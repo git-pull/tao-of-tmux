@@ -1,0 +1,4 @@
+docutils
+sphinx
+aafigure
+pillow
