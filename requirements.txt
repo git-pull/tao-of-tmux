@@ -1,4 +1,3 @@
 docutils
 sphinx
 aafigure
-pillow
