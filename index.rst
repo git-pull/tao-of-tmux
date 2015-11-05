@@ -6,22 +6,6 @@
 The Tao of Tmux
 ===============
 
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   basic_usage
-   configuration
-   shortcuts
-   server
-   session
-   window
-   pane
-   plugins
-   changes
-   internals
-
 .. figure:: _static/tao-tmux-screenshot.png
     :scale: 60%
     :align: center
@@ -270,10 +254,11 @@ This page is licensed `Creative Commons BY-NC-ND 3.0 US`_.
 
 .. _Creative Commons BY-NC-ND 3.0 US: http://creativecommons.org/licenses/by-nc-nd/3.0/us/
 
-
+==================
 Indices and tables
 ==================
 
+* :ref:`table_of_contents`
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
