@@ -1,0 +1,2117 @@
+TMUX(1)                 FreeBSD General Commands Manual                TMUX(1)
+
+1mNAME0m
+     1mtmux 22m-- terminal multiplexer
+
+1mSYNOPSIS0m
+     1mtmux 22m[1m-2lCquvV22m] [1m-c 4m22mshell-command24m] [1m-f 4m22mfile24m] [1m-L 4m22msocket-name24m]
+          [1m-S 4m22msocket-path24m] [4mcommand24m [4mflags24m]]
+
+1mDESCRIPTION0m
+     1mtmux 22mis a terminal multiplexer: it enables a number of terminals to be
+     created, accessed, and controlled from a single screen.  1mtmux 22mmay be
+     detached from a screen and continue running in the background, then later
+     reattached.
+
+     When 1mtmux 22mis started it creates a new 4msession24m with a single 4mwindow24m and
+     displays it on screen.  A status line at the bottom of the screen shows
+     information on the current session and is used to enter interactive com-
+     mands.
+
+     A session is a single collection of 4mpseudo24m 4mterminals24m under the management
+     of 1mtmux22m.  Each session has one or more windows linked to it.  A window
+     occupies the entire screen and may be split into rectangular panes, each
+     of which is a separate pseudo terminal (the pty(4) manual page documents
+     the technical details of pseudo terminals).  Any number of 1mtmux 22minstances
+     may connect to the same session, and any number of windows may be present
+     in the same session.  Once all sessions are killed, 1mtmux 22mexits.
+
+     Each session is persistent and will survive accidental disconnection
+     (such as ssh(1) connection timeout) or intentional detaching (with the
+     `C-b d' key strokes).  1mtmux 22mmay be reattached using:
+
+           $ tmux attach
+
+     In 1mtmux22m, a session is displayed on screen by a 4mclient24m and all sessions
+     are managed by a single 4mserver24m.  The server and each client are separate
+     processes which communicate through a socket in 4m/tmp24m.
+
+     The options are as follows:
+
+     1m-2            22mForce 1mtmux 22mto assume the terminal supports 256 colours.
+
+     1m-C            22mStart in control mode (see the 4mCONTROL24m 4mMODE24m section).
+                   Given twice (1m-CC22m) disables echo.
+
+     1m-c 4m22mshell-command0m
+                   Execute 4mshell-command24m using the default shell.  If neces-
+                   sary, the 1mtmux 22mserver will be started to retrieve the
+                   1mdefault-shell 22moption.  This option is for compatibility
+                   with sh(1) when 1mtmux 22mis used as a login shell.
+
+     1m-f 4m22mfile24m       Specify an alternative configuration file.  By default,
+                   1mtmux 22mloads the system configuration file from
+                   4m@SYSCONFDIR@/tmux.conf24m, if present, then looks for a user
+                   configuration file at 4m~/.tmux.conf24m.
+
+                   The configuration file is a set of 1mtmux 22mcommands which are
+                   executed in sequence when the server is first started.
+                   1mtmux 22mloads configuration files once when the server process
+                   has started.  The 1msource-file 22mcommand may be used to load a
+                   file later.
+
+                   1mtmux 22mshows any error messages from commands in configura-
+                   tion files in the first session created, and continues to
+                   process the rest of the configuration file.
+
+     1m-L 4m22msocket-name0m
+                   1mtmux 22mstores the server socket in a directory under
+                   TMUX_TMPDIR, TMPDIR if it is unset, or 4m/tmp24m if both are
+                   unset.  The default socket is named 4mdefault24m.  This option
+                   allows a different socket name to be specified, allowing
+                   several independent 1mtmux 22mservers to be run.  Unlike 1m-S 22ma
+                   full path is not necessary: the sockets are all created in
+                   the same directory.
+
+                   If the socket is accidentally removed, the SIGUSR1 signal
+                   may be sent to the 1mtmux 22mserver process to recreate it.
+
+     1m-l            22mBehave as a login shell.  This flag currently has no effect
+                   and is for compatibility with other shells when using tmux
+                   as a login shell.
+
+     1m-q            22mSet the 1mquiet 22mserver option to prevent the server sending
+                   various informational messages.
+
+     1m-S 4m22msocket-path0m
+                   Specify a full alternative path to the server socket.  If
+                   1m-S 22mis specified, the default socket directory is not used
+                   and any 1m-L 22mflag is ignored.
+
+     1m-u            tmux 22mattempts to guess if the terminal is likely to support
+                   UTF-8 by checking the first of the LC_ALL, LC_CTYPE and
+                   LANG environment variables to be set for the string
+                   "UTF-8".  This is not always correct: the 1m-u 22mflag explic-
+                   itly informs 1mtmux 22mthat UTF-8 is supported.
+
+                   If the server is started from a client passed 1m-u 22mor where
+                   UTF-8 is detected, the 1mutf8 22mand 1mstatus-utf8 22moptions are
+                   enabled in the global window and session options respec-
+                   tively.
+
+     1m-v            22mRequest verbose logging.  This option may be specified mul-
+                   tiple times for increasing verbosity.  Log messages will be
+                   saved into 4mtmux-client-PID.log24m and 4mtmux-server-PID.log0m
+                   files in the current directory, where 4mPID24m is the PID of the
+                   server or client process.
+
+     1m-V            22mReport the 1mtmux 22mversion.
+
+     4mcommand24m [4mflags24m]
+                   This specifies one of a set of commands used to control
+                   1mtmux22m, as described in the following sections.  If no com-
+                   mands are specified, the 1mnew-session 22mcommand is assumed.
+
+1mKEY BINDINGS0m
+     1mtmux 22mmay be controlled from an attached client by using a key combination
+     of a prefix key, `C-b' (Ctrl-b) by default, followed by a command key.
+
+     The default command key bindings are:
+
+           C-b         Send the prefix key (C-b) through to the application.
+           C-o         Rotate the panes in the current window forwards.
+           C-z         Suspend the 1mtmux 22mclient.
+           !           Break the current pane out of the window.
+           "           Split the current pane into two, top and bottom.
+           #           List all paste buffers.
+           $           Rename the current session.
+           %           Split the current pane into two, left and right.
+           &           Kill the current window.
+           '           Prompt for a window index to select.
+           ,           Rename the current window.
+           -           Delete the most recently copied buffer of text.
+           .           Prompt for an index to move the current window.
+           0 to 9      Select windows 0 to 9.
+           :           Enter the 1mtmux 22mcommand prompt.
+           ;           Move to the previously active pane.
+           =           Choose which buffer to paste interactively from a list.
+           ?           List all key bindings.
+           D           Choose a client to detach.
+           [           Enter copy mode to copy text or view the history.
+           ]           Paste the most recently copied buffer of text.
+           c           Create a new window.
+           d           Detach the current client.
+           f           Prompt to search for text in open windows.
+           i           Display some information about the current window.
+           l           Move to the previously selected window.
+           n           Change to the next window.
+           o           Select the next pane in the current window.
+           p           Change to the previous window.
+           q           Briefly display pane indexes.
+           r           Force redraw of the attached client.
+           s           Select a new session for the attached client interac-
+                       tively.
+           L           Switch the attached client back to the last session.
+           t           Show the time.
+           w           Choose the current window interactively.
+           x           Kill the current pane.
+           {           Swap the current pane with the previous pane.
+           }           Swap the current pane with the next pane.
+           ~           Show previous messages from 1mtmux22m, if any.
+           Page Up     Enter copy mode and scroll one page up.
+           Up, Down
+           Left, Right
+                       Change to the pane above, below, to the left, or to the
+                       right of the current pane.
+           M-1 to M-5  Arrange panes in one of the five preset layouts: even-
+                       horizontal, even-vertical, main-horizontal, main-verti-
+                       cal, or tiled.
+           M-n         Move to the next window with a bell or activity marker.
+           M-o         Rotate the panes in the current window backwards.
+           M-p         Move to the previous window with a bell or activity
+                       marker.
+           C-Up, C-Down
+           C-Left, C-Right
+                       Resize the current pane in steps of one cell.
+           M-Up, M-Down
+           M-Left, M-Right
+                       Resize the current pane in steps of five cells.
+
+     Key bindings may be changed with the 1mbind-key 22mand 1munbind-key 22mcommands.
+
+1mCOMMANDS0m
+     This section contains a list of the commands supported by 1mtmux22m.  Most
+     commands accept the optional 1m-t 22margument with one of 4mtarget-client24m,
+     4mtarget-session24m 4mtarget-window24m, or 4mtarget-pane24m.  These specify the client,
+     session, window or pane which a command should affect.  4mtarget-client24m is
+     the name of the pty(4) file to which the client is connected, for example
+     either of 4m/dev/ttyp124m or 4mttyp124m for the client attached to 4m/dev/ttyp124m.  If
+     no client is specified, the current client is chosen, if possible, or an
+     error is reported.  Clients may be listed with the 1mlist-clients 22mcommand.
+
+     4mtarget-session24m is the session id prefixed with a $, the name of a session
+     (as listed by the 1mlist-sessions 22mcommand), or the name of a client with
+     the same syntax as 4mtarget-client24m, in which case the session attached to
+     the client is used.  When looking for the session name, 1mtmux 22minitially
+     searches for an exact match; if none is found, the session names are
+     checked for any for which 4mtarget-session24m is a prefix or for which it
+     matches as an fnmatch(3) pattern.  If a single match is found, it is used
+     as the target session; multiple matches produce an error.  If a session
+     is omitted, the current session is used if available; if no current ses-
+     sion is available, the most recently used is chosen.
+
+     4mtarget-window24m specifies a window in the form 4msession24m:4mwindow24m.  4msession0m
+     follows the same rules as for 4mtarget-session24m, and 4mwindow24m is looked for in
+     order: as a window index, for example mysession:1; as a window ID, such
+     as @1; as an exact window name, such as mysession:mywindow; then as an
+     fnmatch(3) pattern or the start of a window name, such as myses-
+     sion:mywin* or mysession:mywin.  An empty window name specifies the next
+     unused index if appropriate (for example the 1mnew-window 22mand 1mlink-window0m
+     commands) otherwise the current window in 4msession24m is chosen.  The special
+     character `!' uses the last (previously current) window, `^' selects the
+     highest numbered window, `$' selects the lowest numbered window, and `+'
+     and `-' select the next window or the previous window by number.  When
+     the argument does not contain a colon, 1mtmux 22mfirst attempts to parse it as
+     window; if that fails, an attempt is made to match a session.
+
+     4mtarget-pane24m takes a similar form to 4mtarget-window24m but with the optional
+     addition of a period followed by a pane index, for example: myses-
+     sion:mywindow.1.  If the pane index is omitted, the currently active pane
+     in the specified window is used.  If neither a colon nor period appears,
+     1mtmux 22mfirst attempts to use the argument as a pane index; if that fails,
+     it is looked up as for 4mtarget-window24m.  A `+' or `-' indicate the next or
+     previous pane index, respectively.  One of the strings 4mtop24m, 4mbottom24m, 4mleft24m,
+     4mright24m, 4mtop-left24m, 4mtop-right24m, 4mbottom-left24m or 4mbottom-right24m may be used
+     instead of a pane index.
+
+     The special characters `+' and `-' may be followed by an offset, for
+     example:
+
+           select-window -t:+2
+
+     When dealing with a session that doesn't contain sequential window
+     indexes, they will be correctly skipped.
+
+     1mtmux 22malso gives each pane created in a server an identifier consisting of
+     a `%' and a number, starting from zero.  A pane's identifier is unique
+     for the life of the 1mtmux 22mserver and is passed to the child process of the
+     pane in the TMUX_PANE environment variable.  It may be used alone to tar-
+     get a pane or the window containing it.
+
+     4mshell-command24m arguments are sh(1) commands.  These must be passed as a
+     single item, which typically means quoting them, for example:
+
+           new-window 'vi /etc/passwd'
+
+     4mcommand24m [4marguments24m] refers to a 1mtmux 22mcommand, passed with the command and
+     arguments separately, for example:
+
+           bind-key F1 set-window-option force-width 81
+
+     Or if using sh(1):
+
+           $ tmux bind-key F1 set-window-option force-width 81
+
+     Multiple commands may be specified together as part of a 4mcommand0m
+     4msequence24m.  Each command should be separated by spaces and a semicolon;
+     commands are executed sequentially from left to right and lines ending
+     with a backslash continue on to the next line, except when escaped by
+     another backslash.  A literal semicolon may be included by escaping it
+     with a backslash (for example, when specifying a command sequence to
+     1mbind-key22m).
+
+     Example 1mtmux 22mcommands include:
+
+           refresh-client -t/dev/ttyp2
+
+           rename-session -tfirst newname
+
+           set-window-option -t:0 monitor-activity on
+
+           new-window ; split-window -d
+
+           bind-key R source-file ~/.tmux.conf \; \
+                   display-message "source-file done"
+
+     Or from sh(1):
+
+           $ tmux kill-window -t :1
+
+           $ tmux new-window \; split-window -d
+
+           $ tmux new-session -d 'vi /etc/passwd' \; split-window -d \; attach
+
+1mCLIENTS AND SESSIONS0m
+     The 1mtmux 22mserver manages clients, sessions, windows and panes.  Clients
+     are attached to sessions to interact with them, either when they are cre-
+     ated with the 1mnew-session 22mcommand, or later with the 1mattach-session 22mcom-
+     mand.  Each session has one or more windows 4mlinked24m into it.  Windows may
+     be linked to multiple sessions and are made up of one or more panes, each
+     of which contains a pseudo terminal.  Commands for creating, linking and
+     otherwise manipulating windows are covered in the 4mWINDOWS24m 4mAND24m 4mPANES24m sec-
+     tion.
+
+     The following commands are available to manage clients and sessions:
+
+     1mattach-session 22m[1m-dr22m] [1m-c 4m22mworking-directory24m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mattach22m)
+             If run from outside 1mtmux22m, create a new client in the current ter-
+             minal and attach it to 4mtarget-session24m.  If used from inside,
+             switch the current client.  If 1m-d 22mis specified, any other clients
+             attached to the session are detached.  1m-r 22msignifies the client is
+             read-only (only keys bound to the 1mdetach-client 22mor 1mswitch-client0m
+             commands have any effect)
+
+             If no server is started, 1mattach-session 22mwill attempt to start it;
+             this will fail unless sessions are created in the configuration
+             file.
+
+             The 4mtarget-session24m rules for 1mattach-session 22mare slightly
+             adjusted: if 1mtmux 22mneeds to select the most recently used session,
+             it will prefer the most recently used 4munattached24m session.
+
+             1m-c 22mwill set the session working directory (used for new windows)
+             to 4mworking-directory24m.
+
+     1mdetach-client 22m[1m-P22m] [1m-a22m] [1m-s 4m22mtarget-session24m] [1m-t 4m22mtarget-client24m]
+                   (alias: 1mdetach22m)
+             Detach the current client if bound to a key, the client specified
+             with 1m-t22m, or all clients currently attached to the session speci-
+             fied by 1m-s22m.  The 1m-a 22moption kills all but the client given with
+             1m-t22m.  If 1m-P 22mis given, send SIGHUP to the parent process of the
+             client, typically causing it to exit.
+
+     1mhas-session 22m[1m-t 4m22mtarget-session24m]
+                   (alias: 1mhas22m)
+             Report an error and exit with 1 if the specified session does not
+             exist.  If it does exist, exit with 0.
+
+     1mkill-server0m
+             Kill the 1mtmux 22mserver and clients and destroy all sessions.
+
+     1mkill-session 22m[1m-a22m] [1m-t 4m22mtarget-session24m]
+             Destroy the given session, closing any windows linked to it and
+             no other sessions, and detaching all clients attached to it.  If
+             1m-a 22mis given, all sessions but the specified one is killed.
+
+     1mlist-clients 22m[1m-F 4m22mformat24m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mlsc22m)
+             List all clients attached to the server.  For the meaning of the
+             1m-F 22mflag, see the 4mFORMATS24m section.  If 4mtarget-session24m is speci-
+             fied, list only clients connected to that session.
+
+     1mlist-commands0m
+                   (alias: 1mlscm22m)
+             List the syntax of all commands supported by 1mtmux22m.
+
+     1mlist-sessions 22m[1m-F 4m22mformat24m]
+                   (alias: 1mls22m)
+             List all sessions managed by the server.  For the meaning of the
+             1m-F 22mflag, see the 4mFORMATS24m section.
+
+     1mlock-client 22m[1m-t 4m22mtarget-client24m]
+                   (alias: 1mlockc22m)
+             Lock 4mtarget-client24m, see the 1mlock-server 22mcommand.
+
+     1mlock-session 22m[1m-t 4m22mtarget-session24m]
+                   (alias: 1mlocks22m)
+             Lock all clients attached to 4mtarget-session24m.
+
+     1mnew-session 22m[1m-AdDP22m] [1m-c 4m22mstart-directory24m] [1m-F 4m22mformat24m] [1m-n 4m22mwindow-name24m] [1m-s0m
+             4msession-name24m] [1m-t 4m22mtarget-session24m] [1m-x 4m22mwidth24m] [1m-y 4m22mheight24m]
+             [4mshell-command24m]
+                   (alias: 1mnew22m)
+             Create a new session with name 4msession-name24m.
+
+             The new session is attached to the current terminal unless 1m-d 22mis
+             given.  4mwindow-name24m and 4mshell-command24m are the name of and shell
+             command to execute in the initial window.  If 1m-d 22mis used, 1m-x 22mand
+             1m-y 22mspecify the size of the initial window (80 by 24 if not
+             given).
+
+             If run from a terminal, any termios(4) special characters are
+             saved and used for new windows in the new session.
+
+             The 1m-A 22mflag makes 1mnew-session 22mbehave like 1mattach-session 22mif
+             4msession-name24m already exists; in the case, 1m-D 22mbehaves like 1m-d 22mto
+             1mattach-session22m.
+
+             If 1m-t 22mis given, the new session is 4mgrouped24m with 4mtarget-session24m.
+             This means they share the same set of windows - all windows from
+             4mtarget-session24m are linked to the new session and any subsequent
+             new windows or windows being closed are applied to both sessions.
+             The current and previous window and any session options remain
+             independent and either session may be killed without affecting
+             the other.  Giving 1m-n 22mor 4mshell-command24m are invalid if 1m-t 22mis used.
+
+             The 1m-P 22moption prints information about the new session after it
+             has been created.  By default, it uses the format
+             `#{session_name}:' but a different format may be specified with
+             1m-F22m.
+
+     1mrefresh-client 22m[1m-S22m] [1m-t 4m22mtarget-client24m]
+                   (alias: 1mrefresh22m)
+             Refresh the current client if bound to a key, or a single client
+             if one is given with 1m-t22m.  If 1m-S 22mis specified, only update the
+             client's status bar.
+
+     1mrename-session 22m[1m-t 4m22mtarget-session24m] 4mnew-name0m
+                   (alias: 1mrename22m)
+             Rename the session to 4mnew-name24m.
+
+     1mshow-messages 22m[1m-IJT22m] [1m-t 4m22mtarget-client24m]
+                   (alias: 1mshowmsgs22m)
+             Show client messages or server information.  Any messages dis-
+             played on the status line are saved in a per-client message log,
+             up to a maximum of the limit set by the 4mmessage-limit24m session
+             option for the session attached to that client.  With 1m-t22m, display
+             the log for 4mtarget-client24m.  1m-I22m, 1m-J 22mand 1m-T 22mshow debugging informa-
+             tion about the running server, jobs and terminals.
+
+     1msource-file 4m22mpath0m
+                   (alias: 1msource22m)
+             Execute commands from 4mpath24m.
+
+     1mstart-server0m
+                   (alias: 1mstart22m)
+             Start the 1mtmux 22mserver, if not already running, without creating
+             any sessions.
+
+     1msuspend-client 22m[1m-t 4m22mtarget-client24m]
+                   (alias: 1msuspendc22m)
+             Suspend a client by sending SIGTSTP (tty stop).
+
+     1mswitch-client 22m[1m-lnpr22m] [1m-c 4m22mtarget-client24m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mswitchc22m)
+             Switch the current session for client 4mtarget-client24m to
+             4mtarget-session24m.  If 1m-l22m, 1m-n 22mor 1m-p 22mis used, the client is moved to
+             the last, next or previous session respectively.  1m-r 22mtoggles
+             whether a client is read-only (see the 1mattach-session 22mcommand).
+
+1mWINDOWS AND PANES0m
+     A 1mtmux 22mwindow may be in one of several modes.  The default permits direct
+     access to the terminal attached to the window.  The other is copy mode,
+     which permits a section of a window or its history to be copied to a
+     4mpaste24m 4mbuffer24m for later insertion into another window.  This mode is
+     entered with the 1mcopy-mode 22mcommand, bound to `[' by default.  It is also
+     entered when a command that produces output, such as 1mlist-keys22m, is exe-
+     cuted from a key binding.
+
+     The keys available depend on whether emacs or vi mode is selected (see
+     the 1mmode-keys 22moption).  The following keys are supported as appropriate
+     for the mode:
+
+           1mFunction                     vi              emacs0m
+           Back to indentation          ^               M-m
+           Bottom of history            G               M-<
+           Clear selection              Escape          C-g
+           Copy selection               Enter           M-w
+           Cursor down                  j               Down
+           Cursor left                  h               Left
+           Cursor right                 l               Right
+           Cursor to bottom line        L
+           Cursor to middle line        M               M-r
+           Cursor to top line           H               M-R
+           Cursor up                    k               Up
+           Delete entire line           d               C-u
+           Delete/Copy to end of line   D               C-k
+           End of line                  $               C-e
+           Go to line                   :               g
+           Half page down               C-d             M-Down
+           Half page up                 C-u             M-Up
+           Jump forward                 f               f
+           Jump to forward              t
+           Jump backward                F               F
+           Jump to backward             T
+           Jump again                   ;               ;
+           Jump again in reverse        ,               ,
+           Next page                    C-f             Page down
+           Next space                   W
+           Next space, end of word      E
+           Next word                    w
+           Next word end                e               M-f
+           Other end of selection       o
+           Paste buffer                 p               C-y
+           Previous page                C-b             Page up
+           Previous word                b               M-b
+           Previous space               B
+           Quit mode                    q               Escape
+           Rectangle toggle             v               R
+           Scroll down                  C-Down or C-e   C-Down
+           Scroll up                    C-Up or C-y     C-Up
+           Search again                 n               n
+           Search again in reverse      N               N
+           Search backward              ?               C-r
+           Search forward               /               C-s
+           Start of line                0               C-a
+           Start selection              Space           C-Space
+           Top of history               g               M->
+           Transpose characters                         C-t
+
+     The next and previous word keys use space and the `-', `_' and `@' char-
+     acters as word delimiters by default, but this can be adjusted by setting
+     the 4mword-separators24m session option.  Next word moves to the start of the
+     next word, next word end to the end of the next word and previous word to
+     the start of the previous word.  The three next and previous space keys
+     work similarly but use a space alone as the word separator.
+
+     The jump commands enable quick movement within a line.  For instance,
+     typing `f' followed by `/' will move the cursor to the next `/' character
+     on the current line.  A `;' will then jump to the next occurrence.
+
+     Commands in copy mode may be prefaced by an optional repeat count.  With
+     vi key bindings, a prefix is entered using the number keys; with emacs,
+     the Alt (meta) key and a number begins prefix entry.  For example, to
+     move the cursor forward by ten words, use `M-1 0 M-f' in emacs mode, and
+     `10w' in vi.
+
+     When copying the selection, the repeat count indicates the buffer index
+     to replace, if used.
+
+     Mode key bindings are defined in a set of named tables: 4mvi-edit24m and
+     4memacs-edit24m for keys used when line editing at the command prompt;
+     4mvi-choice24m and 4memacs-choice24m for keys used when choosing from lists (such
+     as produced by the 1mchoose-window 22mcommand); and 4mvi-copy24m and 4memacs-copy0m
+     used in copy mode.  The tables may be viewed with the 1mlist-keys 22mcommand
+     and keys modified or removed with 1mbind-key 22mand 1munbind-key22m.  One command
+     accepts an argument, 1mcopy-pipe22m, which copies the selection and pipes it
+     to a command.  For example the following will bind `C-q' to copy the
+     selection into 4m/tmp24m as well as the paste buffer:
+
+           bind-key -temacs-copy C-q copy-pipe "cat >/tmp/out"
+
+     The paste buffer key pastes the first line from the top paste buffer on
+     the stack.
+
+     The synopsis for the 1mcopy-mode 22mcommand is:
+
+     1mcopy-mode 22m[1m-u22m] [1m-t 4m22mtarget-pane24m]
+             Enter copy mode.  The 1m-u 22moption scrolls one page up.
+
+     Each window displayed by 1mtmux 22mmay be split into one or more 4mpanes24m; each
+     pane takes up a certain area of the display and is a separate terminal.
+     A window may be split into panes using the 1msplit-window 22mcommand.  Windows
+     may be split horizontally (with the 1m-h 22mflag) or vertically.  Panes may be
+     resized with the 1mresize-pane 22mcommand (bound to `C-up', `C-down' `C-left'
+     and `C-right' by default), the current pane may be changed with the
+     1mselect-pane 22mcommand and the 1mrotate-window 22mand 1mswap-pane 22mcommands may be
+     used to swap panes without changing their position.  Panes are numbered
+     beginning from zero in the order they are created.
+
+     A number of preset 4mlayouts24m are available.  These may be selected with the
+     1mselect-layout 22mcommand or cycled with 1mnext-layout 22m(bound to `Space' by
+     default); once a layout is chosen, panes within it may be moved and
+     resized as normal.
+
+     The following layouts are supported:
+
+     1meven-horizontal0m
+             Panes are spread out evenly from left to right across the window.
+
+     1meven-vertical0m
+             Panes are spread evenly from top to bottom.
+
+     1mmain-horizontal0m
+             A large (main) pane is shown at the top of the window and the
+             remaining panes are spread from left to right in the leftover
+             space at the bottom.  Use the 4mmain-pane-height24m window option to
+             specify the height of the top pane.
+
+     1mmain-vertical0m
+             Similar to 1mmain-horizontal 22mbut the large pane is placed on the
+             left and the others spread from top to bottom along the right.
+             See the 4mmain-pane-width24m window option.
+
+     1mtiled   22mPanes are spread out as evenly as possible over the window in
+             both rows and columns.
+
+     In addition, 1mselect-layout 22mmay be used to apply a previously used layout
+     - the 1mlist-windows 22mcommand displays the layout of each window in a form
+     suitable for use with 1mselect-layout22m.  For example:
+
+           $ tmux list-windows
+           0: ksh [159x48]
+               layout: bb62,159x48,0,0{79x48,0,0,79x48,80,0}
+           $ tmux select-layout bb62,159x48,0,0{79x48,0,0,79x48,80,0}
+
+     1mtmux 22mautomatically adjusts the size of the layout for the current window
+     size.  Note that a layout cannot be applied to a window with more panes
+     than that from which the layout was originally defined.
+
+     Commands related to windows and panes are as follows:
+
+     1mbreak-pane 22m[1m-dP22m] [1m-F 4m22mformat24m] [1m-t 4m22mtarget-pane24m]
+                   (alias: 1mbreakp22m)
+             Break 4mtarget-pane24m off from its containing window to make it the
+             only pane in a new window.  If 1m-d 22mis given, the new window does
+             not become the current window.  The 1m-P 22moption prints information
+             about the new window after it has been created.  By default, it
+             uses the format `#{session_name}:#{window_index}' but a different
+             format may be specified with 1m-F22m.
+
+     1mcapture-pane 22m[1m-aepPq22m] [1m-b 4m22mbuffer-index24m] [1m-E 4m22mend-line24m] [1m-S 4m22mstart-line24m] [1m-t0m
+             4mtarget-pane24m]
+                   (alias: 1mcapturep22m)
+             Capture the contents of a pane.  If 1m-p 22mis given, the output goes
+             to stdout, otherwise to the buffer specified with 1m-b 22mor a new
+             buffer if omitted.  If 1m-a 22mis given, the alternate screen is used,
+             and the history is not accessible.  If no alternate screen
+             exists, an error will be returned unless 1m-q 22mis given.  If 1m-e 22mis
+             given, the output includes escape sequences for text and back-
+             ground attributes.  1m-C 22malso escapes non-printable characters as
+             octal \xxx.  1m-J 22mjoins wrapped lines and preserves trailing spaces
+             at each line's end.  1m-P 22mcaptures only any output that the pane
+             has received that is the beginning of an as-yet incomplete escape
+             sequence.
+
+             1m-S 22mand 1m-E 22mspecify the starting and ending line numbers, zero is
+             the first line of the visible pane and negative numbers are lines
+             in the history.  The default is to capture only the visible con-
+             tents of the pane.
+
+     1mchoose-client 22m[1m-F 4m22mformat24m] [1m-t 4m22mtarget-window24m] [4mtemplate24m]
+             Put a window into client choice mode, allowing a client to be
+             selected interactively from a list.  After a client is chosen,
+             `%%' is replaced by the client pty(4) path in 4mtemplate24m and the
+             result executed as a command.  If 4mtemplate24m is not given, "detach-
+             client -t '%%'" is used.  For the meaning of the 1m-F 22mflag, see the
+             4mFORMATS24m section.  This command works only if at least one client
+             is attached.
+
+     1mchoose-list 22m[1m-l 4m22mitems24m] [1m-t 4m22mtarget-window24m] [4mtemplate24m]
+             Put a window into list choice mode, allowing 4mitems24m to be
+             selected.  4mitems24m can be a comma-separated list to display more
+             than one item.  If an item has spaces, that entry must be quoted.
+             After an item is chosen, `%%' is replaced by the chosen item in
+             the 4mtemplate24m and the result is executed as a command.  If
+             4mtemplate24m is not given, "run-shell '%%'" is used.  4mitems24m also
+             accepts format specifiers.  For the meaning of this see the
+             4mFORMATS24m section.  This command works only if at least one client
+             is attached.
+
+     1mchoose-session 22m[1m-F 4m22mformat24m] [1m-t 4m22mtarget-window24m] [4mtemplate24m]
+             Put a window into session choice mode, where a session may be
+             selected interactively from a list.  When one is chosen, `%%' is
+             replaced by the session name in 4mtemplate24m and the result executed
+             as a command.  If 4mtemplate24m is not given, "switch-client -t '%%'"
+             is used.  For the meaning of the 1m-F 22mflag, see the 4mFORMATS24m sec-
+             tion.  This command works only if at least one client is
+             attached.
+
+     1mchoose-tree 22m[1m-suw22m] [1m-b 4m22msession-template24m] [1m-c 4m22mwindow-template24m] [1m-S 4m22mformat24m]
+             [1m-W 4m22mformat24m] [1m-t 4m22mtarget-window24m]
+             Put a window into tree choice mode, where either sessions or win-
+             dows may be selected interactively from a list.  By default, win-
+             dows belonging to a session are indented to show their relation-
+             ship to a session.
+
+             Note that the 1mchoose-window 22mand 1mchoose-session 22mcommands are wrap-
+             pers around 1mchoose-tree22m.
+
+             If 1m-s 22mis given, will show sessions.  If 1m-w 22mis given, will show
+             windows.
+
+             By default, the tree is collapsed and sessions must be expanded
+             to windows with the right arrow key.  The 1m-u 22moption will start
+             with all sessions expanded instead.
+
+             If 1m-b 22mis given, will override the default session command.  Note
+             that `%%' can be used and will be replaced with the session name.
+             The default option if not specified is "switch-client -t '%%'".
+             If 1m-c 22mis given, will override the default window command.  Like
+             1m-b22m, `%%' can be used and will be replaced with the session name
+             and window index.  When a window is chosen from the list, the
+             session command is run before the window command.
+
+             If 1m-S 22mis given will display the specified format instead of the
+             default session format.  If 1m-W 22mis given will display the speci-
+             fied format instead of the default window format.  For the mean-
+             ing of the 1m-s 22mand 1m-w 22moptions, see the 4mFORMATS24m section.
+
+             This command works only if at least one client is attached.
+
+     1mchoose-window 22m[1m-F 4m22mformat24m] [1m-t 4m22mtarget-window24m] [4mtemplate24m]
+             Put a window into window choice mode, where a window may be cho-
+             sen interactively from a list.  After a window is selected, `%%'
+             is replaced by the session name and window index in 4mtemplate24m and
+             the result executed as a command.  If 4mtemplate24m is not given,
+             "select-window -t '%%'" is used.  For the meaning of the 1m-F 22mflag,
+             see the 4mFORMATS24m section.  This command works only if at least one
+             client is attached.
+
+     1mdisplay-panes 22m[1m-t 4m22mtarget-client24m]
+                   (alias: 1mdisplayp)0m
+             Display a visible indicator of each pane shown by 4mtarget-client24m.
+             See the 1mdisplay-panes-time22m, 1mdisplay-panes-colour22m, and
+             1mdisplay-panes-active-colour 22msession options.  While the indicator
+             is on screen, a pane may be selected with the `0' to `9' keys.
+
+     1mfind-window 22m[1m-CNT22m] [1m-F 4m22mformat24m] [1m-t 4m22mtarget-window24m] 4mmatch-string0m
+                   (alias: 1mfindw22m)
+             Search for the fnmatch(3) pattern 4mmatch-string24m in window names,
+             titles, and visible content (but not history).  The flags control
+             matching behavior: 1m-C 22mmatches only visible window contents, 1m-N0m
+             matches only the window name and 1m-T 22mmatches only the window
+             title.  The default is 1m-CNT22m.  If only one window is matched,
+             it'll be automatically selected, otherwise a choice list is
+             shown.  For the meaning of the 1m-F 22mflag, see the 4mFORMATS24m section.
+             This command works only if at least one client is attached.
+
+     1mjoin-pane 22m[1m-bdhv22m] [1m-l 4m22msize24m | 1m-p 4m22mpercentage24m] [1m-s 4m22msrc-pane24m] [1m-t 4m22mdst-pane24m]
+                   (alias: 1mjoinp22m)
+             Like 1msplit-window22m, but instead of splitting 4mdst-pane24m and creating
+             a new pane, split it and move 4msrc-pane24m into the space.  This can
+             be used to reverse 1mbreak-pane22m.  The 1m-b 22moption causes 4msrc-pane24m to
+             be joined to left of or above 4mdst-pane24m.
+
+     1mkill-pane 22m[1m-a22m] [1m-t 4m22mtarget-pane24m]
+                   (alias: 1mkillp22m)
+             Destroy the given pane.  If no panes remain in the containing
+             window, it is also destroyed.  The 1m-a 22moption kills all but the
+             pane given with 1m-t22m.
+
+     1mkill-window 22m[1m-a22m] [1m-t 4m22mtarget-window24m]
+                   (alias: 1mkillw22m)
+             Kill the current window or the window at 4mtarget-window24m, removing
+             it from any sessions to which it is linked.  The 1m-a 22moption kills
+             all but the window given with 1m-t22m.
+
+     1mlast-pane 22m[1m-t 4m22mtarget-window24m]
+                   (alias: 1mlastp22m)
+             Select the last (previously selected) pane.
+
+     1mlast-window 22m[1m-t 4m22mtarget-session24m]
+                   (alias: 1mlast22m)
+             Select the last (previously selected) window.  If no
+             4mtarget-session24m is specified, select the last window of the cur-
+             rent session.
+
+     1mlink-window 22m[1m-dk22m] [1m-s 4m22msrc-window24m] [1m-t 4m22mdst-window24m]
+                   (alias: 1mlinkw22m)
+             Link the window at 4msrc-window24m to the specified 4mdst-window24m.  If
+             4mdst-window24m is specified and no such window exists, the 4msrc-window0m
+             is linked there.  If 1m-k 22mis given and 4mdst-window24m exists, it is
+             killed, otherwise an error is generated.  If 1m-d 22mis given, the
+             newly linked window is not selected.
+
+     1mlist-panes 22m[1m-as22m] [1m-F 4m22mformat24m] [1m-t 4m22mtarget24m]
+                   (alias: 1mlsp22m)
+             If 1m-a 22mis given, 4mtarget24m is ignored and all panes on the server are
+             listed.  If 1m-s 22mis given, 4mtarget24m is a session (or the current ses-
+             sion).  If neither is given, 4mtarget24m is a window (or the current
+             window).  For the meaning of the 1m-F 22mflag, see the 4mFORMATS24m sec-
+             tion.
+
+     1mlist-windows 22m[1m-a22m] [1m-F 4m22mformat24m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mlsw22m)
+             If 1m-a 22mis given, list all windows on the server.  Otherwise, list
+             windows in the current session or in 4mtarget-session24m.  For the
+             meaning of the 1m-F 22mflag, see the 4mFORMATS24m section.
+
+     1mmove-pane 22m[1m-bdhv22m] [1m-l 4m22msize24m | 1m-p 4m22mpercentage24m] [1m-s 4m22msrc-pane24m] [1m-t 4m22mdst-pane24m]
+                   (alias: 1mmovep22m)
+             Like 1mjoin-pane22m, but 4msrc-pane24m and 4mdst-pane24m may belong to the same
+             window.
+
+     1mmove-window 22m[1m-rdk22m] [1m-s 4m22msrc-window24m] [1m-t 4m22mdst-window24m]
+                   (alias: 1mmovew22m)
+             This is similar to 1mlink-window22m, except the window at 4msrc-window0m
+             is moved to 4mdst-window24m.  With 1m-r22m, all windows in the session are
+             renumbered in sequential order, respecting the 1mbase-index 22moption.
+
+     1mnew-window 22m[1m-adkP22m] [1m-c 4m22mstart-directory24m] [1m-F 4m22mformat24m] [1m-n 4m22mwindow-name24m] [1m-t0m
+             4mtarget-window24m] [4mshell-command24m]
+                   (alias: 1mneww22m)
+             Create a new window.  With 1m-a22m, the new window is inserted at the
+             next index up from the specified 4mtarget-window24m, moving windows up
+             if necessary, otherwise 4mtarget-window24m is the new window location.
+
+             If 1m-d 22mis given, the session does not make the new window the cur-
+             rent window.  4mtarget-window24m represents the window to be created;
+             if the target already exists an error is shown, unless the 1m-k0m
+             flag is used, in which case it is destroyed.  4mshell-command24m is
+             the command to execute.  If 4mshell-command24m is not specified, the
+             value of the 1mdefault-command 22moption is used.  1m-c 22mspecifies the
+             working directory in which the new window is created.
+
+             When the shell command completes, the window closes.  See the
+             1mremain-on-exit 22moption to change this behaviour.
+
+             The TERM environment variable must be set to ``screen'' for all
+             programs running 4minside24m 1mtmux22m.  New windows will automatically
+             have ``TERM=screen'' added to their environment, but care must be
+             taken not to reset this in shell start-up files.
+
+             The 1m-P 22moption prints information about the new window after it
+             has been created.  By default, it uses the format
+             `#{session_name}:#{window_index}' but a different format may be
+             specified with 1m-F22m.
+
+     1mnext-layout 22m[1m-t 4m22mtarget-window24m]
+                   (alias: 1mnextl22m)
+             Move a window to the next layout and rearrange the panes to fit.
+
+     1mnext-window 22m[1m-a22m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mnext22m)
+             Move to the next window in the session.  If 1m-a 22mis used, move to
+             the next window with an alert.
+
+     1mpipe-pane 22m[1m-o22m] [1m-t 4m22mtarget-pane24m] [4mshell-command24m]
+                   (alias: 1mpipep22m)
+             Pipe any output sent by the program in 4mtarget-pane24m to a shell
+             command.  A pane may only be piped to one command at a time, any
+             existing pipe is closed before 4mshell-command24m is executed.  The
+             4mshell-command24m string may contain the special character sequences
+             supported by the 1mstatus-left 22moption.  If no 4mshell-command24m is
+             given, the current pipe (if any) is closed.
+
+             The 1m-o 22moption only opens a new pipe if no previous pipe exists,
+             allowing a pipe to be toggled with a single key, for example:
+
+                   bind-key C-p pipe-pane -o 'cat >>~/output.#I-#P'
+
+     1mprevious-layout 22m[1m-t 4m22mtarget-window24m]
+                   (alias: 1mprevl22m)
+             Move to the previous layout in the session.
+
+     1mprevious-window 22m[1m-a22m] [1m-t 4m22mtarget-session24m]
+                   (alias: 1mprev22m)
+             Move to the previous window in the session.  With 1m-a22m, move to the
+             previous window with an alert.
+
+     1mrename-window 22m[1m-t 4m22mtarget-window24m] 4mnew-name0m
+                   (alias: 1mrenamew22m)
+             Rename the current window, or the window at 4mtarget-window24m if
+             specified, to 4mnew-name24m.
+
+     1mresize-pane 22m[1m-DLRUZ22m] [1m-t 4m22mtarget-pane24m] [1m-x 4m22mwidth24m] [1m-y 4m22mheight24m] [4madjustment24m]
+                   (alias: 1mresizep22m)
+             Resize a pane, up, down, left or right by 4madjustment24m with 1m-U22m, 1m-D22m,
+             1m-L 22mor 1m-R22m, or to an absolute size with 1m-x 22mor 1m-y22m.  The 4madjustment0m
+             is given in lines or cells (the default is 1).
+
+             With 1m-Z22m, the active pane is toggled between zoomed (occupying the
+             whole of the window) and unzoomed (its normal position in the
+             layout).
+
+     1mrespawn-pane 22m[1m-k22m] [1m-t 4m22mtarget-pane24m] [4mshell-command24m]
+                   (alias: 1mrespawnp22m)
+             Reactivate a pane in which the command has exited (see the
+             1mremain-on-exit 22mwindow option).  If 4mshell-command24m is not given,
+             the command used when the pane was created is executed.  The pane
+             must be already inactive, unless 1m-k 22mis given, in which case any
+             existing command is killed.
+
+     1mrespawn-window 22m[1m-k22m] [1m-t 4m22mtarget-window24m] [4mshell-command24m]
+                   (alias: 1mrespawnw22m)
+             Reactivate a window in which the command has exited (see the
+             1mremain-on-exit 22mwindow option).  If 4mshell-command24m is not given,
+             the command used when the window was created is executed.  The
+             window must be already inactive, unless 1m-k 22mis given, in which
+             case any existing command is killed.
+
+     1mrotate-window 22m[1m-DU22m] [1m-t 4m22mtarget-window24m]
+                   (alias: 1mrotatew22m)
+             Rotate the positions of the panes within a window, either upward
+             (numerically lower) with 1m-U 22mor downward (numerically higher).
+
+     1mselect-layout 22m[1m-np22m] [1m-t 4m22mtarget-window24m] [4mlayout-name24m]
+                   (alias: 1mselectl22m)
+             Choose a specific layout for a window.  If 4mlayout-name24m is not
+             given, the last preset layout used (if any) is reapplied.  1m-n 22mand
+             1m-p 22mare equivalent to the 1mnext-layout 22mand 1mprevious-layout 22mcom-
+             mands.
+
+     1mselect-pane 22m[1m-lDLRU22m] [1m-t 4m22mtarget-pane24m]
+                   (alias: 1mselectp22m)
+             Make pane 4mtarget-pane24m the active pane in window 4mtarget-window24m.
+             If one of 1m-D22m, 1m-L22m, 1m-R22m, or 1m-U 22mis used, respectively the pane below,
+             to the left, to the right, or above the target pane is used.  1m-l0m
+             is the same as using the 1mlast-pane 22mcommand.
+
+     1mselect-window 22m[1m-lnpT22m] [1m-t 4m22mtarget-window24m]
+                   (alias: 1mselectw22m)
+             Select the window at 4mtarget-window24m.  1m-l22m, 1m-n 22mand 1m-p 22mare equivalent
+             to the 1mlast-window22m, 1mnext-window 22mand 1mprevious-window 22mcommands.  If
+             1m-T 22mis given and the selected window is already the current win-
+             dow, the command behaves like 1mlast-window22m.
+
+     1msplit-window 22m[1m-dhvP22m] [1m-c 4m22mstart-directory24m] [1m-l 4m22msize24m | 1m-p 4m22mpercentage24m] [1m-t0m
+             4mtarget-pane24m] [4mshell-command24m] [1m-F 4m22mformat24m]
+                   (alias: 1msplitw22m)
+             Create a new pane by splitting 4mtarget-pane24m: 1m-h 22mdoes a horizontal
+             split and 1m-v 22ma vertical split; if neither is specified, 1m-v 22mis
+             assumed.  The 1m-l 22mand 1m-p 22moptions specify the size of the new pane
+             in lines (for vertical split) or in cells (for horizontal split),
+             or as a percentage, respectively.  All other options have the
+             same meaning as for the 1mnew-window 22mcommand.
+
+     1mswap-pane 22m[1m-dDU22m] [1m-s 4m22msrc-pane24m] [1m-t 4m22mdst-pane24m]
+                   (alias: 1mswapp22m)
+             Swap two panes.  If 1m-U 22mis used and no source pane is specified
+             with 1m-s22m, 4mdst-pane24m is swapped with the previous pane (before it
+             numerically); 1m-D 22mswaps with the next pane (after it numerically).
+             1m-d 22minstructs 1mtmux 22mnot to change the active pane.
+
+     1mswap-window 22m[1m-d22m] [1m-s 4m22msrc-window24m] [1m-t 4m22mdst-window24m]
+                   (alias: 1mswapw22m)
+             This is similar to 1mlink-window22m, except the source and destination
+             windows are swapped.  It is an error if no window exists at
+             4msrc-window24m.
+
+     1munlink-window 22m[1m-k22m] [1m-t 4m22mtarget-window24m]
+                   (alias: 1munlinkw22m)
+             Unlink 4mtarget-window24m.  Unless 1m-k 22mis given, a window may be
+             unlinked only if it is linked to multiple sessions - windows may
+             not be linked to no sessions; if 1m-k 22mis specified and the window
+             is linked to only one session, it is unlinked and destroyed.
+
+1mKEY BINDINGS0m
+     1mtmux 22mallows a command to be bound to most keys, with or without a prefix
+     key.  When specifying keys, most represent themselves (for example `A' to
+     `Z').  Ctrl keys may be prefixed with `C-' or `^', and Alt (meta) with
+     `M-'.  In addition, the following special key names are accepted: 4mUp24m,
+     4mDown24m, 4mLeft24m, 4mRight24m, 4mBSpace24m, 4mBTab24m, 4mDC24m (Delete), 4mEnd24m, 4mEnter24m, 4mEscape24m, 4mF124m to
+     4mF2024m, 4mHome24m, 4mIC24m (Insert), 4mNPage/PageDown/PgDn24m, 4mPPage/PageUp/PgUp24m, 4mSpace24m,
+     and 4mTab24m.  Note that to bind the `"' or `'' keys, quotation marks are nec-
+     essary, for example:
+
+           bind-key '"' split-window
+           bind-key "'" new-window
+
+     Commands related to key bindings are as follows:
+
+     1mbind-key 22m[1m-cnr22m] [1m-t 4m22mkey-table24m] 4mkey24m 4mcommand24m [4marguments24m]
+                   (alias: 1mbind22m)
+             Bind key 4mkey24m to 4mcommand24m.  By default (without 1m-t22m) the primary key
+             bindings are modified (those normally activated with the prefix
+             key); in this case, if 1m-n 22mis specified, it is not necessary to
+             use the prefix key, 4mcommand24m is bound to 4mkey24m alone.  The 1m-r 22mflag
+             indicates this key may repeat, see the 1mrepeat-time 22moption.
+
+             If 1m-t 22mis present, 4mkey24m is bound in 4mkey-table24m: the binding for com-
+             mand mode with 1m-c 22mor for normal mode without.  To view the
+             default bindings and possible commands, see the 1mlist-keys 22mcom-
+             mand.
+
+     1mlist-keys 22m[1m-t 4m22mkey-table24m]
+                   (alias: 1mlsk22m)
+             List all key bindings.  Without 1m-t 22mthe primary key bindings -
+             those executed when preceded by the prefix key - are printed.
+
+             With 1m-t22m, the key bindings in 4mkey-table24m are listed; this may be
+             one of: 4mvi-edit24m, 4memacs-edit24m, 4mvi-choice24m, 4memacs-choice24m, 4mvi-copy24m or
+             4memacs-copy24m.
+
+     1msend-keys 22m[1m-lR22m] [1m-t 4m22mtarget-pane24m] 4mkey24m 4m...0m
+                   (alias: 1msend22m)
+             Send a key or keys to a window.  Each argument 4mkey24m is the name of
+             the key (such as `C-a' or `npage' ) to send; if the string is not
+             recognised as a key, it is sent as a series of characters.  The
+             1m-l 22mflag disables key name lookup and sends the keys literally.
+             All arguments are sent sequentially from first to last.  The 1m-R0m
+             flag causes the terminal state to be reset.
+
+     1msend-prefix 22m[1m-222m] [1m-t 4m22mtarget-pane24m]
+             Send the prefix key, or with 1m-2 22mthe secondary prefix key, to a
+             window as if it was pressed.
+
+     1munbind-key 22m[1m-acn22m] [1m-t 4m22mkey-table24m] 4mkey0m
+                   (alias: 1munbind22m)
+             Unbind the command bound to 4mkey24m.  Without 1m-t 22mthe primary key
+             bindings are modified; in this case, if 1m-n 22mis specified, the com-
+             mand bound to 4mkey24m without a prefix (if any) is removed.  If 1m-a 22mis
+             present, all key bindings are removed.
+
+             If 1m-t 22mis present, 4mkey24m in 4mkey-table24m is unbound: the binding for
+             command mode with 1m-c 22mor for normal mode without.
+
+1mOPTIONS0m
+     The appearance and behaviour of 1mtmux 22mmay be modified by changing the
+     value of various options.  There are three types of option: 4mserver0m
+     4moptions24m, 4msession24m 4moptions24m and 4mwindow24m 4moptions24m.
+
+     The 1mtmux 22mserver has a set of global options which do not apply to any
+     particular window or session.  These are altered with the 1mset-option -s0m
+     command, or displayed with the 1mshow-options -s 22mcommand.
+
+     In addition, each individual session may have a set of session options,
+     and there is a separate set of global session options.  Sessions which do
+     not have a particular option configured inherit the value from the global
+     session options.  Session options are set or unset with the 1mset-option0m
+     command and may be listed with the 1mshow-options 22mcommand.  The available
+     server and session options are listed under the 1mset-option 22mcommand.
+
+     Similarly, a set of window options is attached to each window, and there
+     is a set of global window options from which any unset options are inher-
+     ited.  Window options are altered with the 1mset-window-option 22mcommand and
+     can be listed with the 1mshow-window-options 22mcommand.  All window options
+     are documented with the 1mset-window-option 22mcommand.
+
+     1mtmux 22malso supports user options which are prefixed with a `@'.  User
+     options may have any name, so long as they are prefixed with `@', and be
+     set to any string.  For example
+
+           $ tmux setw -q @foo "abc123"
+           $ tmux showw -v @foo
+           abc123
+
+     Commands which set options are as follows:
+
+     1mset-option 22m[1m-agoqsuw22m] [1m-t 4m22mtarget-session24m | 4mtarget-window24m] 4moption24m 4mvalue0m
+                   (alias: 1mset22m)
+             Set a window option with 1m-w 22m(equivalent to the 1mset-window-option0m
+             command), a server option with 1m-s22m, otherwise a session option.
+
+             If 1m-g 22mis specified, the global session or window option is set.
+             The 1m-u 22mflag unsets an option, so a session inherits the option
+             from the global options.  It is not possible to unset a global
+             option.
+
+             The 1m-o 22mflag prevents setting an option that is already set.
+
+             The 1m-q 22mflag suppresses the informational message (as if the 1mquiet0m
+             server option was set).
+
+             With 1m-a22m, and if the option expects a string or a style, 4mvalue24m is
+             appended to the existing setting.  For example:
+
+                   set -g status-left "foo"
+                   set -ag status-left "bar"
+
+             Will result in `foobar'.  And:
+
+                   set -g status-style "bg=red"
+                   set -ag status-style "fg=blue"
+
+             Will result in a red background 4mand24m blue foreground.  Without 1m-a22m,
+             the result would be the default background and a blue foreground.
+
+             Available window options are listed under 1mset-window-option22m.
+
+             4mvalue24m depends on the option and may be a number, a string, or a
+             flag (on, off, or omitted to toggle).
+
+             Available server options are:
+
+             1mbuffer-limit 4m22mnumber0m
+                     Set the number of buffers; as new buffers are added to
+                     the top of the stack, old ones are removed from the bot-
+                     tom if necessary to maintain this maximum length.
+
+             1mescape-time 4m22mtime0m
+                     Set the time in milliseconds for which 1mtmux 22mwaits after
+                     an escape is input to determine if it is part of a func-
+                     tion or meta key sequences.  The default is 500 millisec-
+                     onds.
+
+             1mexit-unattached 22m[1mon 22m| 1moff22m]
+                     If enabled, the server will exit when there are no
+                     attached clients.
+
+             1mfocus-events 22m[1mon 22m| 1moff22m]
+                     When enabled, focus events are requested from the termi-
+                     nal if supported and passed through to applications run-
+                     ning in 1mtmux22m.  Attached clients should be detached and
+                     attached again after changing this option.
+
+             1mquiet 22m[1mon 22m| 1moff22m]
+                     Enable or disable the display of various informational
+                     messages (see also the 1m-q 22mcommand line flag).
+
+             1mset-clipboard 22m[1mon 22m| 1moff22m]
+                     Attempt to set the terminal clipboard content using the
+                     \e]52;...\007 xterm(1) escape sequences.  This option is
+                     on by default if there is an 4mMs24m entry in the terminfo(5)
+                     description for the client terminal.  Note that this fea-
+                     ture needs to be enabled in xterm(1) by setting the
+                     resource:
+
+                           disallowedWindowOps: 20,21,SetXprop
+
+                     Or changing this property from the xterm(1) interactive
+                     menu when required.
+
+             Available session options are:
+
+             1massume-paste-time 4m22mmilliseconds0m
+                     If keys are entered faster than one in 4mmilliseconds24m, they
+                     are assumed to have been pasted rather than typed and
+                     1mtmux 22mkey bindings are not processed.  The default is one
+                     millisecond and zero disables.
+
+             1mbase-index 4m22mindex0m
+                     Set the base index from which an unused index should be
+                     searched when a new window is created.  The default is
+                     zero.
+
+             1mbell-action 22m[1many 22m| 1mnone 22m| 1mcurrent22m]
+                     Set action on window bell.  1many 22mmeans a bell in any win-
+                     dow linked to a session causes a bell in the current win-
+                     dow of that session, 1mnone 22mmeans all bells are ignored and
+                     1mcurrent 22mmeans only bells in windows other than the cur-
+                     rent window are ignored.
+
+             1mbell-on-alert 22m[1mon 22m| 1moff22m]
+                     If on, ring the terminal bell when an alert occurs.
+
+             1mdefault-command 4m22mshell-command0m
+                     Set the command used for new windows (if not specified
+                     when the window is created) to 4mshell-command24m, which may
+                     be any sh(1) command.  The default is an empty string,
+                     which instructs 1mtmux 22mto create a login shell using the
+                     value of the 1mdefault-shell 22moption.
+
+             1mdefault-shell 4m22mpath0m
+                     Specify the default shell.  This is used as the login
+                     shell for new windows when the 1mdefault-command 22moption is
+                     set to empty, and must be the full path of the exe-
+                     cutable.  When started 1mtmux 22mtries to set a default value
+                     from the first suitable of the SHELL environment vari-
+                     able, the shell returned by getpwuid(3), or 4m/bin/sh24m.
+                     This option should be configured when 1mtmux 22mis used as a
+                     login shell.
+
+             1mdefault-terminal 4m22mterminal0m
+                     Set the default terminal for new windows created in this
+                     session - the default value of the TERM environment vari-
+                     able.  For 1mtmux 22mto work correctly, this 4mmust24m be set to
+                     `screen' or a derivative of it.
+
+             1mdestroy-unattached 22m[1mon 22m| 1moff22m]
+                     If enabled and the session is no longer attached to any
+                     clients, it is destroyed.
+
+             1mdetach-on-destroy 22m[1mon 22m| 1moff22m]
+                     If on (the default), the client is detached when the ses-
+                     sion it is attached to is destroyed.  If off, the client
+                     is switched to the most recently active of the remaining
+                     sessions.
+
+             1mdisplay-panes-active-colour 4m22mcolour0m
+                     Set the colour used by the 1mdisplay-panes 22mcommand to show
+                     the indicator for the active pane.
+
+             1mdisplay-panes-colour 4m22mcolour0m
+                     Set the colour used by the 1mdisplay-panes 22mcommand to show
+                     the indicators for inactive panes.
+
+             1mdisplay-panes-time 4m22mtime0m
+                     Set the time in milliseconds for which the indicators
+                     shown by the 1mdisplay-panes 22mcommand appear.
+
+             1mdisplay-time 4m22mtime0m
+                     Set the amount of time for which status line messages and
+                     other on-screen indicators are displayed.  4mtime24m is in
+                     milliseconds.
+
+             1mhistory-limit 4m22mlines0m
+                     Set the maximum number of lines held in window history.
+                     This setting applies only to new windows - existing win-
+                     dow histories are not resized and retain the limit at the
+                     point they were created.
+
+             1mlock-after-time 4m22mnumber0m
+                     Lock the session (like the 1mlock-session 22mcommand) after
+                     4mnumber24m seconds of inactivity, or the entire server (all
+                     sessions) if the 1mlock-server 22moption is set.  The default
+                     is not to lock (set to 0).
+
+             1mlock-command 4m22mshell-command0m
+                     Command to run when locking each client.  The default is
+                     to run lock(1) with 1m-np22m.
+
+             1mlock-server 22m[1mon 22m| 1moff22m]
+                     If this option is 1mon 22m(the default), instead of each ses-
+                     sion locking individually as each has been idle for
+                     1mlock-after-time22m, the entire server will lock after 4mall0m
+                     sessions would have locked.  This has no effect as a ses-
+                     sion option; it must be set as a global option.
+
+             1mmessage-command-style 4m22mstyle0m
+                     Set status line message command style, where 4mstyle24m is a
+                     comma-separated list of characteristics to be specified.
+
+                     These may be `bg=colour' to set the background colour,
+                     `fg=colour' to set the foreground colour, and a list of
+                     attributes as specified below.
+
+                     The colour is one of: 1mblack22m, 1mred22m, 1mgreen22m, 1myellow22m, 1mblue22m,
+                     1mmagenta22m, 1mcyan22m, 1mwhite22m, aixterm bright variants (if sup-
+                     ported: 1mbrightred22m, 1mbrightgreen22m, and so on), 1mcolour0 22mto
+                     1mcolour255 22mfrom the 256-colour set, 1mdefault22m, or a hexadec-
+                     imal RGB string such as `#ffffff', which chooses the
+                     closest match from the default 256-colour set.
+
+                     The attributes is either 1mnone 22mor a comma-delimited list
+                     of one or more of: 1mbright 22m(or 1mbold22m), 1mdim22m, 1munderscore22m,
+                     1mblink22m, 1mreverse22m, 1mhidden22m, or 1mitalics22m, to turn an attribute
+                     on, or an attribute prefixed with `no' to turn one off.
+
+                     Examples are:
+
+                           fg=yellow,bold,underscore,blink
+                           bg=black,fg=default,noreverse
+
+                     With the 1m-a 22mflag to the 1mset-option 22mcommand the new style
+                     is added otherwise the existing style is replaced.
+
+             1mmessage-limit 4m22mnumber0m
+                     Set the number of error or information messages to save
+                     in the message log for each client.  The default is 20.
+
+             1mmessage-style 4m22mstyle0m
+                     Set status line message style.  For how to specify 4mstyle24m,
+                     see the 1mmessage-command-style 22moption.
+
+             1mmouse-resize-pane 22m[1mon 22m| 1moff22m]
+                     If on, 1mtmux 22mcaptures the mouse and allows panes to be
+                     resized by dragging on their borders.
+
+             1mmouse-select-pane 22m[1mon 22m| 1moff22m]
+                     If on, 1mtmux 22mcaptures the mouse and when a window is split
+                     into multiple panes the mouse may be used to select the
+                     current pane.  The mouse click is also passed through to
+                     the application as normal.
+
+             1mmouse-select-window 22m[1mon 22m| 1moff22m]
+                     If on, clicking the mouse on a window name in the status
+                     line will select that window.
+
+             1mmouse-utf8 22m[1mon 22m| 1moff22m]
+                     If enabled, request mouse input as UTF-8 on UTF-8 termi-
+                     nals.
+
+             1mpane-active-border-style 4m22mstyle0m
+                     Set the pane border style for the currently active pane.
+                     For how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.  Attributes are ignored.
+
+             1mpane-border-style 4m22mstyle0m
+                     Set the pane border style for paneas aside from the
+                     active pane.  For how to specify 4mstyle24m, see the
+                     1mmessage-command-style 22moption.  Attributes are ignored.
+
+             1mprefix 4m22mkey0m
+                     Set the key accepted as a prefix key.
+
+             1mprefix2 4m22mkey0m
+                     Set a secondary key accepted as a prefix key.
+
+             1mrenumber-windows 22m[1mon 22m| 1moff22m]
+                     If on, when a window is closed in a session, automati-
+                     cally renumber the other windows in numerical order.
+                     This respects the 1mbase-index 22moption if it has been set.
+                     If off, do not renumber the windows.
+
+             1mrepeat-time 4m22mtime0m
+                     Allow multiple commands to be entered without pressing
+                     the prefix-key again in the specified 4mtime24m milliseconds
+                     (the default is 500).  Whether a key repeats may be set
+                     when it is bound using the 1m-r 22mflag to 1mbind-key22m.  Repeat
+                     is enabled for the default keys bound to the 1mresize-pane0m
+                     command.
+
+             1mset-remain-on-exit 22m[1mon 22m| 1moff22m]
+                     Set the 1mremain-on-exit 22mwindow option for any windows
+                     first created in this session.  When this option is true,
+                     windows in which the running program has exited do not
+                     close, instead remaining open but inactivate.  Use the
+                     1mrespawn-window 22mcommand to reactivate such a window, or
+                     the 1mkill-window 22mcommand to destroy it.
+
+             1mset-titles 22m[1mon 22m| 1moff22m]
+                     Attempt to set the client terminal title using the 4mtsl0m
+                     and 4mfsl24m terminfo(5) entries if they exist.  1mtmux 22mautomat-
+                     ically sets these to the \e]2;...\007 sequence if the
+                     terminal appears to be an xterm.  This option is off by
+                     default.  Note that elinks will only attempt to set the
+                     window title if the STY environment variable is set.
+
+             1mset-titles-string 4m22mstring0m
+                     String used to set the window title if 1mset-titles 22mis on.
+                     Character sequences are replaced as for the 1mstatus-left0m
+                     option.
+
+             1mstatus 22m[1mon 22m| 1moff22m]
+                     Show or hide the status line.
+
+             1mstatus-interval 4m22minterval0m
+                     Update the status bar every 4minterval24m seconds.  By
+                     default, updates will occur every 15 seconds.  A setting
+                     of zero disables redrawing at interval.
+
+             1mstatus-justify 22m[1mleft 22m| 1mcentre 22m| 1mright22m]
+                     Set the position of the window list component of the sta-
+                     tus line: left, centre or right justified.
+
+             1mstatus-keys 22m[1mvi 22m| 1memacs22m]
+                     Use vi or emacs-style key bindings in the status line,
+                     for example at the command prompt.  The default is emacs,
+                     unless the VISUAL or EDITOR environment variables are set
+                     and contain the string `vi'.
+
+             1mstatus-left 4m22mstring0m
+                     Display 4mstring24m (by default the session name) to the left
+                     of the status bar.  4mstring24m will be passed through
+                     strftime(3) and formats (see 4mFORMATS24m) will be expanded.
+                     It may also contain any of the following special charac-
+                     ter sequences:
+
+                           1mCharacter pair    Replaced with0m
+                           #(shell-command)  First line of the command's
+                                                              output
+                           #[attributes]     Colour or attribute change
+                           ##                A literal `#'
+
+                     The #(shell-command) form executes `shell-command' and
+                     inserts the first line of its output.  Note that shell
+                     commands are only executed once at the interval specified
+                     by the 1mstatus-interval 22moption: if the status line is
+                     redrawn in the meantime, the previous result is used.
+                     Shell commands are executed with the 1mtmux 22mglobal environ-
+                     ment set (see the 4mENVIRONMENT24m section).
+
+                     For details on how the names and titles can be set see
+                     the 4mNAMES24m 4mAND24m 4mTITLES24m section.  For a list of allowed
+                     attributes see the 1mmessage-command-style 22moption.
+
+                     Examples are:
+
+                           #(sysctl vm.loadavg)
+                           #[fg=yellow,bold]#(apm -l)%%#[default] [#S]
+
+                     Where appropriate, special character sequences may be
+                     prefixed with a number to specify the maximum length, for
+                     example `#24T'.
+
+                     By default, UTF-8 in 4mstring24m is not interpreted, to enable
+                     UTF-8, use the 1mstatus-utf8 22moption.
+
+             1mstatus-left-length 4m22mlength0m
+                     Set the maximum 4mlength24m of the left component of the sta-
+                     tus bar.  The default is 10.
+
+             1mstatus-left-style 4m22mstyle0m
+                     Set the style of the left part of the status line.  For
+                     how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mstatus-position 22m[1mtop 22m| 1mbottom22m]
+                     Set the position of the status line.
+
+             1mstatus-right 4m22mstring0m
+                     Display 4mstring24m to the right of the status bar.  By
+                     default, the current window title in double quotes, the
+                     date and the time are shown.  As with 1mstatus-left22m, 4mstring0m
+                     will be passed to strftime(3), character pairs are
+                     replaced, and UTF-8 is dependent on the 1mstatus-utf80m
+                     option.
+
+             1mstatus-right-length 4m22mlength0m
+                     Set the maximum 4mlength24m of the right component of the sta-
+                     tus bar.  The default is 40.
+
+             1mstatus-right-style 4m22mstyle0m
+                     Set the style of the right part of the status line.  For
+                     how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mstatus-style 4m22mstyle0m
+                     Set status line style.  For how to specify 4mstyle24m, see the
+                     1mmessage-command-style 22moption.
+
+             1mstatus-utf8 22m[1mon 22m| 1moff22m]
+                     Instruct 1mtmux 22mto treat top-bit-set characters in the
+                     1mstatus-left 22mand 1mstatus-right 22mstrings as UTF-8; notably,
+                     this is important for wide characters.  This option
+                     defaults to off.
+
+             1mterminal-overrides 4m22mstring0m
+                     Contains a list of entries which override terminal
+                     descriptions read using terminfo(5).  4mstring24m is a comma-
+                     separated list of items each a colon-separated string
+                     made up of a terminal type pattern (matched using
+                     fnmatch(3)) and a set of 4mname=value24m entries.
+
+                     For example, to set the `clear' terminfo(5) entry to
+                     `\e[H\e[2J' for all terminal types and the `dch1' entry
+                     to `\e[P' for the `rxvt' terminal type, the option could
+                     be set to the string:
+
+                           "*:clear=\e[H\e[2J,rxvt:dch1=\e[P"
+
+                     The terminal entry value is passed through strunvis(3)
+                     before interpretation.  The default value forcibly cor-
+                     rects the `colors' entry for terminals which support 256
+                     colours:
+
+                           "*256col*:colors=256,xterm*:XT"
+
+             1mupdate-environment 4m22mvariables0m
+                     Set a space-separated string containing a list of envi-
+                     ronment variables to be copied into the session environ-
+                     ment when a new session is created or an existing session
+                     is attached.  Any variables that do not exist in the
+                     source environment are set to be removed from the session
+                     environment (as if 1m-r 22mwas given to the 1mset-environment0m
+                     command).  The default is "DISPLAY SSH_ASKPASS
+                     SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAU-
+                     THORITY".
+
+             1mvisual-activity 22m[1mon 22m| 1moff22m]
+                     If on, display a status line message when activity occurs
+                     in a window for which the 1mmonitor-activity 22mwindow option
+                     is enabled.
+
+             1mvisual-bell 22m[1mon 22m| 1moff22m]
+                     If this option is on, a message is shown on a bell
+                     instead of it being passed through to the terminal (which
+                     normally makes a sound).  Also see the 1mbell-action0m
+                     option.
+
+             1mvisual-content 22m[1mon 22m| 1moff22m]
+                     Like 1mvisual-activity22m, display a message when content is
+                     present in a window for which the 1mmonitor-content 22mwindow
+                     option is enabled.
+
+             1mvisual-silence 22m[1mon 22m| 1moff22m]
+                     If 1mmonitor-silence 22mis enabled, prints a message after the
+                     interval has expired on a given window.
+
+             1mword-separators 4m22mstring0m
+                     Sets the session's conception of what characters are con-
+                     sidered word separators, for the purposes of the next and
+                     previous word commands in copy mode.  The default is
+                     ` -_@'.
+
+     1mset-window-option 22m[1m-agoqu22m] [1m-t 4m22mtarget-window24m] 4moption24m 4mvalue0m
+                   (alias: 1msetw22m)
+             Set a window option.  The 1m-a22m, 1m-g22m, 1m-o22m, 1m-q 22mand 1m-u 22mflags work simi-
+             larly to the 1mset-option 22mcommand.
+
+             Supported window options are:
+
+             1maggressive-resize 22m[1mon 22m| 1moff22m]
+                     Aggressively resize the chosen window.  This means that
+                     1mtmux 22mwill resize the window to the size of the smallest
+                     session for which it is the current window, rather than
+                     the smallest session to which it is attached.  The window
+                     may resize when the current window is changed on another
+                     sessions; this option is good for full-screen programs
+                     which support SIGWINCH and poor for interactive programs
+                     such as shells.
+
+             1mallow-rename 22m[1mon 22m| 1moff22m]
+                     Allow programs to change the window name using a terminal
+                     escape sequence (\033k...\033\\).  The default is on.
+
+             1malternate-screen 22m[1mon 22m| 1moff22m]
+                     This option configures whether programs running inside
+                     1mtmux 22mmay use the terminal alternate screen feature, which
+                     allows the 4msmcup24m and 4mrmcup24m terminfo(5) capabilities.  The
+                     alternate screen feature preserves the contents of the
+                     window when an interactive application starts and
+                     restores it on exit, so that any output visible before
+                     the application starts reappears unchanged after it
+                     exits.  The default is on.
+
+             1mautomatic-rename 22m[1mon 22m| 1moff22m]
+                     Control automatic window renaming.  When this setting is
+                     enabled, 1mtmux 22mwill rename the window automatically using
+                     the format specified by 1mautomatic-rename-format22m.  This
+                     flag is automatically disabled for an individual window
+                     when a name is specified at creation with 1mnew-window 22mor
+                     1mnew-session22m, or later with 1mrename-window22m, or with a ter-
+                     minal escape sequence.  It may be switched off globally
+                     with:
+
+                           set-window-option -g automatic-rename off
+
+             1mautomatic-rename-format 4m22mformat0m
+                     The format (see 4mFORMATS24m) used when the 1mautomatic-rename0m
+                     option is enabled.
+
+             1mc0-change-interval 4m22minterval0m
+             1mc0-change-trigger 4m22mtrigger0m
+                     These two options configure a simple form of rate limit-
+                     ing for a pane.  If 1mtmux 22msees more than 4mtrigger24m C0
+                     sequences that modify the screen (for example, carriage
+                     returns, linefeeds or backspaces) in one millisecond, it
+                     will stop updating the pane immediately and instead
+                     redraw it entirely every 4minterval24m milliseconds.  This
+                     helps to prevent fast output (such as yes(1)) overwhelm-
+                     ing the terminal.  The default is a trigger of 250 and an
+                     interval of 100.  A trigger of zero disables the rate
+                     limiting.
+
+             1mclock-mode-colour 4m22mcolour0m
+                     Set clock colour.
+
+             1mclock-mode-style 22m[1m12 22m| 1m2422m]
+                     Set clock hour format.
+
+             1mforce-height 4m22mheight0m
+             1mforce-width 4m22mwidth0m
+                     Prevent 1mtmux 22mfrom resizing a window to greater than 4mwidth0m
+                     or 4mheight24m.  A value of zero restores the default unlim-
+                     ited setting.
+
+             1mmain-pane-height 4m22mheight0m
+             1mmain-pane-width 4m22mwidth0m
+                     Set the width or height of the main (left or top) pane in
+                     the 1mmain-horizontal 22mor 1mmain-vertical 22mlayouts.
+
+             1mmode-keys 22m[1mvi 22m| 1memacs22m]
+                     Use vi or emacs-style key bindings in copy and choice
+                     modes.  As with the 1mstatus-keys 22moption, the default is
+                     emacs, unless VISUAL or EDITOR contains `vi'.
+
+             1mmode-mouse 22m[1mon 22m| 1moff 22m| 1mcopy-mode22m]
+                     Mouse state in modes.  If on, the mouse may be used to
+                     enter copy mode and copy a selection by dragging, to
+                     enter copy mode and scroll with the mouse wheel, or to
+                     select an option in choice mode.  If set to 4mcopy-mode24m,
+                     the mouse behaves as set to on, but cannot be used to
+                     enter copy mode.
+
+             1mmode-style 4m22mstyle0m
+                     Set window modes style.  For how to specify 4mstyle24m, see
+                     the 1mmessage-command-style 22moption.
+
+             1mmonitor-activity 22m[1mon 22m| 1moff22m]
+                     Monitor for activity in the window.  Windows with activ-
+                     ity are highlighted in the status line.
+
+             1mmonitor-content 4m22mmatch-string0m
+                     Monitor content in the window.  When fnmatch(3) pattern
+                     4mmatch-string24m appears in the window, it is highlighted in
+                     the status line.
+
+             1mmonitor-silence 22m[1minterval22m]
+                     Monitor for silence (no activity) in the window within
+                     1minterval 22mseconds.  Windows that have been silent for the
+                     interval are highlighted in the status line.  An interval
+                     of zero disables the monitoring.
+
+             1mother-pane-height 4m22mheight0m
+                     Set the height of the other panes (not the main pane) in
+                     the 1mmain-horizontal 22mlayout.  If this option is set to 0
+                     (the default), it will have no effect.  If both the
+                     1mmain-pane-height 22mand 1mother-pane-height 22moptions are set,
+                     the main pane will grow taller to make the other panes
+                     the specified height, but will never shrink to do so.
+
+             1mother-pane-width 4m22mwidth0m
+                     Like 1mother-pane-height22m, but set the width of other panes
+                     in the 1mmain-vertical 22mlayout.
+
+             1mpane-base-index 4m22mindex0m
+                     Like 1mbase-index22m, but set the starting index for pane num-
+                     bers.
+
+             1mremain-on-exit 22m[1mon 22m| 1moff22m]
+                     A window with this flag set is not destroyed when the
+                     program running in it exits.  The window may be reacti-
+                     vated with the 1mrespawn-window 22mcommand.
+
+             1msynchronize-panes 22m[1mon 22m| 1moff22m]
+                     Duplicate input to any pane to all other panes in the
+                     same window (only for panes that are not in any special
+                     mode).
+
+             1mutf8 22m[1mon 22m| 1moff22m]
+                     Instructs 1mtmux 22mto expect UTF-8 sequences to appear in
+                     this window.
+
+             1mwindow-status-activity-style 4m22mstyle0m
+                     Set status line style for windows with an activity alert.
+                     For how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mwindow-status-bell-style 4m22mstyle0m
+                     Set status line style for windows with a bell alert.  For
+                     how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mwindow-status-content-style 4m22mstyle0m
+                     Set status line style for windows with a content alert.
+                     For how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mwindow-status-current-format 4m22mstring0m
+                     Like 4mwindow-status-format24m, but is the format used when
+                     the window is the current window.
+
+             1mwindow-status-current-style 4m22mstyle0m
+                     Set status line style for the currently active window.
+                     For how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mwindow-status-format 4m22mstring0m
+                     Set the format in which the window is displayed in the
+                     status line window list.  See the 4mstatus-left24m option for
+                     details of special character sequences available.  The
+                     default is `#I:#W#F'.
+
+             1mwindow-status-last-style 4m22mstyle0m
+                     Set status line style for the last active window.  For
+                     how to specify 4mstyle24m, see the 1mmessage-command-style0m
+                     option.
+
+             1mwindow-status-separator 4m22mstring0m
+                     Sets the separator drawn between windows in the status
+                     line.  The default is a single space character.
+
+             1mwindow-status-style 4m22mstyle0m
+                     Set status line style for a single window.  For how to
+                     specify 4mstyle24m, see the 1mmessage-command-style 22moption.
+
+             1mxterm-keys 22m[1mon 22m| 1moff22m]
+                     If this option is set, 1mtmux 22mwill generate xterm(1) -style
+                     function key sequences; these have a number included to
+                     indicate modifiers such as Shift, Alt or Ctrl.  The
+                     default is off.
+
+             1mwrap-search 22m[1mon 22m| 1moff22m]
+                     If this option is set, searches will wrap around the end
+                     of the pane contents.  The default is on.
+
+     1mshow-options 22m[1m-gqsvw22m] [1m-t 4m22mtarget-session24m | 4mtarget-window24m] [4moption24m]
+                   (alias: 1mshow22m)
+             Show the window options (or a single window option if given) with
+             1m-w 22m(equivalent to 1mshow-window-options22m), the server options with
+             1m-s22m, otherwise the session options for 4mtarget24m 4msession24m.  Global
+             session or window options are listed if 1m-g 22mis used.  1m-v 22mshows
+             only the option value, not the name.  If 1m-q 22mis set, no error will
+             be returned if 4moption24m is unset.
+
+     1mshow-window-options 22m[1m-gv22m] [1m-t 4m22mtarget-window24m] [4moption24m]
+                   (alias: 1mshoww22m)
+             List the window options or a single option for 4mtarget-window24m, or
+             the global window options if 1m-g 22mis used.  1m-v 22mshows only the
+             option value, not the name.
+
+1mFORMATS0m
+     Certain commands accept the 1m-F 22mflag with a 4mformat24m argument.  This is a
+     string which controls the output format of the command.  Replacement
+     variables are enclosed in `#{' and `}', for example `#{session_name}'.
+     Some variables also have an shorter alias such as `#S'.  `##' is replaced
+     by a single `#'.  Conditionals are also accepted by prefixing with `?'
+     and separating two alternatives with a comma; if the specified variable
+     exists and is not zero, the first alternative is chosen, otherwise the
+     second is used.  For example `#{?session_attached,attached,not attached}'
+     will include the string `attached' if the session is attached and the
+     string `not attached' if it is unattached.  A limit may be placed on the
+     length of the resultant string by prefixing it by an `=', a number and a
+     colon, so `#{=10:pane_title}' will include at most the first 10 charac-
+     ters of the pane title.
+
+     The following variables are available, where appropriate:
+
+     1mVariable name          Alias    Replaced with0m
+     alternate_on                    If pane is in alternate screen
+     alternate_saved_x               Saved cursor X in alternate screen
+     alternate_saved_y               Saved cursor Y in alternate screen
+     buffer_sample                   First 50 characters from buffer
+     buffer_size                     Size of the specified buffer in bytes
+     client_activity                 Integer time client last had activity
+     client_activity_string          String time client last had activity
+     client_created                  Integer time client created
+     client_created_string           String time client created
+     client_height                   Height of client
+     client_last_session             Name of the client's last session
+     client_prefix                   1 if prefix key has been pressed
+     client_readonly                 1 if client is readonly
+     client_session                  Name of the client's session
+     client_termname                 Terminal name of client
+     client_tty                      Pseudo terminal of client
+     client_utf8                     1 if client supports utf8
+     client_width                    Width of client
+     cursor_flag                     Pane cursor flag
+     cursor_x                        Cursor X position in pane
+     cursor_y                        Cursor Y position in pane
+     history_bytes                   Number of bytes in window history
+     history_limit                   Maximum window history lines
+     history_size                    Size of history in bytes
+     host                   #H       Hostname of local host
+     host_short             #h       Hostname of local host (no domain name)
+     insert_flag                     Pane insert flag
+     keypad_cursor_flag              Pane keypad cursor flag
+     keypad_flag                     Pane keypad flag
+     line                            Line number in the list
+     mouse_any_flag                  Pane mouse any flag
+     mouse_button_flag               Pane mouse button flag
+     mouse_standard_flag             Pane mouse standard flag
+     mouse_utf8_flag                 Pane mouse UTF-8 flag
+     pane_active                     1 if active pane
+     pane_current_command            Current command if available
+     pane_current_path               Current path if available
+     pane_dead                       1 if pane is dead
+     pane_height                     Height of pane
+     pane_id                #D       Unique pane ID
+     pane_in_mode                    If pane is in a mode
+     pane_synchronized               If pane is synchronized
+     pane_index             #P       Index of pane
+     pane_pid                        PID of first process in pane
+     pane_start_command              Command pane started with
+     pane_start_path                 Path pane started with
+     pane_tabs                       Pane tab positions
+     pane_title             #T       Title of pane
+     pane_tty                        Pseudo terminal of pane
+     pane_width                      Width of pane
+     saved_cursor_x                  Saved cursor X in pane
+     saved_cursor_y                  Saved cursor Y in pane
+     scroll_region_lower             Bottom of scroll region in pane
+     scroll_region_upper             Top of scroll region in pane
+     session_attached                1 if session attached
+     session_created                 Integer time session created
+     session_created_string          String time session created
+     session_group                   Number of session group
+     session_grouped                 1 if session in a group
+     session_height                  Height of session
+     session_id                      Unique session ID
+     session_name           #S       Name of session
+     session_width                   Width of session
+     session_windows                 Number of windows in session
+     window_active                   1 if window active
+     window_activity_flag            1 if window has activity alert
+     window_bell_flag                1 if window has bell
+     window_content_flag             1 if window has content alert
+     window_find_matches             Matched data from the find-window
+     window_flags           #F       Window flags
+     window_height                   Height of window
+     window_id                       Unique window ID
+     window_index           #I       Index of window
+     window_layout                   Window layout description
+     window_name            #W       Name of window
+     window_panes                    Number of panes in window
+     window_silence_flag             1 if window has silence alert
+     window_width                    Width of window
+     wrap_flag                       Pane wrap flag
+
+1mNAMES AND TITLES0m
+     1mtmux 22mdistinguishes between names and titles.  Windows and sessions have
+     names, which may be used to specify them in targets and are displayed in
+     the status line and various lists: the name is the 1mtmux 22midentifier for a
+     window or session.  Only panes have titles.  A pane's title is typically
+     set by the program running inside the pane and is not modified by 1mtmux22m.
+     It is the same mechanism used to set for example the xterm(1) window
+     title in an X(7) window manager.  Windows themselves do not have titles -
+     a window's title is the title of its active pane.  1mtmux 22mitself may set
+     the title of the terminal in which the client is running, see the
+     1mset-titles 22moption.
+
+     A session's name is set with the 1mnew-session 22mand 1mrename-session 22mcommands.
+     A window's name is set with one of:
+
+     1.      A command argument (such as 1m-n 22mfor 1mnew-window 22mor 1mnew-session22m).
+
+     2.      An escape sequence:
+
+                   $ printf '\033kWINDOW_NAME\033\\'
+
+     3.      Automatic renaming, which sets the name to the active command in
+             the window's active pane.  See the 1mautomatic-rename 22moption.
+
+     When a pane is first created, its title is the hostname.  A pane's title
+     can be set via the OSC title setting sequence, for example:
+
+           $ printf '\033]2;My Title\033\\'
+
+1mENVIRONMENT0m
+     When the server is started, 1mtmux 22mcopies the environment into the 4mglobal0m
+     4menvironment24m; in addition, each session has a 4msession24m 4menvironment24m.  When a
+     window is created, the session and global environments are merged.  If a
+     variable exists in both, the value from the session environment is used.
+     The result is the initial environment passed to the new process.
+
+     The 1mupdate-environment 22msession option may be used to update the session
+     environment from the client when a new session is created or an old reat-
+     tached.  1mtmux 22malso initialises the TMUX variable with some internal
+     information to allow commands to be executed from inside, and the TERM
+     variable with the correct terminal setting of `screen'.
+
+     Commands to alter and view the environment are:
+
+     1mset-environment 22m[1m-gru22m] [1m-t 4m22mtarget-session24m] 4mname24m [4mvalue24m]
+                   (alias: 1msetenv22m)
+             Set or unset an environment variable.  If 1m-g 22mis used, the change
+             is made in the global environment; otherwise, it is applied to
+             the session environment for 4mtarget-session24m.  The 1m-u 22mflag unsets a
+             variable.  1m-r 22mindicates the variable is to be removed from the
+             environment before starting a new process.
+
+     1mshow-environment 22m[1m-g22m] [1m-t 4m22mtarget-session24m] [4mvariable24m]
+                   (alias: 1mshowenv22m)
+             Display the environment for 4mtarget-session24m or the global environ-
+             ment with 1m-g22m.  If 4mvariable24m is omitted, all variables are shown.
+             Variables removed from the environment are prefixed with `-'.
+
+1mSTATUS LINE0m
+     1mtmux 22mincludes an optional status line which is displayed in the bottom
+     line of each terminal.  By default, the status line is enabled (it may be
+     disabled with the 1mstatus 22msession option) and contains, from left-to-
+     right: the name of the current session in square brackets; the window
+     list; the title of the active pane in double quotes; and the time and
+     date.
+
+     The status line is made of three parts: configurable left and right sec-
+     tions (which may contain dynamic content such as the time or output from
+     a shell command, see the 1mstatus-left22m, 1mstatus-left-length22m, 1mstatus-right22m,
+     and 1mstatus-right-length 22moptions below), and a central window list.  By
+     default, the window list shows the index, name and (if any) flag of the
+     windows present in the current session in ascending numerical order.  It
+     may be customised with the 4mwindow-status-format24m and
+     4mwindow-status-current-format24m options.  The flag is one of the following
+     symbols appended to the window name:
+
+           1mSymbol    Meaning0m
+           *         Denotes the current window.
+           -         Marks the last window (previously selected).
+           #         Window is monitored and activity has been detected.
+           !         A bell has occurred in the window.
+           +         Window is monitored for content and it has appeared.
+           ~         The window has been silent for the monitor-silence
+                                interval.
+           Z         The window's active pane is zoomed.
+
+     The # symbol relates to the 1mmonitor-activity 22mand + to the 1mmonitor-content0m
+     window options.  The window name is printed in inverted colours if an
+     alert (bell, activity or content) is present.
+
+     The colour and attributes of the status line may be configured, the
+     entire status line using the 1mstatus-style 22msession option and individual
+     windows using the 1mwindow-status-style 22mwindow option.
+
+     The status line is automatically refreshed at interval if it has changed,
+     the interval may be controlled with the 1mstatus-interval 22msession option.
+
+     Commands related to the status line are as follows:
+
+     1mcommand-prompt 22m[1m-I 4m22minputs24m] [1m-p 4m22mprompts24m] [1m-t 4m22mtarget-client24m] [4mtemplate24m]
+             Open the command prompt in a client.  This may be used from
+             inside 1mtmux 22mto execute commands interactively.
+
+             If 4mtemplate24m is specified, it is used as the command.  If present,
+             1m-I 22mis a comma-separated list of the initial text for each prompt.
+             If 1m-p 22mis given, 4mprompts24m is a comma-separated list of prompts
+             which are displayed in order; otherwise a single prompt is dis-
+             played, constructed from 4mtemplate24m if it is present, or `:' if
+             not.
+
+             Both 4minputs24m and 4mprompts24m may contain the special character
+             sequences supported by the 1mstatus-left 22moption.
+
+             Before the command is executed, the first occurrence of the
+             string `%%' and all occurrences of `%1' are replaced by the
+             response to the first prompt, the second `%%' and all `%2' are
+             replaced with the response to the second prompt, and so on for
+             further prompts.  Up to nine prompt responses may be replaced
+             (`%1' to `%9').
+
+     1mconfirm-before 22m[1m-p 4m22mprompt24m] [1m-t 4m22mtarget-client24m] 4mcommand0m
+                   (alias: 1mconfirm22m)
+             Ask for confirmation before executing 4mcommand24m.  If 1m-p 22mis given,
+             4mprompt24m is the prompt to display; otherwise a prompt is con-
+             structed from 4mcommand24m.  It may contain the special character
+             sequences supported by the 1mstatus-left 22moption.
+
+             This command works only from inside 1mtmux22m.
+
+     1mdisplay-message 22m[1m-p22m] [1m-c 4m22mtarget-client24m] [1m-t 4m22mtarget-pane24m] [4mmessage24m]
+                   (alias: 1mdisplay22m)
+             Display a message.  If 1m-p 22mis given, the output is printed to std-
+             out, otherwise it is displayed in the 4mtarget-client24m status line.
+             The format of 4mmessage24m is described in the 4mFORMATS24m section; infor-
+             mation is taken from 4mtarget-pane24m if 1m-t 22mis given, otherwise the
+             active pane for the session attached to 4mtarget-client24m.
+
+1mBUFFERS0m
+     1mtmux 22mmaintains a stack of 4mpaste24m 4mbuffers24m.  Up to the value of the
+     1mbuffer-limit 22moption are kept; when a new buffer is added, the buffer at
+     the bottom of the stack is removed.  Buffers may be added using 1mcopy-mode0m
+     or the 1mset-buffer 22mcommand, and pasted into a window using the
+     1mpaste-buffer 22mcommand.
+
+     A configurable history buffer is also maintained for each window.  By
+     default, up to 2000 lines are kept; this can be altered with the
+     1mhistory-limit 22moption (see the 1mset-option 22mcommand above).
+
+     The buffer commands are as follows:
+
+     1mchoose-buffer 22m[1m-F 4m22mformat24m] [1m-t 4m22mtarget-window24m] [4mtemplate24m]
+             Put a window into buffer choice mode, where a buffer may be cho-
+             sen interactively from a list.  After a buffer is selected, `%%'
+             is replaced by the buffer index in 4mtemplate24m and the result exe-
+             cuted as a command.  If 4mtemplate24m is not given, "paste-buffer -b
+             '%%'" is used.  For the meaning of the 1m-F 22mflag, see the 4mFORMATS0m
+             section.  This command works only if at least one client is
+             attached.
+
+     1mclear-history 22m[1m-t 4m22mtarget-pane24m]
+                   (alias: 1mclearhist22m)
+             Remove and free the history for the specified pane.
+
+     1mdelete-buffer 22m[1m-b 4m22mbuffer-index24m]
+                   (alias: 1mdeleteb22m)
+             Delete the buffer at 4mbuffer-index24m, or the top buffer if not spec-
+             ified.
+
+     1mlist-buffers 22m[1m-F 4m22mformat24m]
+                   (alias: 1mlsb22m)
+             List the global buffers.  For the meaning of the 1m-F 22mflag, see the
+             4mFORMATS24m section.
+
+     1mload-buffer 22m[1m-b 4m22mbuffer-index24m] 4mpath0m
+                   (alias: 1mloadb22m)
+             Load the contents of the specified paste buffer from 4mpath24m.
+
+     1mpaste-buffer 22m[1m-dpr22m] [1m-b 4m22mbuffer-index24m] [1m-s 4m22mseparator24m] [1m-t 4m22mtarget-pane24m]
+                   (alias: 1mpasteb22m)
+             Insert the contents of a paste buffer into the specified pane.
+             If not specified, paste into the current one.  With 1m-d22m, also
+             delete the paste buffer from the stack.  When output, any line-
+             feed (LF) characters in the paste buffer are replaced with a sep-
+             arator, by default carriage return (CR).  A custom separator may
+             be specified using the 1m-s 22mflag.  The 1m-r 22mflag means to do no
+             replacement (equivalent to a separator of LF).  If 1m-p 22mis speci-
+             fied, paste bracket control codes are inserted around the buffer
+             if the application has requested bracketed paste mode.
+
+     1msave-buffer 22m[1m-a22m] [1m-b 4m22mbuffer-index24m] 4mpath0m
+                   (alias: 1msaveb22m)
+             Save the contents of the specified paste buffer to 4mpath24m.  The 1m-a0m
+             option appends to rather than overwriting the file.
+
+     1mset-buffer 22m[1m-b 4m22mbuffer-index24m] 4mdata0m
+                   (alias: 1msetb22m)
+             Set the contents of the specified buffer to 4mdata24m.
+
+     1mshow-buffer 22m[1m-b 4m22mbuffer-index24m]
+                   (alias: 1mshowb22m)
+             Display the contents of the specified buffer.
+
+1mMISCELLANEOUS0m
+     Miscellaneous commands are as follows:
+
+     1mclock-mode 22m[1m-t 4m22mtarget-pane24m]
+             Display a large clock.
+
+     1mif-shell 22m[1m-b22m] [1m-t 4m22mtarget-pane24m] 4mshell-command24m 4mcommand24m [4mcommand24m]
+                   (alias: 1mif22m)
+             Execute the first 4mcommand24m if 4mshell-command24m returns success or the
+             second 4mcommand24m otherwise.  Before being executed, shell-command
+             is expanded using the rules specified in the 4mFORMATS24m section,
+             including those relevant to 4mtarget-pane24m.  With 1m-b22m, 4mshell-command0m
+             is run in the background.
+
+     1mlock-server0m
+                   (alias: 1mlock22m)
+             Lock each client individually by running the command specified by
+             the 1mlock-command 22moption.
+
+     1mrun-shell 22m[1m-b22m] [1m-t 4m22mtarget-pane24m] 4mshell-command0m
+                   (alias: 1mrun22m)
+             Execute 4mshell-command24m in the background without creating a win-
+             dow.  Before being executed, shell-command is expanded using the
+             rules specified in the 4mFORMATS24m section.  With 1m-b22m, the command is
+             run in the background.  After it finishes, any output to stdout
+             is displayed in copy mode (in the pane specified by 1m-t 22mor the
+             current pane if omitted).  If the command doesn't return success,
+             the exit status is also displayed.
+
+     1mwait-for 22m[1m-L 22m| 1m-S 22m| 1m-U22m] 4mchannel0m
+                   (alias: 1mwait22m)
+             When used without options, prevents the client from exiting until
+             woken using 1mwait-for -S 22mwith the same channel.  When 1m-L 22mis used,
+             the channel is locked and any clients that try to lock the same
+             channel are made to wait until the channel is unlocked with
+             1mwait-for -U22m.  This command only works from outside 1mtmux22m.
+
+1mTERMINFO EXTENSIONS0m
+     1mtmux 22munderstands some extensions to terminfo(5):
+
+     4mCs24m, 4mCr24m  Set the cursor colour.  The first takes a single string argument
+             and is used to set the colour; the second takes no arguments and
+             restores the default cursor colour.  If set, a sequence such as
+             this may be used to change the cursor colour from inside 1mtmux22m:
+
+                   $ printf '\033]12;red\033\\'
+
+     4mSs24m, 4mSe24m  Change the cursor style.  If set, a sequence such as this may be
+             used to change the cursor to an underline:
+
+                   $ printf '\033[4 q'
+
+             If 4mCsr24m is set, it will be used to reset the cursor style instead
+             of 4mCs24m.
+
+     4mMs24m      This sequence can be used by 1mtmux 22mto store the current buffer in
+             the host terminal's selection (clipboard).  See the 4mset-clipboard0m
+             option above and the xterm(1) man page.
+
+1mCONTROL MODE0m
+     1mtmux 22moffers a textual interface called 4mcontrol24m 4mmode24m.  This allows appli-
+     cations to communicate with 1mtmux 22musing a simple text-only protocol.
+
+     In control mode, a client sends 1mtmux 22mcommands or command sequences termi-
+     nated by newlines on standard input.  Each command will produce one block
+     of output on standard output.  An output block consists of a 4m%begin24m line
+     followed by the output (which may be empty).  The output block ends with
+     a 4m%end24m or 4m%error24m.  4m%begin24m and matching 4m%end24m or 4m%error24m have two arguments:
+     an integer time (as seconds from epoch) and command number.  For example:
+
+           %begin 1363006971 2
+           0: ksh* (1 panes) [80x24] [layout b25f,80x24,0,0,2] @2 (active)
+           %end 1363006971 2
+
+     In control mode, 1mtmux 22moutputs notifications.  A notification will never
+     occur inside an output block.
+
+     The following notifications are defined:
+
+     1m%exit 22m[4mreason24m]
+             The 1mtmux 22mclient is exiting immediately, either because it is not
+             attached to any session or an error occurred.  If present, 4mreason0m
+             describes why the client exited.
+
+     1m%layout-change 4m22mwindow-id24m 4mwindow-layout0m
+             The layout of a window with ID 4mwindow-id24m changed.  The new layout
+             is 4mwindow-layout24m.
+
+     1m%output 4m22mpane-id24m 4mvalue0m
+             A window pane produced output.  4mvalue24m escapes non-printable char-
+             acters and backslash as octal \xxx.
+
+     1m%session-changed 4m22msession-id24m 4mname0m
+             The client is now attached to the session with ID 4msession-id24m,
+             which is named 4mname24m.
+
+     1m%session-renamed 4m22mname0m
+             The current session was renamed to 4mname24m.
+
+     1m%sessions-changed0m
+             A session was created or destroyed.
+
+     1m%unlinked-window-add 4m22mwindow-id0m
+             The window with ID 4mwindow-id24m was created but is not linked to the
+             current session.
+
+     1m%window-add 4m22mwindow-id0m
+             The window with ID 4mwindow-id24m was linked to the current session.
+
+     1m%window-close 4m22mwindow-id0m
+             The window with ID 4mwindow-id24m closed.
+
+     1m%window-renamed 4m22mwindow-id24m 4mname0m
+             The window with ID 4mwindow-id24m was renamed to 4mname24m.
+
+1mFILES0m
+     ~/.tmux.conf               Default 1mtmux 22mconfiguration file.
+     @SYSCONFDIR@/tmux.conf     System-wide configuration file.
+
+1mEXAMPLES0m
+     To create a new 1mtmux 22msession running vi(1):
+
+           $ tmux new-session vi
+
+     Most commands have a shorter form, known as an alias.  For new-session,
+     this is 1mnew22m:
+
+           $ tmux new vi
+
+     Alternatively, the shortest unambiguous form of a command is accepted.
+     If there are several options, they are listed:
+
+           $ tmux n
+           ambiguous command: n, could be: new-session, new-window, next-window
+
+     Within an active session, a new window may be created by typing `C-b c'
+     (Ctrl followed by the `b' key followed by the `c' key).
+
+     Windows may be navigated with: `C-b 0' (to select window 0), `C-b 1' (to
+     select window 1), and so on; `C-b n' to select the next window; and `C-b
+     p' to select the previous window.
+
+     A session may be detached using `C-b d' (or by an external event such as
+     ssh(1) disconnection) and reattached with:
+
+           $ tmux attach-session
+
+     Typing `C-b ?' lists the current key bindings in the current window; up
+     and down may be used to navigate the list or `q' to exit from it.
+
+     Commands to be run when the 1mtmux 22mserver is started may be placed in the
+     4m~/.tmux.conf24m configuration file.  Common examples include:
+
+     Changing the default prefix key:
+
+           set-option -g prefix C-a
+           unbind-key C-b
+           bind-key C-a send-prefix
+
+     Turning the status line off, or changing its colour:
+
+           set-option -g status off
+           set-option -g status-style bg=blue
+
+     Setting other options, such as the default command, or locking after 30
+     minutes of inactivity:
+
+           set-option -g default-command "exec /bin/ksh"
+           set-option -g lock-after-time 1800
+
+     Creating new key bindings:
+
+           bind-key b set-option status
+           bind-key / command-prompt "split-window 'exec man %%'"
+           bind-key S command-prompt "new-window -n %1 'ssh %1'"
+
+1mSEE ALSO0m
+     pty(4)
+
+1mAUTHORS0m
+     Nicholas Marriott <4mnicm@users.sourceforge.net24m>
+
+FreeBSD 11.0                   November 6, 2015                   FreeBSD 11.0
