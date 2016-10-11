@@ -1,5 +1,0 @@
-# Chapter 1
-Hello, world!
-
-
-%% vim: set ft=markdown:
