@@ -14,32 +14,33 @@ Then open up Command Prompt as you normally would (Run cli.exe). Then type
 
 It will prompt you to agree to terms, create a user. In my build, tmux was already installed! But if it's not, type `sudo apt-get install tmux`.
 
-{width=50%}
+{width=50%,float=left}
 ![Find Turn Windows Features on or off](images/99-windows-bash/01-turn-features-onoff.jpg)
-{width=50%}
+
+{width=50%,float=left}
 ![Check Windows Sybsystem for Linux (Beta)](images/99-windows-bash/02-turn-features-onoff-check.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![Windows completed the requested changes. Restart](images/99-windows-bash/03-turn-features-restart.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![Use Developer features](images/99-windows-bash/04-developer-mode.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![Select Developer mode in Update & Security](images/99-windows-bash/05-developer-mode-check.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![Installing Ubuntu from Windows Store](images/99-windows-bash/06-install-ubuntu.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![Create Linux user](images/99-windows-bash/07-create-user.jpg)
 
-{width=50%}
+{width=50%,float=left}
 ![In bash!](images/99-windows-bash/08-bash.jpg)
 
     yourusername@COMPUTERNAME-ID321FJ:/mnt/c/Users/username$ tmux
 
-{width=50%}
+{width=50%,float=left}
 ![In tmux!](images/99-windows-bash/09-tmux.jpg)
 
 [^win10bashbuild]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
