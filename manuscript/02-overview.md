@@ -22,9 +22,6 @@ the text dimension. Inside tmux you can:
 
 ## Thinking in tmux
 
-Text-based window manager
--------------------------
-
 |**tmux**               |**"Desktop"-Speak**       |**Plain English**                 |
 |-------------------|----------------------|------------------------------|
 |Multiplexer        |Multi-tasking         |Multiple applications         |
