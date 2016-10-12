@@ -74,8 +74,6 @@ Then open up Command Prompt as you normally would (Run cli.exe). Then type
 
 It will prompt you to agree to terms, create a user. In my build, tmux was already installed! But if it's not, type `sudo apt-get install tmux`.
 
-![Prompt to agree to terms and install Ubuntu on Windows](images/windows_bash/.png)
-
 For more a more detailed instruction with screenshots, check out the [Windows 10 tmux installation](#appendix-windows-bash)
 
 [^win10bashbuild]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
