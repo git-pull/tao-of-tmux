@@ -32,4 +32,4 @@ A lot of books tend to use this as filler. For me it's more of not wanting to le
 
 For special circumstances like Windows 10, I opted that going so far as adding screenshots since a fair share may be more comfortable by a visual approach.
 
-[^screen]: GNU Screen (screen) is a terminal multiplexer that allows detaching (sending applications to the background) and reattaching (resuming the background applications). It predates tmux. Some still prefer screen to tmux. The official website is at https://www.gnu.org/software/screen/.
+[^screen]: GNU Screen (screen) is a terminal multiplexer that allows detaching (sending applications to the background) and reattaching (returning the background applications to the foreground). It predates tmux. Some still prefer screen to tmux. The official website is at https://www.gnu.org/software/screen/.
