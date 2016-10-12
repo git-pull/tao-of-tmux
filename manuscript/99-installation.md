@@ -1,4 +1,4 @@
-# Appendix: Installing tmux
+# Appendix: Installing tmux {#appendix-installation}
 
 ## MacOS / OS X
 
