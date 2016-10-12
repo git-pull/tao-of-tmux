@@ -1,4 +1,4 @@
-## Appendix: tmux on Windows 10 {#appendix-windows-bash}
+# Appendix: tmux on Windows 10 {#appendix-windows-bash}
 
 ![Find Turn Windows Features on or off](images/99-windows-bash/01-turn-features-onoff.jpg)
 ![Check Windows Sybsystem for Linux (Beta)](images/99-windows-bash/02-turn-features-onoff-check.jpg)
