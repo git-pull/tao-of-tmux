@@ -1,10 +1,4 @@
-# Installation and System Requirements
-
-If you're a sysadmin or already have tmux installed on your machine, skip this chapter, as it's intended for absolute beginners.
-
-## System Requirements
-
-tmux is designed to run on Linux, BSD and OS X.
+# Appendix: Installing tmux
 
 ## MacOS / OS X
 
