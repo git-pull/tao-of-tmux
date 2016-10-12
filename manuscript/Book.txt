@@ -1,2 +1,2 @@
-forward.txt
-chapter1.txt
+forward.md
+chapter1.md
