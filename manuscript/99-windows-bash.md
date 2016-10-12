@@ -18,16 +18,22 @@ It will prompt you to agree to terms, create a user. In my build, tmux was alrea
 ![Find Turn Windows Features on or off](images/99-windows-bash/01-turn-features-onoff.jpg)
 {width=50%}
 ![Check Windows Sybsystem for Linux (Beta)](images/99-windows-bash/02-turn-features-onoff-check.jpg)
+
 {width=50%}
 ![Windows completed the requested changes. Restart](images/99-windows-bash/03-turn-features-restart.jpg)
+
 {width=50%}
 ![Use Developer features](images/99-windows-bash/04-developer-mode.jpg)
+
 {width=50%}
 ![Select Developer mode in Update & Security](images/99-windows-bash/05-developer-mode-check.jpg)
+
 {width=50%}
 ![Installing Ubuntu from Windows Store](images/99-windows-bash/06-install-ubuntu.jpg)
+
 {width=50%}
 ![Create Linux user](images/99-windows-bash/07-create-user.jpg)
+
 {width=50%}
 ![In bash!](images/99-windows-bash/08-bash.jpg)
 
