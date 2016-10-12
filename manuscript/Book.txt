@@ -1,4 +1,7 @@
+{frontmatter}
 00-forward.md
+
+{mainmatter}
 01-installation.md
 02-overview.md
 03-practical-usage.md
@@ -9,3 +12,6 @@
 08-pane.md
 09-configuration.md
 10-recipes.md
+
+{backmatter}
+99-windows-bash.md
