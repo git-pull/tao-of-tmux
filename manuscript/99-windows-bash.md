@@ -26,21 +26,21 @@ It will prompt you to agree to terms, create a user. In my build, tmux was alrea
 {width=50%,float=left}
 ![Use Developer features](images/99-windows-bash/04-developer-mode.jpg)
 
-{width=75%,float=left}
+{width=100%,float=left}
 ![Select Developer mode in Update & Security](images/99-windows-bash/05-developer-mode-check.jpg)
 
-{width=75%,float=left}
+{width=100%,float=left}
 ![Installing Ubuntu from Windows Store](images/99-windows-bash/06-install-ubuntu.jpg)
 
-{width=75%,float=left}
+{width=100%,float=left}
 ![Create Linux user](images/99-windows-bash/07-create-user.jpg)
 
-{width=75%,float=left}
+{width=100%,float=left}
 ![In bash!](images/99-windows-bash/08-bash.jpg)
 
     yourusername@COMPUTERNAME-ID321FJ:/mnt/c/Users/username$ tmux
 
-{width=75%,float=left}
+{width=100%,float=left}
 ![In tmux!](images/99-windows-bash/09-tmux.jpg)
 
 [^win10bashbuild]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
