@@ -2,7 +2,6 @@
 00-forward.md
 
 {mainmatter}
-01-installation.md
 02-overview.md
 03-practical-usage.md
 04-technical-stuff.md
@@ -14,5 +13,5 @@
 10-recipes.md
 
 {backmatter}
-# Appendix
+99-installation.md
 99-windows-bash.md
