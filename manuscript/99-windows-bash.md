@@ -11,4 +11,4 @@
 
     yourusername@COMPUTERNAME-ID321FJ:/mnt/c/Users/username$ tmux
 
-![In tmux!](images/09-tmux.jpg)
+![In tmux!](images/99-windows-bash/09-tmux.jpg)
