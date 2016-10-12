@@ -1,4 +1,4 @@
-# Overview
+# Thinking in tmux
 
 tmux is geared for developers and admins who interact regularly with
 CLI (text-only interfaces)
@@ -18,9 +18,6 @@ the text dimension. Inside tmux you can:
 - have multiple command lines (pane) in the same window
 - have multiple windows (window) in the workspace (session)
 - switch between multiple workspaces, like virtual desktops
-
-
-## Thinking in tmux
 
 |**tmux**               |**"Desktop"-Speak**       |**Plain English**                 |
 |-------------------|----------------------|------------------------------|
