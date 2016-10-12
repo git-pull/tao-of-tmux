@@ -22,6 +22,8 @@ That said, I do attach it to my life. I am writing this from vim in a tmux pane,
 
 As for me, I like to write like I'm write next to you or in a class.
 
+A word to absolute beginners, do not feel like you need to grasps the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiousities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
+
 ## How this book is structured
 
 First, anything involving installation and hard technical details are in the appendix.
