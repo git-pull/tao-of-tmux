@@ -52,13 +52,13 @@ tmux is designed to run on Linux, BSD and OS X.
 
 ### OpenBSD
 
-As of OpenBSD 4.6, tmux is part of the base system[^openbsd 4.7].
+As of OpenBSD 4.6, tmux is part of the base system[^openbsd47].
 
 If you are using an earlier version:
 
     # pkg_add tmux
 
-[^openbsd 4.7]: https://www.openbsd.org/46.html
+[^openbsd47]: https://www.openbsd.org/46.html
 
 ### NetBSD
 
@@ -66,6 +66,6 @@ If you are using an earlier version:
 
 ## Windows 10
 
-Yes, as of Windows 10 build 14361 [^windows 10 build 14361] you can run tmux via the Linux Subsystem feature.
+Yes, as of Windows 10 build 14361 [^win10bashbuild] you can run tmux via the Linux Subsystem feature.
 
-[^windows 10 build 14361]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
+[^win10bashbuild]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
