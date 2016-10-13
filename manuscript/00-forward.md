@@ -6,21 +6,21 @@ Despite our home computers sleeping or being off, our username's in the channel 
 
 Funnily, even though we knew each other by our real names, we sometimes opted to call each other by our nicks. It's something about how the personal relationships, formed completely through text, persist.
 
-It seemed as if it were orchestrated, but each of us fell into the same ebb and flow of operating our lives. No one told us to do it, but inch by inch we made optimizations to our lifestyle personally and professionally that felt eerily alike.
+It seemed as if it were orchestrated, but each of us fell into the same ebb and flow of operating our lives. No one told us to do it, but inch by inch we incrementally optimized to our lifestyle personally and professionally that felt eerily alike.
 
 Like many things in life, when we act on autopilot, we sometimes arrive at similar destinations. This is often completely unplanned.
 
-So when I go off and write a technical book on a computer application, I hope to right it for human beings. Not to sell you on tmux, not to make you like it, or hate it, but to tell you what it is, how some use it, but leave the rest up to you.
+So when I go off and write a technical book on a computer application, I hope to write it for human beings. Not to sell you on tmux, not to make you like it, or hate it, but to tell you what it is, how some use it and leave the rest up to you.
 
 ## About this book
 
 You do not need a book to use or understand tmux. But if there is a book, let this be the one.
 
-I don't like to give a slipshod effort. But tmux to me is a tool I find incredible use with, but I don't attach it to my identity.
+I don't like to give a slipshod effort. if I'm going to take the time to write a book, I'm giving it 100% of my effort.
 
-That said, I do attach it to my life. I am writing this from vim in a tmux pane, inside a window, in a session, on the server, through a client.  It's not that I don't care about accuracy, but if you want a technical manual, the manpage for tmux is quite sufficient in this regard.
+tmux to me is a tool I find incredible use with, while I don't attach it to my identity, it's been part of my daily life for years. I've helped thousands of people learn tmux through my free resource under the same name The Tao of tmux[^taooftmux], written a popular starter configuration [^startconfig], a python library [^libtmux] and a session manager [^tmuxp]. You'd think I'm trying to build this big thing around tmux, in reality, it's just that useful.
 
-As for me, I like to write like I'm write next to you or in a class.
+I am writing this from vim in a tmux pane, inside a window, in a session, on the server, through a client.  It's not that I don't care about accuracy, but if you want a technical manual, the manpage for tmux is quite sufficient in this regard.
 
 A word to absolute beginners, do not feel like you need to grasps the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiousities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
 
