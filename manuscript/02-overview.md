@@ -11,6 +11,8 @@ In the world of computers, there are 2 realms:
 Tmux resides in the text realm. This is about fixed-width fonts and that
 old fashioned black terminal.
 
+## So what does tmux help me do in the terminal?
+
 tmux is to the console what a desktop is to gui apps. It's a world inside
 the text dimension. Inside tmux you can:
 
