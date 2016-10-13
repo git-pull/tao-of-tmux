@@ -18,7 +18,7 @@ You do not need a book to use or understand tmux. But if there is a book, let th
 
 I don't like to give a slipshod effort. if I'm going to take the time to write a book, I'm giving it 100% of my effort.
 
-tmux to me is a tool I find incredible use with, while I don't attach it to my identity, it's been part of my daily life for years. I've helped thousands of people learn tmux through my free resource under the same name The Tao of tmux[^taooftmux], written a popular starter configuration [^startconfig], a python library [^libtmux] and a session manager [^tmuxp]. You'd think I'm trying to build this big thing around tmux, in reality, it's just that useful.
+tmux to me is a tool I find incredible use with, while I don't attach it to my identity, it's been part of my daily life for years. I've helped thousands of people learn tmux through my free resource under the same name The Tao of tmux[^taooftmux], written a popular starter configuration [^tmuxconfig], a python library [^libtmux] and a session manager [^tmuxp]. You'd think I'm trying to build this big thing around tmux, in reality, it's just that useful.
 
 I am writing this from vim in a tmux pane, inside a window, in a session, on the server, through a client.  It's not that I don't care about accuracy, but if you want a technical manual, the manpage for tmux is quite sufficient in this regard.
 
@@ -33,3 +33,7 @@ A lot of books tend to use this as filler. For me it's more of not wanting to le
 For special circumstances like Windows 10, I opted that going so far as adding screenshots since a fair share may be more comfortable by a visual approach.
 
 [^screen]: GNU Screen (screen) is a terminal multiplexer that allows detaching (sending applications to the background) and reattaching (returning the background applications to the foreground). It predates tmux. Some still prefer screen to tmux. The official website is at https://www.gnu.org/software/screen/.
+[^tmuxconfig]: https://github.com/tony/tmux-config
+[^taooftmux]: https://tmuxp.readthedocs.io/en/latest/about_tmux.html
+[^tmuxp]: https://github.com/tony/tmuxp
+[^libtmux]: https://github.com/tony/libtmux
