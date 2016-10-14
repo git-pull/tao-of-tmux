@@ -25,19 +25,18 @@ POSIX Make has no conditionals?
 
 I'm not saying this to take a run at purists, as I'm someone who tries to remain
 as compatible as possible in my scripting, it gets very hard to do simple
-things after a while. On FreeBSD, the default Make uses dots between
-conditionals:
+things after a while. On FreeBSD, the default Make (PMake)[^PMake] uses dots
+between conditionals:
 
     .IF
 
     .ENDIF
 
-But on most Linux systems and MacOS, Bash is often the default shell
-interpreter, so they get to do:
+But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
     IF
 
-    ENDIF
+    ENDIF 
 
 ## Terminal interface
 
@@ -45,7 +44,7 @@ The terminal interface can be best introduced by stating their is an official
 specification laying out its technical properties, interfaces and
 responsibilities [^opengroup-terminalinterface].
 
-
+[^PMake]: https://www.freebsd.org/doc/en_US.ISO8859-1/books/pmake/
 [^opengroup-terminalinterface]: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html
 [^posix-compliant-wikipedia]: https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant
 
