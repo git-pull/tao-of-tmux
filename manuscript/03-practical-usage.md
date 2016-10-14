@@ -6,15 +6,20 @@ This is the easiest part, open up your terminal and type `tmux`, hit enter.
 
 You're in tmux.
 
-## The leader key / prefix
+## The prefix key
 
-The leader key is how we send commands into tmux. With this, we can split windows, move windows, switch windows, switch sessions, send in custom commands, you name it.
+The *prefix* is how we send commands into tmux. With this, we can split windows, move windows, switch windows, switch sessions, send in custom commands, you name it.
 
-And its a hump we have to get over. Without you understanding how to send `command sequences` to tmux, you'll pretty much be dead in the water.
+And its a hump we have to get over. 
 
-So the default leader prefix is `<Ctrl-b>`. So that's holding down the `control` key, then `b`.
+When I was a kid, there was a video game (depending on your generation you may know it) called Sonic 3. One of the carnival levels had this ridiculous section
+where you could only get passed if you motioned your controller in a special fashion.
 
-Q> ## Customizing your prefix key / Coming from ``GNU Screen``?
+That's kind of like what the prefix key in tmux is like. Without you understanding how to send `command sequences` to tmux, you'll pretty much be dead in the water.
+
+And the same will also end up coming up in later cases if you use Vim or Emacs and many TUI (Terminal User Interface) applications.
+
+Q> ### Coming from ``GNU Screen``?
 Q>
 Q> Your tmux prefix key can be set via your tmux configuration later on!  In your
 Q> `~/.tmux.conf` file, set the `prefix` option:
@@ -23,22 +28,28 @@ Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal multiplexer's)
 Q> prefix key.
 
-Try that.
+So the default leader prefix is `<Ctrl-b>`. So that's holding down the `control` key, then `b`.
 
-1. Press `control` key down, and *hold it*.
-2. Press `b`, and hold it.
-3. Release both keys at the same time.
+X> ### Sending tmux commands 
+X> 
+X> Try that.
+X> 
+X> 1. Press `control` key down, and *hold it*.
+X> 2. Press `b`, and hold it.
+X> 3. Release both keys at the same time.
+X>
+X> That's it. Now let's try something:
+X> 
+X> `<Ctrl-b> d`. So,
+X> 
+X> 1. Press `control` key down, and *hold it*.
+X> 2. Press `b`, and hold it.
+X> 3. Release both keys at the same time.
+X> 4. Hit `d`!
+X>
+X> You've just send tmux your first command! And you're back at the plain old terminal now!
 
-That's it. Now let's try something:
-
-`<Ctrl-b> d`. So,
-
-1. Press `control` key down, and *hold it*.
-2. Press `b`, and hold it.
-3. Release both keys at the same time.
-4. Hit `d`!
-
-You've just detached the tmux session you were in.
+You've just detached the tmux session you were in. So let's speak about what just happened.
 
 ## Detaching a tmux session
 
