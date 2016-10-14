@@ -55,17 +55,22 @@ rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
 ## Shell interpreters (Shells)
 
-Examples: POSIX sh, BASH, ZSH, tcsh, ksh, fish
+Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 
 When we speak about "shells", such as the examples below, we're often referring
 to the interpretter.
 
-Plain old shell is based of a standard.
+On most Linux distributions and MacOS, you'll typically be dropped into Bash.
 
-As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01)
+As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
 
-## Shell language
+## Shell languages
 
-http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html
+Each shell interpreter has its own language features. Like with shells themselves,
+many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
+
+You will sometimes see this in `.sh` files, which at their header, 
+
+ZSH and Bash should be able to understand POSIX shell you write.
