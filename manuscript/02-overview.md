@@ -8,7 +8,7 @@ In the world of computers, there are 2 realms:
 1. The text realm
 2. The graphical realm
 
-Tmux resides in the text realm. This is about fixed-width fonts and that
+tmux resides in the text realm. This is about fixed-width fonts and that
 old fashioned black terminal.
 
 ## So what does tmux help me do in the terminal?
