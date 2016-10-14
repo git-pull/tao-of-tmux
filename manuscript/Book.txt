@@ -2,7 +2,8 @@
 00-forward.md
 
 {mainmatter}
-02-overview.md
+01-thinking-tmux.md
+02-terminal-fundamentals.md
 03-practical-usage.md
 04-technical-stuff.md
 05-server.md

@@ -1,17 +1,4 @@
-# Thinking in tmux
-
-tmux is geared for developers and admins who interact regularly with
-CLI (text-only interfaces)
-
-In the world of computers, there are 2 realms:
-
-1. The text realm
-2. The graphical realm
-
-tmux resides in the text realm. This is about fixed-width fonts and that
-old fashioned black terminal.
-
-## Brief aside on the realm of the terminal
+# Terminal fundamentals
 
 Before I get into tmux, there are a few fundamentals of the command line I want
 to run over.
@@ -20,7 +7,7 @@ Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
 and so on, but a fair deal never had a run through of how they interact with
 each other.
 
-### POSIX roots
+## POSIX roots
 
 Operating systems like MacOS (formerly OS X), Linux and the BSD's all of
 something similar[^similar-POSIX] to the POSIX specification in terms of how
@@ -52,7 +39,7 @@ interpreter, so they get to do:
 
     ENDIF
 
-### Terminal interface
+## Terminal interface
 
 The terminal interface can be best introduced by stating their is an official
 specification laying out its technical properties, interfaces and
@@ -62,12 +49,12 @@ responsibilities [^opengroup-terminalinterface].
 [^opengroup-terminalinterface]: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html
 [^posix-compliant-wikipedia]: https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant
 
-### Terminal emulation
+## Terminal emulation
 
 GUI Terminals: Terminal.app, iterm, iterm2, konsole, lxterm, xfce4-terminal,
 rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
-### Shell interpreters (Shells)
+## Shell interpreters (Shells)
 
 Examples: POSIX sh, BASH, ZSH, tcsh, ksh, fish
 
@@ -80,28 +67,6 @@ As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinep
 covers in technical detail the responsibilities of the shell.
 
 
-### Shell language
+## Shell language
 
 http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html
-
-## So what does tmux help me do in the terminal?
-
-tmux is to the console what a desktop is to gui apps. It's a world inside
-the text dimension. Inside tmux you can:
-
-- multitask inside the terminal, run multiple applications.
-- have multiple command lines (pane) in the same window
-- have multiple windows (window) in the workspace (session)
-- switch between multiple workspaces, like virtual desktops
-
-|**tmux**               |**"Desktop"-Speak**       |**Plain English**                 |
-|-------------------|----------------------|------------------------------|
-|Multiplexer        |Multi-tasking         |Multiple applications         |
-|                   |                      |simulataneously.              |
-|-------------------|----------------------|------------------------------|
-|Session            |Desktop               |Applications are visible here |
-|-------------------|----------------------|------------------------------|
-|Window             |Virtual Desktop or    |A desktop that stores it own  |
-|                   |applications          |screen			  |
-|-------------------|----------------------|------------------------------|
-|Pane               |Application           |Performs operations           |
