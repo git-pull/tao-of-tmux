@@ -1,8 +1,8 @@
 # Forward
 
-Pretty much all my friends swear to using tmux. I remember going out at night for drinks and the 3 of us would take a seat at a round table and take our smart phones out. It was the days back when we had mechanical keyboards. All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 3 hours earlier on IRC to get Oleg's car to drive us into the city. 
+Pretty much all my friends swear to using tmux. I remember going out at night for drinks and the 3 of us would take a seat at a round table and take our smart phones out. It was the days back when we had mechanical keyboards. All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 3 hours earlier on IRC to get Oleg's car to drive us into the city.
 
-Despite our home computers sleeping or being off, our username's in the channel persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot into our cloud servers and reattached `screen(1)`[^screen]. Just as it hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames one by one fell off. 
+Despite our home computers sleeping or being off, our username's in the channel persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot into our cloud servers and reattached `screen(1)`[^screen]. Just as it hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames one by one fell off.
 
 Funnily, even though we knew each other by our real names, we sometimes opted to call each other by our nicks. It's something about how the personal relationships, formed completely through text, persist.
 
@@ -22,7 +22,7 @@ tmux to me is a tool I find incredible use with, while I don't attach it to my i
 
 I am writing this from vim in a tmux pane, inside a window, in a session, on the server, through a client.  It's not that I don't care about accuracy, but if you want a technical manual, the manpage for tmux is quite sufficient in this regard.
 
-A word to absolute beginners, do not feel like you need to grasps the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiousities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
+A word to absolute beginners, do not feel like you need to grasps the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiosities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
 
 ## How this book is structured
 
