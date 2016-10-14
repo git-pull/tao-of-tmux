@@ -30,7 +30,7 @@ conditionals:
 
     .IF
 
-    . ENDIF
+    .ENDIF
 
 But on most Linux systems and MacOS, Bash is often the default shell
 interpreter, so they get to do:
