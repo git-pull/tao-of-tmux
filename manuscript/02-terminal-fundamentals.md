@@ -20,13 +20,9 @@ by Linus Åkesson (available online) dives into the TTY and is a good read as we
 ## POSIX roots
 
 Operating systems like MacOS (formerly OS X), Linux and the BSD's all follow
-something similar[^similar-POSIX] to the POSIX specification in terms of how
+something similar to the POSIX specification in terms of how
 they square away various responsibilities and interfaces of the operating
-system.
-
-[^similar-POSIX]: Not all operating systems follow the POSIX standard
-absolutely. What you'll end up finding is that they're categorized as
-["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
+system. They're categorized as ["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
 
 In daily life, we often use systems that break compatibility with POSIX
 standards for sheer reasons of practicality. Operating systems like MacOS will
