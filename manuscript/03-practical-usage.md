@@ -51,6 +51,24 @@ X> You've just send tmux your first command! And you're back at the plain old te
 
 You've just detached the tmux session you were in. So let's speak about what just happened.
 
-## Detaching a tmux session
+## Session persistance and the server model
 
-When you did `<Ctrl-b> d`, 
+If you're familiar with Linux, you may have heard of [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
+such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), `jobs(1)`[^jobs].
+
+This is a similar concept, it feels like you just ran `<ctrl-z>` and sent
+
+except technically you were in a "job" all along, you were just using a client
+to view it.
+
+When you 
+
+When you did `<Ctrl-b> d`, just detached your session.
+
+Your tmux client disconnected from the server instance. The session however is still running
+in the background.
+
+
+
+[^fg]: http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html
+[^jobs]: http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html
