@@ -1,11 +1,20 @@
 # Terminal fundamentals
 
 Before I get into tmux, there are a few fundamentals of the command line I want
-to run over.
+to run over. Often, we're so used to using these out of street smarts and muscle
+memory, a great deal of us never seen a technical relation of where these tools
+stand in relation of one another.
 
 Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
-and so on, but a fair deal never had a run through of how they interact with
-each other.
+shell scripting, and so on. If you use tmux, you'll be around these all the time,
+regardless of whether you're in a GUI on your local machine or ssh'ing into a remote
+server.
+
+I'm not going to go super deep into the technicalities, but if you ever wanted to
+rip into how processes and tty's work at the kernel level (data structures and all)
+I reccomend the book *The Design and Implementation of the FreeBSD Operating System
+(2nd Edition)* by Marshall Kirk McKusick. In particular, Chapter 4, *Process Management*
+and Section 8.6 *Terminal Handling*.
 
 ## POSIX roots
 
