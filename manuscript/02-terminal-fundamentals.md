@@ -22,7 +22,7 @@ interesting and I'd probably could have a coffee / tea with you discussing it fo
 And I could put you on a few tracks, (The C Language, anything from the BSD lineage, etc.)
 and some snob would likely chime in wanting to talk about Linux, GNU and so on. It's
 like *Game of Thrones*, there's a lot characters who all think they're the cornerstone; I
-can't be authoritative, but I can give you info. A few good ones would be
+can't be authoritative, but I can give you info. A few good resources would be
 [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk) by Marshall Kirk
 McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
 by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
