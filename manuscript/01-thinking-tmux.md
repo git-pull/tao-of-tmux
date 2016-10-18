@@ -11,7 +11,7 @@ In the world of computers, there are 2 realms:
 tmux resides in the text realm. This is about fixed-width fonts and that
 old fashioned black terminal.
 
-## So what does tmux help me do in the terminal?
+## a window manager for the terminal
 
 tmux is to the console what a desktop is to gui apps. It's a world inside
 the text dimension. Inside tmux you can:
@@ -32,3 +32,12 @@ the text dimension. Inside tmux you can:
 |                   |applications          |screen			  |
 |-------------------|----------------------|------------------------------|
 |Pane               |Application           |Performs operations           |
+
+## Multitasking
+
+## Keep your applications running in the background
+
+Sometimes in GUI applications, you'll have an option to minimize and application
+to a tray ground.  The application is out of the way, but running in the background.
+
+In tmux, a similar concept exists where we can "detach" a tmux session.
