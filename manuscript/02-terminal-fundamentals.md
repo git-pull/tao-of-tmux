@@ -17,7 +17,18 @@ I recommend the book *The Design and Implementation of the FreeBSD Operating Sys
 and Section 8.6 *Terminal Handling*. [*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
 by Linus Åkesson (available online) dives into the TTY and is a good read as well.
 
-## POSIX roots
+Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. While is is
+interesting and I'd probably could have a coffee / tea with you discussing it for hours.
+And I could put you on a few tracks, (The C Language, anything from the BSD lineage, etc.)
+and some snob would likely chime in wanting to talk about Linux, GNU and so on. It's
+like *Game of Thrones*, there's a lot characters who all think they're the cornerstone; I
+can't be authoritative, but I can give you info. A few good ones would be
+[A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk) by Marshall Kirk
+McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
+by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
+(Video) by Stephen R. Bourne.
+
+## POSIX / POSIX-like motif
 
 Operating systems like MacOS (formerly OS X), Linux and the BSD's all follow
 something similar to the POSIX specification in terms of how
@@ -45,6 +56,9 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
     IF
 
     ENDIF 
+
+So why does it matter? Why do bring it up? You'll see this kind of stuff everywhere.
+So let's separate the common suspects into their respective categorties.
 
 ## Terminal interface
 
