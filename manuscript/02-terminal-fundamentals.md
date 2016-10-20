@@ -18,7 +18,7 @@ and Section 8.6 *Terminal Handling*. [*The TTY demystified*](http://www.linusake
 by Linus Åkesson (available online) dives into the TTY and is a good read as well.
 
 Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. While it is
-interesting and I'd probably could have a coffee / tea with you discussing it for hours.
+interesting and I probably could have a coffee / tea with you discussing it for hours.
 And I could put you on a few tracks, (The C Language, anything from the BSD lineage, etc.)
 and some snob would likely chime in wanting to talk about Linux, GNU and so on. It's
 like *Game of Thrones*, there's a lot characters who all think they're the cornerstone; I
