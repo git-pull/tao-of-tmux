@@ -1,6 +1,6 @@
 # Forward
 
-Pretty much all my friends swear to using tmux. I remember going out at night for drinks and the 3 of us would take a seat at a round table and take our smart phones out. It was the days back when we had mechanical keyboards. All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
+Pretty much all my friends swear to using tmux. I remember going out at night for drinks and the 3 of us would take a seat at a round table and take our smart phones out. It was the days back when phones still had mechanical keyboards. All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
 
 Despite our home computers sleeping or being off, our username's in the channel persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot into our cloud servers and reattached `screen(1)`[^screen]. Just as it hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames one by one fell off.
 
