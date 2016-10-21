@@ -1,3 +1,5 @@
+{mainmatter}
+
 # Thinking in tmux
 
 tmux is geared for developers and admins who interact regularly with
