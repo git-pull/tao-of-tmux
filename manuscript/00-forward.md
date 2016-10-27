@@ -25,7 +25,7 @@ tmux to me is a tool I find incredible use with, while I don't attach it to my i
 
 I am writing this from vim in a tmux pane, inside a window, in a session, on the server, through a client.  It's not that I don't care about accuracy, but if you want a technical manual, the manpage for tmux is quite sufficient in this regard.
 
-A word to absolute beginners, do not feel like you need to grasps the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiosities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
+A word to absolute beginners, do not feel like you need to grasp the concepts of command line and terminal multiplexing in a single sitting. You have the choice of picking out the concepts of tmux that you like according to your needs or curiosities. If you do not have it installed, please view the [Installation section](#appendix-installation) in the Appendix of the book.
 
 ## How this book is structured
 
