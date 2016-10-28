@@ -1,5 +1,4 @@
 00-forward.md
-
 01-thinking-tmux.md
 02-terminal-fundamentals.md
 03-practical-usage.md
@@ -10,6 +9,5 @@
 08-pane.md
 09-configuration.md
 10-recipes.md
-
 99-installation.md
 99-windows-bash.md
