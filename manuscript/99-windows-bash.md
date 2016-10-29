@@ -1,6 +1,6 @@
 # Appendix: tmux on Windows 10 {#appendix-windows-bash}
 
-As of Windows 10 build 14361 [^win10bashbuild] you can run tmux via the Linux Subsystem feature.
+As of Windows 10 build 14361 [you can run tmux](https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/) via the Linux Subsystem feature.
 
 Usage requires enabling **Developer mode** via the "For Developers" tab in the "Update & security" settings.
 
@@ -42,5 +42,3 @@ It will prompt you to agree to terms, create a user. In my build, tmux was alrea
 
 {width=100%,float=left}
 ![In tmux!](images/99-windows-bash/09-tmux.jpg)
-
-[^win10bashbuild]: https://blogs.msdn.microsoft.com/commandline/2016/06/08/tmux-support-arrives-for-bash-on-ubuntu-on-windows/
