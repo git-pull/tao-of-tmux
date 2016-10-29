@@ -13,7 +13,7 @@ It seemed as if it were orchestrated, but each of us fell into the same ebb and 
 
 Like many things in life, when we act on autopilot, we sometimes arrive at similar destinations. This is often completely unplanned.
 
-So when I go off and write a technical book on a computer application, I hope to write it for human beings. Not to sell you on tmux, not to make you like it, or hate it, but to tell you what it is, how some use it and leave the rest up to you.
+So when I go off and write a learning book on a computer application, I hope to write it for human beings. Not to sell you on tmux, not to make you like it, or hate it, but to tell you what it is, how some use it and leave the rest up to you.
 
 ## About this book
 
