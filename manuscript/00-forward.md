@@ -5,7 +5,7 @@
 
 Pretty much all my friends swear to using tmux. I remember going out at night for drinks and the 3 of us would take a seat at a round table and take our smart phones out. It was the days back when phones still had mechanical keyboards. All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
 
-Despite our home computers sleeping or being off, our username's in the channel persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot into our cloud servers and reattached `screen(1)`[^screen]. Just as it hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames one by one fell off.
+Despite our home computers sleeping or being off, our username's in the channel persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot into our cloud servers and reattached [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames one by one fell off.
 
 Funnily, even though we knew each other by our real names, we sometimes opted to call each other by our nicks. It's something about how the personal relationships, formed completely through text, persist in real life.
 
@@ -36,5 +36,3 @@ For special circumstances like Windows 10, I opted that going so far as adding s
 The first Chapter, Thinking Tmux, goes over a breakdown of what tmux does and how it relates to the GUI desktops we already use on our computers.  You will get to wrap your brain around what tmux is
 
 The second Chapter, Terminal Fundamentals, 
-
-[^screen]: GNU Screen (screen) is a terminal multiplexer that allows detaching (sending applications to the background) and reattaching (returning the background applications to the foreground). It predates tmux. Some still prefer screen to tmux. The official website is at https://www.gnu.org/software/screen/.
