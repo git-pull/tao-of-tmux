@@ -29,10 +29,12 @@ A word to absolute beginners, do not feel like you need to grasp the concepts of
 
 ## How this book is structured
 
-First, anything involving installation and hard technical details are in the appendix.
-
-A lot of books tend to use this as filler. For me it's more of not wanting to leave complete beginners behind.
+First, anything involving installation and hard technical details are in the appendix (back of the book). A lot of books tend to use this as filler. For me it's more of not wanting to leave complete beginners behind.
 
 For special circumstances like Windows 10, I opted that going so far as adding screenshots since a fair share may be more comfortable by a visual approach.
+
+The first Chapter, Thinking Tmux, goes over a breakdown of what tmux does and how it relates to the GUI desktops we already use on our computers.  You will get to wrap your brain around what tmux is
+
+The second Chapter, Terminal Fundamentals, 
 
 [^screen]: GNU Screen (screen) is a terminal multiplexer that allows detaching (sending applications to the background) and reattaching (returning the background applications to the foreground). It predates tmux. Some still prefer screen to tmux. The official website is at https://www.gnu.org/software/screen/.
