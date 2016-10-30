@@ -48,13 +48,11 @@
 
 ### OpenBSD
 
-As of OpenBSD 4.6, tmux is part of the base system[^openbsd47].
+As of OpenBSD 4.6, [tmux is part of the base system](https://www.openbsd.org/46.html).
 
 If you are using an earlier version:
 
     # pkg_add tmux
-
-[^openbsd47]: https://www.openbsd.org/46.html
 
 ### NetBSD
 
