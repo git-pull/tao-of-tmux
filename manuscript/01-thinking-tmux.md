@@ -14,7 +14,7 @@ In the world of computers, there are 2 realms:
 tmux resides in the text realm. This is about fixed-width fonts and that
 old fashioned black terminal.
 
-## a window manager for the terminal
+## Window manager for the terminal
 
 tmux is to the console what a desktop is to gui apps. It's a world inside
 the text dimension. Inside tmux you can:
