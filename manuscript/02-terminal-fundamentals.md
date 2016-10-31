@@ -80,7 +80,7 @@ rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 
 When we speak about "shells", such as the examples below, we're often referring
-to the interpretter.
+to the interpreter.
 
 On most Linux distributions and MacOS, you'll typically be dropped into Bash.
 
