@@ -6,40 +6,43 @@ memory, a great deal of us never seen a technical relation of where these tools
 stand in relation of one another.
 
 Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
-shell scripting, and so on. If you use tmux, you'll be around these all the time,
-regardless of whether you're in a GUI on your local machine or ssh'ing into a remote
-server.
+shell scripting, and so on. If you use tmux, you'll be around these all the
+time, regardless of whether you're in a GUI on your local machine or ssh'ing
+into a remote server.
 
-I'm not going to go super deep into the technicalities, but if you ever wanted to
-dive into how processes and tty's work at the kernel level (data structures and all)
-I recommend the book *The Design and Implementation of the FreeBSD Operating System
-(2nd Edition)* by Marshall Kirk McKusick. In particular, Chapter 4, *Process Management*
-and Section 8.6 *Terminal Handling*. [*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
-by Linus Åkesson (available online) dives into the TTY and is a good read as well.
+I'm not going to go super deep into the technicalities, but if you ever wanted
+to dive into how processes and tty's work at the kernel level (data structures
+and all) I recommend the book *The Design and Implementation of the FreeBSD
+Operating System (2nd Edition)* by Marshall Kirk McKusick. In particular,
+Chapter 4, *Process Management* and Section 8.6 *Terminal Handling*.
+[*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
+by Linus Åkesson (available online) dives into the TTY and is a good read as
+well.
 
-Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. While it is
-interesting and I probably could have a coffee / tea with you discussing it for hours.
-And I could put you on a few tracks, (The C Language, anything from the BSD lineage, etc.)
-and some snob would likely chime in wanting to talk about Linux, GNU and so on. It's
-like *Game of Thrones*, there's a lot characters who all think they're the cornerstone; I
-can't be authoritative, but I can give you info. A few good resources would be
-[A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk) by Marshall Kirk
-McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
+Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. While it
+is interesting and I probably could have a coffee / tea with you discussing it
+for hours. I could even set you on a few tracks, (The C Language, anything from
+he BSD lineage, etc.) and some snob would likely chime in wanting to talk about
+Linux, GNU and so on. It's like *Game of Thrones*, there's a lot characters who
+all think they're the cornerstone; I can't be authoritative, but I can give you
+info. A few good resources would be [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk)
+by Marshall Kirk McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
 by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 (Video) by Stephen R. Bourne.
 
 ## POSIX / POSIX-like motif
 
 Operating systems like MacOS (formerly OS X), Linux and the BSD's all follow
-something similar to the POSIX specification in terms of how
-they square away various responsibilities and interfaces of the operating
-system. They're categorized as ["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
+something similar to the POSIX specification in terms of how they square away
+various responsibilities and interfaces of the operating system. They're
+categorized as ["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
 
 In daily life, we often use systems that break compatibility with POSIX
 standards for sheer reasons of practicality. Operating systems like MacOS will
 drop you right into Bash. [`make(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html),
 which is also a POSIX standard, is in actuality [GNU Make](https://www.gnu.org/software/make/)
-on MacOS by default.  Did you know that as of September 2016 POSIX Make has no conditionals?
+on MacOS by default.  Did you know that as of September 2016 POSIX Make has no
+conditionals?
 
 I'm not saying this to take a run at purists, as I'm someone who tries to remain
 as compatible as possible in my scripting, it gets very hard to do simple
@@ -55,10 +58,11 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
     IF
 
-    ENDIF 
+    ENDIF
 
-So why does it matter? Why do bring it up? You'll see this kind of stuff everywhere.
-So let's separate the common suspects into their respective categorties.
+So why does it matter? Why do bring it up? You'll see this kind of stuff
+everywhere. So let's separate the common suspects into their respective
+categories.
 
 ## Terminal interface
 
@@ -86,9 +90,9 @@ covers in technical detail the responsibilities of the shell.
 
 ## Shell languages
 
-Each shell interpreter has its own language features. Like with shells themselves,
-many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
+Each shell interpreter has its own language features. Like with shells
+themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
 
-You will sometimes see this in `.sh` files, which at their header, 
+You will sometimes see this in `.sh` files, which at their header,
 
 ZSH and Bash should be able to understand POSIX shell you write.
