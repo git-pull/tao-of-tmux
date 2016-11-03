@@ -30,7 +30,7 @@ by Marshall Kirk McKusick (Video), [The UNIX Operating System](https://www.youtu
 by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 (Video) by Stephen R. Bourne.
 
-## POSIX / POSIX-like motif
+## POSIX stuff
 
 Operating systems like MacOS (formerly OS X), Linux and the BSD's all follow
 something similar to the POSIX specification in terms of how they square away
