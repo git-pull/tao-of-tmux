@@ -27,5 +27,9 @@ think time being spent. But not with tmux. Its server, but in the good way.
 The server part of tmux is how your sessions are able to stay alive even
 when you detached your client.
 
+## Servers hold sessions
+
+One server can contain one or multiple sessions.
+
 Recurring usage of tmux after a server already exist will create a new
 session inside that server.
