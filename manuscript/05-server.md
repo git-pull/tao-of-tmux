@@ -14,7 +14,7 @@ tmux uses a client-server model, but the server is forked to the
 background for you.
 
 It surprises some when I mention it because servers often beget
-a setup process. But just because server's are involved doesn't entail
+a setup process. But just because servers are involved doesn't entail
 hours of configuration on each machine you run it on. There is no
 setup.
 
@@ -26,3 +26,6 @@ think time being spent. But not with tmux. Its server, but in the good way.
 
 The server part of tmux is how your sessions are able to stay alive even
 when you detached your client.
+
+Recurring usage of tmux after a server already exist will create a new
+session inside that server.
