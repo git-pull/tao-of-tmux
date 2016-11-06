@@ -1,5 +1,7 @@
 # Server
 
+![Server](images/info/server.png)
+
 Q> ### Wait what, tmux is a server?
 Q>
 Q> Often when web servers are mentioned, what comes to mind for many
