@@ -19,7 +19,7 @@ So when I go off and write a learning book on a computer application, I hope to 
 
 You do not need a book to use or understand tmux. But if there is a book, let this be the one.
 
-I don't like to give a slipshod effort. if I'm going to take the time to write a book, I'm giving it 100% of my effort.
+I don't like to give a slipshod effort. If I'm going to take the time to write a book, I'm giving it 100% of my effort.
 
 tmux to me is a tool I find incredible use with, while I don't attach it to my identity, it's been part of my daily life for years. I've helped thousands of people learn tmux through my free resource under the same name [The Tao of tmux](https://tmuxp.readthedocs.io/en/latest/about_tmux.html), written a [popular tmux starter configuration](https://github.com/tony/tmux-config), a [pythonic tmux library](https://github.com/tony/libtmux) and a [tmux session manager](https://github.com/tony/tmuxp). You'd think I'm trying to build this big thing around tmux, in reality, it's just that useful.
 
