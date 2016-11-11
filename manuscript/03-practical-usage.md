@@ -12,7 +12,7 @@ The *prefix* is how we send commands into tmux. With this, we can split windows,
 move windows, switch windows, switch sessions, send in custom commands, you name
 it.
 
-And its a hump we have to get over.
+And it's a hump we have to get over.
 
 When I was a kid, there was a video game (depending on your generation you may
 now it) called Sonic 3. One of the carnival levels had this ridiculous section
