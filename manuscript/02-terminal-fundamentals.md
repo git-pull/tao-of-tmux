@@ -60,7 +60,7 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
     ENDIF
 
-So why does it matter? Why do bring it up? You'll see this kind of stuff
+So why does it matter? Why do you bring it up? You'll see this kind of stuff
 everywhere. So let's separate the common suspects into their respective
 categories.
 
@@ -95,4 +95,4 @@ themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.
 
 You will sometimes see this in `.sh` files, which at their header,
 
-ZSH and Bash should be able to understand POSIX shell you write.
+ZSH and Bash should be able to understand POSIX shell script you write.
