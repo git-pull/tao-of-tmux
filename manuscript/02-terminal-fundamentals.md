@@ -2,8 +2,8 @@
 
 Before I get into tmux, there are a few fundamentals of the command line I want
 to run over. Often, we're so used to using these out of street smarts and muscle
-memory, a great deal of us never seen a technical relation of where these tools
-stand in relation of one another.
+memory, a great deal of us never seen relation of where these tools stand next to
+another.
 
 Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
 shell scripting, and so on. If you use tmux, you'll be around these all the
@@ -22,10 +22,10 @@ well.
 Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. While it
 is interesting and I probably could have a coffee / tea with you discussing it
 for hours. I could even set you on a few tracks, (The C Language, anything from
-he Unix/BSD lineage, etc.) and some snob would likely chime in wanting to talk
-about Linux, GNU and so on. It's like *Game of Thrones*, there's a lot characters
-who all think they're the cornerstone; I can't be authoritative, but I can give
-you info. A few good resources would be [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk)
+he Unix/BSD lineage, etc.) and some clever fellow would likely chime in wanting
+to talk about Linux, GNU and so on. It's like *Game of Thrones*, there's a lot
+characters who all think they're the cornerstone; I can't be authoritative, but
+I can give you info. A few good resources would be [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk)
 by Marshall Kirk McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
 by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 (Video) by Stephen R. Bourne.
