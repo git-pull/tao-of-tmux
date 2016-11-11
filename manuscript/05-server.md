@@ -27,7 +27,7 @@ It's just that's streamlined. People think, server, they think pain. They
 think time being spent. But not with tmux. Its server, but in the good way.
 
 The server part of tmux is how your sessions are able to stay alive even
-when you detached your client.
+after your client is detached.
 
 ## Servers hold sessions
 
