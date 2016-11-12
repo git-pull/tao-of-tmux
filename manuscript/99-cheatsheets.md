@@ -2,11 +2,11 @@
 
 ## Commands
 
-| Command     | Action                                                 |
-|-------------|--------------------------------------------------------|
-| no command  |                                                         |
-| new-session |                                                        |
-| new-window  |                                                        |
+| Command       | Action                                                 |
+|---------------|--------------------------------------------------------|
+| no command    |                                                        |
+| `new-session` |                                                        |
+| `new-window`  |                                                        |
 
 ## Config
 
