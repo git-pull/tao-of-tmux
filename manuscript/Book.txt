@@ -9,5 +9,6 @@
 08-pane.md
 09-configuration.md
 10-recipes.md
+99-cheatsheets.md
 99-installation.md
 99-windows-bash.md
