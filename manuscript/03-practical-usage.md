@@ -31,7 +31,8 @@ Q> ### Coming from ``GNU Screen``?
 Q>
 Q> Your tmux prefix key can be set via your tmux configuration later on!  In
 Q> you `~/.tmux.conf` file, set the `prefix` option:
-Q>     set-option -g prefix C-a
+Q>
+Q>      set-option -g prefix C-a
 Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
