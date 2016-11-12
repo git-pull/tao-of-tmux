@@ -38,6 +38,17 @@ text dimension. Inside tmux you can:
 
 ## Multitasking
 
+tmux gives you prime oppurtunity to do many things at once in one screen.
+
+For one you can keep multiple terminals running on the same display.
+
+But you also have the concept of shuffling between multiple "windows" within
+that, all within the confines of the tmux session you attached.
+
+Even better, there are facilities to copy and paste, scroll. No requirement
+for graphics either, so you have full power even if you're SSH'ing or in a
+tty without X.
+
 ## Keep your applications running in the background
 
 Sometimes in GUI applications, you'll have an option to minimize and application
