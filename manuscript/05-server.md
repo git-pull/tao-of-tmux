@@ -4,7 +4,7 @@
 
 Q> ### Wait what, tmux is a server?
 Q>
-Q> Often when web servers are mentioned, what comes to mind for many
+Q> Often when "server" is mentioned, what comes to mind for many
 Q> may be rackmounted hardware, to others it may be software running
 Q> daemonized on a server and managed through a utility like upstart,
 Q> supervisor and so on.
