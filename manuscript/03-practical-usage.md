@@ -25,7 +25,9 @@ understanding how to send `command sequences` to tmux, you'll pretty much be
 dead in the water.
 
 And the same will also end up coming up in later cases if you use Vim or Emacs
-and many TUI (Terminal User Interface) applications.
+and many TUI (Terminal User Interface) applications. So if you haven't
+internalized the concept, let's do it now. If you already have done similar
+command sequences before in TUI/GUI applications, that'll come in helpful.
 
 Q> ### Coming from ``GNU Screen``?
 Q>
