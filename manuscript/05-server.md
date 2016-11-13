@@ -24,7 +24,8 @@ You don't notice it, but when you use tmux normally, what actually happens
 is a server is launched and you're really being connected via a client.
 
 It's just that's streamlined. People think, server, they think pain. They
-think time being spent. But not with tmux. Its server, but in the good way.
+think time being spent trying and testing configs just to get basic systems
+online. But not with tmux. It's a server, but in the good way.
 
 The server part of tmux is how your sessions are able to stay alive even
 after your client is detached.
