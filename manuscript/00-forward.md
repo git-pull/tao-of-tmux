@@ -41,7 +41,7 @@ The second Chapter, Terminal Fundamentals, gives a run through of the common sys
 
 ## Donations
 
-I do offer my learning material for free on the internet, as well as maintain several open source projects. If you'd like to support my day-to-day open source participation please check out http://www.git-pull.com/support.html for ways to contribute.
+I do offer my learning material for free on the internet, as well as maintain several open source projects. If you'd like to support my day-to-day open source participation please check out [http://www.git-pull.com/support.html](http://www.git-pull.com/support.html) for ways to contribute.
 
 ## Errata
 
