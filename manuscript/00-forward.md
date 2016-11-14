@@ -45,4 +45,4 @@ I do offer my learning material for free on the internet, as well as maintain se
 
 ## Errata
 
-If you find errors in this book please submit them to me at tony@git-pull.com. I will update digital versions of the book with the changes where applicable.
+If you find errors in this book please submit them to me at tony <AT> nospam git-pull.com. I will update digital versions of the book with the changes where applicable.
