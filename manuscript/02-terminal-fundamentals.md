@@ -60,6 +60,15 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
     ENDIF
 
+In addition to that tiny little thing, there are hundreds of trivialities that
+run across operating systems, their userlands, their paths, enough so a good
+deal of software infrastructure out there exists solely to abstract the differences
+across these systems. CMake, Autotools, SFML, SDL2, interpretted programming languages
+and their standard libraries. Many, many `#ifdef` preprocessor directives in your C
+and C++ applications. You want open source, you get choice, but be aware there's a lot
+of upkeep cost in keeping these upstream projects (and even your personal ones)
+compatible. But I digress, back to terminal stuff.
+
 So why does it matter? Why do you bring it up? You'll see this kind of stuff
 everywhere. So let's separate the common suspects into their respective
 categories.
