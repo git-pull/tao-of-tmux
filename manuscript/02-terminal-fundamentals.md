@@ -44,7 +44,7 @@ which is also a POSIX standard, is in actuality [GNU Make](https://www.gnu.org/s
 on MacOS by default.  Did you know that as of September 2016 POSIX Make has no
 conditionals?
 
-I'm not saying this to take a run at purists, as I'm someone who tries to remain
+I'm not saying this to take a run at purists, as someone who tries to remain
 as compatible as possible in my scripting, it gets very hard to do simple
 things after a while. On FreeBSD, the default Make
 [(PMake)](https://www.freebsd.org/doc/en_US.ISO8859-1/books/pmake/) uses dots
