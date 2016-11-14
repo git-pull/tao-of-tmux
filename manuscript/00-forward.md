@@ -17,6 +17,8 @@ So when I go off and write a learning book on a computer application, I hope to 
 
 ## About this book
 
+This book is currently under development. It's available to read for [free on the web](https://leanpub.com/the-tao-of-tmux/read).
+
 You do not need a book to use or understand tmux. But if there is a book, let this be the one.
 
 I don't like to give a slipshod effort. If I'm going to take the time to write a book, I'm giving it 100% of my effort.
@@ -33,6 +35,14 @@ First, anything involving installation and hard technical details are in the app
 
 For special circumstances like Windows 10, I opted that going so far as adding screenshots since a fair share may be more comfortable by a visual approach.
 
-The first Chapter, Thinking Tmux, goes over a breakdown of what tmux does and how it relates to the GUI desktops we already use on our computers.  You will get to wrap your brain around what tmux is
+The first Chapter, Thinking Tmux, goes over a breakdown of what tmux does and how it relates to the GUI desktops we already use on our computers.  You will get to wrap your brain around what tmux is and how it can make your life easier.
 
-The second Chapter, Terminal Fundamentals, 
+The second Chapter, Terminal Fundamentals, gives a run through of the common systems you'll be dealing with in the realm of the text-based console. It's great for those new to tmux, but also to put some technical backing for developers who learned the ropes through examples and osmosis. You'll be more confident and secure in the fundamental underpinnings of using multiplexers and shells.
+
+## Donations
+
+I do offer my learning material for free on the internet, as well as maintain several open source projects. If you'd like to support my day-to-day open source participation please check out http://www.git-pull.com/support.html for ways to contribute.
+
+## Errata
+
+If you find errors in this book please submit them to me at tony@git-pull.com. I will update digital versions of the book with the changes where applicable.
