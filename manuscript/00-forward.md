@@ -109,6 +109,15 @@ and copy and paste been panes.
 [*Panes*](#chapter-08) A terminal in a terminal. This is where we leave you to
 do your magic and get to work!
 
+[*Configuration*](#chapter-09) discusses customization of tmux, via keybindings,
+status line and behavior. You'll even know how to show your CPU usage and
+memory via the status line.
+
+[*Recipes*](#chapter-10) wraps it up with a whirlwind of a customized tmux
+configuration, a yaml file to launch tmux sessions using tmuxp. In addition,
+we'll cover a Python API for tmux called libtmux. You'll get to see some tricked
+out tmux examples.
+
 ## Donations
 
 I do offer my learning material for free on the internet, as well as maintain
