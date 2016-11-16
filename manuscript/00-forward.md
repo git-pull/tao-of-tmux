@@ -73,7 +73,7 @@ it's more of not wanting to leave complete beginners behind.
 For special circumstances like Windows 10, I opted that going so far as adding
 screenshots since a fair share may be more comfortable by a visual approach.
 
-The [first Chapter](#chapter-01), Thinking Tmux, goes over a breakdown of what
+The first Chapter, [Thinking Tmux](#chapter-01), goes over a breakdown of what
 tmux does and how it relates to the GUI desktops we already use on our
 computers.  You will get to wrap your brain around what tmux is and how it can
 make your life easier.
