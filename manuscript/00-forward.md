@@ -106,7 +106,7 @@ which leaves you an an excellent transition to our next destination.
 of you. You'll learn to rename and move windows, to create, delete, move between
 and copy and paste been panes.
 
-[*Panes*](#chapter-08) A terminal in a terminal. This is where we leave you to
+[*Panes*](#chapter-08) - A terminal in a terminal. This is where we leave you to
 do your magic and get to work!
 
 [*Configuration*](#chapter-09) discusses customization of tmux, via keybindings,
@@ -122,7 +122,7 @@ out tmux examples.
 
 I do offer my learning material for free on the internet, as well as maintain
 several open source projects. If you'd like to support my day-to-day open
-source participation please check out [http://www.git-pull.com/support.html](http://www.git-pull.com/support.html)
+source participation please check out <http://www.git-pull.com/support.html>
 for ways to contribute.
 
 ## Errata
