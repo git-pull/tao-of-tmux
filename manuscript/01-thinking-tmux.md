@@ -1,7 +1,7 @@
 
 {mainmatter}
 
-# Thinking in tmux
+# Thinking in tmux {#chapter-01}
 
 tmux is geared for developers and admins who interact regularly with CLI
 (text-only interfaces)

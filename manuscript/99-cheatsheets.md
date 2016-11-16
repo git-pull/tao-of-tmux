@@ -1,4 +1,4 @@
-# Cheatsheets
+# Cheatsheets {#appendix-cheatsheets}
 
 ## Commands
 

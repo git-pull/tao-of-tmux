@@ -1,4 +1,4 @@
-# Terminal fundamentals
+# Terminal fundamentals {#chapter-02}
 
 Before I get into tmux, there are a few fundamentals of the command line I want
 to run over. Often, we're so used to using these out of street smarts and muscle
