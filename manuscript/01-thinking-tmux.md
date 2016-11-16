@@ -19,7 +19,7 @@ fashioned black terminal.
 tmux is to the console what a desktop is to gui apps. It's a world inside the
 text dimension. Inside tmux you can:
 
-- multitask inside the terminal, run multiple applications.
+- multitask inside the terminal, run multiple applications
 - have multiple command lines (pane) in the same window
 - have multiple windows (window) in the workspace (session)
 - switch between multiple workspaces, like virtual desktops
