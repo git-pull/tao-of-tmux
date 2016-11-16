@@ -62,3 +62,22 @@ So here are a few common scenarios:
 - A system administrator will run a `tail -F /var/log/apache2/error.log` in a
   pane to get a live stream of the latest system events.
 - Running a file watcher like [watchman](https://github.com/facebook/watchman)
+- Any general workspace you'd normally use in a terminal for any task, with the
+  benefit of you being able to persist it
+
+Q> ### Does tmux persist sessions after restarts?
+Q>
+Q> Unfortunately not. A restart will kill the tmux server.
+Q>
+Q> Thankfully, the modern server can stay online for a long time. Even for
+Q> consumer laptops and PC's with a day or two uptime, having tmux persist
+Q> tasks for organizational purposes is satisfactory to run it.
+Q>
+Q> For tasks you repeat often, you can always use a tool like
+Q> [tmuxp](https://github.com/tony/tmuxp), [tmuxinator](https://github.com/tmuxinator/tmuxinator)
+Q> or [teamocil](https://github.com/remiprev/teamocil) to resume common
+Q> sessions.
+Q>
+Q> It comes at a disappointment, because some are interested in the idea of
+Q> being able to persist a tree of processes after restart. That goes out of
+Q> scope of what tmux is meant to do.
