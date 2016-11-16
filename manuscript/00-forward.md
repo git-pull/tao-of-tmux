@@ -93,7 +93,7 @@ stuff about the internals of tmux. You may learn enough to be able to
 impress friends who currently use tmux daily. If you like programming on
 POSIX-like systems, this one is for you.
 
-[*Server*](#chapter-05) gives life the smooth, unseen server that powers tmux behind
+[*Server*](#chapter-05) gives life to unseen workforce that powers tmux behind
 the scenes. You'll think of tmux in a different way, and may be impressed to see
 a client-server architecture could be implemented so seamlessly to end users.
 
