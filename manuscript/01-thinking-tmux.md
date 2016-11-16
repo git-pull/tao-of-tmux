@@ -24,17 +24,17 @@ text dimension. Inside tmux you can:
 - have multiple windows (window) in the workspace (session)
 - switch between multiple workspaces, like virtual desktops
 
-|**tmux**               |**"Desktop"-Speak**       |**Plain English**                 |
-|-------------------|----------------------|------------------------------|
-|Multiplexer        |Multi-tasking         |Multiple applications         |
-|                   |                      |simulataneously.              |
-|-------------------|----------------------|------------------------------|
-|Session            |Desktop               |Applications are visible here |
-|-------------------|----------------------|------------------------------|
-|Window             |Virtual Desktop or    |A desktop that stores it own  |
-|                   |applications          |screen			  |
-|-------------------|----------------------|------------------------------|
-|Pane               |Application           |Performs operations           |
+|**tmux**           |**"Desktop"-Speak**   |**Plain English**                  |
+|-------------------|----------------------|-----------------------------------|
+|Multiplexer        |Multi-tasking         |Multiple applications              |
+|                   |                      |simulataneously.                   |
+|-------------------|----------------------|-----------------------------------|
+|Session            |Desktop               |Applications are visible here      |
+|-------------------|----------------------|-----------------------------------|
+|Window             |Virtual Desktop or    |A desktop that stores it own screen|
+|                   |applications          |screen			                       |
+|-------------------|----------------------|-----------------------------------|
+|Pane               |Application           |Performs operations                |
 
 ## Multitasking
 
