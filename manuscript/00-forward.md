@@ -102,7 +102,7 @@ You'll learn what a session is and how it helps you organize your workspace
 in the terminal. You'll learn how you can manipulate and rename your session,
 which leaves you an an excellent transition to our next destination.
 
-[*Windows*](#chapter-07) The Window is what you when tmux is open right in front
+[*Window*](#chapter-07) is what you see when tmux is open right in front
 of you. You'll learn to rename and move windows, to create, delete, move between
 and copy and paste been panes.
 
