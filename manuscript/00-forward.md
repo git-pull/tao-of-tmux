@@ -114,9 +114,10 @@ status line and behavior. You'll even know how to show your CPU usage and
 memory via the status line.
 
 [*Recipes*](#chapter-10) wraps it up with a whirlwind of a customized tmux
-configuration, a yaml file to launch tmux sessions using tmuxp. In addition,
-we'll cover a Python API for tmux called libtmux. You'll get to see some tricked
-out tmux examples.
+configuration, a yaml file to launch tmux sessions using
+[tmuxp](https://github.com/tony/tmuxp). In addition, we'll cover a Python API
+for tmux called [libtmux](https://github.com/tony/libtmux). You'll get to see
+some tricked out tmux examples.
 
 ## Donations
 
