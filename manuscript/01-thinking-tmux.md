@@ -59,14 +59,16 @@ In tmux, a similar concept exists where we can "detach" a tmux session.
 
 So here are a few common scenarios:
 
-- A system administrator will run a `tail -F /var/log/apache2/error.log` in a
-  pane to get a live stream of the latest system events.
-- Running a file watcher like [watchman](https://github.com/facebook/watchman),
-  [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
-  [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
-  or [entr](http://entrproject.org/).
-- Keeping a text editor like vim, emacs, pico, nano, etc. open in pane, while
-  leaving two other open for CLI commands and building via `make` or `ninja`.
+A system administrator will run a `tail -F /var/log/apache2/error.log` in a
+pane to get a live stream of the latest system events.
+
+Running a file watcher like [watchman](https://github.com/facebook/watchman),
+[gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
+[grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
+or [entr](http://entrproject.org/).
+
+Keeping a text editor like vim, emacs, pico, nano, etc. open in pane, while
+leaving two other open for CLI commands and building via `make` or `ninja`.
 
 {width=50%,float=right}
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
@@ -75,8 +77,9 @@ Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
 server to manage AIM, MSN, Google Talk, Jabber, ICQ, even twitter. Also
 checking up on email with [mutt](http://www.mutt.org/). 
-- Any general workspace you'd normally use in a terminal for any task, with the
-  benefit of you being able to persist it
+
+Any general workspace you'd normally use in a terminal for any task, with the
+benefit of you being able to persist it
 
 Q> ### Does tmux persist sessions after restarts?
 Q>
