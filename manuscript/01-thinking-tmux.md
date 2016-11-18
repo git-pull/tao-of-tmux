@@ -32,7 +32,7 @@ text dimension. Inside tmux you can:
 |Session            |Desktop               |Applications are visible here      |
 |-------------------|----------------------|-----------------------------------|
 |Window             |Virtual Desktop or    |A desktop that stores it own screen|
-|                   |applications          |screen			                       |
+|                   |applications          |screen			       |
 |-------------------|----------------------|-----------------------------------|
 |Pane               |Application           |Performs operations                |
 
@@ -61,7 +61,10 @@ So here are a few common scenarios:
 
 - A system administrator will run a `tail -F /var/log/apache2/error.log` in a
   pane to get a live stream of the latest system events.
-- Running a file watcher like [watchman](https://github.com/facebook/watchman)
+- Running a file watcher like [watchman](https://github.com/facebook/watchman),
+  [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
+  [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
+  or [entr](http://entrproject.org/).
 - Any general workspace you'd normally use in a terminal for any task, with the
   benefit of you being able to persist it
 
