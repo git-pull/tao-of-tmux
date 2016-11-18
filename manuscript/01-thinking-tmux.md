@@ -67,8 +67,9 @@ Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
 or [entr](http://entrproject.org/).
 
-Keeping a text editor like vim, emacs, pico, nano, etc. open in pane, while
-leaving two other open for CLI commands and building via `make` or `ninja`.
+Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
+while leaving two other open for CLI commands and building via `make` or
+`ninja`.
 
 {width=50%,float=right}
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
