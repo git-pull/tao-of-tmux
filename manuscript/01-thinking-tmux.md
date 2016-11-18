@@ -51,8 +51,8 @@ tty without X.
 
 ## Keep your applications running in the background
 
-Sometimes in GUI applications, you'll have an option to minimize and application
-to a tray ground.  The application is out of the way, but running in the
+Sometimes in GUI applications you'll have an option to minimize and application
+to a tray ground.  The application is out of the sight, but running in the
 background.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
