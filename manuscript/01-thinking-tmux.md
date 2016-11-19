@@ -63,7 +63,10 @@ In tmux, a similar concept exists where we can "detach" a tmux session.
 So here are a few common scenarios:
 
 A system administrator will run a `tail -F /var/log/apache2/error.log` in a
-pane to get a live stream of the latest system events.
+pane to get a live stream of the latest system events. You could also run a
+stat program like [htop](https://hisham.hm/htop/) in another pane, and keep
+a third open for managing [supervisor](http://supervisord.org/index.html)
+processes.
 
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
