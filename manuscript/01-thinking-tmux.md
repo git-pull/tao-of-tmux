@@ -57,13 +57,16 @@ background.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
 
+{width=50%,float=right}
+![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja on file change](images/01-thinking-tmux/dev-watch.png)
+
+{width=50%,float=right}
+![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
+
 So here are a few common scenarios:
 
 A system administrator will run a `tail -F /var/log/apache2/error.log` in a
 pane to get a live stream of the latest system events.
-
-{width=50%,float=right}
-![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja on file change](images/01-thinking-tmux/dev-watch.png)
 
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
@@ -73,9 +76,6 @@ or [entr](http://entrproject.org/).
 Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
-
-{width=50%,float=right}
-![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
