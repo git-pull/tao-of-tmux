@@ -38,6 +38,9 @@ text dimension. Inside tmux you can:
 
 ## Multitasking
 
+{width=50%,float=right}
+![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja to rebuild on file change, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
+
 tmux gives you prime oppurtunity to do many things at once in one screen.
 
 For one you can keep multiple terminals running on the same display.
@@ -51,14 +54,14 @@ tty without X.
 
 ## Keep your applications running in the background
 
+{width=50%,float=right}
+![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
+
 Sometimes in GUI applications you'll have an option to minimize and application
 to a tray ground.  The application is out of the sight, but running in the
 background.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
-
-{width=50%,float=right}
-![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja to rebuild on file change, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 So here are a few common scenarios:
 
@@ -73,9 +76,6 @@ or [entr](http://entrproject.org/).
 Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
-
-{width=50%,float=right}
-![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
