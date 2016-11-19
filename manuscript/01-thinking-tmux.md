@@ -39,7 +39,7 @@ text dimension. Inside tmux you can:
 ## Multitasking
 
 {width=50%,float=right}
-![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja to rebuild on file change, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
+![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 tmux gives you prime oppurtunity to do many things at once in one screen.
 
