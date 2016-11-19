@@ -62,6 +62,9 @@ So here are a few common scenarios:
 A system administrator will run a `tail -F /var/log/apache2/error.log` in a
 pane to get a live stream of the latest system events.
 
+{width=50%,float=right}
+![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja on file change](images/01-thinking-tmux/dev-watch.png)
+
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
 [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
