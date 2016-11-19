@@ -58,15 +58,12 @@ background.
 In tmux, a similar concept exists where we can "detach" a tmux session.
 
 {width=50%,float=right}
-![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja on file change](images/01-thinking-tmux/dev-watch.png)
+![vim + entr filewatcher rebuilding a C++ project w/ CMake + Ninja to rebuild on file change, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 So here are a few common scenarios:
 
 A system administrator will run a `tail -F /var/log/apache2/error.log` in a
-pane to get a live stream of the latest system events. You could also run a
-stat program like [htop](https://hisham.hm/htop/) in another pane, and keep
-a third open for managing [supervisor](http://supervisord.org/index.html)
-processes.
+pane to get a live stream of the latest system events.
 
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
