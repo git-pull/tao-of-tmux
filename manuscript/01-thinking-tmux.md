@@ -36,6 +36,8 @@ text dimension. Inside tmux you can:
 |-------------------|----------------------|-----------------------------------|
 |Pane               |Application           |Performs operations                |
 
+Heck, you even get a clock.
+
 ## Multitasking
 
 {width=50%,float=right}
@@ -94,7 +96,7 @@ messengers, and get back to your messages when you return.
 I've even see people (myself included) use it to keep development servers running. Hearty emphasis on *development*, I would advise daemonizing and wrapping your production web applications using a tool like [supervisor](http://supervisord.org/) with its own safe environmental settings.
 
 Any general workspace you'd normally use in a terminal for any task, with the
-benefit of you being able to persist it.  That includes projects or repetitive efforts you'd multitask on.
+benefit of you being able to persist it is fair game!  That includes projects or repetitive efforts you'd multitask on.
 
 Q> ### Does tmux persist sessions after restarts?
 Q>
