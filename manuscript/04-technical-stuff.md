@@ -8,7 +8,7 @@ operates under the hood.
 The point of an application that's built for you to use is it elegantly hides that
 complexity of how it operates underneath. Though, tmux actually has really great
 code underneath, down to the point its a joy to read it. You really have to thank
-Nicolas Mariott, Thomas Adam and Tiago Cunha for that.
+Nicholas Marriott, Thomas Adam and Tiago Cunha for that.
 
 Did you know that when you start tmux, you're automatically creating a server in the background?
 
