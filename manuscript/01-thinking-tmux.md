@@ -71,11 +71,18 @@ pane to get a live stream of the latest system events.
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
 [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
-or [entr](http://entrproject.org/).
+or [entr](http://entrproject.org/). On file change, you could do stuff like:
+
+- rebuild LESS or SASS files, minify CSS and/or assets and static files
+- linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint)/[ESLint](http://eslint.org/)/[Flake8](http://flake8.pycqa.org/en/latest/), re-run `make` or `ninja`
+- reload your [Express](http://expressjs.com/) server
+- or any custom command of your liking.
 
 Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
+
+You can see with tmux, you very quickly have the makings of an IDE! And it's on your terms.
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
