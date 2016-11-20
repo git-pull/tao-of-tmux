@@ -70,11 +70,12 @@ pane to get a live stream of the latest system events.
 
 Running a file watcher like [watchman](https://github.com/facebook/watchman),
 [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
-[grunt-watch](https://github.com/gruntjs/grunt-contrib-watch)
+[grunt-watch](https://github.com/gruntjs/grunt-contrib-watch), [guard](https://github.com/guard/guard)
 or [entr](http://entrproject.org/). On file change, you could do stuff like:
 
 - rebuild LESS or SASS files, minify CSS and/or assets and static files
-- linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint)/[ESLint](http://eslint.org/)/[Flake8](http://flake8.pycqa.org/en/latest/), re-run `make` or `ninja`
+- linting with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint), [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop), [ESLint](http://eslint.org/) or [Flake8](http://flake8.pycqa.org/en/latest/)
+- rebuilding with `make` or `ninja`
 - reload your [Express](http://expressjs.com/) server
 - or any custom command of your liking.
 
