@@ -9,7 +9,7 @@ Q> may be rackmounted hardware, to others it may be software running
 Q> daemonized on a server and managed through a utility like upstart,
 Q> supervisor and so on.
 Q>
-Q> Unlike web or database software, tmux doesn't require sqecialized
+Q> Unlike web or database software, tmux doesn't require specialized
 Q> configuration settings or creating a service entry to start things.
 
 tmux uses a client-server model, but the server is forked to the 
