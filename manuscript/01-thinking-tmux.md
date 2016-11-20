@@ -52,17 +52,6 @@ Even better, there are facilities to copy and paste, scroll. No requirement
 for graphics either, so you have full power even if you're SSH'ing or in a
 tty without X.
 
-## Keep your applications running in the background
-
-{width=50%,float=right}
-![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
-
-Sometimes in GUI applications you'll have an option to minimize and application
-to a tray ground.  The application is out of the sight, but running in the
-background.
-
-In tmux, a similar concept exists where we can "detach" a tmux session.
-
 So here are a few common scenarios:
 
 A system administrator will run a `tail -F /var/log/apache2/error.log` in a
@@ -84,6 +73,17 @@ while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
 You can see with tmux, you very quickly have the makings of an IDE! And it's on your terms.
+
+## Keep your applications running in the background
+
+{width=50%,float=right}
+![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
+
+Sometimes in GUI applications you'll have an option to minimize and application
+to a tray ground.  The application is out of the sight, but running in the
+background.
+
+In tmux, a similar concept exists where we can "detach" a tmux session.
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
