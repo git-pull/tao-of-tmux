@@ -88,7 +88,8 @@ benefit of you being able to persist it
 
 Q> ### Does tmux persist sessions after restarts?
 Q>
-Q> Unfortunately not. A restart will kill the tmux server.
+Q> Unfortunately not. A restart will kill the tmux server and any processes
+Q> running within it.
 Q>
 Q> Thankfully, the modern server can stay online for a long time. Even for
 Q> consumer laptops and PC's with a day or two uptime, having tmux persist
