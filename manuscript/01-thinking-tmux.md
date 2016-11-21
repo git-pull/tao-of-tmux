@@ -68,7 +68,7 @@ or [entr](http://entrproject.org/). On file change, you could do stuff like:
 - linting with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint), [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop), [ESLint](http://eslint.org/) or [Flake8](http://flake8.pycqa.org/en/latest/)
 - rebuilding with `make` or `ninja`
 - reload your [Express](http://expressjs.com/) server
-- or any custom command of your liking.
+- any other custom command to your liking
 
 Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
