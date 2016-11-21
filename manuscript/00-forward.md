@@ -73,47 +73,47 @@ it's more of not wanting to leave complete beginners behind.
 For special circumstances like Windows 10, I opted that going so far as adding
 screenshots since a fair share may be more comfortable by a visual approach.
 
-The first Chapter, [*Thinking Tmux*](#chapter-01), goes over a breakdown of what
+[*Thinking Tmux*](#thinking-tmux), goes over a breakdown of what
 tmux does and how it relates to the GUI desktops we already use on our
 computers.  You will get to wrap your brain around what tmux is and how it can
 make your life easier.
 
-The second Chapter, [*Terminal Fundamentals*](#chapter-02), gives a run through of the common
+[*Terminal Fundamentals*](#terminal-fundamentals), gives a run through of the common
 systems you'll be dealing with in the realm of the text-based console. It's
 great for those new to tmux, but also to put some technical backing for
 developers who learned the ropes through examples and osmosis. You'll be more
 confident and secure in the fundamental underpinnings of using multiplexers
 and shells.
 
-In chapter three, [*Practical Usage*](#chapter-03), covers common bread and
+[*Practical Usage*](#practical-usage), covers common bread and
 butter use cases for you to start using tmux daily, starting now.
 
-Chapter Four, [*Technical Stuff*](#chapter-04) is intensive, "nice to know"
-stuff about the internals of tmux. You may learn enough to be able to 
-impress friends who currently use tmux daily. If you like programming on
-POSIX-like systems, this one is for you.
-
-[*Server*](#chapter-05) gives life to unseen workhorse that powers tmux behind
+[*Server*](#server) gives life to unseen workhorse that powers tmux behind
 the scenes. You'll think of tmux in a different way, and may be impressed to see
 a client-server architecture could be implemented so seamlessly to end users.
 
-[*Session*](#chapter-06) drops you into the world launching tmux places you into.
+[*Session*](#sessions) drops you into the world launching tmux places you into.
 You'll learn what a session is and how it helps you organize your workspace
 in the terminal. You'll learn how you can manipulate and rename your session,
 which leaves you an an excellent transition to our next destination.
 
-[*Window*](#chapter-07) is what you see when tmux is open right in front
+[*Window*](#windows) is what you see when tmux is open right in front
 of you. You'll learn to rename and move windows, to create, delete, move between
 and copy and paste been panes.
 
-[*Panes*](#chapter-08) - A terminal in a terminal. This is where we leave you to
+[*Panes*](#panes) - A terminal in a terminal. This is where we leave you to
 do your magic and get to work!
 
-[*Configuration*](#chapter-09) discusses customization of tmux, via keybindings,
+[*Configuration*](#config) discusses customization of tmux, via keybindings,
 status line and behavior. You'll even know how to show your CPU usage and
 memory via the status line.
 
-[*Recipes*](#chapter-10) wraps it up with a whirlwind of a customized tmux
+[*Technical Stuff*](#technical-stuff) is intensive, "nice to know"
+stuff about the internals of tmux. You may learn enough to be able to 
+impress friends who currently use tmux daily. If you like programming on
+POSIX-like systems, this one is for you.
+
+[*Recipes*](#recipes) wraps it up with a whirlwind of a customized tmux
 configuration, a yaml file to launch tmux sessions using
 [tmuxp](https://github.com/tony/tmuxp). In addition, we'll cover a Python API
 for tmux called [libtmux](https://github.com/tony/libtmux). You'll get to see

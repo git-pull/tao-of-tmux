@@ -1,3 +1,3 @@
-# Pane {#chapter-08}
+# Pane {#panes}
 
 ![Pane](images/info/pane.png)

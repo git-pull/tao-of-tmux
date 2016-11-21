@@ -1,3 +1,3 @@
-# Window {#chapter-07}
+# Window {#windows}
 
 ![Window](images/info/window.png)

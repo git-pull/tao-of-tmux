@@ -1,1 +1,1 @@
-# Configuration {#chapter-10}
+# Configuration {#config}

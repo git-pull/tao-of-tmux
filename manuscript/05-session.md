@@ -1,3 +1,3 @@
-# Session {#chapter-06}
+# Session {#sessions}
 
 ![Session](images/info/session.png)

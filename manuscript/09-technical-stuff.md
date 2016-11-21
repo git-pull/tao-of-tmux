@@ -1,4 +1,4 @@
-# Technical Stuff {#chapter-04}
+# Technical Stuff {#technical-stuff}
 
 ![Server w/ laptop](images/info/server-with-laptop.png)
 

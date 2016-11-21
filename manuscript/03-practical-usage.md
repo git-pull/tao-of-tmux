@@ -1,4 +1,4 @@
-# Practical Usage {#chapter-03}
+# Practical Usage {#practical-usage}
 
 This is the easiest part, open up your terminal and type `tmux`, hit enter.
 
