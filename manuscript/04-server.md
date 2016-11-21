@@ -36,3 +36,14 @@ One server can contain one or multiple sessions.
 
 Recurring usage of tmux after a server already exist will create a new
 session inside that server.
+
+W> ### Advanced: Multiple servers
+W>
+W> tmux is nimble. if you want to use a separate server, just pass in
+W> the `-L` flag to any command.
+W>
+W> `tmux -L moo` - start a new tmux server + session if non-exists under
+W> the socket name "moo"
+W>
+W> `tmux -L moo attach` try to re-attach to session if one exists
+
