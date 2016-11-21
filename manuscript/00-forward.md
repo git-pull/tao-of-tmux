@@ -137,3 +137,18 @@ It's also available for free to [free on the web](https://leanpub.com/the-tao-of
 If you find errors in this book please submit them to me at tao.of.tmux <AT>
 nospam git-pull.com. I will update digital versions of the book with the 
 changes where applicable.
+
+## Book Updates and tmux changes
+
+This book was written for tmux 2.3, released September 2016.
+
+tmux does intermittently have updates. I've shepherded many of them over
+the past 5 or so years on my personal configurations as well as software
+libraries.
+
+Refer to tmux's [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES)
+file for updates on what changes and when.
+
+As of November 2016, it's pretty trivial for me to push out minor changes on
+Leanpub, Amazon and iTunes. So don't worry about having to pay unless tmux
+radically changes.
