@@ -42,7 +42,7 @@ You do not need a book to use or understand tmux. But if there is a book, let
 this be the one.
 
 I don't like to give a slipshod effort. If I'm going to take the time to write a
-book, I'm giving it 100% of my effort.
+book, I'm giving it 100%.
 
 tmux to me is a tool I find incredible use with, while I don't attach it to my
 identity, it's been part of my daily life for years. I've helped thousands of
