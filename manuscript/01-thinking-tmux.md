@@ -65,7 +65,9 @@ Running a file watcher like [watchman](https://github.com/facebook/watchman),
 or [entr](http://entrproject.org/). On file change, you could do stuff like:
 
 - rebuild LESS or SASS files, minify CSS and/or assets and static files
-- linting with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint), [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop), [ESLint](http://eslint.org/) or [Flake8](http://flake8.pycqa.org/en/latest/)
+- linting with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint),
+  [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop),
+  [ESLint](http://eslint.org/) or [Flake8](http://flake8.pycqa.org/en/latest/)
 - rebuilding with `make` or `ninja`
 - reload your [Express](http://expressjs.com/) server
 - any other custom command to your liking
@@ -74,7 +76,8 @@ Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
-You can see with tmux, you very quickly have the makings of an IDE! And it's on your terms.
+You can see with tmux, you very quickly have the makings of an IDE! And it's on
+your terms.
 
 ## Keep your applications running in the background
 
@@ -93,7 +96,11 @@ server to manage AIM, MSN, Google Talk, Jabber, ICQ, even twitter. Then you can
 detach your IRC and "idle" in your favorite channels, stay online on instant
 messengers, and get back to your messages when you return.
 
-I've even see people (myself included) use it to keep development servers running. Hearty emphasis on *development*, I would advise daemonizing and wrapping your production web applications using a tool like [supervisor](http://supervisord.org/) with its own safe environmental settings.
+I've even see people (myself included) use it to keep development servers
+running. Hearty emphasis on *development*, I would advise daemonizing and
+wrapping your production web applications using a tool like
+[supervisor](http://supervisord.org/) with its own safe environmental
+settings.
 
 Any general workspace you'd normally use in a terminal for any task, with the
 benefit of you being able to persist it is fair game!  That includes projects or repetitive efforts you'd multitask on.
