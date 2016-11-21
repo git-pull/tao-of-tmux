@@ -32,7 +32,7 @@ after your client is detached.
 
 ## Servers hold sessions
 
-One server can contain one or multiple sessions.
+One server can contain one or multiple [sessions](#sessions).
 
 Recurring usage of tmux after a server already exist will create a new
 session inside that server.
