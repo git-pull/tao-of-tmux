@@ -90,6 +90,21 @@ background.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
 
+This is especially cool if:
+
+- On a local machine, you start all your normal terminal applications within
+  a tmux session, you restart X. Instead of losing your processes as your
+  normally would if you were using an X terminal like xterm or konsole, you'd
+  be able to `tmux attach` after and find all processes were alive and kicking
+  all along :)
+- Same applies for remote SSH applications and workspaces you run in tmux. You
+  can detach your tmux workspace at work before you clock out, then next morning
+  reattach your session. Ahhh. Refreshing. :) Heck, sometimes you may have one
+  of those rare servers you rarely log into. Funny story, I once had caching
+  front end on AWS I totally forgot about. 9 months later I connect, and as if
+  it was a reflex, `tmux attach` to see if there we anything on there. And boom,
+  I'm in a session that's 9 months old. Surprisingly no memory leaks.
+
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
 server to manage AIM, MSN, Google Talk, Jabber, ICQ, even twitter. Then you can
@@ -102,8 +117,14 @@ wrapping your production web applications using a tool like
 [supervisor](http://supervisord.org/) with its own safe environmental
 settings.
 
+You can also have multiple users attach their clients to the same sessions.
+Which is great for pair programming.  If you were in the same session, you
+and the other person would see the same thing, share the same input, and the
+same active window and pane.
+
 Any general workspace you'd normally use in a terminal for any task, with the
-benefit of you being able to persist it is fair game!  That includes projects or repetitive efforts you'd multitask on.
+benefit of you being able to persist it is fair game!  That includes projects or
+repetitive efforts you'd multitask on.
 
 Q> ### Does tmux persist sessions after restarts?
 Q>
