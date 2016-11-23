@@ -1,4 +1,4 @@
-00-forward.md
+00-foreward.md
 01-thinking-tmux.md
 02-terminal-fundamentals.md
 03-practical-usage.md

@@ -1,7 +1,7 @@
 
 {frontmatter}
 
-# Forward 
+# Foreward 
 
 Pretty much all my friends swear to using tmux. I remember going out at night
 for drinks and the 3 of us would take a seat at a round table and take our smart
