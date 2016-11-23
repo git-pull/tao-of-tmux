@@ -9,7 +9,7 @@ phones out. It was the days back when phones still had physical "QWERTY" keyboar
 All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2
 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
 
-Despite our home computers sleeping or being off, our username's in the channel
+Despite our home computers sleeping or being off, our usernames in the channel
 persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors
 on a black background. We ssh'd with ConnectBot into our cloud servers and
 reattached [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
