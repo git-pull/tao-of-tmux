@@ -3,18 +3,18 @@
 
 # Foreward 
 
-Pretty much all my friends swear to using tmux. I remember going out at night
-for drinks and the 3 of us would take a seat at a round table and take our smart
-phones out. It was the days back when phones still had physical "QWERTY" keyboards.
-All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2
+Most of my friends swear by tmux. I remember going out at night
+for drinks with friends and we would take a seat at a favorite restaurant, 
+take out our smart phones and get down to tmux. It was back in the days when 
+phones still had physical "QWERTY" keyboards.  We had just planned 2
 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
 
 Despite our home computers sleeping or being off, our usernames in the channel
 persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors
 on a black background. We ssh'd with ConnectBot into our cloud servers and
 reattached [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
-hit 2AM, our Turkish coffee arrived, the `|away` trailing our online nicknames
-one by one fell off.
+hit 2AM, our Turkish coffee arrived, and the `|away` trailing our online nicknames
+fell off one by one.
 
 Funnily, even though we knew each other by our real names, we sometimes opted to
 call each other by our nicks. It's something about how the personal
