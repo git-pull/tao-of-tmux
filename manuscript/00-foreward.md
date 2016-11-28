@@ -5,9 +5,9 @@
 
 Most of my friends swear by tmux. I remember going out at night
 for drinks with friends and we would take a seat at a favorite restaurant, 
-take out our smart phones and get down to tmux. It was back in the days when 
-phones still had physical "QWERTY" keyboards.  We had just planned 2
-hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
+take out our smart phones. It was back in the days when phones still had
+physical "QWERTY" keyboards.  We had just planned 2 hours earlier on IRC to use
+Oleg's car to pick us up and drive us into the city.
 
 Despite our home computers sleeping or being off, our usernames in the channel
 persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors
