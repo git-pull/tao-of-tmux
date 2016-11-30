@@ -95,7 +95,7 @@ a client-server architecture could be implemented so seamlessly to end users.
 [*Session*](#sessions) drops you into the world launching tmux places you into.
 You'll learn what a session is and how it helps you organize your workspace
 in the terminal. You'll learn how you can manipulate and rename your session,
-which leaves you an an excellent transition to our next destination.
+providing a fine stepping stone to the next destination.
 
 [*Window*](#windows) is what you see when tmux is open right in front
 of you. You'll learn to rename and move windows, to create, delete, move between
