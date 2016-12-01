@@ -56,8 +56,9 @@ the `TMUX_TMPDIR` environment variable.
 
 So something like:
 
-`export TMUX_TMPDIR=$HOME`
-`tmux`
+{language=shell, line-numbers=off}
+    $ export TMUX_TMPDIR=$HOME
+    $ tmux
 
 Will give you a tmux directory created within your `$HOME` folder. On OS X,
 your home folder will probably be something like `/Users/yourusername`, on
