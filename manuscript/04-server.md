@@ -23,7 +23,7 @@ setup.
 You don't notice it, but when you use tmux normally, what actually happens
 is a server is launched and you're really being connected via a client.
 
-It's just that's streamlined. People think, server, they think pain. They
+It's just that streamlined. People think, server, they think pain. They
 think time being spent trying and testing configs just to get basic systems
 online. But not with tmux. It's a server, but in the good way.
 
