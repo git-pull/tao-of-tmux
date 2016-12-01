@@ -14,7 +14,7 @@ I'm not going to go super deep into the technicalities, but if you ever wanted
 to dive into how processes and tty's work at the kernel level (data structures
 and all) I recommend the book *The Design and Implementation of the FreeBSD
 Operating System (2nd Edition)* by Marshall Kirk McKusick. In particular,
-Chapter 4, *Process Management* and Section 8.6 *Terminal Handling*.
+Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*.
 [*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
 by Linus Åkesson (available online) dives into the TTY and is a good read as
 well.
