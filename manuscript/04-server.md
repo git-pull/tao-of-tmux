@@ -3,7 +3,7 @@
 ![Server](images/info/server.png)
 
 Q> ### Wait what, tmux is a server?
-Q>
+
 Q> Often when "server" is mentioned, what comes to mind for many
 Q> may be rackmounted hardware, to others it may be software running
 Q> daemonized on a server and managed through a utility like upstart,
@@ -48,3 +48,18 @@ W> the socket name "moo"
 W>
 W> `tmux -L moo attach` try to re-attach to session if one exists
 
+## How servers are "named"
+
+The default name for the server is `default`. It is stored in a socket in
+`/tmp`. The default directory for storing this can be overridden via setting
+the `TMUX_TMPDIR` environment variable.
+
+So something like:
+
+`export TMUX_TMPDIR=$HOME`
+`tmux`
+
+Will give you a tmux directory created within your `$HOME` folder. On OS X,
+your home folder will probably be something like `/Users/yourusername`, on
+other systems, `/home/yourusername` will be most common. If you want to find
+out for sure, just type `echo $HOME`.
