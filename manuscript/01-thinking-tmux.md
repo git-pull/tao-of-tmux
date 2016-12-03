@@ -122,9 +122,9 @@ Which is great for pair programming.  If you were in the same session, you
 and the other person would see the same thing, share the same input, and the
 same active window and pane.
 
-Any general workspace you'd normally use in a terminal for any task, with the
-benefit of you being able to persist it is fair game!  That includes projects or
-repetitive efforts you'd multitask on.
+The above is just examples, but any general workspace you'd normally use in a
+terminal for any task can gain the benefit of you being able to persist it! 
+That includes projects or repetitive efforts you'd multitask on.
 
 Q> ### Does tmux persist sessions after restarts?
 Q>
