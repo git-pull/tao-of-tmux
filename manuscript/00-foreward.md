@@ -5,7 +5,7 @@
 
 Most of my friends swear by tmux. I remember going out at night
 for drinks with friends and we would take a seat at a favorite restaurant, 
-take out our smart phones. It was back in the days when phones still had
+take out our smart phones and ????. It was back in the days when phones still had
 physical "QWERTY" keyboards.  We had just planned 2 hours earlier on IRC to use
 Oleg's car to pick us up and drive us into the city.
 
@@ -16,9 +16,9 @@ reattached [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
 hit 2AM, our Turkish coffee arrived, and the `|away` trailing our online nicknames
 fell off one by one.
 
-Funnily, even though we knew each other by our real names, we sometimes opted to
+Oddly, even though we knew each other by our real names, we sometimes opted to
 call each other by our nicks. It's something about how the personal
-relationships, formed completely through text, persist in real life.
+relationships, formed completely through text, persists in real life.
 
 It seemed as if it were orchestrated, but each of us fell into the same ebb and
 flow of operating our lives. No one told us to do it, but inch by inch we
@@ -35,23 +35,21 @@ up to you.
 
 ## About this book
 
-This book is currently under development. It's available to read for
+This book is written for tmux 2.3This book is currently under development. It's available to read for
 [free on the web](https://leanpub.com/the-tao-of-tmux/read).
 
 You do not need a book to use or understand tmux. But if there is a book, let
 this be the one.
 
-I don't like to give a slipshod effort. If I'm going to take the time to write a
-book, I'm giving it 100%.
+I am not slipshod in the work I perform.  If I'm going to take the time to write a book, I'm giving it 100%.
 
-tmux to me is a tool I find incredible use with, while I don't attach it to my
-identity, it's been part of my daily life for years. I've helped thousands of
-people learn tmux through my free resource under the same name
-[The Tao of tmux](https://tmuxp.readthedocs.io/en/latest/about_tmux.html),
+tmux to me is a tool I find incredibly helpful. It's been part of my daily life for years.
+I've helped thousands of people learn tmux through my free resource under the same name
+[The Tao of tmux](https://tmuxp.readthedocs.io/en/latest/about_tmux.html). I've
 written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
 a [pythonic tmux library](https://github.com/tony/libtmux) and a
-[tmux session manager](https://github.com/tony/tmuxp). You'd think I'm trying
-to build this big thing around tmux, in reality, it's just that useful.
+[tmux session manager](https://github.com/tony/tmuxp) as well. You might think I'm trying
+to build this big thing around tmux, but the reality of it is, tmux is just that useful.
 
 I am writing this from vim in a tmux pane, inside a window, in a session, on
 the server, through a client.  It's not that I don't care about accuracy, but
@@ -90,6 +88,7 @@ butter use cases for you to start using tmux daily, starting now.
 
 [*Server*](#server) gives life to unseen workhorse that powers tmux behind
 the scenes. You'll think of tmux in a different way, and may be impressed to see
+
 a client-server architecture could be implemented so seamlessly to end users.
 
 [*Session*](#sessions) drops you into the world launching tmux places you into.
@@ -140,7 +139,7 @@ changes where applicable.
 
 ## Book Updates and tmux changes
 
-This book was written for tmux 2.3, released September 2016.
+
 
 tmux does intermittently have updates. I've shepherded many of them over
 the past 5 or so years on my personal configurations as well as software
