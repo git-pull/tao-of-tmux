@@ -36,7 +36,7 @@ text dimension. Inside tmux you can:
 |-------------------|----------------------|-----------------------------------|
 |Pane               |Application           |Performs operations                |
 
-Heck, you even get a clock.
+Heck, you even get a clock. Just like in a graphical desktop environment.
 
 ## Multitasking
 
