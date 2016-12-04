@@ -83,7 +83,7 @@ make your life easier.
 systems you'll be dealing with in the realm of the text-based console. It's
 great for those new to tmux, but also to lays forth some technical backing for
 developers who learned the ropes through examples and osmosis. At the end of this
-section You'll be more confident and secure in the essential systems underpinning
+section you'll be more confident and secure in the essential systems underpinning
 the modern terminal environment.
 
 [*Practical Usage*](#practical-usage) covers common bread and
