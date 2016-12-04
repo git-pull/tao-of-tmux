@@ -105,7 +105,7 @@ and copy and paste been panes.
 do your magic and get to work!
 
 [*Configuration*](#config) discusses customization of tmux, via keybindings,
-status line and behavior. You'll even know how to show your CPU usage and
+status line and behavior. You'll even learn how to show your CPU usage and
 memory via the status line.
 
 [*Technical Stuff*](#technical-stuff) is intensive, "nice to know"
