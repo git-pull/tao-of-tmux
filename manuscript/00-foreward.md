@@ -44,7 +44,7 @@ this be the one.
 I don't like to give a slipshod effort. If I'm going to take the time to write a
 book, I'm giving it 100%.
 
-tmux to me is a tool I find incredible use with, while I don't attach it to my
+tmux to me is a tool I find incredible use with. While I don't attach it to my
 identity, it's been part of my daily life for years. I've helped thousands of
 people learn tmux through my free resource under the same name
 [The Tao of tmux](https://tmuxp.readthedocs.io/en/latest/about_tmux.html),
@@ -55,8 +55,8 @@ to build this big thing around tmux, in reality, it's just that useful.
 
 I am writing this from vim in a tmux pane, inside a window, in a session, on
 the server, through a client.  It's not that I don't care about accuracy, but
-if you want a technical manual, the manpage for tmux is quite sufficient in
-this regard.
+if you want a technical manual, the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
+is quite sufficient in this regard.
 
 A word to absolute beginners, do not feel like you need to grasp the concepts
 of command line and terminal multiplexing in a single sitting. You have the
