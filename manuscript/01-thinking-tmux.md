@@ -46,7 +46,7 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 {width=50%,float=right}
 ![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
-tmux gives you prime oppurtunity to do many things at once in one screen.
+tmux gives you prime oppurtunity to do many things at once on the same screen.
 
 For one you can keep multiple terminals running on the same display.
 
