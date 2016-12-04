@@ -47,8 +47,10 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 ![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 tmux gives you prime oppurtunity to do many things at once on the same screen.
-You can keep multiple terminals running on the same display. After all, that's
-where the name tmux comes from - **T**erminal **Mu**ltiple**x**er.
+You can keep multiple terminals running on the same display.
+
+(After all, that's where the name tmux comes from - **T**erminal
+**Mu**ltiple**x**er.)
 
 In addition to have multiple terminals on one screen, tmux allows you to create
 and link multiple "windows", all within the confines of the tmux session you
