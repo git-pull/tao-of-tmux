@@ -58,37 +58,38 @@ the server, through a client.  It's not that I don't care about accuracy, but
 if you want a technical manual, the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
 is quite sufficient in this regard.
 
-A word to absolute beginners, do not feel like you need to grasp the concepts
+A word to absolute beginners: do not feel you need to grasp the concepts
 of command line and terminal multiplexing in a single sitting. You have the
-choice of picking out the concepts of tmux that you like according to your
+choice of picking out concepts of tmux that you like according to your
 needs or curiosities. If you do not have it installed, please view the
 [Installation section](#appendix-installation) in the Appendix of the book.
 
 ## How this book is structured
 
-First, anything involving installation and hard technical details are in the
-appendix (back of the book). A lot of books tend to use this as filler. For me
-it's more of not wanting to leave complete beginners behind.
+First, anything involving [installation](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
+and hard technical details are in the appendix (back of the book). A lot of
+books tend to use this as filler. For me it's more of not wanting to leave
+complete beginners behind.
 
 For special circumstances like Windows 10, I opted that going so far as adding
 screenshots since a fair share may be more comfortable by a visual approach.
 
-[*Thinking Tmux*](#thinking-tmux), goes over a breakdown of what
+[*Thinking Tmux*](#thinking-tmux) goes over a breakdown of what
 tmux does and how it relates to the GUI desktops we already use on our
 computers.  You will get to wrap your brain around what tmux is and how it can
 make your life easier.
 
-[*Terminal Fundamentals*](#terminal-fundamentals), gives a run through of the common
+[*Terminal Fundamentals*](#terminal-fundamentals) gives a run through of the common
 systems you'll be dealing with in the realm of the text-based console. It's
-great for those new to tmux, but also to put some technical backing for
+great for those new to tmux, but also to lays forth some technical backing for
 developers who learned the ropes through examples and osmosis. You'll be more
 confident and secure in the fundamental underpinnings of using multiplexers
 and shells.
 
-[*Practical Usage*](#practical-usage), covers common bread and
+[*Practical Usage*](#practical-usage) covers common bread and
 butter use cases for you to start using tmux daily, starting now.
 
-[*Server*](#server) gives life to unseen workhorse that powers tmux behind
+[*Server*](#server) gives life to the unseen workhorse that powers tmux behind
 the scenes. You'll think of tmux in a different way, and may be impressed to see
 a client-server architecture could be implemented so seamlessly to end users.
 
