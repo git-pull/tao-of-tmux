@@ -48,7 +48,7 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 
 tmux gives you prime oppurtunity to do many things at once on the same screen.
 You can keep multiple terminals running on the same display. After all, that's
-where the name **T**-**M**ux comes from - **T**erminal **Mu**ltiple**x**er.
+where the name tmux comes from - **T**erminal **Mu**ltiple**x**er.
 
 In addition to have multiple terminals on one screen, tmux allows you to create
 and link multiple "windows", all within the confines of the tmux session you
