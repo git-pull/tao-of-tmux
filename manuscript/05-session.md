@@ -11,3 +11,5 @@ found at the bottom, will include a list of windows.
 The window you have selected currently may have a special color or a `*` symbol
 next to it.
 
+![The first window, ID 1, titled "manuscript" is active. The second window, ID 2, titled zsh.](images/05-session/active-window.png)
+
