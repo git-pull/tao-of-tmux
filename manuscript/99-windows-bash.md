@@ -46,3 +46,9 @@ already installed! But if it's not, type `sudo apt-get install tmux`.
 
 {width=100%,float=left}
 ![In tmux!](images/99-windows-bash/09-tmux.jpg)
+
+This should allow you to run tmux within bash.exe.
+
+This is a real ubuntu installation, so you can continue to install
+packages via `sudo apt-get install **packagename**` and update packages
+via `sudo apt-get update && sudo apt-get upgrade`.
