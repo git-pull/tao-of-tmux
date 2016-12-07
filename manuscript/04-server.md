@@ -29,6 +29,8 @@ They visualize time being spent digging around `/etc/` for configuration files
 and flipping settings on and off just to get basic systems online. But not with
 tmux. It's a server, but in the good way.
 
+## Stayin' alive
+
 The server part of tmux is how your sessions are able to stay alive even
 after your client is detached.
 
