@@ -17,4 +17,11 @@ notification library. libevent is an abstraction layer on top of OS-specific eve
 
 ## Targets {#targets}
 
+If a command allow target specification, it's usually done through `-t`.
+
 ## Formats {#formats}
+
+tmux provides a minimal template language and set of variables you can use to
+access information about your tmux environment.
+
+Formats are often specified via `-F` flag.
