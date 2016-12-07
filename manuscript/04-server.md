@@ -1,7 +1,6 @@
 # Server {#server} 
 
-![Server](images/info/server.png)
-
+![Server](images/info/server.png) 
 Q> ### Wait what, tmux is a server?
 
 Q> Often when "server" is mentioned, what comes to mind for many
@@ -14,6 +13,8 @@ Q> configuration settings or creating a service entry to start things.
 
 tmux uses a client-server model, but the server is forked to the 
 background for you.
+
+## Zero config needed
 
 It surprises some when I mention it because servers often beget
 a setup process. But just because servers are involved doesn't entail
@@ -36,7 +37,7 @@ after your client is detached.
 One server can contain one or multiple [sessions](#sessions).
 
 Recurring usage of tmux after a server already exist will create a new
-session inside that server.
+session inside that server. 
 
 W> ### Advanced: Multiple servers
 W>
