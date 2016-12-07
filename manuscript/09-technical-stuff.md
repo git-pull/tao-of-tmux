@@ -17,4 +17,4 @@ notification library. libevent is an abstraction layer on top of OS-specific eve
 
 ## Targets {#targets}
 
-## Formats #{formats}
+## Formats {#formats}
