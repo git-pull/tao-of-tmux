@@ -1,6 +1,6 @@
-# Cheatsheets {#appendix-troubleshooting}
+# Troubleshooting {#appendix-troubleshooting}
 
-# `E353: Nothing in register *` when pasting on vim
+## `E353: Nothing in register *` when pasting on vim
 
 If you are using MacOS / OS X with vim inside tmux, you may get the error
 `E353: Nothing in register *` when trying to paste.
