@@ -12,3 +12,4 @@
 99-cheatsheets.md
 99-installation.md
 99-windows-bash.md
+99-troubleshooting.md
