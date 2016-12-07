@@ -20,7 +20,7 @@ where you could only get passed if you motioned your controller in a special
 fashion. Coined the ["Barrel of Doom"](https://gaming.stackexchange.com/questions/10361/i-never-made-it-past-carnival-night-zone),
 if you don't get past it, you won't progress to the next stage, game over.
 
-That's kind of like what the prefix key in tmux is like. Without you
+That's kind of what the prefix key in tmux is like. Without you
 understanding how to send `command sequences` to tmux, you'll pretty much be
 dead in the water.
 
