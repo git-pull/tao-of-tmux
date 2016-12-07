@@ -2,6 +2,8 @@
 
 ![Server w/ laptop](images/info/server-with-laptop.png)
 
+## Under the hood
+
 There's how you use it in practice, and the hard technical reality of how something
 operates under the hood.
 
