@@ -38,7 +38,7 @@ various responsibilities and interfaces of the operating system. They're
 categorized as ["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
 
 In daily life, we often use systems that break compatibility with POSIX
-standards for sheer reasons of practicality. Operating systems like MacOS will
+standards for reasons of sheer practicality. Operating systems like MacOS will
 drop you right into Bash. [`make(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html),
 which is also a POSIX standard, is in actuality [GNU Make](https://www.gnu.org/software/make/)
 on MacOS by default.  Did you know that as of September 2016 POSIX Make has no
