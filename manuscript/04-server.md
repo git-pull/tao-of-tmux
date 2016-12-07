@@ -16,18 +16,27 @@ background for you.
 
 ## Zero config needed
 
+You don't notice it, but when you use tmux normally, what actually happens
+is a server is launched and you're really being connected via a client.
+
+It's just that it's streamlined for normal usage. I could continue the book and
+not even mention servers. But I'd rather readers a solid understanding that
+while tmux feels like magic, it's really utilitarian first and foremost, but
+exquisitely executed from a user experience standpoint.
+
+How is it utilitarian? We'll go into it more in future chapters where I dive
+into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
+which I made that utilize the often unnoticed advanced features under the hood.
+
 It surprises some when I mention it because servers often beget
 a setup process. But just because servers are involved doesn't entail
 hours of configuration on each machine you run it on. There is no
 setup.
 
-You don't notice it, but when you use tmux normally, what actually happens
-is a server is launched and you're really being connected via a client.
-
-It's just that streamlined. When people people think server, they think pain.
-They visualize time being spent digging around `/etc/` for configuration files
-and flipping settings on and off just to get basic systems online. But not with
-tmux. It's a server, but in the good way.
+When people people think server, they think pain. They visualize time being
+spent digging around `/etc/` for configuration files and flipping settings on
+and off just to get basic systems online. But not with tmux. It's a server, but
+in the good way.
 
 ## Stayin' alive
 

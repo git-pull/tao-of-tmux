@@ -15,6 +15,6 @@ Did you know that when you start tmux, you're automatically creating a server in
 The innards of tmux is powered by [libevent](http://libevent.org/), a cross-platform event
 notification library. libevent is an abstraction layer on top of OS-specific event notifiers.
 
-## Targets
+## Targets {#targets}
 
-## Formats
+## Formats #{formats}
