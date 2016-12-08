@@ -1,5 +1,12 @@
 # Command Line Kung fu {#cli-kung-fu}
 
+The command line in tmux is one of those areas often uncharted.
+
+## Shorthands
+
+tmux commands and arguments may all be accessed via [`fnmatch(1)`](http://pubs.opengroup.org/onlinepubs/009695399/functions/fnmatch.html)
+patterns.
+
 ## Targets {#targets}
 
 If a command allow target specification, it's usually done through `-t`.
