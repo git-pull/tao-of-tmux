@@ -1,15 +1,21 @@
 # Session {#sessions}
 
-![Session](images/info/session.png)
+Welcome to the session. Being the highest level entity after your
+[server](#server). Regardless of whether you're starting tmux fresh
+or attaching an already created one, your interaction with tmux will
+have to have at least one session running.
 
-Welcome to the session. A tmux client, launched by `tmux` or `tmux attach` will
-connect to a single session.
-
-The session will hold one or more [windows](#windows). Your tmux status bar,
+A session will hold one or more [windows](#windows). Your tmux status bar,
 found at the bottom, will include a list of windows.
+
+![Session](images/info/session.png)
 
 The window you have selected currently may have a special color or a `*` symbol
 next to it.
 
 ![The first window, ID 1, titled "manuscript" is active. The second window, ID 2, titled zsh.](images/05-session/active-window.png)
 
+# Switching sessions within tmux
+
+`Ctrl-b s` will allow you to switch between sessions within the same tmux
+client.
