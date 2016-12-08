@@ -7,22 +7,21 @@ The command line in tmux is one of those areas often uncharted.
 tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
 
-For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`, `$ tmux att`,
-`$ tmux at`, `$ tmux a` work just as well.
+For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`,
+`$ tmux att`, `$ tmux at`, `$ tmux a` work just as well.
 
 Every tmux command has short-hands, let's try this for `$ tmux new-session`:
 
-`$ tmux new-session`
+{language=shell, line-numbers=off}
+    $ tmux new-session
 
-`$ tmux new-sessio`
+    $ tmux new-sessio
 
 and so on, until:
 
-`$ tmux new-`
-
-`ambiguous command: new-, could be: new-session, new-window`
-
-
+{language=shell, line-numbers=off}
+    $ tmux new-
+    ambiguous command: new-, could be: new-session, new-window
 
 ## Targets {#targets}
 
