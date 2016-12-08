@@ -43,8 +43,6 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 
 ## Multitasking
 
-![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
-
 tmux gives you prime oppurtunity to do many things at once on the same screen.
 You can keep multiple terminals running on the same display.
 
@@ -81,12 +79,12 @@ Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
+![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
+
 You can see with tmux, you very quickly have the makings of an IDE! And it's on
 your terms.
 
 ## Keep your applications running in the background
-
-![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 Sometimes in GUI applications you'll have an option to minimize and application
 to a tray ground.  The application is out of the sight, but running in the
@@ -114,6 +112,8 @@ one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
 server to manage AIM, MSN, Google Talk, Jabber, ICQ, even twitter. Then you can
 detach your IRC and "idle" in your favorite channels, stay online on instant
 messengers, and get back to your messages when you return.
+
+![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 I've even see people (myself included) use it to keep development servers
 running. Hearty emphasis on *development*, I would advise daemonizing and
