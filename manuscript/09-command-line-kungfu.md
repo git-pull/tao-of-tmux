@@ -17,6 +17,10 @@ Every tmux command has short-hands, let's try this for `$ tmux new-session`:
 
     $ tmux new-sessio
 
+    # ...
+
+    $ tmux new-s
+
 and so on, until:
 
 {language=shell, line-numbers=off}
