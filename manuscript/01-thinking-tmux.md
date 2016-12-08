@@ -43,7 +43,6 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 
 ## Multitasking
 
-{width=50%,float=right}
 ![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 tmux gives you prime oppurtunity to do many things at once on the same screen.
@@ -87,7 +86,6 @@ your terms.
 
 ## Keep your applications running in the background
 
-{width=50%,float=right}
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 Sometimes in GUI applications you'll have an option to minimize and application
