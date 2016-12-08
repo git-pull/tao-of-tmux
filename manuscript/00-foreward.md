@@ -109,10 +109,13 @@ do your magic and get to work!
 status line and behavior. You'll even learn how to show your CPU usage and
 memory via the status line.
 
-[*Technical Stuff*](#technical-stuff) is intensive, "nice to know"
-stuff about the internals of tmux. You may learn enough to be able to 
-impress friends who currently use tmux daily. If you like programming on
-POSIX-like systems, this one is for you.
+[Command Line Kung fu](#cli-kung-fu) goes into [Targets](#targets) and
+[Formats](#formats).
+
+[*Technical Stuff*](#technical-stuff) is a glimpse at tmux' code and how it
+works under the hood. You may learn enough to be able to impress friends who
+currently use tmux daily. If you like programming on POSIX-like systems, this
+one is for you.
 
 [*Recipes*](#recipes) wraps it up with a whirlwind of a customized tmux
 configuration, a yaml file to launch tmux sessions using

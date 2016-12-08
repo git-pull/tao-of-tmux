@@ -1,4 +1,4 @@
-# Technical Stuff (and Command Line Kung-fu) {#technical-stuff}
+# Technical Stuff {#technical-stuff}
 
 ![Server w/ laptop](images/info/server-with-laptop.png)
 
@@ -16,21 +16,3 @@ Did you know that when you start tmux, you're automatically creating a server in
 
 The innards of tmux is powered by [libevent](http://libevent.org/), a cross-platform event
 notification library. libevent is an abstraction layer on top of OS-specific event notifiers.
-
-## Targets {#targets}
-
-If a command allow target specification, it's usually done through `-t`.
-
-| Thing    | Prefix |
-|----------|--------|
-| session  | $      |
-| window   | @      | 
-| pane     | %      |
-
-
-## Formats {#formats}
-
-tmux provides a minimal template language and set of variables you can use to
-access information about your tmux environment.
-
-Formats are often specified via `-F` flag.

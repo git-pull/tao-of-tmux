@@ -7,8 +7,9 @@
 06-window.md
 07-pane.md
 08-configuration.md
-09-technical-stuff.md
-10-recipes.md
+09-command-line-kungfu.md
+10-technical-stuff.md
+11-recipes.md
 99-cheatsheets.md
 99-installation.md
 99-windows-bash.md
