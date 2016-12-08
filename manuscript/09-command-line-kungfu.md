@@ -4,7 +4,7 @@ The command line in tmux is one of those areas often uncharted.
 
 ## Shorthands
 
-tmux commands and arguments may all be accessed via [`fnmatch(1)`](http://pubs.opengroup.org/onlinepubs/009695399/functions/fnmatch.html)
+tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
 
 ## Targets {#targets}
