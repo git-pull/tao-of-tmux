@@ -64,6 +64,17 @@ choice of picking out concepts of tmux that you like according to your
 needs or curiosities. If you do not have it installed, please view the
 [Installation section](#appendix-installation) in the Appendix of the book.
 
+## Styles
+
+Formatted text `like this` is source code.
+
+Formatted text with a $ in front is a terminal command. `$ echo 'like this'`.
+This means you can type those commands right into the console, without the
+dollar. For more information on the meaning of the "dollar prompt", Check out
+[*What is the origin of the UNIX $ (dollar)
+prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
+on Super User.
+
 ## How this book is structured
 
 First, anything involving [installation](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
