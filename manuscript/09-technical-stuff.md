@@ -1,4 +1,4 @@
-# Technical Stuff {#technical-stuff}
+# Technical Stuff (and Command Line Kung-fu) {#technical-stuff}
 
 ![Server w/ laptop](images/info/server-with-laptop.png)
 
