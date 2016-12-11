@@ -20,7 +20,7 @@ next to it.
 `Ctrl-b s` will allow you to switch between sessions within the same tmux
 client.
 
-## Renaming tmux windows
+## Renaming a tmux session
 
 ### Keystroke
 
