@@ -1,4 +1,4 @@
-# Recipes {#recipes}
+# Tips and Tricks {#tips-and-tricks}
 
 ## Read the tmux manual in style
 

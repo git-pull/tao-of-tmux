@@ -128,8 +128,8 @@ works under the hood. You may learn enough to be able to impress friends who
 currently use tmux daily. If you like programming on POSIX-like systems, this
 one is for you.
 
-[*Recipes*](#recipes) wraps it up with a whirlwind of a customized tmux
-configuration, a yaml file to launch tmux sessions using
+[*Tips and Tricks*](#tips-and-tricks) wraps it up with a whirlwind of a
+customized tmux configuration, a yaml file to launch tmux sessions using
 [tmuxp](https://github.com/tony/tmuxp). In addition, we'll cover a Python API
 for tmux called [libtmux](https://github.com/tony/libtmux). You'll get to see
 some tricked out tmux examples.
