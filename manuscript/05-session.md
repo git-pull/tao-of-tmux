@@ -15,7 +15,20 @@ next to it.
 
 ![The first window, ID 1, titled "manuscript" is active. The second window, ID 2, titled zsh.](images/05-session/active-window.png)
 
-# Switching sessions within tmux
+## Switching sessions within tmux
 
 `Ctrl-b s` will allow you to switch between sessions within the same tmux
 client.
+
+## Renaming tmux windows
+
+### Keystroke
+
+You can rename sessions with `Ctrl-b $`.  The status bar will be temporarily
+altered into a text field to allow altering the session name.
+
+### Command line
+
+{language=shell, line-numbers=off}
+
+    $ tmux rename-session [-t target-session] new-name
