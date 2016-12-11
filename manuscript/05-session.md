@@ -25,8 +25,7 @@ client.
 ### Command line
 
 {language=shell, line-numbers=off}
-    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session] [-T key-table]
-
+    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
 
 ## Renaming a tmux session
 
