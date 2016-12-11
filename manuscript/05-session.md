@@ -30,5 +30,4 @@ altered into a text field to allow altering the session name.
 ### Command line
 
 {language=shell, line-numbers=off}
-
     $ tmux rename-session [-t target-session] new-name
