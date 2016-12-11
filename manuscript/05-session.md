@@ -17,8 +17,16 @@ next to it.
 
 ## Switching sessions within tmux
 
+### Keystroke
+
 `Ctrl-b s` will allow you to switch between sessions within the same tmux
 client.
+
+### Command line
+
+{language=shell, line-numbers=off}
+    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session] [-T key-table]
+
 
 ## Renaming a tmux session
 
