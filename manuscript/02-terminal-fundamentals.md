@@ -21,7 +21,7 @@ well.
 
 Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
-hours. I could even set you on a few tracks, (The C Language, anything from he
+hours. I could even send you on a few tracks, (The C Language, anything from he
 Unix/BSD lineage, etc.) and some clever fellow would likely chime in wanting to
 talk about Linux, GNU and so on. It's like *Game of Thrones*, there's multiple
 story arcs you can follow some of which intersect. I can't be authoritative, but
