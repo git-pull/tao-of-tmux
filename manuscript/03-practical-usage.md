@@ -17,7 +17,7 @@ And it's a hump we have to get over.
 
 When I was a kid, there was a video game (depending on your generation you may
 know it) called Sonic 3. One of the carnival levels had this ridiculous section
-where you could only get passed if you motioned your controller in a special
+where you could only proceed if you motioned your controller in a special
 fashion. Coined the ["Barrel of Doom"](https://gaming.stackexchange.com/questions/10361/i-never-made-it-past-carnival-night-zone),
 if you don't get past it, you won't progress to the next stage, game over.
 
