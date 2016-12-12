@@ -52,9 +52,10 @@ project to a single session, I'll name it after the software project. You'll
 likely develop your own naming conventions, but pretty much anything is more
 descriptive than the default. 
 
-If you don't name your sessions, you won't be able to keep track of what is
-inside that session. Sometimes you may forget you already have a project opened
-that is a few days old and you can just re-attach or switch to that.
+If you don't name your sessions, it'll be difficult to keep track of what is
+inside that session from the outside. Sometimes you may forget you already have
+a project opened that is a few days old and you can just re-attach or switch to
+that.
 
 ### Keystroke
 
