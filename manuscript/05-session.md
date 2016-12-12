@@ -43,10 +43,24 @@ client.
 
 ## Renaming a tmux session
 
+Sometimes the default session name given by tmux isn't descriptive enough. It
+only takes a few seconds to update it.
+
+You can name it whatever you want. Typically if I'm working on multiple web
+projects in one session, I'll name is "web". If I'm assigning one software
+project to a single session, I'll name it after the software project. You'll
+likely develop your own naming conventions, but pretty much anything is more
+descriptive than the default. 
+
+If you don't name your sessions, you won't be able to keep track of what is
+inside that session. Sometimes you may forget you already have a project opened
+that is a few days old and you can just re-attach or switch to that.
+
 ### Keystroke
 
-You can rename sessions with `Ctrl-b $`.  The status bar will be temporarily
-altered into a text field to allow altering the session name.
+You can rename sessions from within tmux with `Ctrl-b $`. 
+The status bar will be temporarily altered into a text field to allow altering
+the session name.
 
 ### Command line
 
