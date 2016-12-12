@@ -15,6 +15,32 @@ highlighter for manual pages.
 
 ![left: man, version 1.6c on MacOS Sierra. right: MOST v5.0.0](images/11-recipes/most.png)
 
+So to get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
+to point to the MOST binary. You can test is like this:
+
+{language=shell, line-numbers=off}
+    $ export PAGER=more man ls
+
+If you found that you like `most`, you will probably want it to be the manual
+page filter for anything you look up. You will want to add it to the "rc" ([Run
+Commands](https://en.wikipedia.org/wiki/Run_commands) for your shell. Depending
+on your shell (you can use `$ echo $SHELL` to find it on most shells, you will
+want to keep this in `~/.bashrc` or `~/.zshrc`:
+
+{language=shell, line-numbers=off}
+    export PAGER="most"
+
+In my configuratiosn, I often reuse configs and some machines may not have
+`most` installed, so I will have my scripting only set `PAGER` if `most` is
+found:
+
+{language=shell, line-numbers=off}
+    #!/bin/sh
+
+    if command -v most > /dev/null 2>&1; then
+        export PAGER="most"
+    fi
+
 ## Session Managers
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
