@@ -44,3 +44,14 @@ tmux provides a minimal template language and set of variables you can use to
 access information about your tmux environment.
 
 Formats are often specified via `-F` flag.
+
+You know how template engines like
+[ERB](http://ruby-doc.org/stdlib-2.3.3/libdoc/erb/rdoc/ERB.html) in ruby,
+[mustache](https://mustache.github.io/), [handlebars](http://handlebarsjs.com/),
+[jinja2](http://jinja.pocoo.org/docs/dev/) in python,
+[twig](http://twig.sensiolabs.org/) in PHP and
+[JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) in Java allow template
+varaibles? Formats are a variable similar concept.
+
+The amount of `FORMATS` (variables) made available by tmux has expanded greatly
+since version 1.8. 
