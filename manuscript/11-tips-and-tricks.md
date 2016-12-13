@@ -119,6 +119,23 @@ disposal. One would be to add continuation to the next line with a trailing
 backlash (`\`). Another would be to break the command up into variables and
 `make` subcommands. So let's try that:
 
+{language=makefile, line-numbers=off}
+    WATCH_FILES= find . -type f -not -path '*/\.*' | grep -i '.*[.]go$$' 2> /dev/null
+
+    test:
+            go test $(test)
+
+    entr_warn:
+            @echo "----------------------------------------------------------"
+            @echo "     ! File watching functionality non-operational !      "
+            @echo ""
+            @echo "Install entr(1) to automatically run tasks on file change."
+            @echo "See http://entrproject.org/"
+            @echo "----------------------------------------------------------"
+
+    watch_test:
+            if command -v entr > /dev/null; then ${WATCH_FILES} | entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
+
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
