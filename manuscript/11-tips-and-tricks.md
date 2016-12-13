@@ -74,7 +74,8 @@ The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_
 a list of files into it to watch.
 
 Let's search for all [`.go`](https://en.wikipedia.org/wiki/Go_(programming_language))
-files in a directory and run tests on file change:
+files in a directory and [run tests](https://golang.org/cmd/go/#hdr-Test_packages)
+on file change:
 
 {language=shell, line-numbers=off}
     $ ls -d *.go | entr -c go test ./...
