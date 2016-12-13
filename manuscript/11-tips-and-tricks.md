@@ -61,8 +61,20 @@ programmers and system adminstrators.
 In my never ending conquest for file watchers, I've become the unofficial
 taste-tester of them.
 
+What this kind of application does is wait for a file to be updated, then
+executes a custom command, like restarting a server, rebuilding an application,
+running tests, linters and so on. It gives you as a developer instant feedback
+in the terminal and is one of those things that can really trick out a tmux
+workspace into an IDE-like environment.
+
 I eventually settled toward [`entr(1)`](http://entrproject.org/), which
 works superbly across Linux distros, BSD's and OS X / MacOS.
+
+The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
+a list of files into it to watch.
+
+{language=shell, line-numbers=off}
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
 ## Session Managers
 
