@@ -30,7 +30,7 @@ want to keep this in `~/.bashrc` or `~/.zshrc`:
 {language=shell, line-numbers=off}
     export PAGER="most"
 
-In my configuratiosn, I often reuse configs and some machines may not have
+In my configurations, I often reuse configs and some machines may not have
 `most` installed, so I will have my scripting only set `PAGER` if `most` is
 found:
 
