@@ -143,9 +143,9 @@ So let's try that:
     entr_warn:
             @echo "----------------------------------------------------------"
             @echo "     ! File watching functionality non-operational !      "
-            @echo ""
+            @echo "                                                          "
             @echo "Install entr(1) to automatically run tasks on file change."
-            @echo "See http://entrproject.org/"
+            @echo "See http://entrproject.org/                               "
             @echo "----------------------------------------------------------"
 
     watch_test:
