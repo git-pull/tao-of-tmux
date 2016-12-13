@@ -21,21 +21,21 @@
 
 ## Keybindings
 
-| Short cut        | Action
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-b`             | Send the prefix key (C-b) through to the           |
 |                  | application.                                       |
 
 ### Miscellaneous
 
-| Short cut        | Action
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
 
 
 ### Copy/Paste
 
-| Short cut        | Action
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`#`               | List all paste buffers.                            |
 |`[`               | Enter copy mode to copy text or view the history.  |
@@ -44,20 +44,26 @@
 
 ### Window traversal
 
-|Short cut         | Action
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
 
 
 ### Pane traversal
 
-| Short cut        | Action
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
+|`;`               | Move to the previously active pane.                |
 
 
-| Short cut        | Action
+### Pane moving
+
+| Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-o`             | Rotate the panes in the current window forwards.   |
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
 |`!`               | Break the current pane out of the window.          |
 |`"`               | Split the current pane into two, top and bottom.   |
 |`$`               | Rename the current session.                        |
@@ -67,9 +73,7 @@
 |`,`               | Rename the current window.                         |
 |`-`               | Delete the most recently copied buffer of text.    |
 |`.`               | Prompt for an index to move the current window.    |
-
 |`:`               | Enter the tmux command prompt.                     |
-|`;`               | Move to the previously active pane.                |
 |`=`               | Choose which buffer to paste interactively from a  |
 |                  | list.                                              |
 |`?`               | List all key bindings.                             |
