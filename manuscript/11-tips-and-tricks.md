@@ -171,16 +171,15 @@ Ruby. There is also [tmuxomatic](https://github.com/oxidane/tmuxomatic), which
 allows you to "draw" your tmux sessions in text and have tmuxomatic build the
 layout.
 
-Of course, I sort of have hometeam advantage here, [tmuxp](https://github.com/tony/tmuxp)
-is better. I written it already having used teamocil and tmuxinator but with
-many more features. For one, it builds on top of
-[libtmux](https://github.com/tony/libtmux), a library which abstracts tmux
-[server](#server), [sessions](#sessions), [windows](#windows) and
-[panes](#panes) to actively build the state of tmux sessions. In addition it
-has a naive form of session freezing, support for JSON, more flexible
-configuration options, and it will even offer to attach sessions that already
-exist instead of redundantly running script commands against the session if it
-already is running.
+I sort of have a hometeam advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp)
+I written it already having used teamocil and tmuxinator but with many more
+features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
+a library which abstracts tmux [server](#server), [sessions](#sessions),
+[windows](#windows) and [panes](#panes) to actively build the state of tmux
+sessions. In addition it has a naive form of session freezing, support for JSON,
+more flexible configuration options, and it will even offer to attach sessions
+that already exist instead of redundantly running script commands against the
+session if it already is running.
 
 So in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
 then create a YAML file at `~/.tmuxp/test.yaml`:
