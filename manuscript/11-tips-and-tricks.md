@@ -129,7 +129,8 @@ Another would be to break the command up into variables and
 `make` subcommands. So let's try that:
 
 {language=makefile, line-numbers=off}
-    WATCH_FILES= find . -type f -not -path '*/\.*' | grep -i '.*[.]go$$' 2> /dev/null
+    WATCH_FILES= find . -type f -not -path '*/\.*' | \
+    grep -i '.*[.]go$$' 2> /dev/null
 
     test:
             go test $(test)
