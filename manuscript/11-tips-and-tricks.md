@@ -110,8 +110,8 @@ So let's go ahead see what a `Makefile` with this looks like:
 
 But that is a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
-backlash (`\`). Another would be to break the command up into variables and `make`
-subcommands.
+backlash (`\`). Another would be to break the command up into variables and
+`make` subcommands. So let's try that:
 
 ## Session Managers
 
