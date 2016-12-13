@@ -116,7 +116,7 @@ So let's go ahead see what a `Makefile` with this looks like:
 
 But that is a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
-backlash (`\`).
+backlash (`\`):
 
 {language=makefile, line-numbers=off}
     watch_test:
@@ -125,8 +125,8 @@ backlash (`\`).
         else go test ./...; \
         echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
-Another would be to break the command up into variables and
-`make` subcommands. So let's try that:
+Another would be to break the command up into variables and `make` subcommands.
+So let's try that:
 
 {language=makefile, line-numbers=off}
     WATCH_FILES= find . -type f -not -path '*/\.*' | \
