@@ -116,7 +116,16 @@ So let's go ahead see what a `Makefile` with this looks like:
 
 But that is a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
-backlash (`\`). Another would be to break the command up into variables and
+backlash (`\`).
+
+{language=makefile, line-numbers=off}
+    watch_test:
+        if command -v entr > /dev/null; then find . -print | \
+        grep -i '.*[.]go' | entr -c go test ./...; \
+        else go test ./...; \
+        echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
+
+Another would be to break the command up into variables and
 `make` subcommands. So let's try that:
 
 {language=makefile, line-numbers=off}
@@ -134,7 +143,8 @@ backlash (`\`). Another would be to break the command up into variables and
             @echo "----------------------------------------------------------"
 
     watch_test:
-            if command -v entr > /dev/null; then ${WATCH_FILES} | entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
+            if command -v entr > /dev/null; then ${WATCH_FILES} | \
+            entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
 
 `$(MAKE)` is helpful for portability because those are recursive command calls
 back into `make`. On BSD systems, I may try invoking `make` via `gmake` (to call
