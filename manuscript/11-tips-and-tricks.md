@@ -41,6 +41,29 @@ found:
         export PAGER="most"
     fi
 
+## Log tailing
+
+Not tmux specific, but powerful when used in tandem with it. You can run a
+follow (`-f`) using [`tail(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html).
+More modern versions of tail have the `-F` (capitalized) which checks for file
+renames and rotation. 
+
+On OS X, you can do:
+
+{language=shell, line-numbers=off}
+    $ tail -F /var/log/system.log
+
+and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
+programmers and system adminstrators.
+
+## File watching
+
+In my never ending conquest for file watchers, I've become the unofficial
+taste-tester of them.
+
+I eventually settled toward [`entr(1)`](http://entrproject.org/), which
+works superbly across Linux distros, BSD's and OS X / MacOS.
+
 ## Session Managers
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
@@ -86,26 +109,3 @@ So in tmuxp, a yaml file like this:
 gives a session titled *4-pane-split*, with one window titled *dev window* that
 has 4 panes in it. 3 of them are in the home directory, the other is in
 `/var/log` and is listed all files ending with `.log`.
-
-## Log tailing
-
-Not tmux specific, but powerful when used in tandem with it. You can run a
-follow (`-f`) using [`tail(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html).
-More modern versions of tail have the `-F` (capitalized) which checks for file
-renames and rotation. 
-
-On OS X, you can do:
-
-{language=shell, line-numbers=off}
-    $ tail -F /var/log/system.log
-
-and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
-programmers and system adminstrators.
-
-## File watching
-
-In my never ending conquest for file watchers, I've become the unofficial
-taste-tester of them.
-
-I eventually settled toward [`entr(1)`](http://entrproject.org/), which
-works superbly across Linux distros, BSD's and OS X / MacOS.
