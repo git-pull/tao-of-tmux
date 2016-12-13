@@ -106,7 +106,7 @@ So let's go ahead see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
     watch_test:
-	if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
+        if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
 But that is a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
