@@ -51,7 +51,7 @@ You know how template engines like
 [jinja2](http://jinja.pocoo.org/docs/dev/) in python,
 [twig](http://twig.sensiolabs.org/) in PHP and
 [JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) in Java allow template
-varaibles? Formats are a variable similar concept.
+variables? Formats are a variable similar concept.
 
 The amount of `FORMATS` (variables) made available by tmux has expanded greatly
 since version 1.8. 
