@@ -73,7 +73,8 @@ superbly across Linux distros, BSD's and OS X / MacOS.
 The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
 a list of files into it to watch.
 
-Let's search for all go files in a directory and run tests on file change:
+Let's search for all [`.go`](https://en.wikipedia.org/wiki/Go_(programming_language))
+files in a directory and run tests on file change:
 
 {language=shell, line-numbers=off}
     $ ls -d *.go | entr -c go test ./...
