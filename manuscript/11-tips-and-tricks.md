@@ -97,6 +97,22 @@ Show a notice message to user to install entr if not installed ons system:
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
+Here's why you want patterns like that, you can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
+and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control)
+so you and other developers can have access to this reusable command across
+different UNIX-like systems, with and without that certain program installed.
+
+So let's go ahead see what a `Makefile` with this looks like:
+
+{language=makefile, line-numbers=off}
+    watch_test:
+	if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
+
+But that is a tad bloated and hard to read. We have a couple tricks at our
+disposal. One would be to add continuation to the next line with a trailing
+backlash (`\`). Another would be to break the command up into variables and `make`
+subcommands.
+
 ## Session Managers
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
