@@ -21,17 +21,25 @@
 
 ## Keybindings
 
-|Short cut         | Action
+| Short cut        | Action
 |------------------|----------------------------------------------------|
 |`C-b`             | Send the prefix key (C-b) through to the           |
 |                  | application.                                       |
 
 ### Miscellaneous
 
-|Short cut         | Action
+| Short cut        | Action
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
+
+
+### Copy/Paste
+
+| Short cut        | Action
+|------------------|----------------------------------------------------|
 |`#`               | List all paste buffers.                            |
+|`[`               | Enter copy mode to copy text or view the history.  |
+|`]`               | Paste the most recently copied buffer of text.     |
 
 
 ### Window traversal
@@ -40,12 +48,18 @@
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
 
-|Short cut         | Action
+
+### Pane traversal
+
+| Short cut        | Action
+|------------------|----------------------------------------------------|
+
+
+| Short cut        | Action
 |------------------|----------------------------------------------------|
 |`C-o`             | Rotate the panes in the current window forwards.   |
 |`!`               | Break the current pane out of the window.          |
 |`"`               | Split the current pane into two, top and bottom.   |
-
 |`$`               | Rename the current session.                        |
 |`%`               | Split the current pane into two, left and right.   |
 |`&`               | Kill the current window.                           |
@@ -60,8 +74,6 @@
 |                  | list.                                              |
 |`?`               | List all key bindings.                             |
 |`D`               | Choose a client to detach.                         |
-|`[`               | Enter copy mode to copy text or view the history.  |
-|`]`               | Paste the most recently copied buffer of text.     |
 |`c`               | Create a new window.                               |
 |`d`               | Detach the current client.                         |
 |`f`               | Prompt to search for text in open windows.         |
