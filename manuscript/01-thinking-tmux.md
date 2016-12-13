@@ -71,7 +71,7 @@ or [entr](http://entrproject.org/). On file change, you could do stuff like:
 - linting with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint),
   [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop),
   [ESLint](http://eslint.org/) or [Flake8](http://flake8.pycqa.org/en/latest/)
-- rebuilding with `make` or `ninja`
+- rebuilding with `make` or [`ninja`](https://ninja-build.org/)
 - reload your [Express](http://expressjs.com/) server
 - any other custom command to your liking
 
