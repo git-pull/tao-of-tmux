@@ -109,6 +109,8 @@ and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_cont
 so you and other developers can have access to this reusable command across
 different UNIX-like systems, with and without that certain program installed.
 
+Note: You may have to convert the indentation within from spaces to tabs.
+
 So let's go ahead see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
