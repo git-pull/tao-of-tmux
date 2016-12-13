@@ -1,5 +1,8 @@
 # Server {#server} 
 
+Your server holds [Sessions](#sessions) and the [Windows](#windows) and
+[Panes](#panes) within them.
+
 ![Server](images/info/server.png) 
 Q> ### Wait what, tmux is a server?
 
