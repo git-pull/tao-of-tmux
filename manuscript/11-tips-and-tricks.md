@@ -154,7 +154,7 @@ So let's try that:
 
 `$(MAKE)` is helpful for portability because those are recursive command calls
 back into `make`. On BSD systems, I may try invoking `make` via `gmake` (to call
-[GNU Make](https://www.gnu.org/software/make/) specifically. I've made a [patch before](https://github.com/liuxinyu95/AlgoXY/pull/16)
+[GNU Make](https://www.gnu.org/software/make/) specifically). I've made a [patch before](https://github.com/liuxinyu95/AlgoXY/pull/16)
 fixing the build system for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
 
 ## Session Managers {#session-manager}
