@@ -79,7 +79,7 @@ files in a directory and run tests on file change:
 {language=shell, line-numbers=off}
     $ ls -d *.go | entr -c go test ./...
 
-Sometimes we may want to see recursive files, and we need to do that in a
+Sometimes we may want to watch files recursively, and we need to do that in a
 cross-platform way. We can't depend on `**` existing to grab files recursively.
 So something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
 
