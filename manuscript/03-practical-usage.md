@@ -75,7 +75,8 @@ This is a similar concept, it feels like you just ran `<ctrl-z>` and sent
 except technically you were in a "job" all along, you were just using a client
 to view it.
 
-When you did `<Ctrl-b> d`, just detached your session.
+A better way of putting it, `<Ctrl-b> d` closed the client connection, therefore
+'detached' from the session.
 
 Your tmux client disconnected from the server instance. The session however is
 still running in the background.
