@@ -90,6 +90,12 @@ Only run file watcher if entr is installed, let's wrap in a conditional
 test:
 
 {language=shell, line-numbers=off}
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; fi
+
+And have it fallback to `go test` in the event `entr` isn't installed (you'll
+thank me when you end up scripting this command in a [session manager](#session-manager):
+
+{language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; fi
 
 Show a notice message to user to install entr if not installed ons system:
@@ -113,7 +119,7 @@ disposal. One would be to add continuation to the next line with a trailing
 backlash (`\`). Another would be to break the command up into variables and
 `make` subcommands. So let's try that:
 
-## Session Managers
+## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
 same software project, view the same logs, etc. there are applications that
