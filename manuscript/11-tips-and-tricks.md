@@ -139,7 +139,7 @@ So let's try that:
     grep -i '.*[.]go$$' 2> /dev/null
 
     test:
-            go test $(test)
+            go test $(test) ./...
 
     entr_warn:
             @echo "----------------------------------------------------------"
@@ -157,6 +157,12 @@ So let's try that:
 back into `make`. On BSD systems, I may try invoking `make` via `gmake` (to call
 [GNU Make](https://www.gnu.org/software/make/) specifically). I've made a [patch before](https://github.com/liuxinyu95/AlgoXY/pull/16)
 fixing the build system for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
+
+The `$(test)` after `go test` allows passing in a shell variable with arguments
+in it. So you could do `make watch_test test='-i'`. For examples of a similar
+`Makefile` in action see [the one in my tmuxp project](https://github.com/tony/tmuxp/blob/master/Makefile).
+The project is licensed BSD (permissive), so you can grab code and use it
+in compliant with the [LICENSE](https://github.com/tony/tmuxp/blob/master/LICENSE).
 
 ## Session Managers {#session-manager}
 
