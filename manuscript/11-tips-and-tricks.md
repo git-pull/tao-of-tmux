@@ -117,7 +117,9 @@ So let's go ahead see what a `Makefile` with this looks like:
     watch_test:
         if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
-But that is a tad bloated and hard to read. We have a couple tricks at our
+To run this, do `$ make watch_test` in the same directory as the `Makefile`.
+
+But that was a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
 backlash (`\`):
 
