@@ -65,3 +65,41 @@ has a naive form of session freezing, support for JSON, more flexible
 configuration options, and it will even offer to attach sessions that already
 exist instead of redundantly running script commands against the session if it
 already is running.
+
+So in tmuxp, a yaml file like this:
+
+{language=yaml, line-numbers=off}
+    session_name: 4-pane-split
+    windows:
+    - window_name: dev window
+      layout: tiled
+      shell_command_before:
+        - cd ~/                    # run as a first command in all panes
+      panes:
+        - shell_command:           # pane no. 1
+            - cd /var/log          # run multiple commands in this pane
+            - ls -al | grep \.log
+        - echo second pane         # pane no. 2
+        - echo third pane          # pane no. 3
+        - echo forth pane          # pane no. 4
+
+gives a session titled *4-pane-split*, with one window titled *dev window* that
+has 4 panes in it. 3 of them are in the home directory, the other is in
+`/var/log` and is listed all files ending with `.log`.
+
+## Log tailing
+
+Not tmux specific, but powerful when used in tandem with it. You can run a
+follow (`-f`) using [`tail(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html).
+More modern versions of tail have the `-F` (capitalized) which checks for file
+renames and rotation. 
+
+On OS X, you can do:
+
+{language=shell, line-numbers=off}
+    $ tail -F /var/log/system.log
+
+and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
+programmers and system adminstrators.
+
+## File watching
