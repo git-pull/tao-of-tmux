@@ -73,6 +73,27 @@ works superbly across Linux distros, BSD's and OS X / MacOS.
 The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
 a list of files into it to watch.
 
+Let's search for all go files in a directory and run tests on file change:
+
+{language=shell, line-numbers=off}
+    $ ls -d *.go | entr -c go test ./...
+
+Sometimes we may want to see recursive files, and we need to do that in a
+cross-platform way. We can't depend on `**` existing to grab files recursively.
+So something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
+
+{language=shell, line-numbers=off}
+    $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
+
+Only run file watcher if entr is installed, let's wrap in a conditional
+[`command -v`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/command.html)
+test:
+
+{language=shell, line-numbers=off}
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; fi
+
+Show a notice message to user to install entr if not installed ons system:
+
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
