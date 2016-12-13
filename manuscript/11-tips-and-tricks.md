@@ -89,7 +89,8 @@ configuration options, and it will even offer to attach sessions that already
 exist instead of redundantly running script commands against the session if it
 already is running.
 
-So in tmuxp, a yaml file like this:
+So in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
+then create a YAML file at `~/.tmuxp/test.yaml`:
 
 {language=yaml, line-numbers=off}
     session_name: 4-pane-split
@@ -109,3 +110,10 @@ So in tmuxp, a yaml file like this:
 gives a session titled *4-pane-split*, with one window titled *dev window* that
 has 4 panes in it. 3 of them are in the home directory, the other is in
 `/var/log` and is listed all files ending with `.log`.
+
+To launch it, install tmuxp and load the configuration:
+
+{language=shell, line-numbers=off}
+    $ pip install --user tmuxp
+    $ tmuxp -V   # verify tmuxp is installed, if not you to fix your `PATH`
+    $ tmuxp load ~/.tmuxp/test.yaml
