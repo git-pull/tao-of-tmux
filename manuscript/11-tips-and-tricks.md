@@ -103,3 +103,9 @@ and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
 programmers and system adminstrators.
 
 ## File watching
+
+On my never ending conquest for file watchers, I've become the unofficial
+taste-tester of them.
+
+I eventually settled toward [`entr(1)`](http://entrproject.org/), which
+works superbly across Linux distros, BSD's and OS X / MacOS.
