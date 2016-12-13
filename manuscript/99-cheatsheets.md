@@ -25,11 +25,27 @@
 |------------------|----------------------------------------------------|
 |`C-b`             | Send the prefix key (C-b) through to the           |
 |                  | application.                                       |
-|`C-o`             | Rotate the panes in the current window forwards.   |
+
+### Miscellaneous
+
+|Short cut         | Action
+|------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
+|`#`               | List all paste buffers.                            |
+
+
+### Window traversal
+
+|Short cut         | Action
+|------------------|----------------------------------------------------|
+|`0 to 9`          | Select windows 0 to 9.                             |
+
+|Short cut         | Action
+|------------------|----------------------------------------------------|
+|`C-o`             | Rotate the panes in the current window forwards.   |
 |`!`               | Break the current pane out of the window.          |
 |`"`               | Split the current pane into two, top and bottom.   |
-|`#`               | List all paste buffers.                            |
+
 |`$`               | Rename the current session.                        |
 |`%`               | Split the current pane into two, left and right.   |
 |`&`               | Kill the current window.                           |
@@ -37,7 +53,7 @@
 |`,`               | Rename the current window.                         |
 |`-`               | Delete the most recently copied buffer of text.    |
 |`.`               | Prompt for an index to move the current window.    |
-|`0 to 9`          | Select windows 0 to 9.                             |
+
 |`:`               | Enter the tmux command prompt.                     |
 |`;`               | Move to the previously active pane.                |
 |`=`               | Choose which buffer to paste interactively from a  |
