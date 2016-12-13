@@ -136,6 +136,11 @@ backlash (`\`). Another would be to break the command up into variables and
     watch_test:
             if command -v entr > /dev/null; then ${WATCH_FILES} | entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
 
+`$(MAKE)` is helpful for portability because those are recursive command calls
+back into `make`. On BSD systems, I may try invoking `make` via `gmake` (to call
+[GNU Make](https://www.gnu.org/software/make/) specifically. I've made a [patch before](https://github.com/liuxinyu95/AlgoXY/pull/16)
+fixing the build system for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
+
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as open the
