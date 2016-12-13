@@ -23,8 +23,8 @@ to point to the MOST binary. You can test is like this:
 
 If you found that you like `most`, you will probably want it to be the manual
 page filter for anything you look up. You will want to add it to the "rc" ([Run
-Commands](https://en.wikipedia.org/wiki/Run_commands) for your shell. Depending
-on your shell (you can use `$ echo $SHELL` to find it on most shells, you will
+Commands](https://en.wikipedia.org/wiki/Run_commands)) for your shell. Depending
+on your shell (you can use `$ echo $SHELL` to find it on most shells), you will
 want to keep this in `~/.bashrc` or `~/.zshrc`:
 
 {language=shell, line-numbers=off}
