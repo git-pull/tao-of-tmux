@@ -7,3 +7,8 @@ cover [panes](#panes) next. Windows are the containers within
 ![Window](images/info/window.png)
 
 You can see the current open windows through the status bar.
+
+## Windows can be named
+
+Just like with sessions, windows can have names. And it is important to label
+them to keep track of what you're doing inside them.
