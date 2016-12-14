@@ -5,3 +5,5 @@ cover [panes](#panes) next. Windows are the containers within
 [session](#session) that old panes.
 
 ![Window](images/info/window.png)
+
+You can see the current open windows through the status bar.
