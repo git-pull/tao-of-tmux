@@ -58,7 +58,7 @@
 |------------------|----------------------------------------------------|
 |`$`               | Rename the current session.                        |
 
-#### Traversal
+#### Session Traversal
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -76,7 +76,7 @@
 |`i`               | Display some information about the current window. |
 |`,`               | Rename the current window.                         |
 
-#### Traversal
+#### Window Traversal
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -91,7 +91,7 @@
 |`l`               | Move to the previously selected window.            |
 |`'`               | Prompt for a window index to select.               |
 
-#### Moving
+#### Window Moving
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -106,7 +106,7 @@
 |`%`               | Split the current pane into two, left and right.   |
 |`"`               | Split the current pane into two, top and bottom.   |
 
-#### Traversal
+#### Pane Traversal
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -115,7 +115,7 @@
 |`Left, Right`     | the right of the current pane.                     |
 |`o`               | Select the next pane in the current window.        |
 
-#### Moving
+#### Pane Moving
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -125,7 +125,7 @@
 |`}`               | Swap the current pane with the next pane.          |
 |`!`               | Break the current pane out of the window.          |
 
-#### Resizing
+#### Pane Resizing
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
