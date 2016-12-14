@@ -136,10 +136,9 @@ some tricked out tmux examples.
 
 ## Donations
 
-I do offer my learning material for free on the internet, as well as maintain
-several open source projects. If you'd like to support my day-to-day open
-source participation please check out <http://www.git-pull.com/support.html>
-for ways to contribute.
+If you enjoy my learning material or my open source software projects, please
+consider a donation. They go directly to me and are not squandered. Visit
+<http://www.git-pull.com/support.html> for ways to contribute.
 
 ## Available Formats
 
