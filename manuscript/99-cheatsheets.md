@@ -34,6 +34,11 @@
 |`r`               | Force redraw of the attached client.               |
 |`t`               | Show the time.                                     |
 |`~`               | Show previous messages from tmux, if any.          |
+|`f`               | Prompt to search for text in open windows.         |
+|`d`               | Detach the current client.                         |
+|`D`               | Choose a client to detach.                         |
+|`?`               | List all key bindings.                             |
+|`:`               | Enter the tmux command prompt.                     |
 
 ### Copy/Paste
 
@@ -43,6 +48,15 @@
 |`[`               | Enter copy mode to copy text or view the history.  |
 |`]`               | Paste the most recently copied buffer of text.     |
 |`Page Up`         | Enter copy mode and scroll one page up.            |
+|`=`               | Choose which buffer to paste interactively from a  |
+|                  | list.                                              |
+|`-`               | Delete the most recently copied buffer of text.    |
+
+### Session
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`$`               | Rename the current session.                        |
 
 ### Session Traversal
 
@@ -52,6 +66,15 @@
 |                  | session.                                           |
 |`s`               | Select a new session for the attached client       |
 |                  | interactively.                                     |
+
+### Window
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`c`               | Create a new window.                               |
+|`&`               | Kill the current window.                           |
+|`i`               | Display some information about the current window. |
+|`,`               | Rename the current window.                         |
 
 ### Window traversal
 
@@ -63,12 +86,25 @@
 |                  | marker.                                            |
 |`M-p`             | Move to the previous window with a bell or activity|
 |                  | marker.                                            |
+|`p`               | Change to the previous window.                     |
+|`n`               | Change to the next window.                         |
+|`l`               | Move to the previously selected window.            |
+|`'`               | Prompt for a window index to select.               |
+
+### Window moving
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`.`               | Prompt for an index to move the current window.    |
 
 ### Pane
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`x`               | Kill the current pane.                             |
+|`q`               | Briefly display pane indexes.                      |
+|`%`               | Split the current pane into two, left and right.   |
+|`"`               | Split the current pane into two, top and bottom.   |
 
 ### Pane traversal
 
@@ -77,8 +113,7 @@
 |`;`               | Move to the previously active pane.                |
 |`Up, Down`        | Change to the pane above, below, to the left, or to|
 |`Left, Right`     | the right of the current pane.                     |
-
-
+|`o`               | Select the next pane in the current window.        |
 
 ### Pane moving
 
@@ -88,6 +123,7 @@
 |`M-o`             | Rotate the panes in the current window backwards.  |
 |`{`               | Swap the current pane with the previous pane.      |
 |`}`               | Swap the current pane with the next pane.          |
+|`!`               | Break the current pane out of the window.          |
 
 ### Pane resizing
 
@@ -100,30 +136,3 @@
 |`C-Left, C-Right` |                                                    |
 |`M-Up, M-Down`    | Resize the current pane in steps of five cells.    |
 |`M-Left, M-Right` |                                                    |
-
-
-| Short cut        | Action                                             |
-|------------------|----------------------------------------------------|
-|`!`               | Break the current pane out of the window.          |
-|`"`               | Split the current pane into two, top and bottom.   |
-|`$`               | Rename the current session.                        |
-|`%`               | Split the current pane into two, left and right.   |
-|`&`               | Kill the current window.                           |
-|`'`               | Prompt for a window index to select.               |
-|`,`               | Rename the current window.                         |
-|`-`               | Delete the most recently copied buffer of text.    |
-|`.`               | Prompt for an index to move the current window.    |
-|`:`               | Enter the tmux command prompt.                     |
-|`=`               | Choose which buffer to paste interactively from a  |
-|                  | list.                                              |
-|`?`               | List all key bindings.                             |
-|`D`               | Choose a client to detach.                         |
-|`c`               | Create a new window.                               |
-|`d`               | Detach the current client.                         |
-|`f`               | Prompt to search for text in open windows.         |
-|`i`               | Display some information about the current window. |
-|`l`               | Move to the previously selected window.            |
-|`n`               | Change to the next window.                         |
-|`o`               | Select the next pane in the current window.        |
-|`p`               | Change to the previous window.                     |
-|`q`               | Briefly display pane indexes.                      |
