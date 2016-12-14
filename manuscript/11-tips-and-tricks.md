@@ -56,6 +56,10 @@ On OS X, you can do:
 and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
 programmers and system administrators.
 
+You could also bring in a tool like [multitail](https://vanheusden.com/multitail/).
+You'd be in for an [*Inception*](http://www.imdb.com/title/tt1375666/) moment,
+because you'd be using a log multiplexer in a terminal multiplexer.
+
 ## File watching
 
 In my never ending conquest for file watchers, I've become the unofficial
