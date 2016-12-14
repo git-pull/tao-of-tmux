@@ -9,6 +9,14 @@
 | no command    |                                                        |
 | `new-session` |                                                        |
 
+### Session Traversal
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`L`               | Switch the attached client back to the last        |
+|                  | session.                                           |
+
+
 ### Window
 
 | Command       | Action                                                 |
@@ -31,7 +39,8 @@
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
-
+|`t`               | Show the time.                                     |
+|`~`               | Show previous messages from tmux, if any.          |
 
 ### Copy/Paste
 
@@ -40,6 +49,8 @@
 |`#`               | List all paste buffers.                            |
 |`[`               | Enter copy mode to copy text or view the history.  |
 |`]`               | Paste the most recently copied buffer of text.     |
+|`Page Up`         | Enter copy mode and scroll one page up.            |
+
 
 
 ### Window traversal
@@ -47,6 +58,10 @@
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
+|`M-n`             | Move to the next window with a bell or activity    |
+|                  | marker.                                            |
+|`M-p`             | Move to the previous window with a bell or activity|
+|                  | marker.                                            |
 
 
 ### Pane traversal
@@ -54,6 +69,9 @@
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`;`               | Move to the previously active pane.                |
+|`Up, Down`        | Change to the pane above, below, to the left, or to|
+|`Left, Right`     | the right of the current pane.                     |
+
 
 
 ### Pane moving
@@ -61,6 +79,10 @@
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-o`             | Rotate the panes in the current window forwards.   |
+|`M-o`             | Rotate the panes in the current window backwards.  |
+|`{`               | Swap the current pane with the previous pane.      |
+|`}`               | Swap the current pane with the next pane.          |
+
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
@@ -90,25 +112,17 @@
 |`r`               | Force redraw of the attached client.               |
 |`s`               | Select a new session for the attached client       |
 |                  | interactively.                                     |
-|`L`               | Switch the attached client back to the last        |
-|                  | session.                                           |
-|`t`               | Show the time.                                     |
 |`w`               | Choose the current window interactively.           |
 |`x`               | Kill the current pane.                             |
-|`{`               | Swap the current pane with the previous pane.      |
-|`}`               | Swap the current pane with the next pane.          |
-|`~`               | Show previous messages from tmux, if any.          |
-|`Page Up`         | Enter copy mode and scroll one page up.            |
-|`Up, Down`        | Change to the pane above, below, to the left, or to|
-|`Left, Right`     | the right of the current pane.                     |
+
+
+### Pane resizing
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
 |`M-1 to M-5`      | Arrange panes in one of the five preset layouts:   |
 |                  | even-horizontal, even-vertical, main-horizontal,   |
 |                  | main-vertical, or tiled.                           |
-|`M-n`             | Move to the next window with a bell or activity    |
-|                  | marker.                                            |
-|`M-o`             | Rotate the panes in the current window backwards.  |
-|`M-p`             | Move to the previous window with a bell or activity|
-|                  | marker.                                            |
 |`C-Up, C-Down`    | Resize the current pane in steps of one cell.      |
 |`C-Left, C-Right` |                                                    |
 |`M-Up, M-Down`    | Resize the current pane in steps of five cells.    |
