@@ -9,14 +9,6 @@
 | no command    |                                                        |
 | `new-session` |                                                        |
 
-### Session Traversal
-
-| Short cut        | Action                                             |
-|------------------|----------------------------------------------------|
-|`L`               | Switch the attached client back to the last        |
-|                  | session.                                           |
-
-
 ### Window
 
 | Command       | Action                                                 |
@@ -39,6 +31,7 @@
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
+|`r`               | Force redraw of the attached client.               |
 |`t`               | Show the time.                                     |
 |`~`               | Show previous messages from tmux, if any.          |
 
@@ -51,18 +44,31 @@
 |`]`               | Paste the most recently copied buffer of text.     |
 |`Page Up`         | Enter copy mode and scroll one page up.            |
 
+### Session Traversal
 
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`L`               | Switch the attached client back to the last        |
+|                  | session.                                           |
+|`s`               | Select a new session for the attached client       |
+|                  | interactively.                                     |
 
 ### Window traversal
 
 | Short cut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
+|`w`               | Choose the current window interactively.           |
 |`M-n`             | Move to the next window with a bell or activity    |
 |                  | marker.                                            |
 |`M-p`             | Move to the previous window with a bell or activity|
 |                  | marker.                                            |
 
+### Pane
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`x`               | Kill the current pane.                             |
 
 ### Pane traversal
 
@@ -82,6 +88,18 @@
 |`M-o`             | Rotate the panes in the current window backwards.  |
 |`{`               | Swap the current pane with the previous pane.      |
 |`}`               | Swap the current pane with the next pane.          |
+
+### Pane resizing
+
+| Short cut        | Action                                             |
+|------------------|----------------------------------------------------|
+|`M-1 to M-5`      | Arrange panes in one of the five preset layouts:   |
+|                  | even-horizontal, even-vertical, main-horizontal,   |
+|                  | main-vertical, or tiled.                           |
+|`C-Up, C-Down`    | Resize the current pane in steps of one cell.      |
+|`C-Left, C-Right` |                                                    |
+|`M-Up, M-Down`    | Resize the current pane in steps of five cells.    |
+|`M-Left, M-Right` |                                                    |
 
 
 | Short cut        | Action                                             |
@@ -109,21 +127,3 @@
 |`o`               | Select the next pane in the current window.        |
 |`p`               | Change to the previous window.                     |
 |`q`               | Briefly display pane indexes.                      |
-|`r`               | Force redraw of the attached client.               |
-|`s`               | Select a new session for the attached client       |
-|                  | interactively.                                     |
-|`w`               | Choose the current window interactively.           |
-|`x`               | Kill the current pane.                             |
-
-
-### Pane resizing
-
-| Short cut        | Action                                             |
-|------------------|----------------------------------------------------|
-|`M-1 to M-5`      | Arrange panes in one of the five preset layouts:   |
-|                  | even-horizontal, even-vertical, main-horizontal,   |
-|                  | main-vertical, or tiled.                           |
-|`C-Up, C-Down`    | Resize the current pane in steps of one cell.      |
-|`C-Left, C-Right` |                                                    |
-|`M-Up, M-Down`    | Resize the current pane in steps of five cells.    |
-|`M-Left, M-Right` |                                                    |
