@@ -82,8 +82,8 @@ specification laying out its technical properties, interfaces and
 responsibilities in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html)
 
 That's your TTY's, what you see when you move between them, on Linux / BSD
-systems, this you can switch between sessions via <ctrl-alt-F1> through
-<ctrl-alt-F12>.
+systems, this you can switch between sessions via `<ctrl-alt-F1>` through
+`<ctrl-alt-F12>`.
 
 ## Terminal emulation
 
