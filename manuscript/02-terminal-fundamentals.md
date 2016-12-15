@@ -108,9 +108,11 @@ update the default shell for a user.
 
 Recent versions of MacOS include ZSH by default as well. Linux distributions
 typically require you to install it via package manager, and installs it to
-`/usr/bin/zsh`. On BSD system, it will be able to be built as a port or via a
-binary and normally is found at `/usr/local/bin/zsh`.  So it can be confusing,
-they can't just agree to disagree on where to install interpreters.
+`/usr/bin/zsh`. On BSD system, you can build it via the port system or or from
+[`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
+on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD and
+normally is found at `/usr/local/bin/zsh`. So it can be confusing, they can't
+just agree to disagree on where to install interpreters.
 
 The other thing to mention is that in order for `chsh -s` to work,  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
