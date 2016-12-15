@@ -137,8 +137,9 @@ some tricked out tmux examples.
 ## Donations
 
 If you enjoy my learning material or my open source software projects, please
-consider a donation. They go directly to me and are not squandered. Visit
-<http://www.git-pull.com/support.html> for ways to contribute.
+consider donating. They go directly to me and my current / future open source
+projects and are not squandered. Visit <http://www.git-pull.com/support.html>
+for ways to contribute.
 
 ## Available Formats
 
