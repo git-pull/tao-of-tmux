@@ -8,4 +8,5 @@ If you are using MacOS / OS X with vim inside tmux, you may get the error
 Try installing [`reattach-to-user-namespace`](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
 via [brew](http://brew.sh).
 
+{language=shell, line-numbers=off}
     $ brew install reattach-to-user-namespace
