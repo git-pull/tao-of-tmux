@@ -27,6 +27,10 @@ The files that make up the project build system are in
 [preprocessor directives](https://en.wikipedia.org/wiki/C_preprocessor#Conditional_compilation)
 in [`compat.h`](https://github.com/tmux/tmux/blob/master/compat.h).
 
+`compat.h` works in tandem with autotools to create route different operating
+systems to header definitions in the `compat/` folder if they're not present on
+the system.
+
 ## Event passing
 
 The innards of tmux is powered by [libevent](http://libevent.org/), a cross-platform event
