@@ -222,3 +222,19 @@ To launch it, install tmuxp and load the configuration:
     $ pip install --user tmuxp
     $ tmuxp -V   # verify tmuxp is installed, if not you to fix your `PATH`
     $ tmuxp load ~/.tmuxp/test.yaml
+
+## tmux-plugins and tpm
+
+[tmux-plugins](https://github.com/tmux-plugins) and [tmux package
+manager](https://github.com/tmux-plugins/tpm) are a suite of tools dedicated
+toward enhancing the experience of tmux users.
+
+- [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): Persists
+  tmux environment across system restarts.
+- [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum): Continuous
+  saving of tmux environment. Automatic restore when tmux is started. Automatic
+  tmux start when computer is turned on.
+- [tmux-yank](https://github.com/tmux-plugins/tmux-yank): Tmux plugin for
+  copying to system clipboard. Works on OSX, Linux and Cygwin.
+- [tmux-battery](https://github.com/tmux-plugins/tmux-battery): Plug and play
+  battery percentage and icon indicator for Tmux.
