@@ -106,7 +106,7 @@ typically be dropped into Bash. That's because it's what Apple decided to use as
 a *default shell* for users.
 
 On BSD, you may be placed into use plain vanilla `sh` unless you specify
-elsewise within the installer. In Ubuntu, `/bin/sh` used to be `bash`
+elsewise during the installation process. In Ubuntu, `/bin/sh` used to be `bash`
 ([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but was
 [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 ([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
