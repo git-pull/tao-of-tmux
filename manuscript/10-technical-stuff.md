@@ -30,9 +30,9 @@ When building from source or porting tmux to a new system, you will encounter
 autotools. If this sounds complicated, do not get overwhelmed or feel you need
 to understand this in one sitting. Autotools exists to abstract the painful
 parts of finding libraries and checking if certain capabilities exist on a
-system. It's solving a complicated problem, because the source code needs to be
-able to build on a plethora of operating systems and individualized environments
-where all of them can be a little different.
+users' system. It's solving a complicated problem, because the source code needs
+to be able to build on a plethora of operating systems and individualized
+environments where all of them can be a little different.
 
 I> ### Gimme more autotools
 I> For tutorials I highly recommend [Alexandre Duret-Lutz' Autotools introduction](https://www.lrde.epita.fr/~adl/autotools.html)
