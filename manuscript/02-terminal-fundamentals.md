@@ -97,11 +97,23 @@ Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 When we speak about "shells", such as the examples below, we're often referring
 to the interpreter.
 
-On most Linux distributions and MacOS, you'll typically be dropped into Bash.
-
 As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
+On most Linux distributions and MacOS, you'll typically be dropped into Bash.
+That's because it's what Apple decided to use as a *default shell* for users.
+
+On many systems, you can use [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to
+update the default shell for a user.
+
+Recent versions of MacOS include ZSH by default as well. Linux distributions
+typically require you to install it via package manager, and installs it to
+`/usr/bin/zsh`. On BSD system, it will be able to be built as a port or via a
+binary and normally is found at `/usr/local/bin/zsh`.  So it can be confusing,
+they can't just agree to disagree on where to install interpreters.
+
+The other thing to mention is that in order for `chsh -s` to work,  you
+typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
 
 ## Shell languages
 
