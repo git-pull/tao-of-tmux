@@ -100,13 +100,25 @@ to the interpreter.
 As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
-On most Linux distributions and MacOS, you'll typically be dropped into Bash.
-That's because it's what Apple decided to use as a *default shell* for users.
+If I can make a comment on shells and operating systems, it's that each vendor
+does there own darn thing. On most Linux distributions and MacOS, you'll
+typically be dropped into Bash. That's because it's what Apple decided to use as
+a *default shell* for users.
 
-On many systems, you can use [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to
-update the default shell for a user.
+On BSD, you may be placed into use plain vanilla `sh` unless you specify
+elsewise within the installer. In Ubuntu, `/bin/sh` used to be `bash`
+([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but was [replaced with`dash`](https://wiki.ubuntu.com/DashAsBinSh)
+([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
+you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell", in
+reality system startup scripts on Ubuntu used to allow non-POSIX shell
+scripting. This is because the [shell language](#shell-languages) itself adds a
+lot of cool features, but they're not portable unfortunately!
 
-Recent versions of MacOS include ZSH by default as well. Linux distributions
+It's fun to experiment with different shells, on many systems, you can use
+[`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
+a user.
+
+Recent versions of MacOS include ZSH by default. Linux distributions
 typically require you to install it via package manager, and installs it to
 `/usr/bin/zsh`. On BSD system, you can build it via the port system or or from
 [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
@@ -117,7 +129,7 @@ just agree to disagree on where to install interpreters.
 The other thing to mention is that in order for `chsh -s` to work,  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
 
-## Shell languages
+## Shell languages (#shell-languages)
 
 Each shell interpreter has its own language features. Like with shells
 themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
