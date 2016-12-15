@@ -20,6 +20,13 @@ Nicholas Marriott, Thomas Adam and Tiago Cunha for that.
 
 tmux is programmed in [C](https://en.wikipedia.org/wiki/C_(programming_language)).
 
+The build system used it [autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html).
+The files that make up the project build system are in
+[`configure.ac`](https://github.com/tmux/tmux/blob/master/configure.ac),
+[`Makefile.am`](https://github.com/tmux/tmux/blob/master/Makefile.am), and the
+[preprocessor directives](https://en.wikipedia.org/wiki/C_preprocessor#Conditional_compilation)
+in [`compat.h`](https://github.com/tmux/tmux/blob/master/compat.h).
+
 ## Event passing
 
 The innards of tmux is powered by [libevent](http://libevent.org/), a cross-platform event
