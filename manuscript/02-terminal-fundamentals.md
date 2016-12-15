@@ -131,7 +131,7 @@ just agree to disagree on where to install interpreters.
 The other thing to mention is that in order for `chsh -s` to work,  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
 
-## Shell languages (#shell-languages)
+## Shell languages {#shell-languages}
 
 Each shell interpreter has its own language features. Like with shells
 themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
