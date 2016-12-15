@@ -44,7 +44,7 @@ in [`compat.h`](https://github.com/tmux/tmux/blob/master/compat.h).
 
 `compat.h` works in tandem with autotools to route header definitions to system
 headers, installed libraries or the `compat/` folder if they're not present on
-the system.
+the system tmux is being built on.
 
 `autogen.sh` is the file that preps the codebase to be build via the `make`
 command.
