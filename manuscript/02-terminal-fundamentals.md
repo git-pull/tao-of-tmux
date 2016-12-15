@@ -111,9 +111,10 @@ elsewise within the installer. In Ubuntu, `/bin/sh` used to be `bash`
 [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 ([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell", in
-reality system startup scripts on Ubuntu used to allow non-POSIX shell
-scripting. This is because the [shell language](#shell-languages) itself adds a
-lot of cool features, but they're not portable unfortunately!
+reality system startup scripts on Ubuntu used to allow non-POSIX Bash
+scripting. This is because the [shell language](#shell-languages) like Bash, ZSH
+and so on can add a lot of cool and very practical features, but they're not
+portable unfortunately!
 
 It's fun to experiment with different shells, on many systems, you can use
 [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
