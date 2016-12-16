@@ -12,3 +12,6 @@ You can see the current open windows through the status bar.
 
 Just like with sessions, windows can have names. And it is important to label
 them to keep track of what you're doing inside them.
+
+`<C-b ,>` will turn the tmux status line into an input field where the current
+active window's name can be altered.
