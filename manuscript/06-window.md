@@ -8,7 +8,7 @@ cover [panes](#panes) next. Windows are the containers within
 
 You can see the current open windows through the status bar.
 
-## (Re-)naming windows
+## (Re)naming windows
 
 Just like with sessions, windows can have names. And it is important to label
 them to keep track of what you're doing inside them.

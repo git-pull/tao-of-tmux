@@ -41,7 +41,7 @@ client.
 {language=shell, line-numbers=off}
     $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
 
-## (Re-)naming a tmux session
+## (Re)naming a tmux session
 
 Sometimes the default session name given by tmux isn't descriptive enough. It
 only takes a few seconds to update it.
