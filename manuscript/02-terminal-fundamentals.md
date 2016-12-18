@@ -116,10 +116,6 @@ scripting. This is because specialty [shell languages](#shell-languages) like
 Bash, ZSH and so on can add a lot of cool and very practical features, but
 they're not portable unfortunately!
 
-It's fun to experiment with different shells, on many systems, you can use
-[`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
-a user.
-
 Recent versions of MacOS include ZSH by default. Linux distributions
 typically require you to install it via package manager, and installs it to
 `/usr/bin/zsh`. On BSD system, you can build it via the port system or or from
@@ -127,6 +123,10 @@ typically require you to install it via package manager, and installs it to
 on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD and
 normally is found at `/usr/local/bin/zsh`. So it can be confusing, they can't
 just agree to disagree on where to install interpreters.
+
+It's fun to experiment with different shells, on many systems, you can use
+[`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
+a user.
 
 The other thing to mention is that in order for `chsh -s` to work,  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
