@@ -31,11 +31,15 @@ and so on, until:
 
 If a command allow target specification, it's usually done through `-t`.
 
-| Thing    | Prefix |
-|----------|--------|
-| session  | $      |
-| window   | @      | 
-| pane     | %      |
+Think of targets as tmux' way of specifying an [unique key](https://en.wikipedia.org/wiki/Unique_key)
+in a relational database.
+
+| Entity    | Prefix | Example                               |
+|-----------|--------|---------------------------------------|
+| server    | n/a    | n/a, uses socket-name and socket-path |
+| session   | $      | $13                                   |
+| window    | @      | @2313                                 |
+| pane      | %      | %5432                                 |
 
 
 ## Formats {#formats}
