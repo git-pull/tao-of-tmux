@@ -23,15 +23,12 @@ ability to switch to session from within tmux!
 
 ### Keystroke
 
-| Short cut        | Action
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
-|`s`               | Select a new session for the attached client       |
-|                  | interactively.                                     |
-|`(`               | Switch the attached client to the previous session.|
-|`)`               | Switch the attached client to the next session.    |
-|`L`               | Switch the attached client back to the last        |
+|`Prefix` + `(`    | Switch the attached client to the previous session.|
+|`Prefix` + `)`    | Switch the attached client to the next session.    |
+|`Prefix` + `L`    | Switch the attached client back to the last        |
 |                  | session.                                           |
-
 
 `Ctrl-b s` will allow you to switch between sessions within the same tmux
 client.
@@ -40,6 +37,15 @@ client.
 
 {language=shell, line-numbers=off}
     $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
+
+## Moving around
+
+You can move around between sessions as well.
+
+| Shortcut         | Action                                             |
+|------------------|----------------------------------------------------|
+|`Prefix` + `s`    | Select a new session for the attached client       |
+|                  | interactively.                                     |
 
 ## (Re)naming a tmux session
 

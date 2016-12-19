@@ -75,6 +75,14 @@ dollar. For more information on the meaning of the "dollar prompt", Check out
 prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
+Shortcuts all require a [prefix key](#prefix-key) to be send before hand.
+Sections going over an subject-level of similar keyboard commands typically will
+have a table. For example:
+
+| Shortcut         | Action                                             |
+|------------------|----------------------------------------------------|
+|`Prefix` + `s`    | Detach client from session.                        |
+
 ## How this book is structured
 
 First, anything involving [installation](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)

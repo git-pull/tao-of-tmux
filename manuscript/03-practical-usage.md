@@ -7,7 +7,7 @@ This is the easiest part, open up your terminal and type `tmux`, hit enter.
 
 You're in tmux.
 
-## The prefix key
+## The prefix key {#prefix-key}
 
 The *prefix* is how we send commands into tmux. With this, we can split windows,
 move windows, switch windows, switch sessions, send in custom commands, you name
