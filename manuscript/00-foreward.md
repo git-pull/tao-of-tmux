@@ -136,11 +136,10 @@ works under the hood. You may learn enough to be able to impress friends who
 currently use tmux daily. If you like programming on POSIX-like systems, this
 one is for you.
 
-[*Tips and Tricks*](#tips-and-tricks) wraps it up with a whirlwind of a
-customized tmux configuration, a yaml file to launch tmux sessions using
-[tmuxp](https://github.com/tony/tmuxp). In addition, we'll cover a Python API
-for tmux called [libtmux](https://github.com/tony/libtmux). You'll get to see
-some tricked out tmux examples.
+[*Tips and Tricks*](#tips-and-tricks) wraps it up with a whirlwind of useful
+terminal tutorials you can use in conjunction with tmux to power up your day to
+day development and administration experience.
+
 
 ## Donations
 
