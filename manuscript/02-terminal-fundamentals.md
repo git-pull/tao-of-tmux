@@ -61,10 +61,11 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
     ENDIF
 
 In addition to that tiny little thing, there are hundreds of trivialities that
-run across operating systems, their userlands, their paths, enough so a good
-deal of software infrastructure out there exists solely to abstract the differences
-across them. For example, CMake, Autotools, SFML, SDL2, interpreted
-programming languages and their standard libraries are dedicated to
+run across operating systems, their userlands, their binary / library /  include
+paths and adherence / interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).
+Enough so a good deal of software infrastructure out there exists solely to
+abstract the differences across them. For example, CMake, Autotools, SFML, SDL2,
+interpreted programming languages and their standard libraries are dedicated to
 normalizing the banal differences across BSD-derivatives and Linux
 distributions. Many, many `#ifdef` preprocessor directives in your C
 and C++ applications. You want open source, you get choice, but be aware
