@@ -90,8 +90,8 @@ and hard technical details are in the appendix (back of the book). A lot of
 books tend to use this as filler. For me it's more of not wanting to leave
 complete beginners behind.
 
-For special circumstances like Windows 10, I opted that going so far as adding
-screenshots since a fair share may be more comfortable by a visual approach.
+For special circumstances like Windows 10, I opted that adding screenshots is best
+since a fair share may be more comfortable with a visual approach.
 
 [*Thinking Tmux*](#thinking-tmux) goes over a breakdown of what
 tmux does and how it relates to the GUI desktops we already use on our
