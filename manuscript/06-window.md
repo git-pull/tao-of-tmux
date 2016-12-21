@@ -17,3 +17,22 @@ them to keep track of what you're doing inside them.
 
 `<C-b ,>` will turn the tmux status line into an input field where the current
 active window's name can be altered.
+
+## Traversing Windows
+
+`Prefix` + `1`, `Prefix` + `2`, and so on... will get you to navigate to windows
+by their index.
+
+Prompt for a window index (useful for indexes greater than 9) with `Prefix` +
+`'`.
+
+I> ### POWER MOVE: Search + Traverse Windows for Text
+I> 
+I> You can forward to a window with a match of a text string by doing `Prefix` +
+I> `f`.
+
+Move tp prefviously selected window with `Prefix` + `l`.
+
+Interactive search all your windows with `Prefix` + `w`.
+
+## Moving Windows
