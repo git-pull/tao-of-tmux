@@ -6,7 +6,7 @@
 Pretty much all my friends swear to using tmux. I remember going out at night
 for drinks and the 3 of us would take a seat at a round table and take our smart
 phones out. It was the days back when phones still had physical "QWERTY" keyboards.
-All 3 of us, by happenstance, drawn our phones from our pockets. We just planned 2
+All 3 of us, by happenstance, drawn our phones from our pockets. We planned just 2
 hours earlier on IRC to use Oleg's car to pick us up and drive us into the city.
 
 Despite our home computers sleeping or being off, our usernames in the channel
