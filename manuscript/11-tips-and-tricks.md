@@ -62,8 +62,9 @@ because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
-In my never ending conquest for file watchers, I've become the unofficial
-taste-tester of them.
+In my never ending conquest to get assets rebuliding, code linting, tests
+running and development servers restarting upon file changes, I've become the
+internet's unofficial connoisseur on them.
 
 What this kind of application does is wait for a file to be updated, then
 executes a custom command, like restarting a server, rebuilding an application,
