@@ -18,7 +18,7 @@ And it's a hump we have to get over.
 An analogy I'd draw would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
 games. In this game, the player could input a combination of buttons in
 sequence to perform flying spinning kicks and shoot fireballs. Sweet. As you
-grew more accustomed with the combos, you'll begin to move around by intuition
+grew more accustomed with the combos, you'd begin to repeat moves by intuition
 since you've committed to muscle memory.
 
 That's kind of what the prefix key in tmux is like. Without you understanding
