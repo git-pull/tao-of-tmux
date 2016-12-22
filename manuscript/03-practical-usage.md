@@ -15,11 +15,11 @@ it.
 
 And it's a hump we have to get over.
 
-When I was a kid, there was a video game (depending on your generation you may
-know it) called Sonic 3. One of the carnival levels had this ridiculous section
-where you could only proceed if you motioned your controller in a special
-fashion. Coined the ["Barrel of Doom"](https://gaming.stackexchange.com/questions/10361/i-never-made-it-past-carnival-night-zone),
-if you don't get past it, you won't progress to the next stage, game over.
+An analogy I'd draw would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
+games. In this game, the player could input a combination of buttons in
+sequence to perform flying spinning kicks and shoot fireballs. Sweet. As you
+grew more accustomed with the combos, you'll begin to move around by intuition
+since you've committed to muscle memory.
 
 That's kind of what the prefix key in tmux is like. Without you understanding
 how to send *command sequences* to tmux via the prefix key, you'll pretty much
@@ -29,14 +29,6 @@ And the same will also end up coming up in later cases if you use Vim or Emacs
 and many TUI (Terminal User Interface) applications. So if you haven't
 internalized the concept, let's do it now. If you already have done similar
 command sequences before in TUI/GUI applications, that'll come in helpful.
-
-Another analogy I'd draw with terminals applications and the necessity to
-overcome the lack of GUI with prefix / leader keys would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
-games. In this game, the player could input a combination of buttons in
-sequence to perform flying spinning kicks and shoot fireballs. Sweet. As you
-grew more accustomed with the combos, you'll begin to move around by intuition
-since you've committed to muscle memory. It impresses people around you, but it
-also gets stuff done.
 
 Every time you learn a key combo is one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short term memory
