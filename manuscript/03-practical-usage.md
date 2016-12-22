@@ -32,12 +32,15 @@ command sequences before in TUI/GUI applications, that'll come in helpful.
 
 Another analogy I'd draw with terminals applications and the necessity to
 overcome the lack of GUI with prefix / leader keys would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
-games. In this game, the player would remember the combo to be able to do sweet
-spinning kicks and shoot fireballs. Sweet. As you grow more accustomed with the
-combos, you'll begin to move around intuitively. It impresses people around you,
-but it also gets stuff done. Every time you learn a key combo is one less time
-you'll be moving your hand away from the keyboard to grab your mouse. You can
-focus your short term memory on getting stuff done, that means less mistakes.
+games. In this game, the player could input a combination of buttons in
+sequence to perform sweet spinning kicks and shoot fireballs. Sweet. As you grew
+more accustomed with the combos, you'll begin to move around by intuition since
+you've committed to muscle memory. It impresses people around you, but it also
+gets stuff done.
+
+Every time you learn a key combo is one less time you'll be moving your hand
+away from the keyboard to grab your mouse. You can focus your short term memory
+on getting stuff done, that means less mistakes.
 
 Q> ### Coming from ``GNU Screen``?
 Q>
