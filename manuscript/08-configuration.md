@@ -20,7 +20,7 @@ I> {language=shell, line-numbers=off}
 I>     $ tmux -f path/to/config.conf -Ltesting_tmux
 I>
 I> And you can treat everything like normal, just keep passing `-Ltesting_tmux`
-I> (or whatever socket name you feel like) for reuse.
+I> (or whatever socket name you feel like testing configs with) for reuse.
 I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -Ltesting_tmux attach
