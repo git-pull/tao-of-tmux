@@ -62,8 +62,9 @@ because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
-In my never ending conquest to get assets rebuliding, code linting, tests
-running and development servers restarting upon file changes, I've become the
+In my never ending conquest to get softare projects working in symphony with
+code changes, I've come to taste test many file watching applications and
+patterns to get 'instant feedback' upon file changes, I've become the
 internet's unofficial connoisseur on them.
 
 What this kind of application does is wait for a file to be updated, then
