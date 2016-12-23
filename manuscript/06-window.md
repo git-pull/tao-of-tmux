@@ -38,3 +38,11 @@ You can open a display choose from a list of current windows with `Prefix` +
 window. Very helpful if you're juggling around a lot of things!
 
 ## Moving Windows
+
+`$ tmux move-window` can be used to move windows.
+
+The accepted arguments are `-s` (the window you are moving) and `-t`, where you
+are moving the window to.
+
+The shortcut to prompt for an index to move the current window to is `Prefix` +
+`.`.
