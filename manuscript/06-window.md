@@ -31,8 +31,10 @@ I>
 I> You can forward to a window with a match of a text string by doing `Prefix` +
 I> `f`.
 
-Move to previously selected window with `Prefix` + `l`.
+You can move to the last selected window with `Prefix` + `l`.
 
-Interactively search all your windows with `Prefix` + `w`.
+You can open a display choose from a list of current windows with `Prefix` +
+`w`. The benefit of this is it also gives you some info on what's inside the
+window. Very helpful if you're juggling around a lot of things!
 
 ## Moving Windows
