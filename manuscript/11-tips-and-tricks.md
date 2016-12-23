@@ -186,7 +186,7 @@ Ruby. There is also [tmuxomatic](https://github.com/oxidane/tmuxomatic), which
 allows you to "draw" your tmux sessions in text and have tmuxomatic build the
 layout.
 
-I sort of have a home team advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp)
+I sort of have a home team advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp).
 I written it already having used teamocil and tmuxinator but with many more
 features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
 a library which abstracts tmux [server](#server), [sessions](#sessions),
