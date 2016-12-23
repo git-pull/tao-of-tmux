@@ -151,7 +151,7 @@ for ways to contribute.
 
 ## Available Formats
 
-This book is available for sale on [Leanpub](https://leanpub.com/the-tao-of-tmux), [Amazon Kindle](https://www.amazon.com/gp/product/B01MG342KU/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MG342KU&linkCode=as2&tag=gitpull-20&linkId=e6d3f08ad92bfea1cf62d735b6a90bdf) and [Apple iBooks](https://geo.itunes.apple.com/us/book/the-tao-of-tmux/id1168912720?mt=11&at=1001lrwP).
+This book is available for sale on [Leanpub](https://leanpub.com/the-tao-of-tmux), [Amazon Kindle](https://www.amazon.com/gp/product/B01MG342KU/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MG342KU&linkCode=as2&tag=gitpull-20&linkId=e6d3f08ad92bfea1cf62d735b6a90bdf).
 
 It's also available to read for [free on the web](https://leanpub.com/the-tao-of-tmux/read).
 
@@ -173,5 +173,5 @@ Refer to tmux's [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES)
 file for updates on what changes and when.
 
 As of November 2016, it's pretty trivial for me to push out minor changes on
-Leanpub, Amazon and iTunes. So don't worry about having to pay unless tmux
+Leanpub and Amazon. So don't worry about having to pay unless tmux
 radically changes.
