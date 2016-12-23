@@ -84,3 +84,15 @@ A better way of putting it, `<Ctrl-b> d` closed the client connection, therefore
 
 Your tmux client disconnected from the server instance. The session however is
 still running in the background.
+
+## It's all just commands
+
+Configs and Commands - [Configs](#config) are the same as automatically running
+commands via `$ tmux command`.
+
+Keybindings and Commands - Keyboard shortcuts in tmux are just shorthands for
+commands you can do via `$ tmux command`.
+
+Even if you look at the [source code](#technical-stuff), the files are prefixed
+`cmd-`. The essence of what you're doing in tmux is easier and more transparent
+than it seems.
