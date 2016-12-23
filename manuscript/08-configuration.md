@@ -33,6 +33,8 @@ in the POSIX standard.
 
 To do this, `prefix` + `:` to open up the tmux prompt. Then type:
 
-`:source ~/path/to/config.conf`
+`:source /path/to/config.conf`
 
 And hit return.
+
+You can also do `$ tmux source-file /path/to/config.conf`.
