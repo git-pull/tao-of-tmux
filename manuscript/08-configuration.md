@@ -5,6 +5,9 @@ Configuration of tmux is typically done through the `.tmux.conf` file in your
 pull their home directory up, the paths `~/.tmux.conf` and `$HOME/.tmux.conf`
 should work on OS X, Linux and BSD.
 
+For a sample config, I maintain a pretty decked out one at
+https://github.com/tony/tmux-config.
+
 I> **Custom Configs**
 I>
 I> You can specify your config via the `-f` command. Like this:
@@ -38,3 +41,15 @@ To do this, `prefix` + `:` to open up the tmux prompt. Then type:
 And hit return.
 
 You can also do `$ tmux source-file /path/to/config.conf`.
+
+Even better, often you will keep your default tmux config stored in
+`$HOME/.tmux.conf`. So what can you do? You can `bind-key` to `source-file
+~/.tmux.conf`:
+
+`bind r source ~/.tmux.conf`
+
+You can also have it give you a confirmation afterwards:
+
+`bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
+
+Now you can type `prefix` + `r` to get the config to reload.
