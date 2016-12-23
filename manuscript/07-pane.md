@@ -4,7 +4,7 @@
 
 ## Traversing Panes {#pane-traversal}
 
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`;`               | Move to the previously active pane.                |
 |`Up, Down`        | Change to the pane above, below, to the left, or to|
