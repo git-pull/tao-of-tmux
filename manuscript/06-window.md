@@ -44,5 +44,17 @@ window. Very helpful if you're juggling around a lot of things!
 The accepted arguments are `-s` (the window you are moving) and `-t`, where you
 are moving the window to.
 
+You can also use `$ tmux movew` for short.
+
+Example: move the current window to number 2:
+
+{language=shell, line-numbers=off}
+    $ tmux movew -t2
+
+Example: move window 2 to window 1:
+
+{language=shell, line-numbers=off}
+    $ tmux movew -s2 -t1
+
 The shortcut to prompt for an index to move the current window to is `Prefix` +
 `.`.
