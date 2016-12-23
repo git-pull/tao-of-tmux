@@ -174,8 +174,8 @@ in compliant with the [LICENSE](https://github.com/tony/tmuxp/blob/master/LICENS
 
 ## Session Managers {#session-manager}
 
-For those who use tmux regularly to perform repetitive tasks, such as open the
-same software project, view the same logs, etc. there are applications that
+For those who use tmux regularly to perform repetitive tasks, such as opening
+the same software project, view the same logs, etc. there are applications that
 store your layouts declaratively in a YAML or JSON file and help you boot up
 your session fast.
 
