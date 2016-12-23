@@ -6,7 +6,7 @@ pull their home directory up, the paths `~/.tmux.conf` and `$HOME/.tmux.conf`
 should work on OS X, Linux and BSD.
 
 For a sample config, I maintain a pretty decked out one at
-https://github.com/tony/tmux-config.
+<https://github.com/tony/tmux-config>.
 
 I> **Custom Configs**
 I>
