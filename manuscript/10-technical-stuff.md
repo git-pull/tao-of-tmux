@@ -62,3 +62,6 @@ command.
 
 The innards of tmux is powered by [libevent](http://libevent.org/), a cross-platform event
 notification library. libevent is an abstraction layer on top of OS-specific event notifiers.
+
+It's the workhorse behind the scenes. It's used in software like Chromium,
+Memcached, Transmission and Tor.
