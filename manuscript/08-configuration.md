@@ -42,14 +42,16 @@ And hit return.
 
 You can also do `$ tmux source-file /path/to/config.conf`.
 
-Even better, often you will keep your default tmux config stored in
-`$HOME/.tmux.conf`. So what can you do? You can `bind-key` to `source-file
-~/.tmux.conf`:
-
-`bind r source ~/.tmux.conf`
-
-You can also have it give you a confirmation afterwards:
-
-`bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
-
-Now you can type `prefix` + `r` to get the config to reload.
+I> **Easy reloadin'**
+I>
+I> Even better, often you will keep your default tmux config stored in
+I> `$HOME/.tmux.conf`. So what can you do? You can `bind-key` to
+I> `source-file ~/.tmux.conf`:
+I>
+I> `bind r source ~/.tmux.conf`
+I> 
+I> You can also have it give you a confirmation afterwards:
+I> 
+I> `bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
+I>
+I> Now you can type `prefix` + `r` to get the config to reload.
