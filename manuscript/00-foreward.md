@@ -61,7 +61,7 @@ is quite sufficient in this regard.
 A word to absolute beginners: do not feel you need to grasp the concepts
 of command line and terminal multiplexing in a single sitting. You have the
 choice of picking out concepts of tmux that you like according to your
-needs or curiosities. If you do not have it installed, please view the
+needs or curiosities. If you haven't installed tmux yet, please view the
 [Installation section](#appendix-installation) in the Appendix of the book.
 
 ## Styles
