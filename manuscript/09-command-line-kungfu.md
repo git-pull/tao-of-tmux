@@ -41,6 +41,8 @@ in a relational database.
 | window    | @      | @2313                                 |
 | pane      | %      | %5432                                 |
 
+What I use to help me remember:
+
 So servers are represented by dollar signs ($), because those are where you keep
 your projects (*ostensibly** where you make money, or help someone else do it).
 
