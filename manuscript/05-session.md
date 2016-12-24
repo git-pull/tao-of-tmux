@@ -53,7 +53,7 @@ Sometimes the default session name given by tmux isn't descriptive enough. It
 only takes a few seconds to update it.
 
 You can name it whatever you want. Typically if I'm working on multiple web
-projects in one session, I'll name is "web". If I'm assigning one software
+projects in one session I'll name it "web". If I'm assigning one software
 project to a single session, I'll name it after the software project. You'll
 likely develop your own naming conventions, but pretty much anything is more
 descriptive than the default. 
