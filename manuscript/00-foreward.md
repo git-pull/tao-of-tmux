@@ -112,7 +112,7 @@ butter use cases for you to start using tmux daily, starting now.
 the scenes. You'll think of tmux in a different way, and may be impressed to see
 a client-server architecture could be implemented so seamlessly to end users.
 
-[Sessions*](#sessions) are the container holding a collection of all your tmux'
+[*Sessions*](#sessions) are the container holding a collection of all your tmux'
 windows. You'll learn what a session is and how it helps you organize your
 workspace in the terminal. You'll learn how you can manipulate and rename your
 session, providing a fine stepping stone to the next destination.
