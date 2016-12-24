@@ -43,7 +43,7 @@ Heck, you even get a clock. Just like in a graphical desktop environment.
 
 ## Multitasking
 
-tmux gives you prime oppurtunity to do many things at once on the same screen.
+tmux gives you prime opportunity to do many things at once on the same screen.
 You can keep multiple terminals running on the same display.
 
 (After all, that's where the abbrevation "tmux" comes from - **T**erminal
