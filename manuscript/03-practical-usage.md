@@ -16,8 +16,8 @@ it.
 And it's a hump we have to get over.
 
 An analogy I'd draw would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
-games. In this game, the player could input a combination of buttons in
-sequence to perform flying spinning kicks and shoot fireballs. Sweet. As you
+games. In this game the player would input a combination of buttons in
+sequence to perform flying spinning kicks and shoot fireballs; sweet. As you
 grew more accustomed with the combos, you'd begin to repeat moves by intuition
 since you've committed to muscle memory.
 
