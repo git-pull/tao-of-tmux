@@ -2,8 +2,8 @@
 
 Before I get into tmux, there are a few fundamentals of the command line I want
 to run over. Often, we're so used to using these out of street smarts and muscle
-memory, a great deal of us never seen relation of where these tools stand next to
-another.
+memory, a great deal of us never see the relation of where these tools stand
+next to each other.
 
 Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
 shell scripting, and so on. If you use tmux, you'll be around these all the
@@ -11,7 +11,7 @@ time, regardless of whether you're in a GUI on your local machine or ssh'ing
 into a remote server.
 
 I'm not going to go super deep into the technicalities, but if you ever wanted
-to dive into how processes and tty's work at the kernel level (data structures
+to dive into how processes and TTY's work at the kernel level (data structures
 and all) I recommend the book *The Design and Implementation of the FreeBSD
 Operating System (2nd Edition)* by Marshall Kirk McKusick. In particular,
 Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*.
@@ -21,7 +21,7 @@ well.
 
 Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
-hours. I could even send you on a few tracks, (The C Language, anything from he
+hours. I could even send you on a few tracks, (The C Language, anything from the
 Unix/BSD lineage, etc.) and some clever fellow would likely chime in wanting to
 talk about Linux, GNU and so on. It's like *Game of Thrones*, there's multiple
 story arcs you can follow, some of which intersect. I can't be authoritative,
@@ -73,7 +73,7 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ man hier
 
-These inconsistencies add up so much a good deal of software infrastructure out
+These inconsistencies add up so much, a good deal of software infrastructure out
 there exists solely to abstract the differences across them. For example, CMake,
 Autotools, SFML, SDL2, interpreted programming languages and their standard
 libraries are dedicated to normalizing the banal differences across
@@ -87,9 +87,9 @@ So let's separate the common suspects into their respective categories.
 
 ## Terminal interface
 
-The terminal interface can be best introduced by stating their is an official
-specification laying out its technical properties, interfaces and
-responsibilities in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html)
+The terminal interface can be best introduced by stating that there is an
+official specification laying out its technical properties, interfaces and
+responsibilities in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html).
 
 That's your TTY's, what you see when you move between them, on Linux / BSD
 systems, this you can switch between sessions via `<ctrl-alt-F1>` through
@@ -111,7 +111,7 @@ As of October 2016 the [latest specification](http://pubs.opengroup.org/onlinepu
 covers in technical detail the responsibilities of the shell.
 
 If I can make a comment on shells and operating systems, it's that each vendor
-does there own darn thing. On most Linux distributions and MacOS, you'll
+does their own darn thing. On most Linux distributions and MacOS, you'll
 typically be dropped into Bash. That's because it's what Apple decided to use as
 a *default shell* for users.
 
