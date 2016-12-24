@@ -15,8 +15,8 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -f path/to/config.conf
 I>
-I> Note that if a tmux server is already running in the background, you may not
-I> and you want to test a fresh config, you should shut down the rest of the
+I> Note that if a tmux server is already running in the background and you want 
+I> to test a fresh config, you must either shut down the rest of the
 I> tmux sessions or use a different socket name. Like this:
 I> 
 I> {language=shell, line-numbers=off}

@@ -31,7 +31,7 @@ and so on, until:
 
 If a command allow target specification, it's usually done through `-t`.
 
-Think of targets as tmux' way of specifying an [unique key](https://en.wikipedia.org/wiki/Unique_key)
+Think of targets as tmux's way of specifying a [unique key](https://en.wikipedia.org/wiki/Unique_key)
 in a relational database.
 
 | Entity    | Prefix | Example                               |
