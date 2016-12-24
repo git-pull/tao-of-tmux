@@ -7,7 +7,7 @@ This is a prerelease version of *The Tao of tmux*. The intended release date is
 January 22nd, 2017. [Please submit errata via GitHub or email](#errata). Thank
 you!
 
-# Foreward 
+# Foreword 
 
 Pretty much all my friends swear to using tmux. I remember going out at night
 for drinks and the 3 of us would take a seat at a round table and take our smart
