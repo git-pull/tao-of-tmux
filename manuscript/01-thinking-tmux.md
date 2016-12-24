@@ -109,7 +109,7 @@ This is especially cool if:
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
-server to manage AIM, MSN, Google Talk, Jabber, ICQ, even twitter. Then you can
+server to manage AIM, MSN, Google Talk, Jabber, ICQ, even Twitter. Then you can
 detach your IRC and "idle" in your favorite channels, stay online on instant
 messengers, and get back to your messages when you return.
 
