@@ -93,6 +93,6 @@ commands via `$ tmux command`.
 Keybindings and Commands - Keyboard shortcuts in tmux are just shorthands for
 commands you can do via `$ tmux command`.
 
-Even if you look at the [source code](#technical-stuff), the files are prefixed
+Even if you look at the [source code](#technical-stuff) there are files prefixed
 `cmd-`. The essence of what you're doing in tmux is easier and more transparent
 than it seems.
