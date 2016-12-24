@@ -30,7 +30,7 @@ and many TUI (Terminal User Interface) applications. So if you haven't
 internalized the concept, let's do it now. If you already have done similar
 command sequences before in TUI/GUI applications, that'll come in helpful.
 
-Every time you learn a key combo is one less time you'll be moving your hand
+Each time you memorize a key combo is one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short term memory
 on getting stuff done, that means less mistakes.
 
