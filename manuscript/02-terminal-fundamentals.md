@@ -82,9 +82,8 @@ directives in your C and C++ applications. You want open source, you get choice,
 but be aware there's a lot of upkeep cost in keeping these upstream projects
 (and even your personal ones) compatible. But I digress, back to terminal stuff.
 
-Why does it matter? Why do you bring it up? You'll see this kind of stuff
-everywhere. So let's separate the common suspects into their respective
-categories.
+Why does it matter, why  bring it up? You'll see this kind of stuff everywhere.
+So let's separate the common suspects into their respective categories.
 
 ## Terminal interface
 
