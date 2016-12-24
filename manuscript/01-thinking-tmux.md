@@ -53,9 +53,9 @@ In addition to having multiple terminals on one screen, tmux allows you to
 create and link multiple "windows", all within the confines of the tmux session
 you attached.
 
-Even better, there are facilities to copy and paste, scroll. No requirement
-for graphics either, so you have full power even if you're SSH'ing or in a
-tty without X.
+Even better, there are facilities to copy and paste as well as scroll. No
+requirement for graphics either, so you have full power even if you're SSH'ing
+or in a tty without X.
 
 So here are a few common scenarios:
 
