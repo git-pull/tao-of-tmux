@@ -6,7 +6,7 @@ Your server holds [Sessions](#sessions) and the [Windows](#windows) and
 ![Server](images/info/server.png) 
 Q> ### Wait what, tmux is a server?
 
-Q> Often when "server" is mentioned, what comes to mind for many
+Q> Often when "server" is mentioned what comes to mind for many
 Q> may be rackmounted hardware, to others it may be software running
 Q> daemonized on a server and managed through a utility like upstart,
 Q> supervisor and so on.
