@@ -1,6 +1,12 @@
 
 {frontmatter}
 
+# Important
+
+This is a prerelease version of *The Tao of tmux*. The intended release date is
+January 22nd, 2017. [Please submit errata via GitHub or email](#errata). Thank
+you!
+
 # Foreward 
 
 Pretty much all my friends swear to using tmux. I remember going out at night
@@ -155,11 +161,14 @@ This book is available for sale on [Leanpub](https://leanpub.com/the-tao-of-tmux
 
 It's also available to read for [free on the web](https://leanpub.com/the-tao-of-tmux/read).
 
-## Errata
+## Errata {#errata}
 
 If you find errors in this book please submit them to me at tao.of.tmux <AT>
-nospam git-pull.com. I will update digital versions of the book with the 
-changes where applicable.
+nospam git-pull.com.
+
+You can also submit a pull request via <https://github.com/git-pull/tao-of-tmux>.
+
+I will update digital versions of the book with the changes where applicable.
 
 ## Book Updates and tmux changes
 
