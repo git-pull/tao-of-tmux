@@ -48,12 +48,12 @@
 #### pkg(1)
 
 {language=shell, line-numbers=off}
-    # pkg install tmux
+    \# pkg install tmux
 
 #### pkg_add(1)
 
 {language=shell, line-numbers=off}
-    # pkg_add -r tmux
+    \# pkg_add -r tmux
 
 ### OpenBSD
 
@@ -62,7 +62,7 @@ As of OpenBSD 4.6, [tmux is part of the base system](https://www.openbsd.org/46.
 If you are using an earlier version:
 
 {language=shell, line-numbers=off}
-    # pkg_add tmux
+    \# pkg_add tmux
 
 ### NetBSD
 
