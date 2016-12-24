@@ -139,14 +139,14 @@ Q> Thankfully, the modern server can stay online for a long time. Even for
 Q> consumer laptops and PC's with a day or two uptime, having tmux persist
 Q> tasks for organizational purposes is satisfactory to run it.
 Q>
+Q> It comes as a disappointment because some are interested in the idea of
+Q> being able to persist a tree of processes after restart. That goes out of
+Q> scope of what tmux is meant to do.
+Q>
 Q> For tasks you repeat often, you can always use a tool like
 Q> [tmuxp](https://github.com/tony/tmuxp), [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 Q> or [teamocil](https://github.com/remiprev/teamocil) to resume common
 Q> sessions.
-Q>
-Q> It comes at a disappointment, because some are interested in the idea of
-Q> being able to persist a tree of processes after restart. That goes out of
-Q> scope of what tmux is meant to do.
 Q>
 Q> In addition to session managers, [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)
 Q> is a tool that attempts to preserve running programs, working directories and
