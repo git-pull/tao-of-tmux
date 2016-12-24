@@ -3,7 +3,7 @@
 
 # Important
 
-This is a prerelease version of *The Tao of tmux*. The intended release date is
+This is a prerelease version of *The Tao of tmux*. The estimated release date is
 January 22nd, 2017. [Please submit errata via GitHub or email](#errata). Thank
 you!
 
