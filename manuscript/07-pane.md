@@ -9,10 +9,11 @@ run your shell within a [window](#windows).
 
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
-|`;`               | Move to the previously active pane.                |
-|`Up, Down`        | Change to the pane above, below, to the left, or to|
-|`Left, Right`     | the right of the current pane.                     |
-|`o`               | Select the next pane in the current window.        |
+|`Prefix` + `;`    | Move to the previously active pane.                |
+|`Prefix`+ `Up` /  | Change to the pane above, below,                   |
+|`Down` / `Left` / | to the left, or to the                             |
+|`Right`           | the right of the current pane.                     |
+|`Prefix` + `o`    | Select the next pane in the current window.        |
 
 ## Zoom in
 
