@@ -107,7 +107,7 @@ Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 When we speak about "shells", such as the examples below, we're often referring
 to the interpreter.
 
-As of October 2016, the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
+As of October 2016 the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
 If I can make a comment on shells and operating systems, it's that each vendor
