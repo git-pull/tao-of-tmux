@@ -100,9 +100,22 @@ systems, this you can switch between sessions via `<ctrl-alt-F1>` through
 GUI Terminals: Terminal.app, iterm, iterm2, konsole, lxterm, xfce4-terminal,
 rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
+## Shell languages {#shell-languages}
+
+Each shell interpreter has its own language features. Like with shells
+themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
+
+You will sometimes see this in `.sh` files, which at their header,
+
+ZSH and Bash should be able to understand POSIX shell script you write.
+
 ## Shell interpreters (Shells)
 
 Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
+
+Shell interpreters *implement* the shell language. They are a layer on top of
+the kernel and are what allow you to, interactively, run commands and
+applications inside them.
 
 When we speak about "shells", such as the examples below, we're often referring
 to the interpreter.
@@ -140,12 +153,3 @@ a user.
 
 The other thing to mention is that in order for `chsh -s` to work  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
-
-## Shell languages {#shell-languages}
-
-Each shell interpreter has its own language features. Like with shells
-themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
-
-You will sometimes see this in `.sh` files, which at their header,
-
-ZSH and Bash should be able to understand POSIX shell script you write.
