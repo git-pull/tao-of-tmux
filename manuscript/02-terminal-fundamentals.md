@@ -127,12 +127,12 @@ Bash, ZSH and so on can add a lot of cool and very practical features, but
 they're not portable unfortunately!
 
 Recent versions of MacOS include ZSH by default. Linux distributions
-typically require you to install it via package manager, and installs it to
-`/usr/bin/zsh`. On BSD system, you can build it via the port system or or from
+typically require you to install it via package manager and installs it to
+`/usr/bin/zsh`. On BSD systems, you can build it via the port system,
 [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
-on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD and
+on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD. It
 normally is found at `/usr/local/bin/zsh`. So it can be confusing, they can't
-just agree to disagree on where to install interpreters.
+agree to disagree on where to install interpreters.
 
 It's fun to experiment with different shells, on many systems, you can use
 [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
