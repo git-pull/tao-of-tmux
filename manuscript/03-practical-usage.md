@@ -25,10 +25,10 @@ That's kind of what the prefix key in tmux is like. Without you understanding
 how to send *command sequences* to tmux via the prefix key, you'll pretty much
 be dead in the water.
 
-And the same will also end up coming up in later cases if you use Vim or Emacs
-and many TUI (Terminal User Interface) applications. So if you haven't
-internalized the concept, let's do it now. If you already have done similar
-command sequences before in TUI/GUI applications, that'll come in helpful.
+Key sequences will also come up in later if you use Vim or Emacs and other TUI
+(Terminal User Interface) applications. So, if you haven't internalized the
+concept let's do it now. If you already have done similar command sequences
+before in TUI/GUI applications, that'll come in handy.
 
 Each time you memorize a key combo is one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short term memory
