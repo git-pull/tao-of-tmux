@@ -19,13 +19,13 @@ background for you.
 
 ## Zero config needed
 
-You don't notice it, but when you use tmux normally, what actually happens
-is a server is launched and you're really being connected via a client.
+You don't notice it, but when you use tmux normally, a server is launched and
+being connected via a client.
 
-It's just that it's streamlined for normal usage. I could continue the book and
-not even mention servers. But I'd rather reader have a solid understanding that
-while tmux feels like magic, it's really utilitarian first and foremost. One
-cannot deny it's exquisitely executed from a user experience standpoint.
+tmux is so streamlined I could continue the book and not even mention servers.
+But I'd rather you have a solid understanding that while tmux feels like
+magic, it's really utilitarian first and foremost. One cannot deny it's
+exquisitely executed from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters where I dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
