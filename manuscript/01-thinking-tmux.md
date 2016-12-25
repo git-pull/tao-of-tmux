@@ -130,7 +130,7 @@ The above is just examples, but any general workspace you'd normally use in a
 terminal for any task can gain the benefit of you being able to persist it! 
 That includes projects or repetitive efforts you'd multitask on.
 
-Q> ### Does tmux persist sessions after restarts?
+Q> ### Do tmux sessions persist after a system restart?
 Q>
 Q> Unfortunately not. A restart will kill the tmux server and any processes
 Q> running within it.
