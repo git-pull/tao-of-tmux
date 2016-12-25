@@ -134,11 +134,11 @@ on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD. It
 normally is found at `/usr/local/bin/zsh`. So it can be confusing, they can't
 agree to disagree on where to install interpreters.
 
-It's fun to experiment with different shells, on many systems, you can use
+It's fun to experiment with different shells. On many systems you can use
 [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
 a user.
 
-The other thing to mention is that in order for `chsh -s` to work,  you
+The other thing to mention is that in order for `chsh -s` to work  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
 
 ## Shell languages {#shell-languages}
