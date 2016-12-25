@@ -1,9 +1,9 @@
 # Session {#sessions}
 
 Welcome to the session. Being the highest level entity after your
-[server](#server). Regardless of whether you're starting tmux fresh
-or attaching an already created one, your interaction with tmux will
-have to have at least one session running.
+[server](#server). Regardless of whether you're starting tmux fresh or attaching
+an existing one, your interaction with tmux will have *at least* one session
+running.
 
 A session will hold one or more [windows](#windows). Your tmux status bar,
 found at the bottom, will include a list of windows.
