@@ -36,15 +36,16 @@ a setup process. But just because servers are involved doesn't entail
 hours of configuration on each machine you run it on. There is no
 setup.
 
-When people people think server, they think pain. They visualize time being
-spent digging around `/etc/` for configuration files and flipping settings on
-and off just to get basic systems online. But not with tmux. It's a server, but
-in the good way.
+When people people think server, they think pain. It invokes an image of digging
+around `/etc/` for configuration files and flipping settings on and off just to
+get basic systems online. But not with tmux. It's a server, but in the good way.
 
 ## Stayin' alive
 
 The server part of tmux is how your sessions are able to stay alive even
 after your client is detached.
+
+The tmux server won't go away until all sessions are closed first.
 
 ## Servers hold sessions
 
