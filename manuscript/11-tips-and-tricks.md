@@ -62,7 +62,7 @@ because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
-In my never ending conquest to get softare projects working in symphony with
+In my never ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
 patterns to get 'instant feedback' upon file changes, I've become the
 internet's unofficial connoisseur on them.
