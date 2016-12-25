@@ -76,6 +76,6 @@ So something like:
     $ tmux
 
 Will give you a tmux directory created within your `$HOME` folder. On OS X,
-your home folder will probably be something like `/Users/yourusername`, on
-other systems, `/home/yourusername` will be most common. If you want to find
-out for sure, just type `echo $HOME`.
+your home folder will probably be something like `/Users/yourusername`. On
+other systems it may be `/home/yourusername`. If you want to find out, just type
+`echo $HOME`.
