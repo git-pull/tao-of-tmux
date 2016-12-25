@@ -58,7 +58,7 @@ project to a single session, I'll name it after the software project. You'll
 likely develop your own naming conventions, but pretty much anything is more
 descriptive than the default. 
 
-![Renaming](images/05-session/rename.png)
+![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
 
 If you don't name your sessions, it'll be difficult to keep track of what is
 inside that session from the outside. Sometimes you may forget you already have
