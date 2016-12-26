@@ -3,7 +3,7 @@
 
 # Thinking in tmux {#thinking-tmux}
 
-In the world of modern computing, there are 2 realms:
+In the world of modern computing, there are 2 realms of user interaction:
 
 1. The text realm
 2. The graphical realm
