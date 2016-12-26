@@ -12,7 +12,7 @@ terminal applications to persist for months or even years if you want to.
 
 ![Server](images/info/server.png)
 
-## Wait what, tmux is a server?
+## Wait, What? tmux is a server?
 
 Often when "server" is mentioned what comes to mind for many
 may be rackmounted hardware, to others it may be software running
