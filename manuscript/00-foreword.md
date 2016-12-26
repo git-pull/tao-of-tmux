@@ -136,8 +136,8 @@ do your magic and get to work!
 status line and behavior. You'll even learn how to show your CPU usage and
 memory via the status line.
 
-[Command Line Kung fu](#cli-kung-fu) goes into Command [Shorthands](#shorthands),
-as well the some advanced and powerful concepts like [Targets](#targets) and [Formats](#formats).
+[*Command Line Kung fu*](#cli-kung-fu) goes into Command [Shorthands](#shorthands),
+as well as some advanced and powerful concepts like [Targets](#targets) and [Formats](#formats).
 
 [*Technical Stuff*](#technical-stuff) is a glimpse at tmux' code and how it
 works under the hood. You may learn enough to be able to impress friends who
