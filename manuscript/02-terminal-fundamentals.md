@@ -5,7 +5,7 @@ over. Often, we're so used to using these out of street smarts and muscle
 memory a great deal of us never see the relation of where these tools stand
 next to each other.
 
-Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
+Seasoned developers are familiar with zsh, bash, iterm2, konsole, /dev/tty,
 shell scripting, and so on. If you use tmux, you'll be around these all the
 time, regardless of whether you're in a GUI on your local machine or ssh'ing
 into a remote server.
