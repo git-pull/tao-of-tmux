@@ -3,16 +3,24 @@
 Your server holds [Sessions](#sessions) and the [Windows](#windows) and
 [Panes](#panes) within them.
 
-![Server](images/info/server.png) 
-Q> ### Wait what, tmux is a server?
+What really happens in tmux is you are connected via a socket connection to a
+server. What you see presented to in you in your shell is merely a client
+connection.
 
-Q> Often when "server" is mentioned what comes to mind for many
-Q> may be rackmounted hardware, to others it may be software running
-Q> daemonized on a server and managed through a utility like upstart,
-Q> supervisor and so on.
-Q>
-Q> Unlike web or database software, tmux doesn't require specialized
-Q> configuration settings or creating a service entry to start things.
+In this chapter, we go into the one of the secret sauces that allow your
+terminal applications to persist for months or even years if you want to.
+
+![Server](images/info/server.png)
+
+## Wait what, tmux is a server?
+
+Often when "server" is mentioned what comes to mind for many
+may be rackmounted hardware, to others it may be software running
+daemonized on a server and managed through a utility like upstart,
+supervisor and so on.
+
+Unlike web or database software, tmux doesn't require specialized
+configuration settings or creating a service entry to start things.
 
 tmux uses a client-server model, but the server is forked to the 
 background for you.
