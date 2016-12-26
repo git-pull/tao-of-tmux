@@ -1,8 +1,8 @@
 # Terminal fundamentals {#terminal-fundamentals}
 
-Before I get into tmux, there are a few fundamentals of the command line I want
-to run over. Often, we're so used to using these out of street smarts and muscle
-memory, a great deal of us never see the relation of where these tools stand
+Before I get into tmux, there are a few fundamentals of the command line to run
+over. Often, we're so used to using these out of street smarts and muscle
+memory a great deal of us never see the relation of where these tools stand
 next to each other.
 
 Seasoned developers are familiar with what zsh, bash, iterm2, konsole, /dev/tty,
