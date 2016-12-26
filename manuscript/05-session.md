@@ -15,6 +15,22 @@ next to it.
 
 ![The first window, ID 1, titled "manuscript" is active. The second window, ID 2, titled zsh.](images/05-session/active-window.png)
 
+## Creating a session
+
+The simplest command to create a new session is just typing `tmux`:
+
+{language=shell, line-numbers=off}
+    $ tmux
+
+The `$ tmux` application without any commands is equivalent to
+`$ tmux new-session`. Nifty!
+
+By default, your session name will be given a number. Which isn't too
+descriptive. What would be better is:
+
+{language=shell, line-numbers=off}
+    $ tmux new-session -s'my rails project'
+
 ## Switching sessions within tmux
 
 I've seen some people acquire a habit of detaching their tmux client and
