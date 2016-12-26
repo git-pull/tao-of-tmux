@@ -104,8 +104,9 @@ rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
 Shell languages *are* programming languages.
 
-Sure you may not compile into binaries with gcc. Sure there may not be a shiny
-[npm](https://www.npmjs.com/) for them. But a language is a language.
+Sure you may not compile the code into binaries with [`gcc`](https://gcc.gnu.org/)
+or [`clang`](http://clang.llvm.org/). And there may not be a shiny [npm](https://www.npmjs.com/)
+for them. But a language is a language.
 
 Each shell interpreter has its own language features. Like with shells
 themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01)
