@@ -3,13 +3,40 @@
 
 # Thinking in tmux {#thinking-tmux}
 
-In the world of modern computing, there are 2 interface styles:
+In the world of modern computing, there are 2 interface realms:
 
-1. The text style
-2. The graphical style
+1. The text realm
+2. The graphical realm
 
-tmux uses the text style in which fixed-width fonts appear in
+tmux lives in the graphical realm in which fixed-width fonts appear in
 a rectangular grid in a window, like in a terminal from the 1980s.
+
+## Window manager for the terminal
+
+tmux is to the console what a desktop is to gui apps. It's a world inside the
+text dimension. Inside tmux you can:
+
+- multitask inside the terminal, run multiple applications
+- have multiple command lines (pane) in the same window
+- have multiple windows (window) in the workspace (session)
+- switch between multiple workspaces, like virtual desktops
+
+|**tmux**           |**"Desktop"-Speak**   |**Plain English**                  |
+|-------------------|----------------------|-----------------------------------|
+|Multiplexer        |Multi-tasking         |Multiple applications              |
+|                   |                      |simulataneously.                   |
+|-------------------|----------------------|-----------------------------------|
+|Session            |Desktop               |Applications are visible here      |
+|-------------------|----------------------|-----------------------------------|
+|Window             |Virtual Desktop or    |A desktop that stores it own screen|
+|                   |applications          |screen			       |
+|-------------------|----------------------|-----------------------------------|
+|Pane               |Application           |Performs operations                |
+
+
+Heck, you even get a clock. Just like in a graphical desktop environment.
+
+![KDE, top-left. Windows 10, top-right. MacOS Sierra, center. tmux 2.3 default status bar, bottom.](images/01-thinking-tmux/clocks.png)
 
 ## Multitasking
 
