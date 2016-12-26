@@ -64,7 +64,7 @@ X> 2. Press `b`, and hold it.
 X> 3. Release both keys at the same time.
 X> 4. Hit `d`!
 X>
-X> You've just send tmux your first command! And you're back at the plain old
+X> You've just sent tmux your first command! And you're back at the plain old
 X> terminal now!
 
 You've just detached the tmux session you were in. So let's speak about what
