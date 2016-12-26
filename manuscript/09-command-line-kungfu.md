@@ -10,7 +10,7 @@ patterns.
 For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`,
 `$ tmux att`, `$ tmux at`, `$ tmux a` work just as well.
 
-Every tmux command has short-hands, let's try this for `$ tmux new-session`:
+Every tmux command has shorthands, let's try this for `$ tmux new-session`:
 
 {language=shell, line-numbers=off}
     $ tmux new-session

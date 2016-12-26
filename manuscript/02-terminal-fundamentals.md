@@ -100,12 +100,22 @@ systems, this you can switch between sessions via `<ctrl-alt-F1>` through
 GUI Terminals: Terminal.app, iterm, iterm2, konsole, lxterm, xfce4-terminal,
 rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
+## Shell languages {#shell-languages}
+
+Each shell interpreter has its own language features. Like with shells
+themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
+
+You will sometimes see this in `.sh` files, which at their header,
+
+ZSH and Bash should be able to understand POSIX shell script you write.
+
 ## Shell interpreters (Shells)
 
 Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 
-When we speak about "shells", such as the examples below, we're often referring
-to the interpreter.
+Shell interpreters *implement* the shell language. They are a layer on top of
+the kernel and are what allow you to, interactively, run commands and
+applications inside them.
 
 As of October 2016 the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
@@ -116,8 +126,8 @@ typically be dropped into Bash. That's because it's what Apple decided to use as
 a *default shell* for users.
 
 On BSD, you may be placed into use plain vanilla `sh` unless you specify
-elsewise during the installation process. In Ubuntu, `/bin/sh` used to be `bash`
-([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but was
+otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
+`bash` ([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but was
 [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 ([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell", in
@@ -127,25 +137,16 @@ Bash, ZSH and so on can add a lot of cool and very practical features, but
 they're not portable unfortunately!
 
 Recent versions of MacOS include ZSH by default. Linux distributions
-typically require you to install it via package manager, and installs it to
-`/usr/bin/zsh`. On BSD system, you can build it via the port system or or from
+typically require you to install it via package manager and installs it to
+`/usr/bin/zsh`. On BSD systems, you can build it via the port system,
 [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
-on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD and
+on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD. It
 normally is found at `/usr/local/bin/zsh`. So it can be confusing, they can't
-just agree to disagree on where to install interpreters.
+agree to disagree on where to install interpreters.
 
-It's fun to experiment with different shells, on many systems, you can use
+It's fun to experiment with different shells. On many systems you can use
 [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
 a user.
 
-The other thing to mention is that in order for `chsh -s` to work,  you
+The other thing to mention is that in order for `chsh -s` to work  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
-
-## Shell languages {#shell-languages}
-
-Each shell interpreter has its own language features. Like with shells
-themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
-
-You will sometimes see this in `.sh` files, which at their header,
-
-ZSH and Bash should be able to understand POSIX shell script you write.
