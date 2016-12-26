@@ -102,14 +102,29 @@ rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
 ## Shell languages {#shell-languages}
 
+Shell languages *are* programming languages.
+
+Sure you may not compile into binaries with gcc. Sure there may not be a shiny
+[npm](https://www.npmjs.com/) for them. But a language is a language.
+
 Each shell interpreter has its own language features. Like with shells
-themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01).
+themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01)
+and strive to be compatible with it. ZSH and Bash should be able to understand
+POSIX shell script you write, but not the other way around (we will cover that
+in [shell interpreters](#shells)).
 
-You will sometimes see this in `.sh` files, which at their header,
 
-ZSH and Bash should be able to understand POSIX shell script you write.
+The top of `.sh` files [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
+statement which can invoke shellscripts in different dialects.
 
-## Shell interpreters (Shells)
+ZSH scripts are implemented by the ZSH shell interpreter, Bash scripts by Bash.
+But the languages are not as closely regulated and standardized as say, [C++'s
+standards committee](http://www.open-std.org/jtc1/sc22/wg21/) workgroups or
+[python's PEPs](https://www.python.org/dev/peps/). Bash and ZSH take features
+from Korn and C Shell's languages, but without all the ceremony and bureaucracy
+that other languages entail.
+
+## Shell interpreters (Shells) {#shells}
 
 Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
 
