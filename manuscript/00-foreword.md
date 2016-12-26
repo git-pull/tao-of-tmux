@@ -128,7 +128,7 @@ session, providing a fine stepping stone to the next destination.
 
 [*Windows*](#windows) are what you see when tmux is open right in front of you.
 You'll learn to rename and move windows, to create, delete, move between and
-copy and paste been panes.
+copy and paste between panes.
 
 [*Panes*](#panes) are a terminal in a terminal. This is where we leave you to
 do your magic and get to work!
