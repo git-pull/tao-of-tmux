@@ -20,7 +20,7 @@ already installed! But if it's not, type `sudo apt-get install tmux`.
 
 ![Find Turn Windows Features on or off](images/99-windows-bash/01-turn-features-onoff.jpg)
 
-![Check Windows Sybsystem for Linux (Beta)](images/99-windows-bash/02-turn-features-onoff-check.jpg)
+![Check Windows Subsystem for Linux (Beta)](images/99-windows-bash/02-turn-features-onoff-check.jpg)
 
 ![Windows completed the requested changes. Restart](images/99-windows-bash/03-turn-features-restart.jpg)
 

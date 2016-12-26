@@ -12,7 +12,7 @@ updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20read
 
 # Foreword 
 
-Pretty much all my friends swear about using tmux. I remember going out at night
+Pretty much all my friends use tmux. I remember going out at night
 for drinks and the 3 of us would take a seat at a round table and take our smart
 phones out. This was back when phones still had physical "QWERTY" keyboards.
 

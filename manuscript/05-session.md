@@ -1,9 +1,9 @@
 # Session {#sessions}
 
 Welcome to the session. Being the highest level entity after your
-[server](#server). Regardless of whether you're starting tmux fresh
-or attaching an already created one, your interaction with tmux will
-have to have at least one session running.
+[server](#server). Regardless of whether you're starting tmux fresh or attaching
+an existing one, your interaction with tmux will have *at least* one session
+running.
 
 A session will hold one or more [windows](#windows). Your tmux status bar,
 found at the bottom, will include a list of windows.
@@ -58,7 +58,7 @@ project to a single session, I'll name it after the software project. You'll
 likely develop your own naming conventions, but pretty much anything is more
 descriptive than the default. 
 
-![Renaming](images/05-session/rename.png)
+![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
 
 If you don't name your sessions, it'll be difficult to keep track of what is
 inside that session from the outside. Sometimes you may forget you already have
