@@ -12,7 +12,7 @@ updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20read
 
 # Foreword 
 
-Pretty much all my friends swear to using tmux. I remember going out at night
+Pretty much all my friends swear by tmux. I remember going out at night
 for drinks and the 3 of us would take a seat at a round table and take our smart
 phones out. It was the days back when phones still had physical "QWERTY" keyboards.
 All 3 of us, by happenstance, drawn our phones from our pockets. We planned just 2
@@ -85,7 +85,7 @@ prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-d
 on Super User.
 
 Shortcuts all require a [prefix key](#prefix-key) be sent before hand. Sections
-going over an subject-level of similar keyboard commands typically will have a
+going over similar keyboard commands will typically have a
 table. For example:
 
 | Shortcut         | Action                                             |
@@ -99,8 +99,7 @@ and hard technical details are in the appendix (back of the book). A lot of
 books tend to use this as filler. For me it's more of not wanting to leave
 complete beginners behind.
 
-For special circumstances like Windows 10, I opted that adding screenshots is best
-since a fair share may be more comfortable with a visual approach.
+For special circumstances like Windows 10, I chose to add screenshots since a fair share of the audience may be more comfortable with a visual approach.
 
 [*Thinking Tmux*](#thinking-tmux) goes over a breakdown of what
 tmux does and how it relates to the GUI desktops we already use on our
@@ -137,9 +136,8 @@ do your magic and get to work!
 status line and behavior. You'll even learn how to show your CPU usage and
 memory via the status line.
 
-[Command Line Kung fu](#cli-kung-fu) goes into Command [Shorthands](#shorthands),
-as well the some advanced and powerful [Targets](#targets) and [Formats](#formats)
-concepts.
+[*Command Line Kung fu*](#cli-kung-fu) goes into Command [Shorthands](#shorthands),
+as well as some advanced and powerful concepts like [Targets](#targets) and [Formats](#formats).
 
 [*Technical Stuff*](#technical-stuff) is a glimpse at tmux' code and how it
 works under the hood. You may learn enough to be able to impress friends who
