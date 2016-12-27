@@ -133,7 +133,7 @@ Shell interpreters *implement* the shell language. They are a layer on top of
 the kernel and are what allow you to, interactively, run commands and
 applications inside them.
 
-As of October 2016 the [latest specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
+As of October 2016 the [latest POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
 If I can make a comment on shells and operating systems, it's that each vendor
