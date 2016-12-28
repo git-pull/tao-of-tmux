@@ -255,12 +255,15 @@ Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
 
 The applications are in the `bin/` folder insite that. So you need to
 concatenate the two and add them to your [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)).
-So something like this into your `~/.bashrc` or `~/.zshrc`:
+Try adding one of these in your `~/.bashrc` or `~/.zshrc`:
 
 {language=shell, line-numbers=off}
-export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # MacOS w/ python 2.7
-export PATH=$HOME/.local/bin:$PATH                     # Linux/BSD
-export PATH="`python -m site --user-base`/bin":$PATH   # May work all-around
+    export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # MacOS w/ python 2.7
+    export PATH=$HOME/.local/bin:$PATH                     # Linux/BSD
+    export PATH="`python -m site --user-base`/bin":$PATH   # May work all-around
+
+Then open a new terminal, or `. ~/.zshrc` / `. ~/.bashrc` in your current one.
+Then you can run `tmuxp -V` and `tmuxp load` commands.
 
 ## tmux-plugins and tpm
 
