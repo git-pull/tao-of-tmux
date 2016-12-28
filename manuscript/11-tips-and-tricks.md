@@ -238,7 +238,7 @@ To launch it, install tmuxp and load the configuration:
 
 {language=shell, line-numbers=off}
     $ pip install --user tmuxp
-    $ tmuxp -V   # verify tmuxp is installed, if not you to fix your `PATH`
+    $ tmuxp -V   # verify tmuxp is installed, if not you need to fix your `PATH`
                  # to point to your python bin folder. More help below.
     $ tmuxp load ~/.tmuxp/test.yaml
 
