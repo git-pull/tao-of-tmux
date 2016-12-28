@@ -272,9 +272,9 @@ I've decided to dust off a C++ space shooter and an example go website I was
 playing with. They're licensed under MIT so you can use them, copy and paste
 from them, etc:
 
-- [tony's C++ space shooter minigame](https://github.com/tony/tot-cpp-shmup) -
+- [C++ space shooter minigame](https://github.com/tony/tot-cpp-shmup) -
   c++14, sdl2, cmake, json resource manifests, linux/bsd/macos compatible
-- [tony's golang web app](https://github.com/tony/tot-go-webapp) -
+- [golang web app](https://github.com/tony/tot-go-webapp) -
   [gin](https://github.com/gin-gonic/gin)
 
 Both of the above support `tmuxp load .` within the project directory to load up
