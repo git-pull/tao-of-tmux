@@ -53,7 +53,7 @@ book, I'm giving it 100%.
 tmux to me is a tool I find incredible useful. While I don't attach it to my personal
 identity, it's been part of my daily life for years. I've helped thousands of
 people learn tmux through my free resource under the name
-[The Tao of tmux](https://tmuxp.readthedocs.io/en/latest/about_tmux.html),
+[The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html),
 written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
 a [pythonic tmux library](https://github.com/tony/libtmux), and a
 [tmux session manager](https://github.com/tony/tmuxp).
