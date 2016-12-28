@@ -248,7 +248,7 @@ This is due to your site package bin path (where application entry points are
 installed to) not being in your paths. To find your user site packages base directory:
 
 {language=shell, line-numbers=off}
-    `$ python -m site --user-base`
+    $ python -m site --user-base
 
 This will get you something like `/Users/me/Library/Python/2.7` on MacOS with
 Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
