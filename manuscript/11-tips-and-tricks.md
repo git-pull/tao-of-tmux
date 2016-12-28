@@ -239,7 +239,28 @@ To launch it, install tmuxp and load the configuration:
 {language=shell, line-numbers=off}
     $ pip install --user tmuxp
     $ tmuxp -V   # verify tmuxp is installed, if not you to fix your `PATH`
+                 # to point to your python bin folder. More help below.
     $ tmuxp load ~/.tmuxp/test.yaml
+
+### Troubleshooting `tmuxp: command not found`
+
+This is due to your site package bin path (where application entry points are
+installed to) not being in your paths. To find your user site packages base directory:
+
+{language=shell, line-numbers=off}
+    `$ python -m site --user-base`
+
+This will get you something like `/Users/me/Library/Python/2.7` on MacOS with
+Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
+
+The applications are in the `bin/` folder insite that. So you need to
+concatenate the two and add them to your [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)).
+So something like this into your `~/.bashrc` or `~/.zshrc`:
+
+{language=shell, line-numbers=off}
+export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # MacOS w/ python 2.7
+export PATH=$HOME/.local/bin:$PATH                     # Linux/BSD
+export PATH="`python -m site --user-base`/bin":$PATH   # May work all-around
 
 ## tmux-plugins and tpm
 
