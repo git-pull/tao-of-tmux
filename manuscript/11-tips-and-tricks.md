@@ -242,6 +242,7 @@ To launch it, install tmuxp and load the configuration:
                  # to point to your python bin folder. More help below.
     $ tmuxp load ~/.tmuxp/test.yaml
 
+<<<<<<< Updated upstream
 ### Troubleshooting `tmuxp: command not found`
 
 This is due to your site package bin path (where application entry points are
@@ -264,6 +265,20 @@ Try adding one of these in your `~/.bashrc` or `~/.zshrc`:
 
 Then open a new terminal, or `. ~/.zshrc` / `. ~/.bashrc` in your current one.
 Then you can run `tmuxp -V` and `tmuxp load` commands.
+
+## More code and examples
+
+I've decided to dust off a C++ space shooter and an example go website I was
+playing with. They're licensed under MIT so you can use them, copy and paste
+from them, etc:
+
+- [tony's C++ shooter game](https://github.com/tony/tot-cpp-shmup)
+- [tony's gin app](https://github.com/tony/tot-go-webapp)
+
+Both of the above support `tmuxp load .` within the project directory to load up
+the project.
+
+Make sure to install [`entr(1)`](http://entrproject.org/) beforehand!
 
 ## tmux-plugins and tpm
 
