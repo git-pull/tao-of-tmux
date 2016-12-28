@@ -172,6 +172,22 @@ in it. So you could do `make watch_test test='-i'`. For examples of a similar
 The project is licensed BSD (permissive), so you can grab code and use it
 in compliant with the [LICENSE](https://github.com/tony/tmuxp/blob/master/LICENSE).
 
+One more thing, let's say you're running a server like
+[Gin](https://github.com/gin-gonic/gin), [Iris](https://github.com/kataras/iris)
+or [Echo](https://github.com/labstack/echo). `entr -c` likely won't be
+restarting the server for you. Try entering the `-r` flag to send a
+[`SIGTERM`](https://en.wikipedia.org/wiki/Unix_signal) to the process before
+restarting it. Combining the current `-c` flag with the new `-r` will give you
+`entr -rc`:
+
+{language=makefile, line-numbers=off}
+    run:
+            go run main.go
+
+    watch_run:
+            if command -v entr > /dev/null; then ${WATCH_FILES} | \
+            entr -c $(MAKE) run; else $(MAKE) run entr_warn; fi
+
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as opening
