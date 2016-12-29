@@ -46,7 +46,7 @@ ability to switch to session from within tmux!
 |`Prefix` + `L`    | Switch the attached client back to the last        |
 |                  | session.                                           |
 
-`Ctrl-b s` will allow you to switch between sessions within the same tmux
+`Prefix` + `s` will allow you to switch between sessions within the same tmux
 client.
 
 ### Command line
@@ -83,7 +83,7 @@ that.
 
 ### Keystroke
 
-You can rename sessions from within tmux with `Ctrl-b $`. 
+You can rename sessions from within tmux with `Prefix` + `$`. 
 The status bar will be temporarily altered into a text field to allow altering
 the session name.
 

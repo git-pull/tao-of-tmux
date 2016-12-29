@@ -87,7 +87,7 @@ table. For example:
 
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
-|`Prefix` + `s`    | Detach client from session.                        |
+|`Prefix` + `d`    | Detach client from session.                        |
 
 ## How this book is structured
 
