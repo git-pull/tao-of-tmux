@@ -37,7 +37,7 @@ on getting stuff done, that means less mistakes.
 Q> ### Coming from ``GNU Screen``?
 Q>
 Q> Your tmux prefix key can be set via your tmux configuration later on!  In
-Q> you `~/.tmux.conf` file, set the `prefix` option:
+Q> your `~/.tmux.conf` file, set the `prefix` option:
 Q>
 Q>      set-option -g prefix C-a
 Q>
