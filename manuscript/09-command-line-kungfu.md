@@ -29,7 +29,7 @@ and so on, until:
 
 ## Targets {#targets}
 
-If a command allow target specification, it's usually done through `-t`.
+If a command allows target specification, it's usually done through `-t`.
 
 Think of targets as tmux's way of specifying a [unique key](https://en.wikipedia.org/wiki/Unique_key)
 in a relational database.
