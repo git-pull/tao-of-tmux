@@ -4,7 +4,7 @@ Your server holds [Sessions](#sessions) and the [Windows](#windows) and
 [Panes](#panes) within them.
 
 What really happens in tmux is you are connected via a socket connection to a
-server. What you see presented to in you in your shell is merely a client
+server. What you see presented to you in your shell is merely a client
 connection.
 
 In this chapter, we go into the one of the secret sauces that allow your
