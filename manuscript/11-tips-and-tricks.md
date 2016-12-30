@@ -275,8 +275,9 @@ from them, etc:
 - c++14 [space shooter minigame](https://github.com/tony/tot-cpp-shmup) - side
   scrolling [shmup](https://en.wikipedia.org/wiki/Shoot_'em_up) demo (sdl2,
   cmake, json resource manifests, linux/BSD/OS X compatible)
-- golang [tmux web frontend](https://github.com/tony/tot-go-webapp) -
-  ([gin](https://github.com/gin-gonic/gin), [bower](https://bower.io/))
+- golang [tmux web frontend](https://github.com/tony/tot-go-webapp) - display
+  current tmux session and window information via browser ([gin](https://github.com/gin-gonic/gin),
+  [bower](https://bower.io/))
 
 Both of the above support `tmuxp load .` within the project directory to load up
 the project.
