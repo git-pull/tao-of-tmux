@@ -88,3 +88,19 @@ Will give you a tmux directory created within your `$HOME` folder. On OS X,
 your home folder will probably be something like `/Users/yourusername`. On
 other systems it may be `/home/yourusername`. If you want to find out, just type
 `echo $HOME`.
+
+## Clients
+
+If there is a server, there will be clients connecting to it.
+
+When you connect to a session and see windows and panes, you're using a client
+connection into tmux.
+
+You can retrieve a list of active client connections via:
+
+{language=shell, line-numbers=off}
+    $ tmux list-clients
+
+Pretty rare command. As well as the other `list-` commands for that matter. But
+they are part of the tools that make tmux highly scriptable should you want to
+get creative. You can learn more about that in [formats](#formats).
