@@ -30,17 +30,18 @@ I>     $ tmux -Ltesting_tmux attach
 
 ## Updating configs in current sessions
 
-You can also "incrementally" update configs in live tmux sessions. Compare this
-to `source` or ["dot"](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
+You can apply configs in live tmux sessions. Compare this to `source` or
+["dot"](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
 in the POSIX standard.
 
-To do this, `prefix` + `:` to open up the tmux prompt. Then type:
+`prefix` + `:` will open up the tmux prompt, then type:
 
 `:source /path/to/config.conf`
 
 And hit return.
 
-You can also do `$ tmux source-file /path/to/config.conf`.
+`$ tmux source-file /path/to/config.conf` can also achieve the same result via
+command line.
 
 I> **Easy reloadin'**
 I>
