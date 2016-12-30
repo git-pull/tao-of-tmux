@@ -15,6 +15,16 @@ run your shell within a [window](#windows).
 |`Right`           | the right of the current pane.                     |
 |`Prefix` + `o`    | Select the next pane in the current window.        |
 
+Also, if you like vim (hjkl) keybindings, add these to your [config](#config):
+
+I> *Movin around vimtuitively*
+I> {language=shell, line-numbers=off}
+I>     # hjkl pane traversal
+I>     bind h select-pane -L
+I>     bind j select-pane -D
+I>     bind k select-pane -U
+I>     bind l select-pane -R
+
 ## Zoom in
 
 To zoom in on a pane, navigate it and do `Leader` + `z`.
