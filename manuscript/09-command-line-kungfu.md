@@ -43,7 +43,7 @@ in a relational database.
 
 What I use to help me remember:
 
-So servers are represented by dollar signs ($), because those are where you keep
+So sessions are represented by dollar signs ($), because those are where you keep
 your projects (*ostensibly* where you make money, or help someone else do it).
 
 Windows are represented by the [at sign](https://en.wikipedia.org/wiki/At_sign)
