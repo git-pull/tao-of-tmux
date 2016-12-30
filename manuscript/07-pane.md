@@ -18,6 +18,7 @@ run your shell within a [window](#windows).
 Also, if you like vim (hjkl) keybindings, add these to your [config](#config):
 
 I> *Movin around vimtuitively*
+I>
 I> {language=shell, line-numbers=off}
 I>     # hjkl pane traversal
 I>     bind h select-pane -L
