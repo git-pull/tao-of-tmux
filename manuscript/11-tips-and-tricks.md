@@ -272,10 +272,11 @@ I've decided to dust off a C++ space shooter and an example go website I was
 playing with. They're licensed under MIT so you can use them, copy and paste
 from them, etc:
 
-- [C++ space shooter minigame](https://github.com/tony/tot-cpp-shmup) -
-  c++14, sdl2, cmake, json resource manifests, linux/bsd/macos compatible
-- [golang web app](https://github.com/tony/tot-go-webapp) -
-  [gin](https://github.com/gin-gonic/gin)
+- c++14 [space shooter minigame](https://github.com/tony/tot-cpp-shmup) - side
+  scrolling [shmup](https://en.wikipedia.org/wiki/Shoot_'em_up) demo (sdl2,
+  cmake, json resource manifests, linux/bsd/macos compatible)
+- golang [tmux web frontend](https://github.com/tony/tot-go-webapp) -
+  ([gin](https://github.com/gin-gonic/gin), [bower](https://bower.io/))
 
 Both of the above support `tmuxp load .` within the project directory to load up
 the project.
