@@ -1,9 +1,8 @@
 # Configuration {#config}
 
-Configuration of tmux is typically done through the `.tmux.conf` file in your
-`$HOME` directory.  To those who are uninitiated with the shorthand of how to
-pull their home directory up, the paths `~/.tmux.conf` and `$HOME/.tmux.conf`
-should work on OS X, Linux and BSD.
+Configuration of tmux managed through `.tmux.conf` in your `$HOME` directory. 
+The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux and
+BSD.
 
 For a sample config, I maintain a pretty decked out one at
 <https://github.com/tony/tmux-config>.
