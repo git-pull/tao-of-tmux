@@ -55,10 +55,16 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 [tcsh](https://en.wikipedia.org/wiki/Tcsh). Hey, makes sense, since panes are
 your pseudoterminals.
 
-If you think I'm crazy coming up with all these conspiracy theories for these
-symbols, [check out Wikipedia](https://en.wikipedia.org/wiki/At_sign#Theories_of_origin)
-and the late [Google answers](http://answers.google.com/answers/threadview?id=89484)
-on theories of where these symbols originated in the real world, historically.
+To give you an idea of the possibilities of where you can use targets, here are
+the commands with you can use targets:
+
+- `$ tmux attach-session [-t target-session]`
+- `$ tmux detach-client [-s target-session] [-t target-client]`
+- `$ tmux has-session [-t target-session]`
+- `$ tmux kill-session [-t target-session]`
+- `$ tmux list-clients [-t target-session]`
+- `$ tmux lock-client [-t target-client]`
+- `$ tmux lock-session [-t target-session]`
 
 ## Formats {#formats}
 
