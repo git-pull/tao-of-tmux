@@ -91,7 +91,7 @@ variables? Formats are a similar concept.
 The amount of `FORMATS` (variables) made available by tmux has expanded greatly
 since version 1.8. As of tmux 2.3, the available formats are:
 
-| Variable name         | Alias  | Replaced with                            |
+| Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
 | alternate_on          |        |If pane is in alternate screen            |
 | alternate_saved_x     |        |Saved cursor X in alternate screen        |
