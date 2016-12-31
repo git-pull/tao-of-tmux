@@ -37,6 +37,7 @@ in a relational database.
 | Entity    | Prefix | Example                               |
 |-----------|--------|---------------------------------------|
 | server    | n/a    | n/a, uses socket-name and socket-path |
+| client    | n/a    | n/a, uses /dev/tty{p,s}[000-9999]     |
 | session   | $      | $13                                   |
 | window    | @      | @2313                                 |
 | pane      | %      | %5432                                 |
@@ -65,6 +66,8 @@ the commands with you can use targets:
 - `$ tmux list-clients [-t target-session]`
 - `$ tmux lock-client [-t target-client]`
 - `$ tmux lock-session [-t target-session]`
+- `$ tmux new-session [-t target-session]`
+- `$ tmux refresh-client [-t target-client]`
 
 ## Formats {#formats}
 
