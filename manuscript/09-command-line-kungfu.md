@@ -68,6 +68,10 @@ the commands with you can use targets:
 - `$ tmux lock-session [-t target-session]`
 - `$ tmux new-session [-t target-session]`
 - `$ tmux refresh-client [-t target-client]`
+- `$ tmux rename-session [-t target-session]`
+- `$ tmux show-messages [-t target-client]`
+- `$ tmux suspend-client [-t target-client]`
+- `$ tmux switch-client [-c target-client] [-t target-session]`
 
 ## Formats {#formats}
 
