@@ -268,7 +268,7 @@ Then you can run `tmuxp -V` and `tmuxp load` commands.
 
 ## More code and examples
 
-I've decided to dust off a C++ space shooter and an example go website I was
+I've decided to dust off a C++ space shooter and a new go webapp I've been
 playing with. They're licensed under MIT so you can use them, copy and paste
 from them, etc:
 
