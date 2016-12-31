@@ -8,7 +8,7 @@ tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.o
 patterns.
 
 For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`,
-`$ tmux att`, `$ tmux at`, `$ tmux a` work just as well.
+`$ tmux att`, `$ tmux at` and `$ tmux a` work just as well.
 
 Every tmux command has shorthands, let's try this for `$ tmux new-session`:
 
