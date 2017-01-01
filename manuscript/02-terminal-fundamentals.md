@@ -153,8 +153,7 @@ they're not portable unfortunately!
 
 Recent versions of MacOS include ZSH by default. Linux distributions
 typically require you to install it via package manager and installs it to
-`/usr/bin/zsh`. On BSD systems, you can build it via the port system,
-[`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
+`/usr/bin/zsh`. BSD systems build it via the port system, [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
 on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD
 and it will install to `/usr/local/bin/zsh`.
 
