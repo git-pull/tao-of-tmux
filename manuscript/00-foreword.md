@@ -47,10 +47,7 @@ This book is currently under development. It's available to read for
 You do not need a book to use or understand tmux. But if there is such a book, let
 this be the one.
 
-I don't like to make a slipshod effort. If I'm going to take the time to write a
-book, I'm giving it 100%.
-
-tmux is a tool I find incredible useful. While I don't attach it to my personal
+tmux is a tool I find incredibly useful. While I don't attach it to my personal
 identity, it's been part of my daily life for years. I've helped thousands of
 people learn tmux through my free resource under the name
 [The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html),
