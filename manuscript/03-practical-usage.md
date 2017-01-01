@@ -30,7 +30,7 @@ Key sequences will also come up in later if you use Vim or Emacs and other TUI
 concept let's do it now. If you already have done similar command sequences
 before in TUI/GUI applications, that'll come in handy.
 
-When you memorize a key combo, it's one less time you'll be moving your hand
+When you memorize a key combo it's one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short term memory
 on getting stuff done, that means less mistakes.
 
