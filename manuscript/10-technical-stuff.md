@@ -42,9 +42,9 @@ The files that make up the project build system are in [`configure.ac`](https://
 [preprocessor directives](https://en.wikipedia.org/wiki/C_preprocessor#Conditional_compilation)
 in [`compat.h`](https://github.com/tmux/tmux/blob/master/compat.h).
 
-`compat.h` works in tandem with autotools to route header definitions to system
-headers, installed libraries or the `compat/` folder if they're not present on
-the system tmux is being built on.
+`compat.h` routes header definitions to system headers, installed libraries or
+the `compat/` folder if they're not present on the system tmux is being built
+on. This is done with the help of autotools' configuration process.
 
 `autogen.sh` is the file that preps the codebase to be build via the `make`
 command.
