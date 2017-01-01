@@ -10,16 +10,15 @@ shell scripting, and so on. If you use tmux, you'll be around these all the
 time, regardless of whether you're in a GUI on your local machine or ssh'ing
 into a remote server.
 
-I'm not going to go super deep into the technicalities, but if you ever wanted
-to dive into how processes and TTY's work at the kernel level (data structures
-and all) I recommend the book *The Design and Implementation of the FreeBSD
-Operating System (2nd Edition)* by Marshall Kirk McKusick. In particular,
-Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*.
+If you ever wanted to dive into how processes and TTY's work at the kernel level
+(data structures and all) I recommend the book *The Design and Implementation of
+the FreeBSD Operating System (2nd Edition)* by Marshall Kirk McKusick. In
+particular, Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*.
 [*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
 by Linus Åkesson (available online) dives into the TTY and is a good read as
 well.
 
-Also, I'm not going to go deep into the history of Unix, 4.2 BSD, etc. It is
+There is also a lot to glean off the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
 hours. I could even send you on a few tracks, (The C Language, anything from the
 Unix/BSD lineage, etc.) and some clever fellow would likely chime in wanting to
