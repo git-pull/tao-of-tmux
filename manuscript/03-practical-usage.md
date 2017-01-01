@@ -15,15 +15,15 @@ it.
 
 And it's a hump we have to get over.
 
-An analogy I'd draw would be [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter)
-games. In this game the player would input a combination of buttons in
-sequence to perform flying spinning kicks and shoot fireballs; sweet. As you
-grew more accustomed with the combos, you'd begin to repeat moves by intuition
-since you've committed to muscle memory.
+It's kind of like [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter).
+In this game the player inputs a combination of buttons in sequence to
+perform flying spinning kicks and shoot fireballs; sweet. As the player grew
+more accustomed with the combos, they'd begin to repeat moves by intuition
+since they've committed to muscle memory.
 
-That's kind of what the prefix key in tmux is like. Without you understanding
-how to send *command sequences* to tmux via the prefix key, you'll pretty much
-be dead in the water.
+That's kind of what the prefix key in tmux is like. Without understanding how to
+send *command sequences* to tmux via the prefix key, you'll pretty much be
+dead in the water.
 
 Key sequences will also come up in later if you use Vim or Emacs and other TUI
 (Terminal User Interface) applications. So, if you haven't internalized the
