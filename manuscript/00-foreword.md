@@ -78,9 +78,9 @@ dollar character. For more information on the meaning of the "dollar prompt", ch
 prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
-Shortcuts all require a [prefix key](#prefix-key) be sent before hand. Sections
-describing similar keyboard commands typically will appear in a
-table. For example:
+Shortcuts require a [prefix key](#prefix-key) to be sent before hand. Sections
+describing similar keyboard commands typically will appear in a table. For
+example:
 
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
