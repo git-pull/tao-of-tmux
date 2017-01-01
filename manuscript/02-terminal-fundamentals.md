@@ -136,10 +136,10 @@ applications inside them.
 As of October 2016 the [latest POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 covers in technical detail the responsibilities of the shell.
 
-If I can make a comment on shells and operating systems, it's that each vendor
-does their own darn thing. On most Linux distributions and MacOS, you'll
-typically be dropped into Bash. That's because it's what Apple decided to use as
-a *default shell* for users.
+When it comes to shells and operating systems: each distro or group does their
+own darn thing. On most Linux distributions and MacOS, you'll typically be
+dropped into Bash. That's because it's what Apple decided to use as a *default
+shell* for users.
 
 On BSD, you may be placed into use plain vanilla `sh` unless you specify
 otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
