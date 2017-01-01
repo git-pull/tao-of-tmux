@@ -146,9 +146,9 @@ otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
 `bash` ([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but was
 [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 ([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
-you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell", in
-reality system startup scripts on Ubuntu used to allow non-POSIX Bash
-scripting. This is because specialty [shell languages](#shell-languages) like
+you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell",
+however, system startup scripts on Ubuntu used to allow non-POSIX scripting
+via bash. This is because specialty [shell languages](#shell-languages) like
 Bash, ZSH and so on can add a lot of cool and very practical features, but
 they're not portable unfortunately!
 
