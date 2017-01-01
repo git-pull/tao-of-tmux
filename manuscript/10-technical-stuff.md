@@ -49,14 +49,14 @@ on. This is done with the help of autotools' configuration process.
 `autogen.sh` is the file that preps the codebase to be build via the `make`
 command.
 
-1. creates an `etc/` directory
-2. runs [`aclocal`](https://www.gnu.org/software/automake/manual/html_node/aclocal-Invocation.html)
+1. Creates an `etc/` directory
+2. Runs [`aclocal`](https://www.gnu.org/software/automake/manual/html_node/aclocal-Invocation.html)
    to generate [`aclocal.m4`](https://stackoverflow.com/questions/1970926/whats-the-point-of-aclocal).
 3. `automake` will use `Makefile.am` to generate `Makefile.in`
 4. `autoreconf` to generate `./configure` script
-5. `./configure` will check the system settings against what compiler features,
-   libraries, headers, etc. the project needs and (if necessary) features the
-   user specified, such as building with `DEBUG` flags.
+5. `./configure` checks system settings against compiler features, libraries,
+   headers, etc. the project needs and (if necessary) features the user specified
+   such as building with `DEBUG` flags.
 
 ## Event passing
 
