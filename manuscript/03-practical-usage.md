@@ -26,7 +26,7 @@ send *command sequences* to tmux via the prefix key, you'll pretty much be
 dead in the water.
 
 Key sequences will also come up in later if you use Vim or Emacs and other TUI
-(Terminal User Interface) applications. So, if you haven't internalized the
+(Terminal User Interface) applications. If you haven't internalized the
 concept let's do it now. If you already have done similar command sequences
 before in TUI/GUI applications, that'll come in handy.
 
@@ -44,7 +44,7 @@ Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
 
-So the default leader prefix is `<Ctrl-b>`. So that's holding down the
+The default leader prefix is `<Ctrl-b>`. That's holding down the
 `control` key, then `b`.
 
 X> ### Sending tmux commands
