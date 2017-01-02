@@ -117,14 +117,6 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | client_tty            |        |Pseudo terminal of client                 |
 | client_utf8           |        |1 if client supports utf8                 |
 | client_width          |        |Width of client                           |
-| command_hooked        |        |Name of command hooked, if any            |
-| command_name          |        |Name of command in use, if any            |
-| command_list_name     |        |Command name if listing commands          |
-| command_list_alias    |        |Command alias if listing commands         |
-| command_list_usage    |        |Command usage if listing commands         |
-| history_bytes         |        |Number of bytes in window history         |
-| history_limit         |        |Maximum window history lines              |
-| history_size          |        |Size of history in bytes                  |
 | line                  |        |Line number in the list                   |
 
 ### Pane
@@ -191,6 +183,9 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
+| history_bytes         |        |Number of bytes in window history         |
+| history_limit         |        |Maximum window history lines              |
+| history_size          |        |Size of history in bytes                  |
 | window_activity       |        |Integer time of window last activity      |
 | window_activity_flag  |        |1 if window has activity                  |
 | window_active         |        |1 if window active                        |
@@ -212,14 +207,17 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | window_width          |        |Width of window                           |
 | window_zoomed_flag    |        |1 if window is zoomed                     |
 
-
 ### Server
 
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
+| command_hooked        |        |Name of command hooked, if any            |
+| command_name          |        |Name of command in use, if any            |
+| command_list_name     |        |Command name if listing commands          |
+| command_list_alias    |        |Command alias if listing commands         |
+| command_list_usage    |        |Command usage if listing commands         |
 | host                  |#H      |Hostname of local host                    |
 | host_short            |#h      |Hostname of local host (no domain name)   |
 | socket_path           |        |Server socket path                        |
 | start_time            |        |Server start time                         |
 | pid                   |        |Server PID                                |
-
