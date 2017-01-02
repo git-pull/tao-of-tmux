@@ -30,10 +30,10 @@ background for you.
 You don't notice it, but when you use tmux normally, a server is launched and
 being connected via a client.
 
-tmux is so streamlined I could continue the book and not even mention servers.
-But I'd rather you have a solid understanding that while tmux feels like
-magic, it's really utilitarian first and foremost. One cannot deny it's
-exquisitely executed from a user experience standpoint.
+tmux is so streamlined the book could continue to explain usage and not even
+mention servers. But I'd rather you have a solid understanding that while tmux
+feels like magic, it's really utilitarian first and foremost. One cannot deny
+it's exquisitely executed from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters where I dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
