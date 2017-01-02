@@ -1,7 +1,7 @@
 # Terminal fundamentals {#terminal-fundamentals}
 
-Before I get into tmux, there are a few fundamentals of the command line to run
-over. Often, we're so used to using these out of street smarts and muscle
+Before getting into tmux, there are a few fundamentals of the command line to
+run over. Often, we're so used to using these out of street smarts and muscle
 memory a great deal of us never see the relation of where these tools stand
 next to each other.
 
@@ -20,11 +20,11 @@ well.
 
 There is also a lot to glean off the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
-hours. I could even send you on a few tracks, (The C Language, anything from the
-Unix/BSD lineage, etc.) and some clever fellow would likely chime in wanting to
-talk about Linux, GNU and so on. It's like *Game of Thrones*, there's multiple
-story arcs you can follow, some of which intersect. I can't be authoritative,
-but I can give you info. A few good resources would be [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk)
+hours. You could look at it from multiple perpsectives (The C Language, anything
+from the Unix/BSD lineage, etc.) and some clever fellow would likely chime in
+mentioning Linux, GNU and so on. It's like *Game of Thrones*, there's multiple
+story arcs you can follow, some of which intersect. A few good resources would
+be [A Narrative History of BSD](https://www.youtube.com/watch?v=bVSXXeiFLgk)
 by Marshall Kirk McKusick (Video), [The UNIX Operating System](https://www.youtube.com/watch?v=tc4ROCJYbm0)
 by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 (Video) by Stephen R. Bourne.
