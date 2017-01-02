@@ -99,6 +99,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | buffer_name           |        |Name of buffer                            |
 | buffer_sample         |        |Sample of start of buffer                 |
 | buffer_size           |        |Size of the specified buffer in bytes     |
+
+### Client
+
+| Variable name         | Alias  | Description                              |
+|-----------------------|--------|------------------------------------------|
 | client_activity       |        |Integer time client last had activity     |
 | client_created        |        |Integer time client created               |
 | client_control_mode   |        |1 if client is in control mode            |
@@ -130,6 +135,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | keypad_cursor_flag    |        |Pane keypad cursor flag                   |
 | keypad_flag           |        |Pane keypad flag                          |
 | line                  |        |Line number in the list                   |
+
+### Pane
+
+| Variable name         | Alias  | Description                              |
+|-----------------------|--------|------------------------------------------|
 | mouse_any_flag        |        |Pane mouse any flag                       |
 | mouse_button_flag     |        |Pane mouse button flag                    |
 | mouse_standard_flag   |        |Pane mouse standard flag                  |
@@ -158,6 +168,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | scroll_region_lower   |        |Bottom of scroll region in pane           |
 | scroll_region_upper   |        |Top of scroll region in pane              |
 | scroll_position       |        |Scroll position in copy mode              |
+
+### Session
+
+| Variable name         | Alias  | Description                              |
+|-----------------------|--------|------------------------------------------|
 | session_alerts        |        |List of window indexes with alerts        |
 | session_attached      |        |Number of clients session is attached to  |
 | session_activity      |        |Integer time of session last activity     |
@@ -171,8 +186,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | session_name          |#S      |Name of session                           |
 | session_width         |        |Width of session                          |
 | session_windows       |        |Number of windows in session              |
-| socket_path           |        |Server socket path                        |
-| start_time            |        |Server start time                         |
+
+### Window
+
+| Variable name         | Alias  | Description                              |
+|-----------------------|--------|------------------------------------------|
 | window_activity       |        |Integer time of window last activity      |
 | window_activity_flag  |        |1 if window has activity                  |
 | window_active         |        |1 if window active                        |
@@ -194,3 +212,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | window_width          |        |Width of window                           |
 | window_zoomed_flag    |        |1 if window is zoomed                     |
 | wrap_flag             |        |Pane wrap flag                            |
+
+
+### Server
+
+| Variable name         | Alias  | Description                              |
+|-----------------------|--------|------------------------------------------|
+| socket_path           |        |Server socket path                        |
+| start_time            |        |Server start time                         |
