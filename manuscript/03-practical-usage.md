@@ -49,13 +49,13 @@ The default leader prefix is `<Ctrl-b>`. That's holding down the
 
 X> ### Sending tmux commands
 X>
-X> Try that.
+X> Practice:
 X>
 X> 1. Press `control` key down, and *hold it*.
 X> 2. Press `b`, and hold it.
 X> 3. Release both keys at the same time.
 X>
-X> That's it. Now let's try something:
+X> That's all it takes. Now let's try something:
 X>
 X> `<Ctrl-b> d`. So,
 X>
