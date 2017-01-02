@@ -91,11 +91,10 @@ variables? Formats are a similar concept.
 The amount of `FORMATS` (variables) made available by tmux has expanded greatly
 since version 1.8. As of tmux 2.3, the available formats are:
 
+### Copy / paste
+
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
-| alternate_on          |        |If pane is in alternate screen            |
-| alternate_saved_x     |        |Saved cursor X in alternate screen        |
-| alternate_saved_y     |        |Saved cursor Y in alternate screen        |
 | buffer_name           |        |Name of buffer                            |
 | buffer_sample         |        |Sample of start of buffer                 |
 | buffer_size           |        |Size of the specified buffer in bytes     |
@@ -126,14 +125,15 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | history_bytes         |        |Number of bytes in window history         |
 | history_limit         |        |Maximum window history lines              |
 | history_size          |        |Size of history in bytes                  |
-| host                  |#H      |Hostname of local host                    |
-| host_short            |#h      |Hostname of local host (no domain name)   |
 | line                  |        |Line number in the list                   |
 
 ### Pane
 
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
+| alternate_on          |        |If pane is in alternate screen            |
+| alternate_saved_x     |        |Saved cursor X in alternate screen        |
+| alternate_saved_y     |        |Saved cursor Y in alternate screen        |
 | cursor_flag           |        |Pane cursor flag                          |
 | cursor_x              |        |Cursor X position in pane                 |
 | cursor_y              |        |Cursor Y position in pane                 |
@@ -217,6 +217,8 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
+| host                  |#H      |Hostname of local host                    |
+| host_short            |#h      |Hostname of local host (no domain name)   |
 | socket_path           |        |Server socket path                        |
 | start_time            |        |Server start time                         |
 | pid                   |        |Server PID                                |
