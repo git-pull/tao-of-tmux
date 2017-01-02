@@ -67,8 +67,7 @@ X>
 X> You've just sent tmux your first command! And you're back at the plain old
 X> terminal now!
 
-You've just detached the tmux session you were in. So let's speak about what
-just happened.
+You've just detached the tmux session you were in.
 
 ## Session persistence and the server model
 
