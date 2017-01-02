@@ -39,12 +39,11 @@ How is it utilitarian? We'll go into it more in future chapters where I dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
 which I made that utilize the often unnoticed advanced features under the hood.
 
-It surprises some when I mention it because servers often beget
-a setup process. But just because servers are involved doesn't entail
-hours of configuration on each machine you run it on. There is no
-setup.
+It surprises some because servers often beget a setup process. But just because
+servers are involved doesn't entail hours of configuration on each machine you
+run it on. There's no setup.
 
-When people people think server, they think pain. It invokes an image of digging
+When people think server, they think pain. It invokes an image of digging
 around `/etc/` for configuration files and flipping settings on and off just to
 get basic systems online. But not with tmux. It's a server, but in the good way.
 
