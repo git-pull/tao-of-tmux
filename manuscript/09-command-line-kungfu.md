@@ -123,23 +123,23 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | command_list_name     |        |Command name if listing commands          |
 | command_list_alias    |        |Command alias if listing commands         |
 | command_list_usage    |        |Command usage if listing commands         |
-| cursor_flag           |        |Pane cursor flag                          |
-| cursor_x              |        |Cursor X position in pane                 |
-| cursor_y              |        |Cursor Y position in pane                 |
 | history_bytes         |        |Number of bytes in window history         |
 | history_limit         |        |Maximum window history lines              |
 | history_size          |        |Size of history in bytes                  |
 | host                  |#H      |Hostname of local host                    |
 | host_short            |#h      |Hostname of local host (no domain name)   |
-| insert_flag           |        |Pane insert flag                          |
-| keypad_cursor_flag    |        |Pane keypad cursor flag                   |
-| keypad_flag           |        |Pane keypad flag                          |
 | line                  |        |Line number in the list                   |
 
 ### Pane
 
 | Variable name         | Alias  | Description                              |
 |-----------------------|--------|------------------------------------------|
+| cursor_flag           |        |Pane cursor flag                          |
+| cursor_x              |        |Cursor X position in pane                 |
+| cursor_y              |        |Cursor Y position in pane                 |
+| insert_flag           |        |Pane insert flag                          |
+| keypad_cursor_flag    |        |Pane keypad cursor flag                   |
+| keypad_flag           |        |Pane keypad flag                          |
 | mouse_any_flag        |        |Pane mouse any flag                       |
 | mouse_button_flag     |        |Pane mouse button flag                    |
 | mouse_standard_flag   |        |Pane mouse standard flag                  |
@@ -164,10 +164,10 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | pane_top              |        |Top of pane                               |
 | pane_tty              |        |Pseudo terminal of pane                   |
 | pane_width            |        |Width of pane                             |
-| pid                   |        |Server PID                                |
 | scroll_region_lower   |        |Bottom of scroll region in pane           |
 | scroll_region_upper   |        |Top of scroll region in pane              |
 | scroll_position       |        |Scroll position in copy mode              |
+| wrap_flag             |        |Pane wrap flag                            |
 
 ### Session
 
@@ -211,7 +211,6 @@ since version 1.8. As of tmux 2.3, the available formats are:
 |                       |        |zoomed window panes                       |
 | window_width          |        |Width of window                           |
 | window_zoomed_flag    |        |1 if window is zoomed                     |
-| wrap_flag             |        |Pane wrap flag                            |
 
 
 ### Server
@@ -220,3 +219,5 @@ since version 1.8. As of tmux 2.3, the available formats are:
 |-----------------------|--------|------------------------------------------|
 | socket_path           |        |Server socket path                        |
 | start_time            |        |Server start time                         |
+| pid                   |        |Server PID                                |
+
