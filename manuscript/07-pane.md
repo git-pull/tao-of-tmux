@@ -30,4 +30,5 @@ I>     bind l select-pane -R
 
 To zoom in on a pane, navigate it and do `Leader` + `z`.
 
-You can use normal pane traversal to unzoom and move a pane at the same time.
+You can use any [pane traversal](#pane-traversal) to unzoom and move a pane at
+the same time.
