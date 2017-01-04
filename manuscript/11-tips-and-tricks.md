@@ -191,7 +191,7 @@ restarting it. Combining the current `-c` flag with the new `-r` will give you
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as opening
-the same software project, view the same logs, etc. there are applications that
+the same software project, view the same logs, etc. Applications that
 store your layouts declaratively in a YAML or JSON file and help you boot up
 your session fast.
 

@@ -1,7 +1,7 @@
 # Terminal fundamentals {#terminal-fundamentals}
 
-Before getting into tmux, there are a few fundamentals of the command line to
-run over. Often, we're so used to using these out of street smarts and muscle
+Before getting into tmux, a few fundamentals of the command line should be 
+reviewed. Often, we're so used to using these out of street smarts and muscle
 memory a great deal of us never see the relation of where these tools stand
 next to each other.
 
@@ -58,9 +58,9 @@ But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
     ENDIF
 
-In addition to that tiny little thing there are hundreds of trivialities that
-run across operating systems, their userlands, their binary / library /  include
-paths and adherence / interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
+Is one example amongst hundreds of trivialities that run across operating
+systems, their userlands, their binary / library /  include paths and adherence
+/ interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 or whether they follow their own.
 
 I> **Find your path**
