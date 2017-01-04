@@ -1,4 +1,4 @@
-# Pane {#panes}
+# Panes {#panes}
 
 Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal) that
 run your shell within a [window](#windows).

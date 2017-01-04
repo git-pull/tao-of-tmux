@@ -1,4 +1,4 @@
-# Session {#sessions}
+# Sessions {#sessions}
 
 Welcome to the session. Being the highest level entity after your
 [server](#server). Regardless of whether you're starting tmux fresh or attaching
