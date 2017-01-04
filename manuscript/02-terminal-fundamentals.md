@@ -11,12 +11,11 @@ time, regardless of whether you're in a GUI on your local machine or ssh'ing
 into a remote server.
 
 If you ever wanted to dive into how processes and TTY's work at the kernel level
-(data structures and all) I recommend the book *The Design and Implementation of
-the FreeBSD Operating System (2nd Edition)* by Marshall Kirk McKusick. In
-particular, Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*.
-[*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
-by Linus Åkesson (available online) dives into the TTY and is a good read as
-well.
+(data structures and all) the book *The Design and Implementation of the FreeBSD
+Operating System (2nd Edition)* by Marshall Kirk McKusick is nice. In particular,
+Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*. [*The TTY
+demystified*](http://www.linusakesson.net/programming/tty/index.php) by Linus
+Åkesson (available online) dives into the TTY and is a good read as well.
 
 There is also a lot to glean off the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
