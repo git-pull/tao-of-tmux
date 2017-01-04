@@ -33,9 +33,9 @@ descriptive. What would be better is:
 
 ## Switching sessions within tmux
 
-I've seen some people acquire a habit of detaching their tmux client and
-trying to reattach via `tmux att -t session_name`. Thankfully, you have the
-ability to switch to session from within tmux!
+Some acquire the habit of detaching their tmux client and reattaching via
+`tmux att -t session_name`. Thankfully, you have the ability to switch to
+session from within tmux!
 
 ### Keystroke
 

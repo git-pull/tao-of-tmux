@@ -113,11 +113,10 @@ messengers, and get back to your messages when you return.
 
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
-I've even seen people (myself included) use it to keep development servers
-running. Hearty emphasis on *development*, I would advise daemonizing and
-wrapping your production web applications using a tool like
-[supervisor](http://supervisord.org/) with its own safe environmental
-settings.
+Some (myself included) use it to keep development servers running. Hearty
+emphasis on *development*, I would advise daemonizing and wrapping your
+production web applications using a tool like [supervisor](http://supervisord.org/)
+with its own safe environmental settings.
 
 You can also have multiple users attach their clients to the same sessions,
 which is great for pair programming.  If you were in the same session, you
