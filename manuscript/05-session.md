@@ -5,8 +5,8 @@ Welcome to the session. Being the highest level entity after your
 an existing one, your interaction with tmux will have *at least* one session
 running.
 
-A session will hold one or more [windows](#windows). Your tmux status bar,
-found at the bottom, will include a list of windows.
+A session will hold one or more [windows](#windows). The [status bar]{#status-bar}
+found at the bottom will include a list of windows.
 
 ![Session](images/info/session.png)
 
