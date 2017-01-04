@@ -62,3 +62,5 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 ### Layouts {#window-layouts}
 
 `Prefix` + `space` switches layouts.
+
+To do specific touch-ups you can (resize panes)[#resizing-panes].
