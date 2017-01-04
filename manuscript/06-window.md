@@ -1,8 +1,6 @@
 # Window {#windows}
 
-If this is the beginning of the Windows chapter, I guess you can assume we'll
-cover [panes](#panes) next. Windows are the containers within
-[session](#session) that hold panes.
+Windows hold [panes](#panes). They reside within a [session](#session).
 
 ![Window](images/info/window.png)
 
