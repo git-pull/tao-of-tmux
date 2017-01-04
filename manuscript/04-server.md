@@ -35,9 +35,9 @@ mention servers. But I'd rather you have a solid understanding that while tmux
 feels like magic, it's really utilitarian first and foremost. One cannot deny
 it's exquisitely executed from a user experience standpoint.
 
-How is it utilitarian? We'll go into it more in future chapters where I dive
+How is it utilitarian? We'll go into it more in future chapters where we dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
-which I made that utilize the often unnoticed advanced features under the hood.
+that I made which utilize these features.
 
 It surprises some because servers often beget a setup process. But just because
 servers are involved doesn't entail hours of configuration on each machine you
