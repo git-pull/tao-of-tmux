@@ -90,9 +90,9 @@ other systems it may be `/home/yourusername`. If you want to find out, just type
 
 ## Clients
 
-If there is a server, there will be clients connecting to it.
+Servers will have clients (you) connecting to them.
 
-When you connect to a session and see windows and panes, you're using a client
+When you connect to a session and see windows and panes, it's a client
 connection into tmux.
 
 You can retrieve a list of active client connections via:
@@ -100,6 +100,7 @@ You can retrieve a list of active client connections via:
 {language=shell, line-numbers=off}
     $ tmux list-clients
 
-Pretty rare command. As well as the other `list-` commands for that matter. But
-they are part of the tools that make tmux highly scriptable should you want to
-get creative. You can learn more about that in [formats](#formats).
+There commands in practice are rather rare. As well as the other `list-`
+commands for that matter. But they are part of the tools that make tmux highly
+scriptable should you want to get creative. You can learn more about that in
+[formats](#formats).

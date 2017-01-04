@@ -1,8 +1,8 @@
 # Technical Stuff {#technical-stuff}
 
-Since you've read this far, you already know there is a [server](#server)
-automatically started and stopped for you when you use tmux. So let's go a bit
-into the innards and how tmux works.
+Since you've read this far, you already know a [server](#server)
+automatically starts when you use tmux. Let's go a bit into the
+innards of how tmux works.
 
 ![Server w/ laptop](images/info/server-with-laptop.png)
 

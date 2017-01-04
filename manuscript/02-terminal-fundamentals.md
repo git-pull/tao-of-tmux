@@ -17,7 +17,7 @@ Chapter 4, *Process Management* and Section 8.6, *Terminal Handling*. [*The TTY
 demystified*](http://www.linusakesson.net/programming/tty/index.php) by Linus
 Åkesson (available online) dives into the TTY and is a good read as well.
 
-There is also a lot to glean off the history of Unix, 4.2 BSD, etc. It is
+Much more exists to glean off the history of Unix, 4.2 BSD, etc. It is
 interesting and I probably could have a coffee / tea with you discussing it for
 hours. You could look at it from multiple perpsectives (The C Language, anything
 from the Unix/BSD lineage, etc.) and some clever fellow would likely chime in
@@ -85,9 +85,9 @@ So let's separate the common suspects into their respective categories.
 
 ## Terminal interface
 
-The terminal interface can be best introduced by stating that there is an
-official specification laying out its technical properties, interfaces and
-responsibilities in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html).
+The terminal interface can be best introduced by citing official specification
+laying out its technical properties, interfaces and responsibilities. This can
+be viewed in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html).
 
 That's your TTY's, what you see when you move between them, on Linux / BSD
 systems, this you can switch between sessions via `<ctrl-alt-F1>` through

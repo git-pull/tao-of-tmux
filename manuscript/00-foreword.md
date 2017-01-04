@@ -44,7 +44,7 @@ up to you.
 This book is currently under development. It's available to read for
 [free on the web](https://leanpub.com/the-tao-of-tmux/read).
 
-You do not need a book to use or understand tmux. But if there is such a book, let
+You do not need a book to use or understand tmux. But if such a book exists, let
 this be the one.
 
 tmux is a tool I find incredibly useful. While I don't attach it to my personal
