@@ -37,4 +37,8 @@ the same time.
 
 Panes can be resized within [windows](#windows).
 
-Another technique that resizes all panes is [window layouts](#window-layouts).
+Another technique that resizes panes is [window layouts](#window-layouts). The
+difference is a window layout switch the proportions and order of the panes.
+Resizing the panes target a specific pane inside that window.
+
+Resizing a pane in a specific layout may subsequently resize that whole row.
