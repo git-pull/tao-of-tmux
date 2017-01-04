@@ -44,8 +44,8 @@ in a relational database.
 
 What I use to help me remember:
 
-So sessions are represented by dollar signs ($) because those are where you keep
-your projects (*ostensibly* where you make money, or help someone else do it).
+So sessions are represented by dollar signs ($) because they hold your projects
+(*ostensibly* where you make money, or help someone else do it).
 
 Windows are represented by the [at sign](https://en.wikipedia.org/wiki/At_sign)
 (@). So windows are kind of like referencing / messaging a user on a social
