@@ -43,7 +43,7 @@ on MacOS by default.  Did you know that as of September 2016 POSIX Make has no
 conditionals?
 
 I'm not saying this to take a run at purists, as someone who tries to remain
-as compatible as possible in my scripting, it gets very hard to do simple
+as compatible as possible in my scripting, it gets hard to do simple
 things after a while. On FreeBSD, the default Make
 [(PMake)](https://www.freebsd.org/doc/en_US.ISO8859-1/books/pmake/) uses dots
 between conditionals:
@@ -147,8 +147,8 @@ otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell",
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
 via bash. This is because specialty [shell languages](#shell-languages) like
-Bash, ZSH and so on can add a lot of cool and very practical features, but
-they're not portable unfortunately!
+Bash, ZSH and so on can add a lot of cool and practical features, but they're
+not portable, unfortunately.
 
 Recent versions of MacOS include ZSH by default. Linux distributions
 typically require you to install it via package manager and installs it to
