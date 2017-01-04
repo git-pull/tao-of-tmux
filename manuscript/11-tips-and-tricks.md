@@ -56,9 +56,9 @@ On OS X, you can do:
 and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
 programmers and system administrators.
 
-You could also bring in a tool like [multitail](https://vanheusden.com/multitail/).
-You'd be in for an [*Inception*](http://www.imdb.com/title/tt1375666/) moment,
-because you'd be using a log multiplexer in a terminal multiplexer.
+For monitoring logs [multitail](https://vanheusden.com/multitail/) is a
+terminal friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
+moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
@@ -198,9 +198,8 @@ your session fast.
 [Teamocil](https://github.com/remiprev/teamocil) and
 [Tmuxinator](https://github.com/tmuxinator/tmuxinator) are the first ones I
 tried. By far the most popular one is tmuxinator. They are both programmed in
-Ruby. There is also [tmuxomatic](https://github.com/oxidane/tmuxomatic), which
-allows you to "draw" your tmux sessions in text and have tmuxomatic build the
-layout.
+Ruby. There's also [tmuxomatic](https://github.com/oxidane/tmuxomatic), where
+you can "draw" your tmux sessions in text and have tmuxomatic build the layout.
 
 I sort of have a home team advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp).
 I written it already having used teamocil and tmuxinator but with many more

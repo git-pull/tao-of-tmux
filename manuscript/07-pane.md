@@ -17,7 +17,7 @@ contain your shell (e.g. Bash, ZSH). They reside within a [window](#windows).
 
 I> *Movin around vimtuitively*
 I>
-I> Also, if you like vim (hjkl) keybindings, add these to your [config](#config):
+I> If you like vim (hjkl) keybindings, add these to your [config](#config):
 I>
 I> {language=shell, line-numbers=off}
 I>     # hjkl pane traversal
