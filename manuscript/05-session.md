@@ -1,11 +1,11 @@
 # Sessions {#sessions}
 
-Welcome to the session. Being the highest level entity after your
-[server](#server). Regardless of whether you're starting tmux fresh or attaching
-an existing one, your interaction with tmux will have *at least* one session
-running.
+Welcome to the session, the highest level entity residing in the [server](#server)
+instance. They are began when starting tmux fresh and reconnected to when
+attaching an existing one, your interaction with tmux will have *at least* one
+session running.
 
-A session will hold one or more [windows](#windows). The [status bar]{#status-bar}
+A session holds one or more [windows](#windows). The [status bar]{#status-bar}
 found at the bottom will include a list of windows.
 
 ![Session](images/info/session.png)
