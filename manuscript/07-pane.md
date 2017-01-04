@@ -1,7 +1,7 @@
 # Panes {#panes}
 
 Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal) that
-run your shell within a [window](#windows).
+contain your shell (e.g. Bash, ZSH). They reside within a [window](#windows).
 
 ![Pane](images/info/pane.png)
 
