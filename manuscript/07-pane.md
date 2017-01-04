@@ -15,9 +15,9 @@ contain your shell (e.g. Bash, ZSH). They reside within a [window](#windows).
 |`Right`           | the right of the current pane.                     |
 |`Prefix` + `o`    | Select the next pane in the current window.        |
 
-Also, if you like vim (hjkl) keybindings, add these to your [config](#config):
-
 I> *Movin around vimtuitively*
+I>
+I> Also, if you like vim (hjkl) keybindings, add these to your [config](#config):
 I>
 I> {language=shell, line-numbers=off}
 I>     # hjkl pane traversal
