@@ -61,6 +61,15 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 
 ### Layouts {#window-layouts}
 
-`Prefix` + `space` switches layouts.
+`Prefix` + `space` switches window *layouts*. These are preset configurations
+which handle proportions and ordering of (panes)[#panes].
 
-To do specific touch-ups you can (resize panes)[#resizing-panes].
+As of tmux 2.3, the supports layouts are:
+
+- even-horizontal
+- even-vertical
+- main-horizontal
+- main-vertical
+- tiled
+
+Specific touch-ups can be done via (resizing panes)[#resizing-panes].
