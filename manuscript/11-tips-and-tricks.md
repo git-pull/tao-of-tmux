@@ -70,8 +70,8 @@ internet's unofficial connoisseur on them.
 What this kind of application does is wait for a file to be updated, then
 executes a custom command, like restarting a server, rebuilding an application,
 running tests, linters and so on. It gives you as a developer instant feedback
-in the terminal and is one of those things that can really trick out a tmux
-workspace into an IDE-like environment.
+in the terminal and is one of those things that can trick out a tmux workspace
+into an IDE-like environment.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
 superbly across Linux distros, BSD's and OS X / MacOS.

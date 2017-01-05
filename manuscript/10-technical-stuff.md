@@ -11,9 +11,8 @@ innards of how tmux works.
 There's how you use it in practice, and the hard technical reality of how something
 operates under the hood.
 
-tmux actually has really great code underneath, down to the point its a joy to
-read it. You really have to thank Nicholas Marriott, Thomas Adam and Tiago Cunha
-for that.
+tmux has great code underneath, it's a joy to read it. You really have to thank
+Nicholas Marriott, Thomas Adam and Tiago Cunha for that.
 
 ## Project basics
 

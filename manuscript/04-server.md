@@ -3,7 +3,7 @@
 Your server holds [Sessions](#sessions) and the [Windows](#windows) and
 [Panes](#panes) within them.
 
-What really happens in tmux is you are connected via a socket connection to a
+What happens in tmux is you are connected via a socket connection to a
 server. What you see presented to you in your shell is merely a client
 connection.
 
@@ -32,8 +32,8 @@ being connected via a client.
 
 tmux is so streamlined the book could continue to explain usage and not even
 mention servers. But I'd rather you have a solid understanding that while tmux
-feels like magic, it's really utilitarian first and foremost. One cannot deny
-it's exquisitely executed from a user experience standpoint.
+feels like magic, it's utilitarian first and foremost. One cannot deny it's
+exquisitely executed from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters where we dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
