@@ -78,7 +78,7 @@ the commands with you can use targets:
 tmux provides a minimal template language and set of variables you can use to
 access information about your tmux environment.
 
-Formats are often specified via `-F` flag.
+Formats are specified via the `-F` flag.
 
 You know how template engines such as
 [mustache](https://mustache.github.io/), [handlebars](http://handlebarsjs.com/)
