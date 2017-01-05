@@ -73,7 +73,7 @@ W> `tmux -L moo attach` try to re-attach to session if one exists
 
 ## How servers are "named"
 
-The default name for the server is `default`. It is stored in a socket in
+The default name for the server is `default`, which is stored as a socket in
 `/tmp`. The default directory for storing this can be overridden via setting
 the `TMUX_TMPDIR` environment variable.
 

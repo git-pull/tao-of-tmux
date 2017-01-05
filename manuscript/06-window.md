@@ -8,8 +8,8 @@ You can see the current open windows through the status bar.
 
 ## (Re)naming windows
 
-Just like with sessions, windows can have names. And it is important to label
-them to keep track of what you're doing inside them.
+Just like with sessions, windows can have names. Labelling them helps keep track
+of what you're doing inside them.
 
 ![Renaming](images/06-window/rename.png)
 
