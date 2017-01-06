@@ -70,4 +70,4 @@ As of tmux 2.3, the supports layouts are:
 - main-vertical
 - tiled
 
-Specific touch-ups can be done via (resizing panes)[#resizing-panes].
+Specific touch-ups can be done via [resizing panes](#resizing-panes).
