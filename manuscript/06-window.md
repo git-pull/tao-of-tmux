@@ -65,10 +65,9 @@ which handle proportions and ordering of [panes](#panes).
 As of tmux 2.3, the supports layouts are:
 
 ![](images/06-window/even-horizontal.png)
-
-- even-vertical
-- main-horizontal
-- main-vertical
-- tiled
+![](images/06-window/even-vertical.png)
+![](images/06-window/main-horizontal.png)
+![](images/06-window/main-vertical.png)
+![](images/06-window/tiled.png)
 
 Specific touch-ups can be done via [resizing panes](#resizing-panes).
