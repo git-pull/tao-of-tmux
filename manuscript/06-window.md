@@ -1,6 +1,6 @@
 # Windows {#windows}
 
-Windows hold [panes](#panes). They reside within a [session](#session).
+Windows hold [panes](#panes). They reside within a [session](#sessions).
 
 ![](images/info/window.png)
 
