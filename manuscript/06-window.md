@@ -57,7 +57,7 @@ Example: move window 2 to window 1:
 The shortcut to prompt for an index to move the current window to is `Prefix` +
 `.`.
 
-### Layouts {#window-layouts}
+## Layouts {#window-layouts}
 
 `Prefix` + `space` switches window *layouts*. These are preset configurations
 which handle proportions and ordering of [panes](#panes).
