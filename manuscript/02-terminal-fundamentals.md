@@ -47,14 +47,14 @@ things after a while. On FreeBSD, the default Make
 [(PMake)](https://www.freebsd.org/doc/en_US.ISO8859-1/books/pmake/) uses dots
 between conditionals:
 
-{language=makefile, line-numbers=off}
+{language=make, line-numbers=off}
     .IF
 
     .ENDIF
 
 But on most Linux systems and MacOS, GNU Make is the default so they get to do:
 
-{language=makefile, line-numbers=off}
+{language=make, line-numbers=off}
     IF
 
     ENDIF
