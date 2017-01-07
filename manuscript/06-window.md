@@ -60,7 +60,7 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 ## Layouts {#window-layouts}
 
 `Prefix` + `space` switches window *layouts*. These are preset configurations
-which handle proportions and ordering of [panes](#panes).
+which handle proportions of [panes](#panes).
 
 As of tmux 2.3, the supports layouts are:
 
