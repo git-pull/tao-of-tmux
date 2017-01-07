@@ -92,7 +92,7 @@ That's your TTY's, what you see when you move between them, on Linux / BSD
 systems, this you can switch between sessions via `<ctrl-alt-F1>` through
 `<ctrl-alt-F12>`.
 
-## Terminal emulation
+## Terminal emulators
 
 GUI Terminals: Terminal.app, iterm, iterm2, konsole, lxterm, xfce4-terminal,
 rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
