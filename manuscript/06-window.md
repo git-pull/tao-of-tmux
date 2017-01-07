@@ -2,7 +2,7 @@
 
 Windows hold [panes](#panes). They reside within a [session](#session).
 
-![Window](images/info/window.png)
+![](images/info/window.png)
 
 You can see the current open windows through the status bar.
 

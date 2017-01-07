@@ -3,7 +3,7 @@
 Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal) that
 contain your shell (e.g. Bash, ZSH). They reside within a [window](#windows).
 
-![Pane](images/info/pane.png)
+![](images/info/pane.png)
 
 ## Traversing Panes {#pane-traversal}
 

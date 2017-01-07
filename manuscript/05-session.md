@@ -8,7 +8,7 @@ session running.
 A session holds one or more [windows](#windows). The [status bar]{#status-bar}
 found at the bottom will include a list of windows.
 
-![Session](images/info/session.png)
+![](images/info/session.png)
 
 The window you have selected currently may have a special color or a `*` symbol
 next to it.

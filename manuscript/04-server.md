@@ -10,7 +10,7 @@ connection.
 In this chapter, we go into the one of the secret sauces that allow your
 terminal applications to persist for months or even years if you want to.
 
-![Server](images/info/server.png)
+![](images/info/server.png)
 
 ## Wait, What? tmux is a server?
 
