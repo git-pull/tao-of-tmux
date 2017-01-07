@@ -52,6 +52,10 @@ get basic systems online. But not with tmux. It's a server, but in the good way.
 The server part of tmux is how your sessions are able to stay alive even
 after your client is detached.
 
+You can detach a tmux session from an SSH server and reconnect at a later time.
+You can detach a tmux session, stop your X server in Linux/BSD, and reattach
+your tmux session in a TTY or new X server.
+
 The tmux server won't go away until all sessions are closed first.
 
 ## Servers hold sessions
