@@ -99,11 +99,10 @@ This is especially cool if:
   can detach your tmux workspace at work before you clock out, then next morning
   reattach your session. Ahhh. Refreshing. :)
   
-  Sometimes you may have one of those rare servers you rarely log into. it could
-  be that cloud instance you have that you log into 9 months later, and as a
-  reflex, `tmux attach` to see if there we anything on there. And boom, you're
-  back in a session that's 9 months old. It's like a hack to restore your short
-  term memory.
+  Those servers you rarely log into. It could be that cloud instance you have
+  that you log into 9 months later, and as a reflex, `tmux attach` to see if
+  there we anything on there. And boom, you're back in a session that's 9 months
+  old. It's like a hack to restore your short term memory.
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
