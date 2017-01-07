@@ -70,8 +70,8 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ man hier
 
-These inconsistencies add up so much, a good deal of software infrastructure out
-there exists solely to abstract the differences across them. For example, CMake,
+These inconsistencies add up so much a good deal of software infrastructure out
+there exists solely to abstract the differences across them. For example: CMake,
 Autotools, SFML, SDL2, interpreted programming languages and their standard
 libraries are dedicated to normalizing the banal differences across
 BSD-derivatives and Linux distributions. Many, many `#ifdef` preprocessor
