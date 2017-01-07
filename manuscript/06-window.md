@@ -64,7 +64,7 @@ which handle proportions and ordering of [panes](#panes).
 
 As of tmux 2.3, the supports layouts are:
 
-[](images/06-window/even-horizontal.png)
+![](images/06-window/even-horizontal.png)
 
 - even-vertical
 - main-horizontal
