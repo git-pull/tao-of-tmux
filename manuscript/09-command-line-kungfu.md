@@ -2,7 +2,11 @@
 
 The command line in tmux is one of those areas often uncharted.
 
-## Shorthands
+## Aliases {#aliases}
+
+tmux also supports a variety of alias commands
+
+## Pattern matching {#fnmatch}
 
 tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
