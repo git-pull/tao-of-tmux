@@ -16,10 +16,6 @@
 |---------------|--------------------------------------------------------|
 | `new-window`  |                                                        |
 
-## Config
-
-## Formats
-
 ## Keybindings
 
 | Shortcut        | Action                                             |
