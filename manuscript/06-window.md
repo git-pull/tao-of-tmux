@@ -80,7 +80,7 @@ This is different behavior than some [tiling window managers](https://en.wikiped
 instance, automatically handle proportions upon new items being added to their
 layouts.
 
-A trick I use to maintain sane proportions in my [config](#config):
+To maintain sane proportions in my [config](#config) I use this:
 
 {language=shell, line-numbers=off}
     bind m set-window-option main-pane-height 60\; select-layout main-horizontal
