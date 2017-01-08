@@ -75,6 +75,15 @@ Specific touch-ups can be done via [resizing panes](#resizing-panes).
 To reset the proportions of the layout (such as after splitting or resizing
 panes), you have to run `$ tmux select-layout` again for the layout.
 
-This is different behavior than say, a [tiling window manager](https://en.wikipedia.org/wiki/Tiling_window_manager)
-such as [awesome](https://awesomewm.org/) or [xmonad](http://xmonad.org/), which
-automatically handle proportions.
+This is different behavior than some [tiling window managers](https://en.wikipedia.org/wiki/Tiling_window_manager).
+[awesome](https://awesomewm.org/) and [xmonad](http://xmonad.org/), for
+instance, automatically handle proportions upon new items being added to their
+layouts.
+
+A quick trick I use to maintain sane proportions:
+
+{language=shell, line-numbers=off}
+    bind m set-window-option main-pane-height 60\; select-layout main-horizontal
+
+This allows me to set a `main-horizontal` layout and automatically set the
+bottom panes proportionally on the bottom everytime I hit `prefix` + `m`.
