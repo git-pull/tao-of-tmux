@@ -71,3 +71,10 @@ As of tmux 2.3, the supports layouts are:
 ![](images/06-window/tiled.png)
 
 Specific touch-ups can be done via [resizing panes](#resizing-panes).
+
+To reset the proportions of the layout (such as after splitting or resizing
+panes), you have to run `$ tmux select-layout` again for the layout.
+
+This is different behavior than say, a [tiling window manager](https://en.wikipedia.org/wiki/Tiling_window_manager)
+such as [awesome](https://awesomewm.org/) or [xmonad](http://xmonad.org/), which
+automatically handle proportions.
