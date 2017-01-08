@@ -87,3 +87,9 @@ To maintain sane proportions in my [config](#config) I use this:
 
 This allows me to set a `main-horizontal` layout and automatically set the
 bottom panes proportionally on the bottom everytime I hit `prefix` + `m`.
+
+Layouts can also be totally custom. To get the custom layout snippet for your
+current window, try this:
+
+{language=shell, line-numbers=off}
+    tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
