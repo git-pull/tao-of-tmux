@@ -4,7 +4,41 @@ The command line in tmux is one of those areas often uncharted.
 
 ## Aliases {#aliases}
 
-tmux also supports a variety of alias commands
+tmux also supports a variety of alias commands:
+
+| Command                    | Alias                         |
+|----------------------------|-------------------------------|
+| break-pane                 | breakp                        |
+| capture-pane               | capturep                      |
+| display-panes              | displayp                      |
+| find-window                | findw                         |
+| join-pane                  | joinp                         |
+| kill-pane                  | killp                         |
+| kill-window                | killw                         |
+| last-pane                  | lastp                         |
+| last-window                | last                          |
+| link-window                | linkw                         |
+| list-panes                 | lsp                           |
+| list-windows               | lsw                           |
+| move-pane                  | movep                         |
+| move-window                | movew                         |
+| new-window                 | neww                          |
+| next-layout                | nextl                         |
+| next-window                | next                          |
+| pipe-pane                  | pipep                         |
+| previous-layout            | prevl                         |
+| previous-window            | prev                          |
+| rename-window              | renamew                       |
+| resize-pane                | resizep                       |
+| respawn-pane               | respawnp                      |
+| respawn-window             | respawnw                      |
+| rotate-window              | rotatew                       |
+| select-layout              | selectl                       |
+| select-pane                | selectp                       |
+| split-window               | splitw                        |
+| swap-pane                  | swapp                         |
+| swap-window                | swapw                         |
+| unlink-window              | unlinkw                       |
 
 ## Pattern matching {#fnmatch}
 
