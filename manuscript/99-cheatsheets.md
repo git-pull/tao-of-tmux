@@ -4,11 +4,17 @@
 
 ### Session
 
-| Command        | Action                                                |
-|----------------|-------------------------------------------------------|
-| no command     | short-cut for `new-session`                           |
-| `new-session`  |                                                       |
-| `kill-session` |                                                       |
+| Command          | Action                                                   |
+|------------------|----------------------------------------------------------|
+| no command       | short-cut for `new-session`                              |
+| `new-session`    |                                                          |
+| `kill-session`   | terminate session                                        |
+| `attach-session` | attach session                                           |
+| `rename-session` | rename session                                           |
+| `list-sessions`  |                                                          |
+| `lock-session`   |                                                          |
+| `choose-session` |                                                          |
+| `has-session`    |                                                          |
 
 ### Window
 
