@@ -18,9 +18,28 @@
 
 ### Window
 
-| Command       | Action                                                 |
-|---------------|--------------------------------------------------------|
-| `new-window`  |                                                        |
+| Command              | Action                                               |
+|----------------------|------------------------------------------------------|
+| `choose-window`      | Put a window into window choice                      |
+| `find-window`        | Search for a pattern in windows                      |
+| `kill-window`        | Destroy a given window                               |
+| `last-window`        | Select the previously selected                       |
+| `link-window`        | Link a window to another                             |
+| `list-windows`       | List windows of a session                            |
+| `move-window`        | Move a window to another                             |
+| `new-window`         | Create a new window                                  |
+| `next-window`        | Move to the next window in a sesssion                |
+| `previous-window`    | Move to the previous window in session               |
+| `rename-window`      | Rename a window                                      |
+| `respawn-window`     | Reuse a window in which a command has exited         |
+| `rotate-window`      | Rotate positions of panes in a window                |
+| `select-window`      | Select a window                                      |
+| `set-window-option`  | Set a window option                                  |
+| `show-window-options`| Show window options                                  |
+| `split-window`       | Splits a pane into two                               |
+| `swap-window`        | Swap two windows                                     |
+| `unlink-window`      | Unlink a window                                      |
+
 
 ## Keybindings
 
