@@ -96,6 +96,7 @@ current window, try this:
 
 To apply that layout, do this:
 
+{language=shell, line-numbers=off}
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
     > 5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]
 
