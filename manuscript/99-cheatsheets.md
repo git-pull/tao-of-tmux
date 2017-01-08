@@ -4,10 +4,11 @@
 
 ### Session
 
-| Command       | Action                                                 |
-|---------------|--------------------------------------------------------|
-| no command    |                                                        |
-| `new-session` |                                                        |
+| Command        | Action                                                |
+|----------------|-------------------------------------------------------|
+| no command     | short-cut for `new-session`                           |
+| `new-session`  |                                                       |
+| `kill-session` |                                                       |
 
 ### Window
 
