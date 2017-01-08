@@ -24,7 +24,7 @@ text dimension. Inside tmux you can:
 |**tmux**           |**"Desktop"-Speak**   |**Plain English**                  |
 |-------------------|----------------------|-----------------------------------|
 |Multiplexer        |Multi-tasking         |Multiple applications              |
-|                   |                      |simultaneously.                   |
+|                   |                      |simultaneously.                    |
 |-------------------|----------------------|-----------------------------------|
 |Session            |Desktop               |Applications are visible here      |
 |-------------------|----------------------|-----------------------------------|
