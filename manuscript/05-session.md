@@ -91,3 +91,9 @@ the session name.
 
 {language=shell, line-numbers=off}
     $ tmux rename-session [-t target-session] new-name
+
+Example usage:
+
+{language=shell, line-numbers=off}
+    $ tmux rename-session -t1 "my session"
+
