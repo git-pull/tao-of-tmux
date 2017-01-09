@@ -40,6 +40,23 @@
 | `swap-window`        | Swap two windows                                     |
 | `unlink-window`      | Unlink a window                                      |
 
+### Pane
+
+| Command         | Action                                                    |
+|-----------------|-----------------------------------------------------------|
+| `break-pane`    | Break a pane from an existing into a new window           |
+| `capture-pane`  | Capture the contents of a pane to a buffer                |
+| `display-panes` | Display an indicator for each visible pane                |
+| `join-pane`     | Split a pane and move an existing one into the new space  |
+| `kill-pane`     | Destroy a given pane                                      |
+| `last-pane`     | Select the previously selected pane                       |
+| `list-panes`    | List panes of a window                                    |
+| `move-pane`     | Move a pane into a new space                              |
+| `pipe-pane`     | Pipe output from a pane to a shell command                |
+| `resize-pane`   | Resize a pane                                             |
+| `respawn-pane`  | Reuse a pane in which a command has exited                |
+| `select-pane`   | Make a pane the active one in the window                  |
+| `swap-pane`     | Swap two panes                                            |
 
 ## Keybindings
 
