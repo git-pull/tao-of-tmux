@@ -42,3 +42,14 @@ difference is a window layout switch the proportions and order of the panes.
 Resizing the panes target a specific pane inside that window.
 
 Resizing a pane in a specific layout may subsequently resize that whole row.
+
+| Shortcut         | Action              |
+|------------------|---------------------|
+|`prefix M-Up`     | `resize-pane -U 5`  |
+|`prefix M-Down`   | `resize-pane -D 5`  |
+|`prefix M-Left`   | `resize-pane -L 5`  |
+|`prefix M-Right`  | `resize-pane -R 5`  |
+|`prefix C-Up`     | `resize-pane -U`    |
+|`prefix C-Down`   | `resize-pane -D`    |
+|`prefix C-Left`   | `resize-pane -L`    |
+|`prefix C-Right`  | `resize-pane -R`    |
