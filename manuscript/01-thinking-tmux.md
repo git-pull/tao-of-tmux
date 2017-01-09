@@ -76,7 +76,7 @@ Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
-![vim + building a C++ project w/ CMake + Ninja using entr rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
+![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
 
 You can see with tmux, you quickly have the makings of an IDE! And it's on
 your terms.
