@@ -241,7 +241,6 @@ To launch it, install tmuxp and load the configuration:
                  # to point to your python bin folder. More help below.
     $ tmuxp load ~/.tmuxp/test.yaml
 
-<<<<<<< Updated upstream
 ### Troubleshooting `tmuxp: command not found`
 
 This is due to your site package bin path (where application entry points are
