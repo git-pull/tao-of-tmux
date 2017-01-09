@@ -59,7 +59,10 @@ traverse between sessions in the [server](#server).
 
 Example usage:
 
-    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
+    $ tmux switch-client -t dev
+
+This will switch to a session named "dev", if it exists.  No need to enter the
+`target-client` if you're in a client already.
 
 ## Moving around
 
