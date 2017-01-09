@@ -53,3 +53,10 @@ Resizing a pane in a specific layout may subsequently resize that whole row.
 |`prefix C-Down`   | `resize-pane -D`    |
 |`prefix C-Left`   | `resize-pane -L`    |
 |`prefix C-Right`  | `resize-pane -R`    |
+
+## Outputting pane to a file
+
+You can output the display of a pane to a file.
+
+{language=shell, line-numbers=off}
+    $ tmux pipe-pane -o 'cat >>~/output.#I-#P'
