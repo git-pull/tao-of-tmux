@@ -33,7 +33,7 @@ To zoom in on a pane, navigate it and do `Leader` + `z`.
 You can use any [pane traversal](#pane-traversal) to unzoom and move a pane at
 the same time.
 
-### Resizing panes {#resizing-panes}
+## Resizing panes {#resizing-panes}
 
 Panes can be resized within [windows](#windows).
 
