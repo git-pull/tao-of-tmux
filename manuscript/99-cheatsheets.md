@@ -6,15 +6,15 @@
 
 | Command          | Action                                                   |
 |------------------|----------------------------------------------------------|
-| no command       | short-cut for `new-session`                              |
-| `new-session`    |                                                          |
-| `kill-session`   | terminate session                                        |
-| `attach-session` | attach session                                           |
-| `rename-session` | rename session                                           |
-| `list-sessions`  |                                                          |
-| `lock-session`   |                                                          |
-| `choose-session` |                                                          |
-| `has-session`    |                                                          |
+| no command       | Short-cut for `new-session`                              |
+| `attach-session` | Attach or switch to a session                            |
+| `choose-session` | Put a window into session choice mode                    |
+| `has-session`    | Check and report if a session exists on the server       |
+| `kill-session`   | Destroy a given session                                  |
+| `list-sessions`  | List sessions managed by server                          |
+| `lock-session`   | Lock all clients attached to a session                   |
+| `new-session`    | Create a new session                                     |
+| `rename-session` | Rename a session                                         |
 
 ### Window
 
