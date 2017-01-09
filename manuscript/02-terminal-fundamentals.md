@@ -29,16 +29,16 @@ by AT&T (Video), [Early days of Unix and design of sh](https://www.youtube.com/w
 
 ## POSIX stuff
 
-Operating systems like MacOS (formerly OS X), Linux and the BSD's all follow
+Operating systems like macOS (formerly OS X), Linux and the BSD's all follow
 something similar to the POSIX specification in terms of how they square away
 various responsibilities and interfaces of the operating system. They're
 categorized as ["Mostly POSIX-compliant"](https://en.wikipedia.org/wiki/POSIX#Mostly_POSIX-compliant).
 
 In daily life we often break compatibility with POSIX standards for reasons of
-sheer practicality. Operating systems like MacOS will drop you right into Bash.
+sheer practicality. Operating systems like macOS will drop you right into Bash.
 [`make(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html),
 which is also a POSIX standard, is in actuality [GNU Make](https://www.gnu.org/software/make/)
-on MacOS by default.  Did you know that as of September 2016 POSIX Make has no
+on macOS by default.  Did you know that as of September 2016 POSIX Make has no
 conditionals?
 
 I'm not saying this to take a run at purists, as someone who tries to remain
@@ -52,7 +52,7 @@ between conditionals:
 
     .ENDIF
 
-But on most Linux systems and MacOS, GNU Make is the default so they get to do:
+But on most Linux systems and macOS, GNU Make is the default so they get to do:
 
 {line-numbers=off}
     IF
@@ -66,7 +66,7 @@ or whether they follow their own.
 
 I> **Find your path**
 I>
-I> Most operating systems inspired by Unix (BSD's, MacOS, Linux) will allow you
+I> Most operating systems inspired by Unix (BSD's, macOS, Linux) will allow you
 I> to get the info of your systems' filesystem hierarchy via [`hier(7)`](https://www.freebsd.org/cgi/man.cgi?hier(7)).
 I>
 I> {language=shell, line-numbers=off}
@@ -136,7 +136,7 @@ As of October 2016 the [latest POSIX specification](http://pubs.opengroup.org/on
 covers in technical detail the responsibilities of the shell.
 
 When it comes to shells and operating systems: each distro or group does their
-own darn thing. On most Linux distributions and MacOS, you'll typically be
+own darn thing. On most Linux distributions and macOS, you'll typically be
 dropped into Bash. That's because it's what Apple decided to use as a *default
 shell* for users.
 
@@ -151,7 +151,7 @@ via bash. This is because specialty [shell languages](#shell-languages) like
 Bash, ZSH and so on can add a lot of cool and practical features, but they're
 not portable, unfortunately.
 
-Recent versions of MacOS include ZSH by default. Linux distributions
+Recent versions of macOS include ZSH by default. Linux distributions
 typically require you to install it via package manager and installs it to
 `/usr/bin/zsh`. BSD systems build it via the port system, [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
 on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD

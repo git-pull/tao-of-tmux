@@ -13,7 +13,7 @@
 that drastically improves readability of manual pages by acting as a syntax
 highlighter for manual pages.
 
-![left: man, version 1.6c on MacOS Sierra. right: MOST v5.0.0](images/11-recipes/most.png)
+![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/11-recipes/most.png)
 
 So to get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
 to point to the MOST binary. You can test is like this:
@@ -74,7 +74,7 @@ in the terminal and is one of those things that can trick out a tmux workspace
 into an IDE-like environment.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
-superbly across Linux distros, BSD's and OS X / MacOS.
+superbly across Linux distros, BSD's and OS X / macOS.
 
 The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
 a list of files into it to watch.
@@ -250,7 +250,7 @@ installed to) not being in your paths. To find your user site packages base dire
 {language=shell, line-numbers=off}
     $ python -m site --user-base
 
-This will get you something like `/Users/me/Library/Python/2.7` on MacOS with
+This will get you something like `/Users/me/Library/Python/2.7` on macOS with
 Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
 
 The applications are in the `bin/` folder insite that. So you need to
@@ -258,7 +258,7 @@ concatenate the two and add them to your [`PATH`](https://en.wikipedia.org/wiki/
 Try adding one of these in your `~/.bashrc` or `~/.zshrc`:
 
 {language=shell, line-numbers=off}
-    export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # MacOS w/ python 2.7
+    export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # macOS w/ python 2.7
     export PATH=$HOME/.local/bin:$PATH                     # Linux/BSD
     export PATH="`python -m site --user-base`/bin":$PATH   # May work all-around
 

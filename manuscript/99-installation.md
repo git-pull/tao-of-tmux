@@ -2,7 +2,7 @@
 
 # Appendix: Installing tmux {#appendix-installation}
 
-## MacOS / OS X
+## macOS / OS X
 
 ### brew
 
