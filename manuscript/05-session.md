@@ -51,7 +51,14 @@ client.
 
 ### Command line
 
+This command name can be a bit confusing. `switch-client` will allow you to
+traverse between sessions in the [server](#server).
+
 {language=shell, line-numbers=off}
+    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
+
+Example usage:
+
     $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
 
 ## Moving around
