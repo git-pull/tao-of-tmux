@@ -4,7 +4,7 @@ The command line in tmux is one of those areas often uncharted.
 
 ## Aliases {#aliases}
 
-tmux also supports a variety of alias commands:
+tmux supports a variety of alias commands:
 
 | Command          | Alias     |
 |------------------|-----------|
