@@ -23,12 +23,14 @@ Example usage:
     # Create pane horizontally, $HOME directory, 50% width of current pane
     $ tmux split-window -h -c $HOME -p 50 vim
 
+{width=75%}
 ![](images/07-pane/splitw/-h -c $HOME -p 50 vim - 2 panes.png)
 
 {language=shell, line-numbers=off}
     # create new pane, split vertically with 75% height
     tmux split-window -p 75
 
+{width=75%}
 ![](images/07-pane/splitw/-p 75.png)
 
 ## Traversing Panes {#pane-traversal}
