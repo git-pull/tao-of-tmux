@@ -18,8 +18,7 @@ To create a new panes, you can `split-window` from within the current
 Example usage:
 
 {language=shell, line-numbers=off}
-    # Create a pane horizontally, in the $HOME directory, consuming 50% of the
-    # width of the current pane
+    # Create pane horizontally, $HOME directory, 50% width of current pane
     $ tmux split-window -h -c $HOME -p 50 vim
 
 ![](images/07-pane/splitw/-h -c $HOME -p 50 vim - 2 panes.png)
