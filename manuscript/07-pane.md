@@ -33,6 +33,8 @@ Example usage:
 {width=75%}
 ![](images/07-pane/splitw/-p 75.png)
 
+{pagebreak}
+
 ## Traversing Panes {#pane-traversal}
 
 | Shortcut         | Action                                             |
