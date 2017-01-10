@@ -54,6 +54,4 @@ I> You can also have it give you a confirmation afterwards:
 I> 
 I> `bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
 I>
-I> Now you can type `prefix` + `r` to get the config to reload.
-
-## Status bar {#status-bar}
+I> Now you can type `prefix` + `r` to get the config to reload.## Status bar {#status-bar}

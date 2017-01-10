@@ -7,6 +7,7 @@
 06-window.md
 07-pane.md
 08-configuration.md
+08-status-bar.md
 09-command-line-kungfu.md
 10-technical-stuff.md
 11-tips-and-tricks.md
