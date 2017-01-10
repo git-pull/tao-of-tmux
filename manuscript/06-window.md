@@ -112,3 +112,10 @@ window and pane you are in.
 |------------------|----------------------------------------------------|
 |`Prefix` + `%`    | `split-window -h` (split horizontally)             |
 |`Prefix` + `"`    | `split-window -v` (split vertically)               |
+
+Example usage:
+
+{language=shell, line-numbers=off}
+    # Create a window split horizontally, in the $HOME directory, consuming 50%
+    # of the width of the current pane
+    $ tmux split-window -h -c $HOME -p 50 vim
