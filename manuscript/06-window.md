@@ -64,10 +64,15 @@ which handle proportions of [panes](#panes).
 
 As of tmux 2.3, the supports layouts are:
 
+{width=75%}
 ![](images/06-window/even-horizontal.png)
+{width=75%}
 ![](images/06-window/even-vertical.png)
+{width=75%}
 ![](images/06-window/main-horizontal.png)
+{width=75%}
 ![](images/06-window/main-vertical.png)
+{width=75%}
 ![](images/06-window/tiled.png)
 
 Specific touch-ups can be done via [resizing panes](#resizing-panes).
