@@ -6,7 +6,7 @@ Windows hold [panes](#panes). They reside within a [session](#sessions).
 
 You can see the current open windows through the status bar.
 
-## (Re)naming windows
+## Naming windows
 
 Just like with sessions, windows can have names. Labelling them helps keep track
 of what you're doing inside them.

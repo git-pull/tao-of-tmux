@@ -73,7 +73,7 @@ You can move around between sessions as well.
 |`Prefix` + `s`    | Select a new session for the attached client       |
 |                  | interactively.                                     |
 
-## (Re)naming a tmux session
+## Naming sessions
 
 Sometimes the default session name given by tmux isn't descriptive enough. It
 only takes a few seconds to update it.
