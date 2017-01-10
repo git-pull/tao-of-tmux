@@ -28,6 +28,8 @@ Example usage:
     # create new pane, split vertically with 75% height
     tmux split-window -p 75
 
+![](images/07-pane/splitw/-p 75.png)
+
 ## Traversing Panes {#pane-traversal}
 
 | Shortcut         | Action                                             |
