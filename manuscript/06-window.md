@@ -4,7 +4,7 @@ Windows hold [panes](#panes). They reside within a [session](#sessions).
 
 ![](images/info/window.png)
 
-You can see the current open windows through the status bar.
+You can see the current open windows through the [status bar](#status-bar).
 
 ## Naming windows
 
@@ -111,3 +111,9 @@ To apply that layout, do this:
 
     # resize your panes or try doing this in another window to see the outcome
     $ tmux select-layout "5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]"
+
+## Closing windows
+
+{language=shell, line-numbers=off}
+    $ tmux kill-window
+
