@@ -102,3 +102,13 @@ To apply that layout, do this:
 
     # resize your panes or try doing this in another window to see the outcome
     $ tmux select-layout "5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]"
+
+## Splitting windows into panes
+
+To create a new [pane](#panes), you can `split-window` from within the current
+window and pane you are in.
+
+| Shortcut         | Action                                             |
+|------------------|----------------------------------------------------|
+|`Prefix` + `%`    | `split-window -h` (split horizontally)             |
+|`Prefix` + `"`    | `split-window -v` (split vertically)               |
