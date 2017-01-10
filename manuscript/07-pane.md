@@ -23,7 +23,7 @@ Example usage:
     $ tmux split-window -h -c $HOME -p 50 vim
 
     # create new pane, split vertically with 75% height
-    # tmux split-window -p 75
+    tmux split-window -p 75
 
 ## Traversing Panes {#pane-traversal}
 
