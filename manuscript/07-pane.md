@@ -22,6 +22,9 @@ Example usage:
     # width of the current pane
     $ tmux split-window -h -c $HOME -p 50 vim
 
+![](images/07-pane/splitw/-h -c $HOME -p 50 vim - 2 panes.png)
+
+{language=shell, line-numbers=off}
     # create new pane, split vertically with 75% height
     tmux split-window -p 75
 
