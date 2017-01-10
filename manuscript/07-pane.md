@@ -15,6 +15,8 @@ To create a new panes, you can `split-window` from within the current
 |`Prefix` + `%`    | `split-window -h` (split horizontally)             |
 |`Prefix` + `"`    | `split-window -v` (split vertically)               |
 
+{pagebreak}
+
 Example usage:
 
 {language=shell, line-numbers=off}
