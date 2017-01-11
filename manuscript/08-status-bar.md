@@ -21,3 +21,5 @@ I>     $ tmux show-options -g | grep status
     status-right-length 140
     status-right-style default
     status-style fg=colour136,bg=colour235
+
+Source: <https://github.com/tony/tmux-config>
