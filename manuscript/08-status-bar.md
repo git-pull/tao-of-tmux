@@ -7,6 +7,21 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux show-options -g | grep status
 
+## Example: default config
+
+    status on
+    status-interval 15
+    status-justify left
+    status-keys vi
+    status-left "[#S] "
+    status-left-length 10
+    status-left-style default
+    status-position bottom
+    status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+    status-right-length 40
+    status-right-style default
+    status-style fg=black,bg=green
+
 ## Example: Dressed up
 
     status on
