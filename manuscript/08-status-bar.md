@@ -9,6 +9,7 @@ I>     $ tmux show-options -g | grep status
 
 ## Example: default config
 
+{line-numbers=off}
     status on
     status-interval 15
     status-justify left
@@ -24,6 +25,7 @@ I>     $ tmux show-options -g | grep status
 
 ## Example: Dressed up
 
+{line-numbers=off}
     status on
     status-interval 1
     status-justify centre
