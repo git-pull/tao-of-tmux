@@ -88,7 +88,7 @@ still running in the background.
 
 The essence of what you're doing in tmux is easier and more transparent than it
 seems. Multiple ways exist to route yourself to the same behavior, what tmux
-refers to externally and internally as a *command*.
+refers to internally and externally as a *command*.
 
 Configs and Commands - [Configs](#config) are the same as automatically running
 commands via `$ tmux command`.
