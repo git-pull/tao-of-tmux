@@ -7,10 +7,10 @@
 06-window.md
 07-pane.md
 08-configuration.md
-08-status-bar.md
-09-command-line-kungfu.md
-10-technical-stuff.md
-11-tips-and-tricks.md
+09-status-bar.md
+10-command-line-kungfu.md
+11-technical-stuff.md
+12-tips-and-tricks.md
 99-cheatsheets.md
 99-installation.md
 99-windows-bash.md
