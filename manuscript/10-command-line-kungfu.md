@@ -97,19 +97,31 @@ pseudoterminals!
 To give you an idea of the possibilities of where you can use targets, here are
 the commands with you can use targets:
 
-- `$ tmux attach-session [-t target-session]`
-- `$ tmux detach-client [-s target-session] [-t target-client]`
-- `$ tmux has-session [-t target-session]`
-- `$ tmux kill-session [-t target-session]`
-- `$ tmux list-clients [-t target-session]`
-- `$ tmux lock-client [-t target-client]`
-- `$ tmux lock-session [-t target-session]`
-- `$ tmux new-session [-t target-session]`
-- `$ tmux refresh-client [-t target-client]`
-- `$ tmux rename-session [-t target-session]`
-- `$ tmux show-messages [-t target-client]`
-- `$ tmux suspend-client [-t target-client]`
-- `$ tmux switch-client [-c target-client] [-t target-session]`
+`$ tmux attach-session [-t target-session]`
+
+`$ tmux detach-client [-s target-session] [-t target-client]`
+
+`$ tmux has-session [-t target-session]`
+
+`$ tmux kill-session [-t target-session]`
+
+`$ tmux list-clients [-t target-session]`
+
+`$ tmux lock-client [-t target-client]`
+
+`$ tmux lock-session [-t target-session]`
+
+`$ tmux new-session [-t target-session]`
+
+`$ tmux refresh-client [-t target-client]`
+
+`$ tmux rename-session [-t target-session]`
+
+`$ tmux show-messages [-t target-client]`
+
+`$ tmux suspend-client [-t target-client]`
+
+`$ tmux switch-client [-c target-client] [-t target-session]`
 
 ## Formats {#formats}
 
