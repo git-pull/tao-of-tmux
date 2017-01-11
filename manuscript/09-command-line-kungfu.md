@@ -46,7 +46,7 @@ tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.o
 patterns.
 
 For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`,
-`$ tmux att`, `$ tmux at` and `$ tmux a` work just as well.
+`$ tmux att`, `$ tmux at` and `$ tmux a` work as well.
 
 Every tmux command has shorthands, let's try this for `$ tmux new-session`:
 
@@ -89,10 +89,10 @@ Windows are represented by the [at sign](https://en.wikipedia.org/wiki/At_sign)
 (@). So windows are kind of like referencing / messaging a user on a social
 networking website.
 
-Panes are the fun one, represented by the percent sign (%). Just like the
+Panes are the fun one, represented by the percent sign (%), like the
 default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 [tcsh](https://en.wikipedia.org/wiki/Tcsh). Hey, makes sense, since panes are
-your pseudoterminals.
+pseudoterminals!
 
 To give you an idea of the possibilities of where you can use targets, here are
 the commands with you can use targets:

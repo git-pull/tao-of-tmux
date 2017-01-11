@@ -64,17 +64,17 @@ X> 2. Press `b`, and hold it.
 X> 3. Release both keys at the same time.
 X> 4. Hit `d`!
 X>
-X> You've just sent tmux your first command! And you're back at the plain old
+X> You've sent tmux your first command! And you're back at the plain old
 X> terminal now!
 
-You've just detached the tmux session you were in.
+You've detached the tmux session you were in.
 
 ## Session persistence and the server model
 
 If you're familiar with Linux, you may have heard of [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
 such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), [`jobs(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html).
 
-This is a similar concept, it feels like you just ran `<ctrl-z>` and sent
+This is a similar concept, it feels like you ran `<ctrl-z>` and sent
 except technically you were in a "job" all along, you were just using a client
 to view it.
 
@@ -84,7 +84,7 @@ A better way of putting it: `<Ctrl-b> d` closed the client connection, therefore
 Your tmux client disconnected from the server instance. The session however is
 still running in the background.
 
-## It's all just commands
+## It's all commands
 
 The essence of what you're doing in tmux is easier and more transparent than it
 seems. Multiple ways exist to route yourself to the same behavior, what tmux
@@ -93,7 +93,7 @@ refers to externally and internally as a *command*.
 Configs and Commands - [Configs](#config) are the same as automatically running
 commands via `$ tmux command`.
 
-Keybindings and Commands - Keyboard shortcuts in tmux are just shorthands for
+Keybindings and Commands - Keyboard shortcuts in tmux are shorthands for
 commands you can do via `$ tmux command`.
 
 To pull it all together, [source code](#technical-stuff) files are prefixed `cmd-`.

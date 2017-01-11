@@ -39,9 +39,9 @@ How is it utilitarian? We'll go into it more in future chapters where we dive
 into [Formats](#formats), [Targets](#targets) and tools such as [libtmux](https://github.com/tony/libtmux)
 that I made which utilize these features.
 
-It surprises some because servers often beget a setup process. But just because
-servers are involved doesn't entail hours of configuration on each machine you
-run it on. There's no setup.
+It surprises some because servers often beget a setup process. But servers being
+involved doesn't necessarily entail hours of configuration on each machine you
+run on. There's no setup.
 
 When people think server, they think pain. It invokes an image of digging
 around `/etc/` for configuration files and flipping settings on and off just to
@@ -67,7 +67,7 @@ session inside that server.
 
 W> ### Advanced: Multiple servers
 W>
-W> tmux is nimble. if you want to use a separate server, just pass in
+W> tmux is nimble. if you want to use a separate server, pass in
 W> the `-L` flag to any command.
 W>
 W> `tmux -L moo` - start a new tmux server + session if non-exists under
@@ -89,7 +89,7 @@ So something like:
 
 Will give you a tmux directory created within your `$HOME` folder. On OS X,
 your home folder will probably be something like `/Users/yourusername`. On
-other systems it may be `/home/yourusername`. If you want to find out, just type
+other systems it may be `/home/yourusername`. If you want to find out, type
 `echo $HOME`.
 
 ## Clients
