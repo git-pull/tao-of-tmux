@@ -9,6 +9,8 @@ I>     $ tmux show-options -g | grep status
 
 ## Example: default config
 
+![](images/status-line/default.png)
+
 {line-numbers=off}
     status on
     status-interval 15
@@ -24,6 +26,8 @@ I>     $ tmux show-options -g | grep status
     status-style fg=black,bg=green
 
 ## Example: Dressed up
+
+![](images/status-line/dressed up.png)
 
 {line-numbers=off}
     status on
