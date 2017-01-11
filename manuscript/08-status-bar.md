@@ -43,4 +43,8 @@ I>     $ tmux show-options -g | grep status
     status-right-style default
     status-style fg=colour136,bg=colour235
 
+Configs can print the output of an application. In this example,
+[tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load) is providing
+system statistics in the right side section of the status line.
+
 Source: <https://github.com/tony/tmux-config>
