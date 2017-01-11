@@ -131,31 +131,31 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Copy / paste
 
-| Variable name         | Alias  | Description                              |
-|-----------------------|--------|------------------------------------------|
-| buffer_name           |        |Name of buffer                            |
-| buffer_sample         |        |Sample of start of buffer                 |
-| buffer_size           |        |Size of the specified buffer in bytes     |
+| Variable name         | Description                              |
+|-----------------------|------------------------------------------|
+| buffer_name           |Name of buffer                            |
+| buffer_sample         |Sample of start of buffer                 |
+| buffer_size           |Size of the specified buffer in bytes     |
 
 ### Client
 
-| Variable name         | Alias  | Description                              |
-|-----------------------|--------|------------------------------------------|
-| client_activity       |        |Integer time client last had activity     |
-| client_created        |        |Integer time client created               |
-| client_control_mode   |        |1 if client is in control mode            |
-| client_height         |        |Height of client                          |
-| client_key_table      |        |Current key table                         |
-| client_last_session   |        |Name of the client's last session         |
-| client_pid            |        |PID of client process                     |
-| client_prefix         |        |1 if prefix key has been pressed          |
-| client_readonly       |        |1 if client is readonly                   |
-| client_session        |        |Name of the client's session              |
-| client_termname       |        |Terminal name of client                   |
-| client_tty            |        |Pseudo terminal of client                 |
-| client_utf8           |        |1 if client supports utf8                 |
-| client_width          |        |Width of client                           |
-| line                  |        |Line number in the list                   |
+| Variable name         | Description                              |
+|-----------------------|------------------------------------------|
+| client_activity       |Integer time client last had activity     |
+| client_created        |Integer time client created               |
+| client_control_mode   |1 if client is in control mode            |
+| client_height         |Height of client                          |
+| client_key_table      |Current key table                         |
+| client_last_session   |Name of the client's last session         |
+| client_pid            |PID of client process                     |
+| client_prefix         |1 if prefix key has been pressed          |
+| client_readonly       |1 if client is readonly                   |
+| client_session        |Name of the client's session              |
+| client_termname       |Terminal name of client                   |
+| client_tty            |Pseudo terminal of client                 |
+| client_utf8           |1 if client supports utf8                 |
+| client_width          |Width of client                           |
+| line                  |Line number in the list                   |
 
 ### Pane
 
