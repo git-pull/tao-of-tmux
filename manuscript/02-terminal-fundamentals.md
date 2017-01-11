@@ -148,8 +148,11 @@ was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell",
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
 via bash. This is because specialty [shell languages](#shell-languages) like
-Bash, ZSH and so on can add a lot of cool and practical features, but they're
-not portable, unfortunately.
+Bash, ZSH and so on add a lot of helpful and practical features may work on
+one interpreter, but not another. For instance, you would need to install the
+interpreter yourself across all your systems if you rely on ZSH-specialized
+scripting. If you conformed with POSIX shell scripting, your scripting would
+have the highest level of compatibility, at the cost of being more verbose.
 
 Recent versions of macOS include ZSH by default. Linux distributions
 typically require you to install it via package manager and installs it to
