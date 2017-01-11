@@ -7,7 +7,7 @@ next to each other.
 
 Seasoned developers are familiar with zsh, bash, iterm2, konsole, /dev/tty,
 shell scripting, and so on. If you use tmux, you'll be around these all the
-time, regardless of whether you're in a GUI on your local machine or ssh'ing
+time, regardless of whether you're in a GUI on your local machine or SSH'ing
 into a remote server.
 
 If you want to learn more about how processes and TTY's work at the kernel level
