@@ -10,7 +10,7 @@ shell scripting, and so on. If you use tmux, you'll be around these all the
 time, regardless of whether you're in a GUI on your local machine or ssh'ing
 into a remote server.
 
-If you ever wanted to dive into how processes and TTY's work at the kernel level
+If you want to learn more about how processes and TTY's work at the kernel level
 (data structures and all) the book [*The Design and Implementation of the FreeBSD
 Operating System (2nd Edition)*](http://amzn.to/2iTmVyv) by Marshall Kirk
 McKusick is nice. In particular, Chapter 4, *Process Management* and Section
