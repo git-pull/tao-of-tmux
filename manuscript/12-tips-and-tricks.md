@@ -13,7 +13,7 @@
 that drastically improves readability of manual pages by acting as a syntax
 highlighter for manual pages.
 
-![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/11-recipes/most.png)
+![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/12-tips-and-tricks/most.png)
 
 So to get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
 to point to the MOST binary. You can test is like this:
