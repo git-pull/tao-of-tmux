@@ -1,4 +1,4 @@
-# Command Line Kung fu {#cli-kung-fu}
+# Scripting tmux {#scripting-tmux}
 
 The command line in tmux is one of those areas often uncharted.
 
@@ -259,3 +259,11 @@ since version 1.8. As of tmux 2.3, the available formats are:
 | socket_path           |        |Server socket path                        |
 | start_time            |        |Server start time                         |
 | pid                   |        |Server PID                                |
+
+## Command prompts
+
+tmux scripting
+
+## Tables
+
+Multiple prefixes

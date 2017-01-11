@@ -130,7 +130,7 @@ copy and paste between panes.
 status line behavior. You'll even learn how to show your CPU and
 memory usage via the status line.
 
-[Command Line Kung Fu](#cli-kung-fu) goes into command [shorthands](#shorthands),
+[Scripting tmux](#scripting-tmux) goes into command [shorthands](#shorthands),
 as well as the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
