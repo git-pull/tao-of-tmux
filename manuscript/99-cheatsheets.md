@@ -100,6 +100,7 @@
 |`-`               | Delete the most recently copied buffer of text.    |
 
 {pagebreak}
+
 ### Session
 
 {width="wide"}
@@ -118,6 +119,7 @@
 |                  | interactively.                                     |
 
 {pagebreak}
+
 ### Window
 
 {width="wide"}
@@ -152,6 +154,7 @@
 |`.`               | Prompt for an index to move the current window.    |
 
 {pagebreak}
+
 ### Pane
 
 {width="wide"}
