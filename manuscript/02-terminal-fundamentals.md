@@ -147,7 +147,7 @@ was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 ([Debian Almquist Shell](https://en.wikipedia.org/wiki/Almquist_shell)). So here
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell",
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
-via bash. This is because specialty [shell languages](#shell-languages) like
+via Bash. This is because specialty [shell languages](#shell-languages) like
 Bash, ZSH and so on add a lot of helpful and practical features may work on
 one interpreter, but not another. For instance, you would need to install the
 interpreter yourself across all your systems if you rely on ZSH-specialized
