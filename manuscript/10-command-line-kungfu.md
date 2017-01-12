@@ -6,6 +6,7 @@ The command line in tmux is one of those areas often uncharted.
 
 tmux supports a variety of alias commands:
 
+{width="narrow"}
 | Command          | Alias     |
 |------------------|-----------|
 | break-pane       | breakp    |
