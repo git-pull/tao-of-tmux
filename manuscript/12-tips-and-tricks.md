@@ -231,7 +231,7 @@ then create a YAML file at `~/.tmuxp/test.yaml`:
 
 gives a session titled *4-pane-split*, with one window titled *dev window* that
 has 4 panes in it. 3 of them are in the home directory, the other is in
-`/var/log` and is listed all files ending with `.log`.
+`/var/log` and is printing a list of all files ending with `.log`.
 
 To launch it, install tmuxp and load the configuration:
 
