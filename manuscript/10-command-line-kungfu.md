@@ -144,6 +144,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Copy / paste
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | buffer_name           |Name of buffer                            |
@@ -173,6 +174,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Pane
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | alternate_on          |If pane is in alternate screen            |
@@ -215,6 +217,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Session
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | session_alerts        |List of window indexes with alerts        |
@@ -233,6 +236,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Window
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | history_bytes         |Number of bytes in window history         |
@@ -261,6 +265,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Server
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | command_hooked        |Name of command hooked, if any            |
