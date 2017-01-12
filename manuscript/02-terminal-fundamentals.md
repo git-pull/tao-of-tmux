@@ -59,7 +59,7 @@ But on most Linux systems and macOS, GNU Make is the default so they get to do:
 
     ENDIF
 
-This is one tiny inconsistency amongst many that run across operating systems,
+This is one tiny inconsistency amongst many that span across operating systems,
 their userlands, their binary / library /  include paths and adherence /
 interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 or whether they follow their own.
