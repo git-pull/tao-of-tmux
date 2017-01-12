@@ -66,7 +66,7 @@
 ## Keybindings
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-b`             | Send the prefix key (C-b) through to the           |
 |                  | application.                                       |
@@ -74,7 +74,7 @@
 ### Miscellaneous
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
 |`r`               | Force redraw of the attached client.               |
@@ -89,7 +89,7 @@
 ### Copy/Paste
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`#`               | List all paste buffers.                            |
 |`[`               | Enter copy mode to copy text or view the history.  |
@@ -104,14 +104,14 @@
 ### Session
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`$`               | Rename the current session.                        |
 
 #### Session Traversal
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`L`               | Switch the attached client back to the last        |
 |                  | session.                                           |
@@ -123,7 +123,7 @@
 ### Window
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`c`               | Create a new window.                               |
 |`&`               | Kill the current window.                           |
@@ -133,7 +133,7 @@
 #### Window Traversal
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
 |`w`               | Choose the current window interactively.           |
@@ -149,7 +149,7 @@
 #### Window Moving
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`.`               | Prompt for an index to move the current window.    |
 
@@ -158,7 +158,7 @@
 ### Pane
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`x`               | Kill the current pane.                             |
 |`q`               | Briefly display pane indexes.                      |
@@ -168,7 +168,7 @@
 #### Pane Traversal
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`;`               | Move to the previously active pane.                |
 |`Up, Down`        | Change to the pane above, below, to the left, or to|
@@ -178,7 +178,7 @@
 #### Pane Moving
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-o`             | Rotate the panes in the current window forwards.   |
 |`M-o`             | Rotate the panes in the current window backwards.  |
@@ -189,7 +189,7 @@
 #### Pane Resizing
 
 {width="wide"}
-| Shortcut        | Action                                             |
+| Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`M-1 to M-5`      | Arrange panes in one of the five preset layouts:   |
 |                  | even-horizontal, even-vertical, main-horizontal,   |
