@@ -61,6 +61,7 @@
 | `select-pane`   | Make a pane the active one in the window                  |
 | `swap-pane`     | Swap two panes                                            |
 
+{pagebreak}
 ## Keybindings
 
 {width="wide"}
@@ -97,6 +98,7 @@
 |                  | list.                                              |
 |`-`               | Delete the most recently copied buffer of text.    |
 
+{pagebreak}
 ### Session
 
 {width="wide"}
@@ -114,6 +116,7 @@
 |`s`               | Select a new session for the attached client       |
 |                  | interactively.                                     |
 
+{pagebreak}
 ### Window
 
 {width="wide"}
@@ -147,6 +150,7 @@
 |------------------|----------------------------------------------------|
 |`.`               | Prompt for an index to move the current window.    |
 
+{pagebreak}
 ### Pane
 
 {width="wide"}
