@@ -152,6 +152,7 @@ since version 1.8. As of tmux 2.3, the available formats are:
 
 ### Client
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | client_activity       |Integer time client last had activity     |
