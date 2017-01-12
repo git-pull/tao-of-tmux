@@ -62,6 +62,7 @@
 | `swap-pane`     | Swap two panes                                            |
 
 {pagebreak}
+
 ## Keybindings
 
 {width="wide"}
