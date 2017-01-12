@@ -166,7 +166,7 @@ up happening to me personally building PDF's for the book [AlgoXY](https://githu
 I've since [wrote a patch](https://github.com/liuxinyu95/AlgoXY/pull/16) to
 property use `$(MAKE)` for recursive calls.
 
-The `$(test)` after `go test` allows passing in a shell variable with arguments
+The `$(test)` after `go test` allows passing a shell variable with arguments
 in it. So you could do `make watch_test test='-i'`. For examples of a similar
 `Makefile` in action see [the one in my tmuxp project](https://github.com/tony/tmuxp/blob/master/Makefile).
 The project is licensed BSD (permissive), so you can grab code and use it
