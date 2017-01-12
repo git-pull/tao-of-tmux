@@ -4,6 +4,7 @@
 
 ### Session
 
+{width="wide"}
 | Command          | Action                                                   |
 |------------------|----------------------------------------------------------|
 | no command       | Short-cut for `new-session`                              |
@@ -18,6 +19,7 @@
 
 ### Window
 
+{width="wide"}
 | Command              | Action                                               |
 |----------------------|------------------------------------------------------|
 | `choose-window`      | Put a window into window choice                      |
@@ -42,6 +44,7 @@
 
 ### Pane
 
+{width="wide"}
 | Command         | Action                                                    |
 |-----------------|-----------------------------------------------------------|
 | `break-pane`    | Break a pane from an existing into a new window           |
@@ -60,6 +63,7 @@
 
 ## Keybindings
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-b`             | Send the prefix key (C-b) through to the           |
@@ -67,6 +71,7 @@
 
 ### Miscellaneous
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-z`             | Suspend the tmux client.                           |
@@ -81,6 +86,7 @@
 
 ### Copy/Paste
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`#`               | List all paste buffers.                            |
@@ -93,12 +99,14 @@
 
 ### Session
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`$`               | Rename the current session.                        |
 
 #### Session Traversal
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`L`               | Switch the attached client back to the last        |
@@ -108,6 +116,7 @@
 
 ### Window
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`c`               | Create a new window.                               |
@@ -117,6 +126,7 @@
 
 #### Window Traversal
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`0 to 9`          | Select windows 0 to 9.                             |
@@ -132,12 +142,14 @@
 
 #### Window Moving
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`.`               | Prompt for an index to move the current window.    |
 
 ### Pane
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`x`               | Kill the current pane.                             |
@@ -147,6 +159,7 @@
 
 #### Pane Traversal
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`;`               | Move to the previously active pane.                |
@@ -156,6 +169,7 @@
 
 #### Pane Moving
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`C-o`             | Rotate the panes in the current window forwards.   |
@@ -166,6 +180,7 @@
 
 #### Pane Resizing
 
+{width="wide"}
 | Shortcut        | Action                                             |
 |------------------|----------------------------------------------------|
 |`M-1 to M-5`      | Arrange panes in one of the five preset layouts:   |
