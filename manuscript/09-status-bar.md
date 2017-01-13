@@ -8,6 +8,28 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux show-options -g | grep status
 
+## Turn your status line off
+
+Turn it off:
+
+{language=shell, line-numbers=off}
+    $ tmux set-option status off
+
+Turn it on:
+
+{language=shell, line-numbers=off}
+    $ tmux set-option status on
+
+Toggle it (regardless or current state):
+
+{language=shell, line-numbers=off}
+    $ tmux set-option status
+
+Bind toggling status line to `Prefix` + `q`:
+
+{language=shell, line-numbers=off}
+    $ tmux bind-key q set-option status
+
 ## Example: default config
 
 ![](images/status-line/default.png)
