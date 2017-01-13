@@ -24,9 +24,9 @@ since they grow muscle memory.
 Without understanding how to send *command sequences* to tmux via the prefix
 key, you'll pretty much be dead in the water.
 
-Key sequences will also come up in later if you use Vim or Emacs and other TUI
+Key sequences will also come up in later if you use Vim, Emacs or other TUI
 (Terminal User Interface) applications. If you haven't internalized the
-concept let's do it now. If you already have done similar command sequences
+concept, let's do it now. If you already have done similar command sequences
 before in TUI/GUI applications, that'll come in handy.
 
 When you memorize a key combo it's one less time you'll be moving your hand
