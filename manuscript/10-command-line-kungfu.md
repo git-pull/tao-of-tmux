@@ -140,7 +140,9 @@ You know how template engines such as
 variables? Formats are a similar concept.
 
 The amount of `FORMATS` (variables) made available by tmux has expanded greatly
-since version 1.8. As of tmux 2.3, the available formats are:
+since version 1.8. Some of the most commonly used formats as of tmux 2.3 are
+listed below. See the [appendix section on formats](#appendix-formats) for a
+complete list.
 
 ### Copy / paste
 
