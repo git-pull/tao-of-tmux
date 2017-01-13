@@ -84,14 +84,15 @@ still running in the background.
 
 ## It's all commands
 
-The essence of what you're doing in tmux is easier and more transparent than it
-seems. Multiple ways exist to route yourself to the same behavior, what tmux
-refers to internally and externally as a *command*.
+Multiple roads can lead you to the same behavior. *Commands* are what tmux uses
+to define instructions for setting options, resizing, renaming, traversing,
+switching modes, copying and pasting and so forth.
 
-Configs and Commands - [Configs](#config) are the same as automatically running
-commands via `$ tmux command`.
-
-Keybindings and Commands - Keyboard shortcuts in tmux are shorthands for
-commands you can do via `$ tmux command`.
-
-To pull it all together, [source code](#technical-stuff) files are prefixed `cmd-`.
+- [Configs](#config) are the same as automatically running commands via
+`$ tmux command`.
+- Internal tmux commands via `Prefix` + `:` prompt.
+- Settings defined in your configuration can also set shortcuts
+   which can execute commands via keybindings via `bind-key`.
+- Commands called from CLI via `$ tmux cmd`
+- To pull it all together, [source code](#technical-stuff) files are prefixed
+  `cmd-`.
