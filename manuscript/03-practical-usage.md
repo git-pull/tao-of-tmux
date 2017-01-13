@@ -17,9 +17,9 @@ And it's a hump we have to get over.
 
 It's kind of like [Street Fighter](https://en.wikipedia.org/wiki/Street_Fighter).
 In this game the player inputs a combination of buttons in sequence to
-perform flying spinning kicks and shoot fireballs; sweet. As the player grew
-more accustomed with the combos, they'd begin to repeat moves by intuition
-since they've committed to muscle memory.
+perform flying spinning kicks and shoot fireballs; sweet. As the player grows
+more accustomed with the combos, they begin to repeat moves by intuition
+since they grow muscle memory.
 
 That's kind of what the prefix key in tmux is like. Without understanding how to
 send *command sequences* to tmux via the prefix key, you'll pretty much be
