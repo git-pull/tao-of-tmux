@@ -144,7 +144,7 @@ since version 1.8. Some of the most commonly used formats as of tmux 2.3 are
 listed below. See the [appendix section on formats](#appendix-formats) for a
 complete list.
 
-### Pane
+### Panes
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -166,7 +166,7 @@ complete list.
 | pane_tty              |Pseudo terminal of pane                   |
 | pane_width            |Width of pane                             |
 
-### Session
+### Sessions
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -184,7 +184,7 @@ complete list.
 | session_width         |Width of session                          |
 | session_windows       |Number of windows in session              |
 
-### Window
+### Windows
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -206,7 +206,7 @@ complete list.
 | window_width          |Width of window                           |
 | window_zoomed_flag    |1 if window is zoomed                     |
 
-### Server
+### Servers
 
 {width="wide"}
 | Variable name         | Description                              |

@@ -210,7 +210,7 @@
 | buffer_sample         |Sample of start of buffer                 |
 | buffer_size           |Size of the specified buffer in bytes     |
 
-### Client
+### Clients
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -231,7 +231,7 @@
 | client_width          |Width of client                           |
 | line                  |Line number in the list                   |
 
-### Pane
+### Panes
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -274,7 +274,7 @@
 | scroll_position       |Scroll position in copy mode              |
 | wrap_flag             |Pane wrap flag                            |
 
-### Session
+### Sessions
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -293,7 +293,7 @@
 | session_width         |Width of session                          |
 | session_windows       |Number of windows in session              |
 
-### Window
+### Windows
 
 {width="wide"}
 | Variable name         | Description                              |
@@ -322,7 +322,7 @@
 | window_width          |Width of window                           |
 | window_zoomed_flag    |1 if window is zoomed                     |
 
-### Server
+### Servers
 
 {width="wide"}
 | Variable name         | Description                              |
