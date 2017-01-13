@@ -21,9 +21,8 @@ perform flying spinning kicks and shoot fireballs; sweet. As the player grows
 more accustomed with the combos, they begin to repeat moves by intuition
 since they grow muscle memory.
 
-That's kind of what the prefix key in tmux is like. Without understanding how to
-send *command sequences* to tmux via the prefix key, you'll pretty much be
-dead in the water.
+Without understanding how to send *command sequences* to tmux via the prefix
+key, you'll pretty much be dead in the water.
 
 Key sequences will also come up in later if you use Vim or Emacs and other TUI
 (Terminal User Interface) applications. If you haven't internalized the
