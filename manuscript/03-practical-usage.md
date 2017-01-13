@@ -70,10 +70,9 @@ You've detached the tmux session you were in.
 
 ## Session persistence and the server model
 
-If you're familiar with Linux, you may have heard of [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
-such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), [`jobs(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html).
-
-This is a similar concept, it feels like you ran `<ctrl-z>` and sent
+If you use Linux or similar system, you've likely brushed through [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
+such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), [`jobs(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html)
+before. tmux behavior feels similar, it feels like you ran `<ctrl-z>` and sent
 except technically you were in a "job" all along, you were just using a client
 to view it.
 
