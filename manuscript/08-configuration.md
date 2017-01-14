@@ -33,7 +33,7 @@ You can apply config files in live tmux sessions. Compare this to `source` or
 ["dot"](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
 in the POSIX standard.
 
-`prefix` + `:` will open up the tmux prompt, then type:
+`Prefix` + `:` will open up the tmux prompt, then type:
 
 `:source /path/to/config.conf`
 

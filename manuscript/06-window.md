@@ -89,13 +89,14 @@ This is different behavior than some [tiling window managers](https://en.wikiped
 instance, automatically handle proportions upon new items being added to their
 layouts.
 
-To maintain sane proportions in my [config](#config) I use this:
+To allow easily resetting to a sensible layout across machines and terminal
+dimensions, you can try this in your [config](#config):
 
 {language=shell, line-numbers=off}
     bind m set-window-option main-pane-height 60\; select-layout main-horizontal
 
-This allows me to set a `main-horizontal` layout and automatically set the
-bottom panes proportionally on the bottom everytime I hit `prefix` + `m`.
+This allows you to set a `main-horizontal` layout and automatically set the
+bottom panes proportionally on the bottom everytime you do `Prefix` + `m`.
 
 Layouts can also be totally custom. To get the custom layout snippet for your
 current window, try this:
