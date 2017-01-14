@@ -5,8 +5,7 @@ instance. They begin when starting tmux fresh and reconnected when attaching to
 an existing session. Your interaction with tmux will have *at least* one session
 running.
 
-A session holds one or more [windows](#windows). The [status bar](#status-bar)
-found at the bottom will include a list of windows.
+A session holds one or more [windows](#windows). 
 
 ![](images/info/session.png)
 
