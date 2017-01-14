@@ -13,8 +13,9 @@ of what you're doing inside them.
 
 ![Renaming](images/06-window/rename.png)
 
-`Prefix` + `,` will turn the tmux status line into an input field where the current
-active window's name can be altered.
+When inside tmux, the most common way of doing that is`Prefix` + `,`. This will
+open a prompt in the tmux status line where you can alter the name of the
+current window.
 
 ## Traversing Windows
 
