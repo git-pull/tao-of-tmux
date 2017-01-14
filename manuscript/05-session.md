@@ -43,6 +43,8 @@ session from within tmux!
 |`Prefix` + `)`    | Switch the attached client to the next session.    |
 |`Prefix` + `L`    | Switch the attached client back to the last        |
 |                  | session.                                           |
+|`Prefix` + `s`    | Select a new session for the attached client       |
+|                  | interactively.                                     |
 
 `Prefix` + `s` will allow you to switch between sessions within the same tmux
 client.
@@ -57,15 +59,6 @@ Example usage:
 
 This will switch to a session named "dev", if it exists.  No need to enter the
 `target-client` if you're in a client already.
-
-## Moving around
-
-You can move around between sessions as well.
-
-| Shortcut         | Action                                             |
-|------------------|----------------------------------------------------|
-|`Prefix` + `s`    | Select a new session for the attached client       |
-|                  | interactively.                                     |
 
 ## Naming sessions
 
