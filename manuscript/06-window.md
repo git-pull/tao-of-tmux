@@ -2,6 +2,9 @@
 
 Windows hold [panes](#panes). They reside within a [session](#sessions).
 
+They also have [layouts](#window-layouts), which can be one of many preset
+dimensions or a custom one done through [pane resizing](#pane-resizing).
+
 ![](images/info/window.png)
 
 You can see the current open windows through the [status bar](#status-bar).
