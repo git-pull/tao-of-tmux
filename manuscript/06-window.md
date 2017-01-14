@@ -115,6 +115,16 @@ To apply that layout, do this:
 
 ## Closing windows
 
+From inside the current window, try this:
+
 {language=shell, line-numbers=off}
     $ tmux kill-window
 
+Another thing, when [scripting](#scripting-tmux) or trying to kill the window
+from outside, use a [target](#targets) of the window index:
+
+{language=shell, line-numbers=off}
+    $ tmux kill-window -t2
+
+You can easily find the window index through the middle section of the [status
+line](#status-line).
