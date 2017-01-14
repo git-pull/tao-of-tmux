@@ -37,8 +37,6 @@ Some acquire the habit of detaching their tmux client and reattaching via
 `tmux att -t session_name`. Thankfully, you have the ability to switch to
 session from within tmux!
 
-### Keystroke
-
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
 |`Prefix` + `(`    | Switch the attached client to the previous session.|
@@ -49,16 +47,12 @@ session from within tmux!
 `Prefix` + `s` will allow you to switch between sessions within the same tmux
 client.
 
-### Command line
-
 This command name can be a bit confusing. `switch-client` will allow you to
 traverse between sessions in the [server](#server).
 
-{language=shell, line-numbers=off}
-    $ tmux switch-client [-Elnpr] [-c target-client] [-t target-session]
-
 Example usage:
 
+{language=shell, line-numbers=off}
     $ tmux switch-client -t dev
 
 This will switch to a session named "dev", if it exists.  No need to enter the
@@ -91,18 +85,11 @@ inside that session from the outside. Sometimes you may forget you already have
 a project opened that is a few days old and you can just re-attach or switch to
 that.
 
-### Keystroke
+You can rename sessions from within tmux with `Prefix` + `$`.  The status bar
+will be temporarily altered into a text field to allow altering the session
+name.
 
-You can rename sessions from within tmux with `Prefix` + `$`. 
-The status bar will be temporarily altered into a text field to allow altering
-the session name.
-
-### Command line
-
-{language=shell, line-numbers=off}
-    $ tmux rename-session [-t target-session] new-name
-
-Example usage:
+Through command line, you can try:
 
 {language=shell, line-numbers=off}
     $ tmux rename-session -t1 "my session"
