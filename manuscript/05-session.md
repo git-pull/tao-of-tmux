@@ -103,3 +103,10 @@ But if it doesn't, you'll get something like this in a response:
 {language=shell, line-numbers=off}
     $ tmux has-session -t1
     > can't find session 4
+
+To try it in a shell script:
+
+{language=shell, line-numbers=off}
+    if tmux has-session -t0 ; then
+        echo "has session 0"
+    fi
