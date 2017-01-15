@@ -33,8 +33,8 @@ be followed by a symbol:
 
 `status-left` and `status-right` accepts variables for the date. 
 
-This happens via piping the status templates through `format_expand_time` in
-`format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
+This happens via piping the status templates through [`format_expand_time`](https://github.com/tmux/tmux/blob/2.3/format.c#L868)
+in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
 from `time.h`.
 
 For a full list of the variables you can use, view the documentation for
