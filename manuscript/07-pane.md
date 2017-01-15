@@ -75,14 +75,14 @@ Resizing a pane in a specific layout may subsequently resize that whole row.
 
 | Shortcut         | Action              |
 |------------------|---------------------|
-|`prefix M-Up`     | `resize-pane -U 5`  |
-|`prefix M-Down`   | `resize-pane -D 5`  |
-|`prefix M-Left`   | `resize-pane -L 5`  |
-|`prefix M-Right`  | `resize-pane -R 5`  |
-|`prefix C-Up`     | `resize-pane -U`    |
-|`prefix C-Down`   | `resize-pane -D`    |
-|`prefix C-Left`   | `resize-pane -L`    |
-|`prefix C-Right`  | `resize-pane -R`    |
+|`Prefix M-Up`     | `resize-pane -U 5`  |
+|`Prefix M-Down`   | `resize-pane -D 5`  |
+|`Prefix M-Left`   | `resize-pane -L 5`  |
+|`Prefix M-Right`  | `resize-pane -R 5`  |
+|`Prefix C-Up`     | `resize-pane -U`    |
+|`Prefix C-Down`   | `resize-pane -D`    |
+|`Prefix C-Left`   | `resize-pane -L`    |
+|`Prefix C-Right`  | `resize-pane -R`    |
 
 ## Outputting pane to a file
 
