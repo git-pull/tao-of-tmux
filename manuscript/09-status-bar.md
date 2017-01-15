@@ -45,6 +45,21 @@ typing `$ man strftime`.
 
 You can also call applications such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load).
 
+## Styling
+
+You can use `[bg=color]` and `[fg=color]` to adjust the text color and
+background within for status line text. 
+
+### Prompt colors
+
+The benefit of wrapping your around this type of styling is you will see it
+`message-command-style`, `message style` and so on.
+
+Let's try this:
+
+{language=shell, line-numbers=off}
+    $ tmux set-option -ag message-style fg=yellow,blink\; set-option -ag message-style bg=black
+
 ## Turn your status line off
 
 Turn it off:
