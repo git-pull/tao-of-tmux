@@ -29,9 +29,15 @@ be followed by a symbol:
 | M      | The window contains the marked pane.                             |
 | Z      | The window's active pane is zoomed.                              |
 
-## Variables
+## Date and time
 
-## External Calls
+`status-left` and `status-right` accepts variables for the date. 
+
+This happens via piping the status templates through `format_expand_time` in
+`format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
+from `time.h`.
+
+## Shell command output
 
 You can also call applications such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load).
 
