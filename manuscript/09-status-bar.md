@@ -60,6 +60,8 @@ Let's try this:
 {language=shell, line-numbers=off}
     $ tmux set-option -ag message-style fg=yellow,blink\; set-option -ag message-style bg=black
 
+![Top: default scheme for prompt. Bottom: newly-styled.](images/09-status-bar/prompt.png)
+
 ## Turn your status line off
 
 Turn it off:
