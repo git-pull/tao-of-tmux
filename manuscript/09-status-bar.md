@@ -99,4 +99,12 @@ Configs can print the output of an application. In this example,
 [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load) is providing
 system statistics in the right side section of the status line.
 
+In order to get tmux-mem-cpu-load built you have to install
+[CMake](https://cmake.org/) and have a C++ compiler like
+[clang](http://clang.llvm.org/) or [GCC](https://gcc.gnu.org/).
+
+On Ubuntu, Debian and Mint machines you can do this via `$ sudo apt-get install
+cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew install
+cmake`.
+
 Source: <https://github.com/tony/tmux-config>
