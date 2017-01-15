@@ -86,3 +86,20 @@ Through command line, you can try:
 {language=shell, line-numbers=off}
     $ tmux rename-session -t1 "my session"
 
+## Does my session exist?
+
+If you're scripting tmux, you will want to be able to see if a session alredy
+exists. `has-session` will return a 0 [exit code](https://en.wikipedia.org/wiki/Exit_status)
+if the session exists, but will report a 1 exit code *and* print an error if a
+session does not exist.
+
+{language=shell, line-numbers=off}
+    $ tmux has-session -t1
+
+It's assume the session "1" exists, it'll just return 0 with no output.
+
+But if it doesn't, you'll get something like this in a response:
+
+{language=shell, line-numbers=off}
+    $ tmux has-session -t1
+    > can't find session 4
