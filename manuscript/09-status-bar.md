@@ -29,11 +29,9 @@ be followed by a symbol:
 | M      | The window contains the marked pane.                             |
 | Z      | The window's active pane is zoomed.                              |
 
-## Customizing the left and right fields
+## Variables
 
-### Variables
-
-### External Calls
+## External Calls
 
 You can also call applications such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load).
 
