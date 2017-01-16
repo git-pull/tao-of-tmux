@@ -222,11 +222,3 @@ complete list.
 | socket_path           |Server socket path                        |
 | start_time            |Server start time                         |
 | pid                   |Server PID                                |
-
-## Command prompts
-
-tmux scripting
-
-## Tables
-
-Multiple prefixes
