@@ -160,12 +160,12 @@ So let's try that:
             if command -v entr > /dev/null; then ${WATCH_FILES} | \
             entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
 
-`$(MAKE)` is helpful for portability in the event of recursive calls into
-`make`, such as here. On BSD systems, I may try invoking `make` via `gmake`
+`$(MAKE)` is used for portability purposes. One reason is recursive calls, such
+as here. On BSD systems, you may try invoking `make` via `gmake`
 (to call [GNU Make](https://www.gnu.org/software/make/) specifically). This
-ended up happening to me personally building PDF's for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
+ended up happening to me personally while building PDF's for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
 I've since [wrote a patch](https://github.com/liuxinyu95/AlgoXY/pull/16) to
-property use `$(MAKE)` for recursive calls.
+properly use `$(MAKE)` for recursive calls.
 
 The `$(test)` after `go test` allows passing a shell variable with arguments
 in it. So you could do `make watch_test test='-i'`. For examples of a similar
