@@ -62,6 +62,28 @@ Let's try this:
 
 ![Top: default scheme for prompt. Bottom: newly-styled.](images/09-status-bar/prompt.png)
 
+## Tweaking your status bar, live!
+
+So you want to customize your tmux status line before you write the changes to
+your [config](#config) file.
+
+First start by grabbing your current status line section you want to edit, for
+instance:
+
+{language=shell, line-numbers=off}
+    $ tmux show-options -g status-left
+    > status-left "[#S] "
+    $ tmux show-options -g status-right
+    > status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+
+Also, you can try to snip the variable off with `| cut -d' ' -f2-`:
+
+{language=shell, line-numbers=off}
+    $ tmux show-options -g status-left | cut -d' ' -f2-
+    > "[#S] "
+    $ tmux show-options -g status-right | cut -d' ' -f2-
+    > " "#{=21:pane_title}" %H:%M %d-%b-%y"
+
 ## Turn your status line off
 
 Turn it off:
