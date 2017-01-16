@@ -144,6 +144,12 @@ since version 1.8. Some of the most commonly used formats as of tmux 2.3 are
 listed below. See the [appendix section on formats](#appendix-formats) for a
 complete list.
 
+Let's try to output it:
+
+{language=shell, line-numbers=off}
+    $ tmux list-windows -F "#{window_id} #{window_name}"
+    > @0 zsh
+
 ### Panes
 
 {width="wide"}
