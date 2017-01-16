@@ -61,3 +61,8 @@ I> Now you can type `prefix` + `r` to get the config to reload.
 The tmux configuration is processed just like [run commands](https://en.wikipedia.org/wiki/Run_commands)
 in a `~/.zshrc` or `~/.bashrc` file. `bind r source ~/.tmux.conf` in the tmux
 configuration is the same as `$ tmux bind r source ~/.tmux.conf`.
+
+To get these to work correctly, you have to set your fonts up to handle the
+powerline symbols. The easiest way to use this is install the [powerline
+fonts](https://github.com/powerline/fonts) which are a great collection of fixed
+width coder fonts which look great in termminal.
