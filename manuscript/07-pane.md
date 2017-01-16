@@ -90,3 +90,6 @@ You can output the display of a pane to a file.
 
 {language=shell, line-numbers=off}
     $ tmux pipe-pane -o 'cat >>~/output.#I-#P'
+
+The `#I` and `#P` are [formats](#formats) for window index and pane index, so
+the file created is unique. Clever!
