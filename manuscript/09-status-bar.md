@@ -70,7 +70,7 @@ your [config](#config) file.
 First start by grabbing your current status line section you want to edit, for
 instance:
 
-{language=shell, line-numbers=off}
+{line-numbers=off}
     $ tmux show-options -g status-left
     > status-left "[#S] "
     $ tmux show-options -g status-right
@@ -78,7 +78,7 @@ instance:
 
 Also, you can try to snip the variable off with `| cut -d' ' -f2-`:
 
-{language=shell, line-numbers=off}
+{line-numbers=off}
     $ tmux show-options -g status-left | cut -d' ' -f2-
     > "[#S] "
     $ tmux show-options -g status-right | cut -d' ' -f2-
