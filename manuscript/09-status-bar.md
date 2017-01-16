@@ -44,12 +44,8 @@ typing `$ man strftime`.
 ## Shell command output
 
 You can also call applications such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load)
-and [conky](https://github.com/brndnmtthws/conky).
-
-By far the most full-featured solution available for tmux status lines is
-[powerline](https://github.com/powerline/powerline/), which heavily utilizes the
-shell command outputs to not only give direct system statistics, but to also
-generate tmux-friendly styling alongside emojis.
+and [conky](https://github.com/brndnmtthws/conky), as well as
+[powerline](#powerline).
 
 ## Styling
 
@@ -161,3 +157,10 @@ cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew install
 cmake`.
 
 Source: <https://github.com/tony/tmux-config>
+
+## Example: Powerline
+
+By far the most full-featured solution available for tmux status lines is
+[powerline](https://github.com/powerline/powerline/), which heavily utilizes the
+shell command outputs to not only give direct system statistics, but to also
+generate tmux-friendly styling alongside emojis.
