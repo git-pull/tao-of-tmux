@@ -63,7 +63,7 @@ The benefit of wrapping your around this type of styling is you will see it
 
 Let's try this:
 
-{language=shell, line-numbers=off}
+{lang="shell", line-numbers=off}
     $ tmux set-option -ag message-style fg=yellow,blink\; set-option -ag message-style bg=black
 
 ![Top: default scheme for prompt. Bottom: newly-styled.](images/09-status-bar/prompt.png)
@@ -76,7 +76,7 @@ your [config](#config) file.
 First start by grabbing your current status line section you want to edit, for
 instance:
 
-{language=none, line-numbers=off}
+{lang="text", line-numbers=off}
     $ tmux show-options -g status-left
     > status-left "[#S] "
     $ tmux show-options -g status-right
@@ -84,7 +84,7 @@ instance:
 
 Also, you can try to snip the variable off with `| cut -d' ' -f2-`:
 
-{language=none, line-numbers=off}
+{lang="text", line-numbers=off}
     $ tmux show-options -g status-left | cut -d' ' -f2-
     > "[#S] "
     $ tmux show-options -g status-right | cut -d' ' -f2-
