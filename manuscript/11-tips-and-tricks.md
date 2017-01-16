@@ -65,8 +65,8 @@ moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 In my never ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
-patterns to get 'instant feedback' upon file changes, I've become the
-internet's unofficial connoisseur on them.
+patterns. In an effort to get that perfect feedback look upon files changing,
+I've gradually become the internet's unofficial connoisseur on them.
 
 What this kind of application does is wait for a file to be updated, then
 executes a custom command, like restarting a server, rebuilding an application,
