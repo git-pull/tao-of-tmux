@@ -43,9 +43,9 @@ up to you.
 
 I've helped thousands learn tmux through my free resource under the name
 [The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html), which I
-kept as part of the documentation for the tmuxp session manager. And now, it's
-been expanded into a full blown book with refined graphics, examples and much
-more.
+kept as part of the documentation for the [tmuxp session manager](https://github.com/tony/tmuxp).
+And now, it's been expanded into a full blown book with refined graphics,
+examples and much more.
 
 You do not need a book to use or understand tmux. If you want a technical
 manual, look at the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
