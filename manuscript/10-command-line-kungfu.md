@@ -2,6 +2,12 @@
 
 The command line in tmux is one of those areas often uncharted.
 
+I will use some tables in this chapter. Never get a feeling that you should
+commit a table to memory immediately. Not my intention, but every person's way
+of using tmux is slightly different, I want to be able to cover a points most
+likely benefits for more people's flows. Full tables are in the
+[cheatsheets](#appendix-cheatsheets).
+
 ## Aliases {#aliases}
 
 tmux supports a variety of alias commands. So don't feel you always have to type
