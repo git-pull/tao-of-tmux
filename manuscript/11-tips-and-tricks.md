@@ -24,9 +24,9 @@ to point to the MOST binary. You can test is like this:
 If you found that you like `most`, you'll probably want to make it your default
 manpage reader. You can do this by setting an environmental variable in your
 "rc" ([Run Commands](https://en.wikipedia.org/wiki/Run_commands)) for your
-shell. Depending on your shell (you can use `$ echo $SHELL` to find it on most
-shells). In Bash and zsh, these are kept in `~/.bashrc` or `~/.zshrc`,
-respectively:
+shell. The location of the file depends on your shell. You can use `$ echo
+$SHELL` to find it on most shells). In Bash and zsh, these are kept in
+`~/.bashrc` or `~/.zshrc`, respectively:
 
 {language=shell, line-numbers=off}
     export PAGER="most"
