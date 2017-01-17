@@ -41,16 +41,23 @@ up to you.
 
 ## About this book
 
-This book is currently under development. It's available to read for
-[free on the web](https://leanpub.com/the-tao-of-tmux/read).
+I've helped thousands learn tmux through my free resource under the name
+[The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html), which I
+kept as part of the documentation for the tmuxp session manager. And now, it's
+been expanded into a full blown book with refined graphics, examples and much
+more.
 
 You do not need a book to use or understand tmux. But if such a book exists, let
-this be the one.
+this be the one. This book breaks down tmux by the way of its objects, from
+servers down to panes. It also includes a rehash of terminal facilities we use
+every day to keep us autodidacts up to speed with what is what. On top of that,
+I've included numerous examples of projects, permissively licensed source code
+and workflows. It's the culmination of years of explaining tmux to others online
+and in person.
 
 tmux is a tool I find incredibly useful. While I don't attach it to my personal
-identity, it's been part of my daily life for years. I've helped thousands learn
-tmux through my free resource under the name [The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html),
-written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
+identity, it's been part of my daily life for years. In addition to the original
+resource, I've written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
 a [pythonic tmux library](https://github.com/tony/libtmux), and a
 [tmux session manager](https://github.com/tony/tmuxp).
 
