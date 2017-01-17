@@ -54,6 +54,10 @@ your current flow:
 | swap-window      | swapw     |
 | unlink-window    | unlinkw   |
 
+If you already know the full name of the command, if you were to chop the hyphen
+(-) from the command and add the first letter of the last word, you'd get the
+shortcut. e.g. **swap**-*w**indow is *swapw, **split**-**w**indow is splitw.
+
 ## Pattern matching {#fnmatch}
 
 tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
