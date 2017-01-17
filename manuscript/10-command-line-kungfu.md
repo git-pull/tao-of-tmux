@@ -57,7 +57,7 @@ your current flow:
 
 If you already know the full name of the command, if you were to chop the hyphen
 (-) from the command and add the first letter of the last word, you'd get the
-shortcut. e.g. **swap**-*w**indow is *swapw, **split**-**w**indow is splitw.
+shortcut. e.g. **swap**-**w**indow is swapw, **split**-**w**indow is splitw.
 
 ## Pattern matching {#fnmatch}
 
