@@ -11,6 +11,8 @@ In the world of modern computing, user interaction has 2 realms:
 tmux lives in the graphical realm in which fixed-width fonts appear in
 a rectangular grid in a window, like in a terminal from the 1980s.
 
+![](images/info/server-with-laptop.png)
+
 ## Window manager for the terminal
 
 tmux is to the console what a desktop is to gui apps. It's a world inside the
