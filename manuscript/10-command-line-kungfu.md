@@ -37,6 +37,7 @@ your current flow:
 | list-windows     | lsw       |
 | move-pane        | movep     |
 | move-window      | movew     |
+| new-session      | new      |
 | new-window       | neww      |
 | next-layout      | nextl     |
 | next-window      | next      |
@@ -85,6 +86,12 @@ and so on, until:
 {language=shell, line-numbers=off}
     $ tmux new-
     ambiguous command: new-, could be: new-session, new-window
+
+The limitation, as seen above, is command matches can collide. There are
+multiple commands which begin with `new-`. So, if you wanted to use matches,
+`$ tmux new-s` for a new session, or `$ tmux new-w` for a new window would be
+the most efficient way. But the alias of `$ tmux new` for new session and
+`$ tmux neww` for new windows is even better than the matching in that case.
 
 ## Targets {#targets}
 
