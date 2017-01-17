@@ -42,6 +42,19 @@ found:
         export PAGER="most"
     fi
 
+So save that to a file, let's say `~/.dot-config/most.sh`.
+
+Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) is in via
+your main rc file.
+
+{language=shell, line-numbers=off}
+    source $HOME/.dot-config/most.sh
+
+If you keep that pattern (or something close to it), you're on your way to have
+a cross-platform, modular dot config. If you need some inspiration you can check
+my public permissively licensed config at <https://github.com/tony/.dot-config>.
+I document it pretty well and welcome you to copy/paste from it too.
+
 ## Log tailing
 
 Not tmux specific, but powerful when used in tandem with it. You can run a
