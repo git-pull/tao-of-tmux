@@ -65,4 +65,4 @@ configuration is the same as `$ tmux bind r source ~/.tmux.conf`.
 To get these to work correctly, you have to set your fonts up to handle the
 powerline symbols. The easiest way to use this is install the [powerline
 fonts](https://github.com/powerline/fonts) which are a great collection of fixed
-width coder fonts which look great in termminal.
+width coder fonts which look great in terminal.
