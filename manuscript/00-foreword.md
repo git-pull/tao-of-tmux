@@ -47,13 +47,14 @@ kept as part of the documentation for the tmuxp session manager. And now, it's
 been expanded into a full blown book with refined graphics, examples and much
 more.
 
-You do not need a book to use or understand tmux. But if such a book exists, let
-this be the one. This book breaks down tmux by the way of its objects, from
-servers down to panes. It also includes a rehash of terminal facilities we use
-every day to keep us autodidacts up to speed with what is what. On top of that,
-I've included numerous examples of projects, permissively licensed source code
-and workflows designed for efficiency in the world of the terminal. It's the
-culmination of years of explaining tmux to others online and in person.
+You do not need a book to use or understand tmux. If you want a technical
+manual, look at the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
+This book breaks down tmux by the way of its objects, from servers down to
+panes. It also includes a rehash of terminal facilities we use every day to keep
+us autodidacts up to speed with what is what. On top of that, I've included
+numerous examples of projects, permissively licensed source code and workflows
+designed for efficiency in the world of the terminal. It's the culmination of
+years of explaining tmux to others online and in person.
 
 tmux is a tool I find incredibly useful. While I don't attach it to my personal
 identity, it's been part of my daily life for years. In addition to the original
@@ -63,9 +64,6 @@ a [pythonic tmux library](https://github.com/tony/libtmux), and a
 
 I am writing this from vim running in a tmux pane, inside a window, in a session, on
 the server, through a client.
-
-This is a learning book. If you want a technical manual, look at the
-[manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
 
 A word to absolute beginners: don't feel you need to grasp the concepts
 of the command line and terminal multiplexing in a single sitting. You have the
