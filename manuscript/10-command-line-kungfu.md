@@ -22,6 +22,7 @@ your current flow:
 {width="narrow"}
 | Command          | Alias     |
 |------------------|-----------|
+| attach-sesion    | attach    |
 | break-pane       | breakp    |
 | capture-pane     | capturep  |
 | display-panes    | displayp  |
@@ -63,8 +64,10 @@ shortcut. e.g. **swap**-*w**indow is *swapw, **split**-**w**indow is splitw.
 tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
 
-For instance, you don't need to type `$ tmux attach` every time. `$ tmux attac`,
-`$ tmux att`, `$ tmux at` and `$ tmux a` work as well.
+For instance, you don't need to type `$ tmux attach-session` every time. First
+there's the [alias](#aliases) of `$ tmux attach`, but *in addition* to that, you
+can pattern match `$ tmux attac`, `$ tmux att`, `$ tmux at` and `$ tmux a` work
+as well.
 
 Every tmux command has shorthands, let's try this for `$ tmux new-session`:
 
