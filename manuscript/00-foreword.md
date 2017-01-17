@@ -52,8 +52,8 @@ this be the one. This book breaks down tmux by the way of its objects, from
 servers down to panes. It also includes a rehash of terminal facilities we use
 every day to keep us autodidacts up to speed with what is what. On top of that,
 I've included numerous examples of projects, permissively licensed source code
-and workflows. It's the culmination of years of explaining tmux to others online
-and in person.
+and workflows designed for efficiency in the world of the terminal. It's the
+culmination of years of explaining tmux to others online and in person.
 
 tmux is a tool I find incredibly useful. While I don't attach it to my personal
 identity, it's been part of my daily life for years. In addition to the original
