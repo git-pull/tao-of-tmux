@@ -170,13 +170,16 @@ I will update digital versions of the book with the changes where applicable.
 
 This book was written for tmux 2.3, released September 2016.
 
+As of January 2017, it's pretty trivial for me to push out minor changes to
+this book on Leanpub and Amazon.
+
 tmux does intermittently receive updates. I've accommodated many of them over
 the past 5 or so years on my personal configurations as well as software
-libraries.
+libraries which are set with [continuous integration tests against multiple tmux
+versions](https://github.com/tony/libtmux/blob/master/.travis.yml). Sometimes
+publishers overplay version numbers to make it seem as if its worth striking a
+new edition of a book over it. It's effective for them, but I'd rather be honest
+to my readership.
 
-Refer to tmux's [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES)
-file for updates on what changes and when.
-
-As of November 2016, it's pretty trivial for me to push out minor changes to this book on
-Leanpub and Amazon. So don't worry about having to pay unless tmux
-radically changes.
+You can refer to tmux's [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES)
+for a list of changes between versions.
