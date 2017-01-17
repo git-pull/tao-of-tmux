@@ -164,3 +164,5 @@ By far the most full-featured solution available for tmux status lines is
 [powerline](https://github.com/powerline/powerline/), which heavily utilizes the
 shell command outputs to not only give direct system statistics, but to also
 generate tmux-friendly styling alongside emojis.
+
+![Powerline requires a specialized font](images/09-status-bar/powerline.png)
