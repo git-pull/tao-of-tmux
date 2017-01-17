@@ -49,12 +49,15 @@ more.
 
 You do not need a book to use or understand tmux. If you want a technical
 manual, look at the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
-This book breaks down tmux by the way of its objects, from servers down to
-panes. It also includes a rehash of terminal facilities we use every day to keep
-us autodidacts up to speed with what is what. On top of that, I've included
-numerous examples of projects, permissively licensed source code and workflows
-designed for efficiency in the world of the terminal. It's the culmination of
-years of explaining tmux to others online and in person.
+Manpages, however, are almost never sufficient to truly wrap your brain around
+abstract concepts, they're their for reference. This learning book is the
+culmination of years of explaining tmux to others online and in person.
+
+In this book we will break down tmux by the way of its objects, from servers
+down to panes. It also includes a rehash of terminal facilities we use every day
+to keep us autodidacts up to speed with what is what. On top of that, I've
+included numerous examples of projects, permissively licensed source code and
+workflows designed for efficiency in the world of the terminal.
 
 tmux is a tool I find incredibly useful. While I don't attach it to my personal
 identity, it's been part of my daily life for years. In addition to the original
