@@ -159,6 +159,8 @@ It's also available to read for [free on the web](https://leanpub.com/the-tao-of
 
 ## Errata {#errata}
 
+This is my first book. I am human and make mistakes.
+
 If you find errors in this book please submit them to me at tao.of.tmux <AT>
 nospam git-pull.com.
 
