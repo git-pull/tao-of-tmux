@@ -38,6 +38,7 @@ text dimension. Inside tmux you can:
 
 Just like in a graphical desktop environment, they throw in a clock too.
 
+{width=75%}
 ![KDE, top-left. Windows 10, top-right. macOS Sierra, center. tmux 2.3 default status bar, bottom.](images/01-thinking-tmux/clocks.png)
 
 ## Multitasking
