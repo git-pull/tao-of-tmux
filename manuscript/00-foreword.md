@@ -152,6 +152,8 @@ one is for you.
 terminal tutorials you can use in conjunction with tmux to improve your day to
 day development and administration experience.
 
+[Cheatsheets](#appendix-cheatsheets) are organized tables of commands, shortcuts
+and formats grouped by section.
 
 ## Donations
 
