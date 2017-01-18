@@ -20,41 +20,45 @@ take a glance at the table and see if you can pick out a couple that'd optimize
 your current flow:
 
 {width="narrow"}
-| Command          | Alias     |
-|------------------|-----------|
-| attach-sesion    | attach    |
-| break-pane       | breakp    |
-| capture-pane     | capturep  |
-| display-panes    | displayp  |
-| find-window      | findw     |
-| join-pane        | joinp     |
-| kill-pane        | killp     |
-| kill-window      | killw     |
-| last-pane        | lastp     |
-| last-window      | last      |
-| link-window      | linkw     |
-| list-panes       | lsp       |
-| list-windows     | lsw       |
-| move-pane        | movep     |
-| move-window      | movew     |
-| new-session      | new      |
-| new-window       | neww      |
-| next-layout      | nextl     |
-| next-window      | next      |
-| pipe-pane        | pipep     |
-| previous-layout  | prevl     |
-| previous-window  | prev      |
-| rename-window    | renamew   |
-| resize-pane      | resizep   |
-| respawn-pane     | respawnp  |
-| respawn-window   | respawnw  |
-| rotate-window    | rotatew   |
-| select-layout    | selectl   |
-| select-pane      | selectp   |
-| split-window     | splitw    |
-| swap-pane        | swapp     |
-| swap-window      | swapw     |
-| unlink-window    | unlinkw   |
+| Command             | Alias     |
+|---------------------|-----------|
+| attach-sesion       | attach    |
+| break-pane          | breakp    |
+| capture-pane        | capturep  |
+| display-panes       | displayp  |
+| find-window         | findw     |
+| join-pane           | joinp     |
+| kill-pane           | killp     |
+| kill-window         | killw     |
+| last-pane           | lastp     |
+| last-window         | last      |
+| link-window         | linkw     |
+| list-panes          | lsp       |
+| list-windows        | lsw       |
+| move-pane           | movep     |
+| move-window         | movew     |
+| new-session         | new       |
+| new-window          | neww      |
+| next-layout         | nextl     |
+| next-window         | next      |
+| pipe-pane           | pipep     |
+| previous-layout     | prevl     |
+| previous-window     | prev      |
+| rename-window       | renamew   |
+| resize-pane         | resizep   |
+| respawn-pane        | respawnp  |
+| respawn-window      | respawnw  |
+| rotate-window       | rotatew   |
+| select-layout       | selectl   |
+| select-pane         | selectp   |
+| set-option          | set       |
+| set-window-option   | setw      |
+| show-options        | show      |
+| show-window-options | showw     |
+| split-window        | splitw    |
+| swap-pane           | swapp     |
+| swap-window         | swapw     |
+| unlink-window       | unlinkw   |
 
 If you already know the full name of the command, if you were to chop the hyphen
 (-) from the command and add the first letter of the last word, you'd get the
