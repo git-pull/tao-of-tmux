@@ -71,11 +71,11 @@ You've detached the tmux session you were in.
 
 If you use Linux or similar system, you've likely brushed through [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
 such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), [`jobs(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html)
-before. tmux behavior feels similar, it feels like you ran `<ctrl-z>` and sent
-except technically you were in a "job" all along, you were just using a client
-to view it.
+before. tmux behavior feels similar, it feels like you ran `<ctrl-z>` except
+technically you were in a "job" all along, you were just using a client to view
+it.
 
-A better way of putting it: `<Ctrl-b> d` closed the client connection, therefore
+Another way of understanding it: `<Ctrl-b> d` closed the client connection, therefore
 'detached' from the session.
 
 Your tmux client disconnected from the server instance. The session however is
