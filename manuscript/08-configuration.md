@@ -92,3 +92,10 @@ Set the starting number (base index) for windows:
     set -g base-index 1
 
 Will make newly created windows start at 1 and count upwards.
+
+Customize your [prefix key](#prefix-key):
+
+{line-numbers=off}
+    bind-key a send-prefix
+
+In the next chapter, we will go into configuring the [status line](#status-bar).
