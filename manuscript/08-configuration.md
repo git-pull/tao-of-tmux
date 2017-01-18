@@ -103,4 +103,7 @@ Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 {line-numbers=off}
     bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
 
+For more ideas, I have a `.tmux.conf` you can copy-paste from on the internet at
+<https://github.com/tony/tmux-config/blob/master/.tmux.conf>.
+
 In the next chapter, we will go into configuring the [status line](#status-bar).
