@@ -36,7 +36,7 @@ text dimension. Inside tmux you can:
 |Pane               |Application           |Performs operations                |
 
 
-Heck, you even get a clock. Just like in a graphical desktop environment.
+Just like in a graphical desktop environment, they throw in a clock too.
 
 ![KDE, top-left. Windows 10, top-right. macOS Sierra, center. tmux 2.3 default status bar, bottom.](images/01-thinking-tmux/clocks.png)
 
