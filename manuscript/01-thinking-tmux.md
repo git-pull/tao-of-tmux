@@ -96,13 +96,12 @@ Detaching can be especially useful on:
 - Local machines. You start all your normal terminal applications within
   a tmux session, you restart X. Instead of losing your processes as your
   normally would if you were using an X terminal like xterm or konsole, you'd
-  be able to `tmux attach` after and find all processes were alive and kicking
-  all along :)
+  be able to `tmux attach` after and find all processes that were alive and
+  kicking all along. :)
 - Remote SSH applications and workspaces you run in tmux. You
   can detach your tmux workspace at work before you clock out, then next morning
   reattach your session. Ahhh. Refreshing. :)
-  
-  Those servers you rarely log into. It could be that cloud instance you have
+- Those servers you rarely log into. It could be that cloud instance you have
   that you log into 9 months later, and as a reflex, `tmux attach` to see if
   there we anything on there. And boom, you're back in a session that's 9 months
   old. It's like a hack to restore your short term memory.
