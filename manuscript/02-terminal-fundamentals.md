@@ -176,7 +176,7 @@ Context is key. It could be:
   shell and see what happens.", (Press q to quit.)
 - A server they have to log into. Before the era of the cloud, it would be
   popular for small hosts to sell "C Shells" with root access.
-- A shell within a tmux [pane](#panes)
+- A shell within a tmux [pane](#panes).
 - If scripting is mentioned, it is likely either the script itself, the
   scripting issue at hand or something about the shell language.
 
