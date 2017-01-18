@@ -254,11 +254,6 @@ position:
 {width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
-| command_hooked        |Name of command hooked, if any            |
-| command_name          |Name of command in use, if any            |
-| command_list_name     |Command name if listing commands          |
-| command_list_alias    |Command alias if listing commands         |
-| command_list_usage    |Command usage if listing commands         |
 | host                  |Hostname of local host (alias: #H)        |
 | host_short            |Hostname of local host (no domain name)   |
 |                       |(alias: #h)                               |
