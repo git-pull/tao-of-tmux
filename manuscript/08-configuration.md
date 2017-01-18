@@ -76,3 +76,19 @@ Is the same as having no `.tmux.conf` (or `$ tmux -f/dev/null`) and typing:
 
 {language=shell, line-numbers=off}
     $ tmux bind-key a send-prefix
+
+## Common options
+
+Tweak wait time between key sequences:
+
+{line-numbers=off}
+    set -s escape-time 0
+
+`-s` sets the option server wide.
+
+Set the starting number (base index) for windows:
+
+{line-numbers=off}
+    set -g base-index 1
+
+Will make newly created windows start at 1 and count upwards.
