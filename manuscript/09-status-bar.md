@@ -167,9 +167,9 @@ shell command outputs to not only give direct system statistics, but to also
 generate tmux-friendly styling alongside emoji-like glyphs.
 
 To get these to work correctly, you have to set your fonts up to handle the
-powerline symbols. The easiest way to use this is install the [powerline
-fonts](https://github.com/powerline/fonts) which are a great collection of fixed
-width coder fonts which look great in terminal.
+powerline symbols. The easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
+which are a great collection of fixed width coder fonts which look great in
+terminal.
 
 [Installation instructions](https://powerline.readthedocs.io/en/latest/installation.html)
 are on Read the Docs. For a better idea:
