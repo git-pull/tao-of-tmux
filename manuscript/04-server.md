@@ -121,7 +121,7 @@ The default key to enter copy mode is `Prefix` + `[`.
 
 The default key to paste the text copied is `Prefix` + `]`.
 
-I> *Vi-like copy-paste
+I> *Vi-like copy-paste*
 I>
 I> In your [config](#config), put this:
 I>
