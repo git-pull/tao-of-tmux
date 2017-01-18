@@ -98,4 +98,9 @@ Customize your [prefix key](#prefix-key):
 {line-numbers=off}
     bind-key a send-prefix
 
+Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
+
+{line-numbers=off}
+    bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
+
 In the next chapter, we will go into configuring the [status line](#status-bar).
