@@ -22,7 +22,7 @@ installed to) not being in your paths. To find your user site packages base dire
 This will get you something like `/Users/me/Library/Python/2.7` on macOS with
 Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
 
-The applications are in the `bin/` folder insite that. So you need to
+The applications are in the `bin/` folder inside that. So you need to
 concatenate the two and add them to your [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)).
 Try adding one of these in your `~/.bashrc` or `~/.zshrc`:
 
