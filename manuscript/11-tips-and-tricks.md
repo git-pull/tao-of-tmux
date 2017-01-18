@@ -142,7 +142,7 @@ To run this, do `$ make watch_test` in the same directory as the `Makefile`.
 
 But that was a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
-backlash (`\`):
+backslash (`\`):
 
 {language=makefile, line-numbers=off}
     watch_test:
