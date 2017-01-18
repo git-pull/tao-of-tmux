@@ -119,6 +119,10 @@ temporarily placed in while text can be copied.
 
 The default key to enter copy mode is `Prefix` + `[`.
 
+1. From within, use `[space]` to enter copy mode.
+2. Use the arrow keys to adjust the text to be selected.
+3. Press `[enter]` to copy the selected text.
+
 The default key to paste the text copied is `Prefix` + `]`.
 
 I> *Vi-like copy-paste*
