@@ -27,7 +27,7 @@ call each other by our nicks. It's something about how personal
 relationships, formed completely online, persist in real life.
 
 It seemed as if it were orchestrated, but each of us fell into the same ebb and
-flow of living our lives. No one told us to do it, but inch by inch we
+flow of living our lives. No one told us to do it, but bit by bit we
 incrementally optimized our lifestyles personally and professionally to arrive
 at destinations that felt eerily alike.
 
@@ -49,8 +49,8 @@ examples and much more.
 
 You do not need a book to use or understand tmux. If you want a technical
 manual, look at the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
-Manpages, however, are almost never sufficient to truly wrap your brain around
-abstract concepts, they're their for reference. This learning book is the
+Manpages, however, are almost never sufficient to wrap your brain around
+abstract concepts, they're there for reference. This learning book is the
 culmination of years of explaining tmux to others online and in person.
 
 In this book we will break down tmux by the way of its objects, from servers
