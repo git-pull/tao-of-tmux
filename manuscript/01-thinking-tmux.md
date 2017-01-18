@@ -57,23 +57,20 @@ or on a system without X.
 
 Here are a few common scenarios:
 
-Running `tail -F /var/log/apache2/error.log` in a
-pane to get a live stream of the latest system events.
-
-Running a file watcher like [watchman](https://github.com/facebook/watchman),
-[gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
-[grunt-watch](https://github.com/gruntjs/grunt-contrib-watch), [guard](https://github.com/guard/guard)
-or [entr](http://entrproject.org/). On file change, you could do stuff like:
-
-- rebuild LESS or SASS files, minimize CSS and/or assets and static files
-- lint with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint),
-  [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop),
-  [ESLint](http://eslint.org/), or [Flake8](http://flake8.pycqa.org/en/latest/)
-- rebuild with `make` or [`ninja`](https://ninja-build.org/)
-- reload your [Express](http://expressjs.com/) server
-- run any other custom command to your liking
-
-Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
+- Running `tail -F /var/log/apache2/error.log` in a
+  pane to get a live stream of the latest system events.
+- Running a file watcher like [watchman](https://github.com/facebook/watchman),
+  [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
+  [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch), [guard](https://github.com/guard/guard)
+  or [entr](http://entrproject.org/). On file change, you could do stuff like:
+  - rebuild LESS or SASS files, minimize CSS and/or assets and static files
+  - lint with linters like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint),
+    [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop),
+    [ESLint](http://eslint.org/), or [Flake8](http://flake8.pycqa.org/en/latest/)
+  - rebuild with `make` or [`ninja`](https://ninja-build.org/)
+  - reload your [Express](http://expressjs.com/) server
+  - run any other custom command to your liking
+- Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
