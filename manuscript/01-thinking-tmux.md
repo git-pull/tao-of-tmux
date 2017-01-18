@@ -81,9 +81,9 @@ With tmux, you quickly have the makings of an IDE! And on your terms.
 
 ## Keep your applications running in the background
 
-Sometimes GUI applications will have an option to send the application to the
-taskbar to run in the background.  The application is out of the sight, but
-events and notifications can still come in, and the app can be instantly brought
+Sometimes GUI applications will have an option to be sidelined to the system
+tray to run in the background.  The application is out of the sight, but
+events and notifications can still come in and the app can be instantly brought
 to the foreground.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
