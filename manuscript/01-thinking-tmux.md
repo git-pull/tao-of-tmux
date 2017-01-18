@@ -116,7 +116,7 @@ messengers, and get back to your messages when you return.
 
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
-Some (myself included) use it to keep development servers running. Hearty
+Some (myself included) to keep development services running in a session. Hearty
 emphasis on *development*, I would advise daemonizing and wrapping your
 production web applications using a tool like [supervisor](http://supervisord.org/)
 with its own safe environmental settings.
