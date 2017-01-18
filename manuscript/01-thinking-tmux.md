@@ -74,7 +74,7 @@ Here are a few common scenarios:
 while leaving two other open for CLI commands and building via `make` or
 `ninja`.
 
-![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, lldb open in the bottom right](images/01-thinking-tmux/dev-watch.png)
+![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, lldb bottom right](images/01-thinking-tmux/dev-watch.png)
 
 With tmux, you quickly have the makings of an IDE! And on your terms.
 
