@@ -104,10 +104,9 @@ For special circumstances like [tmux on Windows 10](#appendix-windows-bash), I
 decided that adding screenshots is best since many readers may be more
 comfortable with a visual approach.
 
-[*Thinking Tmux*](#thinking-tmux) goes over what
-tmux does and how it relates to the GUI desktops already on our
-computers.  You'll wrap your brain around what tmux is and how it can
-make your life easier.
+[*Thinking Tmux*](#thinking-tmux) goes over what tmux does and how it relates to
+the GUI desktops already on our computers.  You'll understand the big picture of
+what tmux is and how it can make your life easier.
 
 [*Terminal Fundamentals*](#terminal-fundamentals) shows the text-based
 environments you'll be dealing with. It's
