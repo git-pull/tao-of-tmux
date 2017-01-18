@@ -113,8 +113,8 @@ messengers, and get back to your messages when you return.
 
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
-Some keep development services running in a session. Hearty emphasis on 
-development*, you probably will want to daemonize and wrap your production web
+Some keep development services running in a session. Hearty emphasis on
+*development*, you probably will want to daemonize and wrap your production web
 applications using a tool like [supervisor](http://supervisord.org/) with its
 own safe environmental settings.
 
