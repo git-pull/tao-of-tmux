@@ -100,9 +100,9 @@ and hard technical details are in the Appendix. A lot of books tend to use
 installation instructions as filler in the early chapters. For me it's more of
 not wanting to confuse complete beginners.
 
-For special circumstances like tmux on Windows 10, I decided that adding
-screenshots is best since many readers may be more comfortable with a visual
-approach.
+For special circumstances like [tmux on Windows 10](#appendix-windows-bash), I
+decided that adding screenshots is best since many readers may be more
+comfortable with a visual approach.
 
 [*Thinking Tmux*](#thinking-tmux) goes over what
 tmux does and how it relates to the GUI desktops already on our
