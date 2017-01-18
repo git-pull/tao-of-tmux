@@ -69,7 +69,7 @@ Here are a few common scenarios:
     [ESLint](http://eslint.org/), or [Flake8](http://flake8.pycqa.org/en/latest/)
   - rebuild with `make` or [`ninja`](https://ninja-build.org/)
   - reload your [Express](http://expressjs.com/) server
-  - run any other custom command to your liking
+  - run any other custom command of your liking
 - Keeping a text editor like vim, emacs, pico, nano, etc. open in a main pane,
   while leaving two other open for CLI commands and building via `make` or
   `ninja`.
