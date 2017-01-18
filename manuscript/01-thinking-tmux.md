@@ -125,9 +125,9 @@ same active window and pane.
 
 The above are just examples, but any general workspace you'd normally use in a
 terminal for any task can gain the benefit of you being able to persist it! 
-That includes projects or repetitive efforts you'd multitask on. Later in the
-*[tips and tricks](#tips-and-tricks)* section, we will dive into specific flows
-you can start using right now.
+That includes projects or repetitive efforts you'd multitask on. The
+*[tips and tricks](#tips-and-tricks)* section will dive into specific flows
+you can start using today.
 
 Q> ### Do tmux sessions persist after a system restart?
 Q>
