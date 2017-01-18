@@ -125,7 +125,7 @@ Show a notice message to user to install entr if not installed ons system:
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
 
-Here's why you want patterns like that, you can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
+Here's why you want patterns like that: you can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
 and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control)
 so you and other developers can have access to this reusable command across
 different UNIX-like systems, with and without that certain program installed.
