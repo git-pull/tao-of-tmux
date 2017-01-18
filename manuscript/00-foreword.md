@@ -122,17 +122,16 @@ butter uses for you to start using tmux immediately.
 the scenes. You'll think of tmux differently, and may be impressed that
 a client-server architecture could be presented so seamlessly to end users.
 
-[*Sessions*](#sessions) are the containers holding your tmux
-windows. You'll learn what a session is and how it helps organize your
-workspace in the terminal. You'll learn how to manipulate and rename your
-session.
+[*Sessions*](#sessions) are the containers holding windows. You'll learn what
+sessions are and how they helps organize your workspace in the terminal. You'll
+learn how to manipulate and rename and traverse sessions.
 
 [*Windows*](#windows) are what you see when tmux is open in front of you.
 You'll learn how to rename and move windows. 
 
 [*Panes*](#panes) are a terminal in a terminal. This is where you get to work and
-do your magic! You'll learn how to create, delete, move between, and
-copy and paste between panes.
+do your magic! You'll learn how to create, delete, move between, and resize
+panes.
 
 [*Configuration*](#config) discusses customization of tmux via keybindings and
 status line behavior. You'll even learn how to show your CPU and
