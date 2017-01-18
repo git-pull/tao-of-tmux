@@ -48,9 +48,8 @@ keep multiple terminals running on the same screen.
 (After all, that's where the abbreviation "tmux" comes from - **T**erminal
 **Mu**ltiple**x**er.)
 
-In addition to having multiple terminals on one screen, tmux allows you to
-create and link multiple "windows", all within the confines of the tmux session
-you attached.
+In addition multiple terminals on one screen, tmux allows you to create and link
+multiple "windows", all within the confines of the tmux session you attached.
 
 Even better, you can copy and paste as well as scroll. No
 requirement for graphics either, so you have full power even if you're SSH'ing
