@@ -91,7 +91,7 @@ to the foreground.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
 
-This is especially cool on:
+Detaching can be especially useful on:
 
 - Local machines. You start all your normal terminal applications within
   a tmux session, you restart X. Instead of losing your processes as your
@@ -106,6 +106,8 @@ This is especially cool on:
   that you log into 9 months later, and as a reflex, `tmux attach` to see if
   there we anything on there. And boom, you're back in a session that's 9 months
   old. It's like a hack to restore your short term memory.
+
+## Powerful combos
 
 Chatting on [irssi](https://irssi.org/) or [weechat](https://weechat.org/),
 one of the "classic combos", along with a [bitlbee](https://www.bitlbee.org)
@@ -127,7 +129,9 @@ same active window and pane.
 
 The above are just examples, but any general workspace you'd normally use in a
 terminal for any task can gain the benefit of you being able to persist it! 
-That includes projects or repetitive efforts you'd multitask on.
+That includes projects or repetitive efforts you'd multitask on. Later in the
+*[tips and tricks](#tips-and-tricks)* section, we will dive into specific flows
+you can start using right now.
 
 Q> ### Do tmux sessions persist after a system restart?
 Q>
