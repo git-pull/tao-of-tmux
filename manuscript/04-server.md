@@ -67,7 +67,7 @@ session inside that server.
 
 W> ### Advanced: Multiple servers
 W>
-W> tmux is nimble. if you want to use a separate server, pass in
+W> tmux is nimble. If you want to use a separate server, pass in
 W> the `-L` flag to any command.
 W>
 W> `tmux -L moo` - start a new tmux server + session if non-exists under
