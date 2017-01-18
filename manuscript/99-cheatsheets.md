@@ -328,6 +328,20 @@ hand into sections for convenience.
 ### Servers
 
 {width="wide"}
+
+| Variable name         | Description                              |
+|-----------------------|------------------------------------------|
+| host                  |Hostname of local host (alias: #H)        |
+| host_short            |Hostname of local host (no domain name)   |
+|                       |(alias: #h)                               |
+| socket_path           |Server socket path                        |
+| start_time            |Server start time                         |
+| pid                   |Server PID                                |
+
+### Commands
+
+For `$ tmux list-commands`.
+
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | command_hooked        |Name of command hooked, if any            |
@@ -335,9 +349,3 @@ hand into sections for convenience.
 | command_list_name     |Command name if listing commands          |
 | command_list_alias    |Command alias if listing commands         |
 | command_list_usage    |Command usage if listing commands         |
-| host                  |Hostname of local host (alias: #H)        |
-| host_short            |Hostname of local host (no domain name)   |
-|                       |(alias: #h)                               |
-| socket_path           |Server socket path                        |
-| start_time            |Server start time                         |
-| pid                   |Server PID                                |
