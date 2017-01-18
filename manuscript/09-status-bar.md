@@ -180,10 +180,10 @@ are on Read the Docs. For a better idea:
 [psutil](https://github.com/giampaolo/psutil) is a cross-platform tool powerline
 uses to help gather system information.
 
-The first option to get it working with tmux is sourcing `powerline.conf` from
-your config, the only difficulty is nailing down the location across systems and
-python versions. As a way to try getting powerline found across varying
-installations, I use `if-shell`:
+The first option to get powerline working with tmux is sourcing `powerline.conf`
+from your config, the only difficulty is nailing down the location across
+systems and python versions. As a way to try getting powerline found across
+varying installations, I use `if-shell`:
 
 {line-numbers=off}
     # pip install --user git+git://github.com/powerline/powerline
