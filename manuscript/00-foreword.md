@@ -179,6 +179,14 @@ You can also submit a pull request via <https://github.com/git-pull/tao-of-tmux>
 
 I will update digital versions of the book with the changes where applicable.
 
+## Thanks
+
+Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors)
+that helped me spot errors in this book.
+
+Some copy, particularly in [cheatsheets](#cheatsheets) comes straight out
+of the manual of tmux, which is [ISC-licensed](https://github.com/tmux/tmux/blob/master/COPYING).
+
 ## Book Updates and tmux changes
 
 This book was written for tmux 2.3, released September 2016.
