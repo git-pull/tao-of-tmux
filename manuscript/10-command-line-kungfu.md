@@ -2,7 +2,7 @@
 
 The command line in tmux is one of those areas often uncharted.
 
-I will use some tables in this chapter. Never get a feeling that you should
+I will use some tables in this chapter. Never get a feeling that you have to
 commit a table to memory immediately. Not my intention, but every person's way
 of using tmux is slightly different, I want to be able to cover points most
 likely to benefit people's flows. Full tables are in the
