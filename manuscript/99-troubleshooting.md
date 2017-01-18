@@ -11,7 +11,7 @@ via [brew](http://brew.sh).
 {language=shell, line-numbers=off}
     $ brew install reattach-to-user-namespace
 
-## Troubleshooting `tmuxp: command not found` and `powerline: command not found` {#troubleshoot-site-paths}
+## `tmuxp: command not found` and `powerline: command not found` {#troubleshoot-site-paths}
 
 This is due to your site package bin path (where application entry points are
 installed to) not being in your paths. To find your user site packages base directory:
