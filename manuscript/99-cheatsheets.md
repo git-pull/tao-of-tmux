@@ -328,7 +328,6 @@ hand into sections for convenience.
 ### Servers
 
 {width="wide"}
-
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | host                  |Hostname of local host (alias: #H)        |
@@ -342,6 +341,7 @@ hand into sections for convenience.
 
 For `$ tmux list-commands`.
 
+{width="wide"}
 | Variable name         | Description                              |
 |-----------------------|------------------------------------------|
 | command_hooked        |Name of command hooked, if any            |
