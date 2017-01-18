@@ -134,7 +134,7 @@ do your magic! You'll learn how to create, delete, move between, and resize
 panes.
 
 [*Configuration*](#config) discusses customization of tmux and set the
-foundation for how to think about configuration so you can customize your own.
+foundation for how to think about `.tmux.conf` so you can customize your own.
 
 [Status bar](#status-bar) is devoted singularly to the customization of the
 status line in tmux. You'll even learn how to show CPU and memory usage via the
@@ -150,7 +150,7 @@ currently use tmux daily. If you like programming on Unix-like systems, this
 one is for you.
 
 [*Tips and Tricks*](#tips-and-tricks) wraps up with a whirlwind of useful
-terminal tutorials you can use in conjunction with tmux to improve your day to
+terminal tutorials you can use in conjunction with tmux to improve day to
 day development and administration experience.
 
 [Cheatsheets](#appendix-cheatsheets) are organized tables of commands, shortcuts
