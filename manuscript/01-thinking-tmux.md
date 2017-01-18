@@ -90,7 +90,7 @@ background.
 
 In tmux, a similar concept exists where we can "detach" a tmux session.
 
-This is especially cool if:
+This is especially cool on:
 
 - Local machines. You start all your normal terminal applications within
   a tmux session, you restart X. Instead of losing your processes as your
