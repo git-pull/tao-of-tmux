@@ -109,7 +109,7 @@ for them. But a language is a language.
 
 Each shell interpreter has its own language features. Like with shells
 themselves, many will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01)
-and strive to be compatible with it. ZSH and Bash should be able to understand
+and strive to be compatible with it. Zsh and Bash should be able to understand
 POSIX shell script you write, but not the other way around (we will cover that
 in [shell interpreters](#shells)).
 
@@ -117,16 +117,16 @@ in [shell interpreters](#shells)).
 The top of `.sh` files [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
 statement which can invoke shellscripts in different dialects.
 
-ZSH scripts are implemented by the ZSH shell interpreter, Bash scripts by Bash.
+Zsh scripts are implemented by the Zsh shell interpreter, Bash scripts by Bash.
 But the languages are not as closely regulated and standardized as say, [C++'s
 standards committee](http://www.open-std.org/jtc1/sc22/wg21/) workgroups or
-[python's PEPs](https://www.python.org/dev/peps/). Bash and ZSH take features
+[python's PEPs](https://www.python.org/dev/peps/). Bash and Zsh take features
 from Korn and C Shell's languages, but without all the ceremony and bureaucracy
 that other languages entail.
 
 ## Shell interpreters (Shells) {#shells}
 
-Examples: POSIX sh, Bash, ZSH, csh, tcsh, ksh, fish
+Examples: POSIX sh, Bash, Zsh, csh, tcsh, ksh, fish
 
 Shell interpreters *implement* the shell language. They are a layer on top of
 the kernel and are what allow you to, interactively, run commands and
@@ -148,13 +148,13 @@ was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell",
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
 via Bash. This is because specialty [shell languages](#shell-languages) like
-Bash, ZSH and so on add a lot of helpful and practical features may work on
+Bash, Zsh and so on add a lot of helpful and practical features may work on
 one interpreter, but not another. For instance, you would need to install the
-interpreter yourself across all your systems if you rely on ZSH-specialized
+interpreter yourself across all your systems if you rely on Zsh-specialized
 scripting. If you conformed with POSIX shell scripting, your scripting would
 have the highest level of compatibility, at the cost of being more verbose.
 
-Recent versions of macOS include ZSH by default. Linux distributions
+Recent versions of macOS include Zsh by default. Linux distributions
 typically require you to install it via package manager and installs it to
 `/usr/bin/zsh`. BSD systems build it via the port system, [`pkg(8)`](https://www.freebsd.org/cgi/man.cgi?query=pkg&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE+and+Ports&arch=default&format=html)
 on FreeBSD or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD
