@@ -108,3 +108,25 @@ There commands in practice are rather rare. As well as the other `list-`
 commands for that matter. But they are part of the tools that make tmux highly
 scriptable should you want to get creative. You can learn more about that in
 [formats](#formats).
+
+## Clipboard
+
+tmux clients wield a powerful clipboard feature you can use to copy and paste
+across sessions, windows and panes.
+
+Much like vi, tmux handles clipboard as a mode (or a state) which a pane is
+temporarily placed in while text can be copied.
+
+The default key to enter copy mode is `Prefix` + `[`.
+
+The default key to paste the text copied is `Prefix` + `]`.
+
+I> *Vi-like copy-paste
+I>
+I> In your [config](#config), put this:
+I>
+I> {language=shell, line-numbers=off}
+I>     # Vi copypaste mode
+I>     set-window-option -g mode-keys vi
+I>     bind-key -t vi-copy 'v' begin-selection
+I>     bind-key -t vi-copy 'y' copy-selection
