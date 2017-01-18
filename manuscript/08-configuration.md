@@ -61,3 +61,18 @@ I> Now you can type `prefix` + `r` to get the config to reload.
 The tmux configuration is processed just like [run commands](https://en.wikipedia.org/wiki/Run_commands)
 in a `~/.zshrc` or `~/.bashrc` file. `bind r source ~/.tmux.conf` in the tmux
 configuration is the same as `$ tmux bind r source ~/.tmux.conf`.
+
+You could always create a shell script that prefixes `tmux ` in front of every
+entry and run that file on fresh servers. The result is the same. Same goes if
+you manually type in `$ tmux set-option` and `$ tmux bind-key` commands into any
+terminal (in or outside tmux).
+
+This in .tmux.conf:
+
+{language=shell, line-numbers=off}
+    bind-key a send-prefix
+
+Is the same as having no `.tmux.conf` (or `$ tmux -f/dev/null`) and typing:
+
+{language=shell, line-numbers=off}
+    $ tmux bind-key a send-prefix
