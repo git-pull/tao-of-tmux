@@ -166,3 +166,21 @@ a user.
 
 The other thing to mention is that in order for `chsh -s` to work  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
+
+## It's about context
+
+To wrap it up, you're going to hear people talking about shells all the time.
+Context is key. It could be:
+
+- A generic way to refer to any terminal you have open. "Type `$ top` into your
+  shell and see what happens.", (Press q to quit.)
+- A server they have to log into. Before the era of the cloud, it would be
+  popular for small hosts to sell "C Shells" with root access.
+- A shell within a tmux [pane](#panes)
+- If scripting is mentioned, it is likely either the script itself, the
+  scripting issue at hand or something about the shell language.
+
+But overall, once you get out of this chapter, go back to doing what you're
+doing, if shell is what people say and they understand it, use it. The backing
+you got here should make you more confident in yourself. It's an ongoing battle
+these days to keep street smarts we pick up with book smarts.
