@@ -171,4 +171,46 @@ powerline symbols. The easiest way to use this is install the [powerline
 fonts](https://github.com/powerline/fonts) which are a great collection of fixed
 width coder fonts which look great in terminal.
 
+[Installation instructions](https://powerline.readthedocs.io/en/latest/installation.html)
+are on Read the Docs. For a better idea:
+
+{language=shell, line-numbers=off}
+    $ pip install --user powerline-status psutil
+
+[psutil](https://github.com/giampaolo/psutil) is a cross-platform tool powerline
+uses to help gather system information.
+
+The first option to get it working with tmux is sourcing `powerline.conf` from
+your config, the only difficulty is nailing down the location across systems and
+python versions. As a way to try getting powerline found across varying
+installations, I use `if-shell`:
+
+{line-numbers=off}
+    # pip install --user git+git://github.com/powerline/powerline
+    if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+    # [sudo] pip install git+git://github.com/powerline/powerline
+    if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+    # [sudo] pip install git+git://github.com/powerline/powerline
+    if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+    # python3.3
+    if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+    # python 3.4
+    # if-shell 'test -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+    # python 3.5
+    # if-shell 'test -f /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+    # python 3.6
+    # if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+A simpler method, after you assured [properly adding python to your PATH](#troubleshoot-site-paths), try adding this to your config:
+
+{line-numbers=off}
+    set -g status-interval 2
+    set -g status-right '#(powerline tmux right)'
+
 ![Powerline requires a specialized font](images/09-status-bar/powerline.png)
