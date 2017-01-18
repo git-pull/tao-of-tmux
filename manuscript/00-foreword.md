@@ -1,15 +1,6 @@
 
 {frontmatter}
-
-# Important
-
-This is a prerelease version of *The Tao of tmux*. The estimated release date is
-January 22nd, 2017. [Please submit errata via GitHub or email](#errata). Thank
-you!
-
-Also feel free to follow [@TheTaoOfTmux](https://twitter.com/TheTaoOfTmux) for
-updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20reading%20the%20prerelease%20of%20The%20Tao%20of%20tmux%20online%20at&url=https://leanpub.com/the-tao-of-tmux/read&hashtags=tmux&via=TheTaoOfTmux)!
-
+ 
 # Foreword 
 
 Pretty much all my friends use tmux. I remember going out at night
@@ -73,6 +64,9 @@ of the command line and terminal multiplexing in a single sitting. You have the
 choice of picking out concepts of tmux that you like according to your
 needs or interests. If you haven't installed tmux yet, please view the
 [Installation section](#appendix-installation) in the Appendix of the book.
+
+Feel free to follow [@TheTaoOfTmux](https://twitter.com/TheTaoOfTmux) for
+updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20reading%20the%20prerelease%20of%20The%20Tao%20of%20tmux%20online%20at&url=https://leanpub.com/the-tao-of-tmux/read&hashtags=tmux&via=TheTaoOfTmux)!
 
 ## Styles
 
