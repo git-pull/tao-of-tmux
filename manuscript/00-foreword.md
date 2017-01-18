@@ -133,9 +133,12 @@ You'll learn how to rename and move windows.
 do your magic! You'll learn how to create, delete, move between, and resize
 panes.
 
-[*Configuration*](#config) discusses customization of tmux via keybindings and
-status line behavior. You'll even learn how to show your CPU and
-memory usage via the status line.
+[*Configuration*](#config) discusses customization of tmux and set the
+foundation for how to think about configuration so you can customize your own.
+
+[Status bar](#status-bar) is devoted singularly to the customization of the
+status line in tmux. You'll even learn how to show CPU and memory usage via the
+status line.
 
 [Scripting tmux](#scripting-tmux) goes into command [shorthands](#shorthands),
 as well as the advanced and powerful [Targets](#targets) and [Formats](#formats)
