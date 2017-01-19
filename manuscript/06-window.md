@@ -66,7 +66,7 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 `Prefix` + `space` switches window *layouts*. These are preset configurations
 which handle proportions of [panes](#panes).
 
-As of tmux 2.3, the supports layouts are:
+As of tmux 2.3, the supported layouts are:
 
 {width=75%}
 ![](images/06-window/even-horizontal.png)
