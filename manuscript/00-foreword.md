@@ -179,7 +179,7 @@ I will update digital versions of the book with the changes where applicable.
 Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors)
 that helped me spot errors in this book.
 
-Some copy, particularly in [cheatsheets](#cheatsheets) comes straight out
+Some copy, particularly in [cheatsheets](#appendix-cheatsheets) comes straight out
 of the manual of tmux, which is [ISC-licensed](https://github.com/tmux/tmux/blob/master/COPYING).
 
 ## Book Updates and tmux changes
