@@ -39,7 +39,7 @@ in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org
 from `time.h`.
 
 For a full list of the variables you can use, view the documentation for
-`strftime(1)`. You find that in the link above, or through your manpages by
+`strftime(3)`. You find that in the link above, or through your manpages by
 typing `$ man strftime`.
 
 ## Shell command output
