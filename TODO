@@ -13,3 +13,5 @@ Organize targets into server, session window and pane (done)
 Command Prompt dialogs
 
 Tables
+
+Tweaking status bar live needs `set-option`
