@@ -38,7 +38,8 @@ Q>
 Q> Your tmux prefix key can be set via your tmux configuration later on!  In
 Q> your `~/.tmux.conf` file, set the `prefix` option:
 Q>
-Q>      set-option -g prefix C-a
+Q> {language=shell, line-numbers=off}
+Q>     set-option -g prefix C-a
 Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
