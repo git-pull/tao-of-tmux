@@ -120,7 +120,7 @@ thank me when you end up scripting this command in a [session manager](#session-
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; fi
 
-Show a notice message to user to install entr if not installed ons system:
+Show a notice message to user to install entr if not installed on the system:
 
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to automatically rebuild documentation when files change. \nSee http://entrproject.org/"; fi
