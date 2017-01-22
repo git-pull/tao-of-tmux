@@ -15,9 +15,7 @@ tmux supports a variety of alias commands. So don't feel you always have to type
 make it very intuitive to type those commands in a pinch.
 
 Most of these aliases come to mind via intuition and are a lot friendlier than
-typing the full hyphenated commands. Don't feel pressure to memorize these, just
-take a glance at the table and see if you can pick out a couple that'd optimize
-your current flow:
+typing the full hyphenated commands.
 
 {width="narrow"}
 | Command             | Alias     |
