@@ -88,7 +88,7 @@ Through command line, you can try:
 
 ## Does my session exist?
 
-If you're scripting tmux, you will want to be able to see if a session alredy
+If you're scripting tmux, you will want to be able to see if a session already
 exists. `has-session` will return a 0 [exit code](https://en.wikipedia.org/wiki/Exit_status)
 if the session exists, but will report a 1 exit code *and* print an error if a
 session does not exist.
