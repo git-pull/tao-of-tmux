@@ -89,7 +89,7 @@ To reset the proportions of the layout (such as after splitting or resizing
 panes), you have to run `$ tmux select-layout` again for the layout.
 
 This is different behavior than some [tiling window managers](https://en.wikipedia.org/wiki/Tiling_window_manager).
-[awesome](https://awesomewm.org/) and [xmonad](http://xmonad.org/), for
+[*awesome*](https://awesomewm.org/) and [*xmonad*](http://xmonad.org/), for
 instance, automatically handle proportions upon new items being added to their
 layouts.
 
