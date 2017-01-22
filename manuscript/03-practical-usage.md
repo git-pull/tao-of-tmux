@@ -16,7 +16,7 @@ it.
 And it's a hump we have to get over.
 
 It's kind of like [*Street Fighter*](https://en.wikipedia.org/wiki/Street_Fighter).
-In this game the player inputs a combination of buttons in sequence to
+In this video game the player inputs a combination of buttons in sequence to
 perform flying spinning kicks and shoot fireballs; sweet. As the player grows
 more accustomed with the combos, they begin to repeat moves by intuition
 since they grow muscle memory.
