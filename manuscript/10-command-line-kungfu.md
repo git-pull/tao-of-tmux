@@ -20,7 +20,7 @@ typing the full hyphenated commands.
 {width="narrow"}
 | Command             | Alias     |
 |---------------------|-----------|
-| attach-sesion       | attach    |
+| attach-session      | attach    |
 | break-pane          | breakp    |
 | capture-pane        | capturep  |
 | display-panes       | displayp  |
