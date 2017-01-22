@@ -16,7 +16,7 @@ of what you're doing inside them.
 
 ![Renaming](images/06-window/rename.png)
 
-When inside tmux, the most common way of doing that is`Prefix` + `,`. This will
+When inside tmux, the most common way of doing that is `Prefix` + `,`. This will
 open a prompt in the tmux status line where you can alter the name of the
 current window.
 
