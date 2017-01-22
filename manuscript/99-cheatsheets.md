@@ -202,6 +202,8 @@ hand into sections for convenience.
 |`M-Up, M-Down`    | Resize the current pane in steps of five cells.    |
 |`M-Left, M-Right` |                                                    |
 
+{pagebreak}
+
 ## Formats {#appendix-formats}
 
 ### Copy / paste
