@@ -162,12 +162,12 @@ So let's try that:
             go test $(test) ./...
 
     entr_warn:
-            @echo "----------------------------------------------------------"
-            @echo "     ! File watching functionality non-operational !      "
-            @echo "                                                          "
-            @echo "Install entr(1) to automatically run tasks on file change."
-            @echo "See http://entrproject.org/                               "
-            @echo "----------------------------------------------------------"
+            @echo "-------------------------------------------------"
+            @echo " ! File watching functionality non-operational ! "
+            @echo "                                                 "
+            @echo " Install entr(1) to run tasks on file change.    "
+            @echo " See http://entrproject.org/                     "
+            @echo "-------------------------------------------------"
 
     watch_test:
             if command -v entr > /dev/null; then ${WATCH_FILES} | \
