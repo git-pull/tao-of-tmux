@@ -1,6 +1,6 @@
 # Server {#server} 
 
-Your server holds [Sessions](#sessions) and the [Windows](#windows) and
+Your server holds [sessions](#sessions) and the [windows](#windows) and
 [Panes](#panes) within them.
 
 What happens in tmux is you are connected via a socket connection to a
