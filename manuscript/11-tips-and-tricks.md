@@ -19,7 +19,7 @@ So to get this working, you need to set your `PAGER` [environmental variable](ht
 to point to the MOST binary. You can test is like this:
 
 {language=shell, line-numbers=off}
-    $ export PAGER=more man ls
+    $ PAGER=most man ls
 
 If you found that you like `most`, you'll probably want to make it your default
 manpage reader. You can do this by setting an environmental variable in your
