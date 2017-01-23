@@ -183,8 +183,8 @@ Here's a cool trick, list all panes with the x and y coordinates of the cursor
 position:
 
 {language=shell, line-numbers=off}
-    $ tmux list-panes -F "#{pane_id} #{pane_current_command} #{pane_current_path} \
-      #{cursor_x},#{cursor_y}"
+    $ tmux list-panes -F "#{pane_id} #{pane_current_command} \
+      #{pane_current_path} #{cursor_x},#{cursor_y}"
     > %0 vim /Users/me/work/tao-of-tmux/manuscript 0,34
       %1 tmux /Users/me/work/tao-of-tmux/manuscript 0,17
       %2 man /Users/me/work/tao-of-tmux/manuscript 0,0
