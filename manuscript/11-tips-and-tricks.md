@@ -112,18 +112,22 @@ Only run file watcher if entr is installed, let's wrap in a conditional
 test:
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; fi
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
+      entr -c go test ./...; fi
 
 And have it fallback to `go test` in the event `entr` isn't installed (you'll
 thank me when you end up scripting this command in a [session manager](#session-manager):
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; fi
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
+      entr -c go test ./...; else go test ./...; fi
 
 Show a notice message to user to install entr if not installed on the system:
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to run tasks when files change. \nSee http://entrproject.org/"; fi
+    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
+      entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
+      echo "run tasks when files change. \nSee http://entrproject.org/"; fi
 
 Here's why you want patterns like that: you can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
 and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control)
