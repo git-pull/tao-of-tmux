@@ -3,11 +3,12 @@
 Your server holds [sessions](#sessions) and the [windows](#windows) and
 [Panes](#panes) within them.
 
-What happens in tmux is you are connected via a socket connection to a
-server. What you see presented to you in your shell is merely a client
-connection. In this chapter, we go into the one of the secret sauces that allow
-your terminal applications to persist for months or even years if you want to.
+When tmux starts you are connected to a server via a socket connection.
+What you see presented to you in your shell is merely a client connection. In
+this chapter, we go into the one of the secret sauces that allow your terminal
+applications to persist for months or even years if you want to.
 
+{width=90%}
 ![](images/info/server.png)
 
 ## What? tmux is a server?
