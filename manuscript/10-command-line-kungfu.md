@@ -89,7 +89,7 @@ and so on, until:
     $ tmux new-
     ambiguous command: new-, could be: new-session, new-window
 
-The limitation, as seen above, is command matches can collide. There are
+The limitation, as seen above, is that command matches can collide. There are
 multiple commands which begin with `new-`. So, if you wanted to use matches,
 `$ tmux new-s` for a new session, or `$ tmux new-w` for a new window would be
 the most efficient way. But the alias of `$ tmux new` for new session and

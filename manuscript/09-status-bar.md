@@ -55,8 +55,8 @@ background within for status line text.
 
 ### Prompt colors
 
-The benefit of wrapping your around this type of styling is you will see it
-`message-command-style`, `message style` and so on.
+The benefit of wrapping your brain around this type of styling is you will see
+it `message-command-style`, `message style` and so on.
 
 Let's try this:
 
@@ -204,7 +204,7 @@ varying installations, I use `if-shell`:
     # python 3.6
     # if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
 
-A simpler method, after you assured [properly adding python to your PATH](#troubleshoot-site-paths), try adding this to your config:
+For a simpler approach, assure you [properly configured python with your PATHs](#troubleshoot-site-paths) and try this:
 
 {line-numbers=off}
     set -g status-interval 2

@@ -68,8 +68,8 @@ W>
 W> tmux is nimble. If you want to use a separate server, pass in
 W> the `-L` flag to any command.
 W>
-W> `tmux -L moo` - start a new tmux server + session if non-exists under
-W> the socket name "moo"
+W> `tmux -L moo` - connect to server under socket name "moo" and attach
+W> a new session. Create server if none already exists for socket.
 W>
 W> `tmux -L moo attach` try to re-attach to session if one exists
 
@@ -102,7 +102,7 @@ You can retrieve a list of active client connections via:
 {language=shell, line-numbers=off}
     $ tmux list-clients
 
-There commands in practice are rather rare. As well as the other `list-`
+These commands in practice are rather rare. As well as the other `list-`
 commands for that matter. But they are part of the tools that make tmux highly
 scriptable should you want to get creative. You can learn more about that in
 [formats](#formats).

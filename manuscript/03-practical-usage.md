@@ -31,7 +31,7 @@ before in TUI/GUI applications, that'll come in handy.
 
 When you memorize a key combo it's one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short term memory
-on getting stuff done, that means less mistakes.
+on getting stuff done, that means fewer mistakes.
 
 Q> ### Coming from ``GNU Screen``?
 Q>
