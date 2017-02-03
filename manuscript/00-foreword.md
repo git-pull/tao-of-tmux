@@ -134,7 +134,7 @@ foundation for how to think about `.tmux.conf` so you can customize your own.
 status line in tmux. You'll even learn how to show CPU and memory usage via the
 status line.
 
-[Scripting tmux](#scripting-tmux) goes into command [shorthands](#shorthands),
+[Scripting tmux](#scripting-tmux) goes into command [aliases](#aliases),
 as well as the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
