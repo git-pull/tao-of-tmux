@@ -66,7 +66,8 @@ X> 4. Hit `d`!
 X>
 X> You've sent tmux your first command, and you're now outside of tmux!
 
-You've detached the tmux session you were in.
+You've detached the tmux session you were in. You can reattach via `$ tmux
+attach`.
 
 ## Session persistence and the server model
 
