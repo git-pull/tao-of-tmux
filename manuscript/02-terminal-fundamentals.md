@@ -140,7 +140,7 @@ own darn thing. On most Linux distributions and macOS, you'll typically be
 dropped into Bash. That's because it's what Apple decided to use as a *default
 shell* for users.
 
-On BSD you may be placed into use plain vanilla `sh` unless you specify
+On FreeBSD you may default to a plain vanilla `sh` unless you specify
 otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
 `bash` ([Bourne Again Shell](https://en.wikipedia.org/wiki/Bourne_shell)) but
 was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
