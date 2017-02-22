@@ -25,10 +25,10 @@ at destinations that felt eerily alike.
 Like many things in life, when we act on autopilot, we sometimes arrive at
 similar destinations. This is often completely unplanned.
 
-So when I go off and write an educational book about a computer application, I hope
-to write it for human beings. Not to sell you on tmux, or convince you to like
-it, hate it, but to tell you what it is, how some people use it. I'll leave the rest
-up to you.
+So when I go off and write an educational book about a computer application, I
+hope to write it for human beings. Not to sell you on tmux, convince you to like
+it or hate it, but to tell you what it is and how some people use it. I'll leave
+the rest up to you.
 
 ## About this book
 
