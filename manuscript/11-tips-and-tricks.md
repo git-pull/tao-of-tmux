@@ -15,7 +15,7 @@ highlighter for them.
 
 ![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/12-tips-and-tricks/most.png)
 
-So to get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
+To get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
 to point to the MOST binary. You can test is like this:
 
 {language=shell, line-numbers=off}
