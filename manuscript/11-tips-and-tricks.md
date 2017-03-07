@@ -42,7 +42,7 @@ found:
         export PAGER="most"
     fi
 
-So save that to a file, let's say `~/.dot-config/most.sh`.
+Save that to a file, let's say `~/.dot-config/most.sh`.
 
 Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) is in via
 your main rc file.
@@ -102,7 +102,7 @@ on file change:
 
 Sometimes we may want to watch files recursively, and we need to do that in a
 cross-platform way. We can't depend on `**` existing to grab files recursively.
-So something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
+Something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
 
 {language=shell, line-numbers=off}
     $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
@@ -136,7 +136,7 @@ different UNIX-like systems, with and without that certain program installed.
 
 Note: You may have to convert the indentation within the `Makefile`s from spaces to tabs.
 
-So let's go ahead see what a `Makefile` with this looks like:
+Let's go ahead see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
     watch_test:
