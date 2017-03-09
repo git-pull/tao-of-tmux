@@ -151,3 +151,13 @@ Q> In addition to session managers, [tmux-resurrect](https://github.com/tmux-plu
 Q> is a tool that attempts to preserve running programs, working directories and
 Q> so on within tmux. The benefit with tmux-resurrect is there's no JSON/YAML
 Q> config needed.
+
+## Summary
+
+tmux is a versatile addition to your terminal toolbelt. It helps you cover the
+gaps between multitasking and workspace organization you'd otherwise lose since
+there's no GUI. In addition, it includes a nice ability to detach workspaces to
+the background and reattach at a later time.
+
+In the next chapter, we're going to touch some terminal basics before diving
+deeper into tmux.
