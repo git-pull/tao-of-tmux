@@ -186,8 +186,8 @@ of the manual of tmux, which is [ISC-licensed](https://github.com/tmux/tmux/blob
 
 This book was written for tmux 2.3, released September 2016.
 
-As of January 2017, it's pretty trivial for me to push out minor changes to
-this book on Leanpub and Amazon.
+As of January 2017, it's pretty trivial to push out minor changes to
+Leanpub. Kindle is a bit harder.
 
 tmux does intermittently receive updates. I've accommodated many of them over
 the past 5 or so years on my personal configurations as well as software
@@ -197,5 +197,6 @@ publishers overplay version numbers to make it seem as if its worth striking a
 new edition of a book over it. It's effective for them, but I'd rather be honest
 to my readership.
 
-You can refer to tmux's [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES)
-for a list of changes between versions.
+If you're looking into keeping up to date with new features and adjustments to tmux,
+the [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES) file in the
+project source serves as way to see for what's updated between official releases.
