@@ -167,7 +167,7 @@ a user.
 The other thing to mention is that in order for `chsh -s` to work  you
 typically need to have it added to [`/etc/shells`](https://bash.cyberciti.biz/guide//etc/shells).
 
-## It's about context
+## Summary
 
 To wrap it up, you're going to hear people talking about shells all the time.
 Context is key. It could be:
@@ -184,3 +184,6 @@ But overall, once you get out of this chapter, go back to doing what you're
 doing, if shell is what people say and they understand it, use it. The backing
 you got here should make you more confident in yourself. It's an ongoing battle
 these days to keep street smarts we pick up with book smarts.
+
+In the next chapter, we're going to touch some terminal basics before diving
+deeper into tmux.
