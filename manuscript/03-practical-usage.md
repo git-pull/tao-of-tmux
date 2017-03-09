@@ -97,3 +97,14 @@ switching modes, copying and pasting and so forth.
 - Commands called from CLI via `$ tmux cmd`
 - To pull it all together, [source code](#technical-stuff) files are prefixed
   `cmd-`.
+
+## Summary
+
+We've established tmux automatically creates a server upon you first starting
+it. The server is what allows you to detach and later reattach your work. The
+keyboard sequences you send to tmux require understanding how to send the prefix
+key.
+
+At the end of the day, keyboard sequences, configuration and command line
+actions all boil down to the same core commands inside tmux.  In our next
+chapter, we will cover the server.
