@@ -132,3 +132,10 @@ from outside, use a [target](#targets) of the window index:
 
 You can easily find the window index through the middle section of the [status
 line](#status-line).
+
+## Summary
+
+In this chapter you learned how to manipulate windows via renaming and changing
+their layouts. To top it off, some advanced functionality you can use to to kill
+windows in a pinch or in shell scripting tmux. In addition, how to save any tmux
+layouts via outputting the `window_layout` template variable.
