@@ -133,3 +133,13 @@ I>     # Vi copypaste mode
 I>     set-window-option -g mode-keys vi
 I>     bind-key -t vi-copy 'v' begin-selection
 I>     bind-key -t vi-copy 'y' copy-selection
+
+## Summary
+
+One of the fundamental underpinning of tmux is the server. For the most part,
+the server is invisible to the user. 
+
+The server can hold one or more *sessions*. You can copy and paste between
+sessions via the clipboard. In the next chapter we will go deeper into the role
+sessions play and how they help your organize and control your terminal
+workspace.
