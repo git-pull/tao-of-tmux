@@ -136,8 +136,8 @@ I>     bind-key -t vi-copy 'y' copy-selection
 
 ## Summary
 
-One of the fundamental underpinning of tmux is the server. For the most part,
-the server is invisible to the user. 
+The server is one of the fundamental underpinnings of tmux. For the most part,
+it is invisible to the user. 
 
 The server can hold one or more *sessions*. You can copy and paste between
 sessions via the clipboard. In the next chapter we will go deeper into the role
