@@ -118,7 +118,7 @@ as well as how to switch between them quickly.
 You'll always be attached to a session when you're using a client in tmux.
 
 One way that may help is to think of sessions as workspaces designed to help
-organize a sets of windows. Its analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
+organize a set of windows. Its analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
 spaces in GUI computing.
 
 In the next chapter we will go into *windows*, which like sessions, are also
