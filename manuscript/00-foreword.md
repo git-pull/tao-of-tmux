@@ -90,30 +90,30 @@ example:
 ## How this book is structured
 
 First, anything involving [installation](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
-and hard technical details are in the Appendix. A lot of books tend to use
-installation instructions as filler in the early chapters. For me it's more of
-not wanting to confuse complete beginners.
+and hard technical details are in the Appendix. A lot of books use installation
+instructions as filler in the early chapters. For me, it's more of not wanting
+to confuse beginners.
 
-For special circumstances like [tmux on Windows 10](#appendix-windows-bash), I
-decided that adding screenshots is best since many readers may be more
-comfortable with a visual approach.
+For special circumstances, like [tmux on Windows 10](#appendix-windows-bash), I
+decided adding screenshots is best, since many readers may be more comfortable
+with a visual approach.
 
 [*Thinking Tmux*](#thinking-tmux) goes over what tmux does and how it relates to
-the GUI desktops already on our computers.  You'll understand the big picture of
+the GUI desktops on our computers.  You'll understand the big picture of
 what tmux is and how it can make your life easier.
 
 [*Terminal Fundamentals*](#terminal-fundamentals) shows the text-based
-environments you'll be dealing with. It's
-great for those new to tmux, but also presents some technical background for
-developers who learned the ropes through examples and osmosis. At the end of this
-section you'll be more confident and secure using the essential components underpinning
-a modern terminal environment.
+environments you'll be dealing with. It's great for those new to tmux, but also
+presents technical background for developers, who learned the ropes through
+examples and osmosis. At the end of this section, you'll be more confident and
+secure using the essential components underpinning a modern terminal
+environment.
 
 [*Practical Usage*](#practical-usage) covers common bread and
-butter uses for you to start using tmux immediately.
+butter uses for you to use tmux immediately.
 
-[*Server*](#server) gives life to the unseen workhorse that powers tmux behind
-the scenes. You'll think of tmux differently, and may be impressed that
+[*Server*](#server) gives life to the unseen workhorse behind the scenes that
+powers tmux. You'll think of tmux differently and may be impressed that
 a client-server architecture could be presented so seamlessly to end users.
 
 [*Sessions*](#sessions) are the containers holding windows. You'll learn what
