@@ -3,9 +3,9 @@
  
 # Foreword 
 
-Pretty much all my friends use tmux. I remember going out at night
-for drinks and the 3 of us would take a seat at a round table and take our smart
-phones out. This was back when phones still had physical "QWERTY" keyboards.
+Nearly all my friends use tmux. I remember going out at night for drinks and the
+3 of us would take a seat at a round table and take out our smart phones. This
+was back when phones still had physical "QWERTY" keyboards.
 
 Despite our home computers being asleep or turned off, our usernames in the IRC channel we frequently visited
 persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors
