@@ -114,10 +114,10 @@ butter uses for you to use tmux immediately.
 
 [*Server*](#server) gives life to the unseen workhorse behind the scenes that
 powers tmux. You'll think of tmux differently and may be impressed that
-a client-server architecture could be presented so seamlessly to end users.
+a client-server architecture could be presented to end users so seamlessly.
 
 [*Sessions*](#sessions) are the containers holding windows. You'll learn what
-sessions are and how they helps organize your workspace in the terminal. You'll
+sessions are and how they help organize your workspace in the terminal. You'll
 learn how to manipulate and rename and traverse sessions.
 
 [*Windows*](#windows) are what you see when tmux is open in front of you.
@@ -127,28 +127,27 @@ You'll learn how to rename and move windows.
 do your magic! You'll learn how to create, delete, move between, and resize
 panes.
 
-[*Configuration*](#config) discusses customization of tmux and set the
+[*Configuration*](#config) discusses customization of tmux and sets the
 foundation for how to think about `.tmux.conf` so you can customize your own.
 
 [Status bar](#status-bar) is devoted singularly to the customization of the
 status line in tmux. You'll even learn how to show CPU and memory usage via the
 status line.
 
-[Scripting tmux](#scripting-tmux) goes into command [aliases](#aliases),
-as well as the advanced and powerful [Targets](#targets) and [Formats](#formats)
+[Scripting tmux](#scripting-tmux) goes into command [aliases](#aliases)
+and the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
 [*Technical Stuff*](#technical-stuff) is a glimpse at tmux source code and how it
-works under the hood. You may learn enough to be able to impress friends who
-currently use tmux daily. If you like programming on Unix-like systems, this
-one is for you.
+works under the hood. You may learn enough to impress colleagues who already use
+tmux. If you like programming on Unix-like systems, this one is for you.
 
 [*Tips and Tricks*](#tips-and-tricks) wraps up with a whirlwind of useful
-terminal tutorials you can use in conjunction with tmux to improve day to
-day development and administration experience.
+terminal tutorials you can use with tmux to improve day to day development and
+administration experience.
 
-[Cheatsheets](#appendix-cheatsheets) are organized tables of commands, shortcuts
-and formats grouped by section.
+[Cheatsheets](#appendix-cheatsheets) are organized tables of commands,
+shortcuts, and formats grouped by section.
 
 ## Donations
 
@@ -157,7 +156,7 @@ consider donating. Donations go directly to me and my current and future open so
 projects and are not squandered. Visit <http://www.git-pull.com/support.html>
 for ways to contribute.
 
-## Available Formats
+## Formats
 
 This book is available for sale on [Leanpub](https://leanpub.com/the-tao-of-tmux) and [Amazon Kindle](http://amzn.to/2gPfRhC).
 
@@ -167,7 +166,7 @@ It's also available to read for [free on the web](https://leanpub.com/the-tao-of
 
 This is my first book. I am human and make mistakes.
 
-If you find errors in this book please submit them to me at tao.of.tmux <AT>
+If you find errors in this book, please submit them to me at tao.of.tmux <AT>
 nospam git-pull.com.
 
 You can also submit a pull request via <https://github.com/git-pull/tao-of-tmux>.
@@ -177,26 +176,24 @@ I will update digital versions of the book with the changes where applicable.
 ## Thanks
 
 Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors)
-that helped me spot errors in this book.
+who helped me spot errors in this book.
 
-Some copy, particularly in [cheatsheets](#appendix-cheatsheets) comes straight out
+Some copy, particularly in [cheatsheets](#appendix-cheatsheets), comes straight out
 of the manual of tmux, which is [ISC-licensed](https://github.com/tmux/tmux/blob/master/COPYING).
 
 ## Book Updates and tmux changes
 
 This book was written for tmux 2.3, released September 2016.
 
-As of January 2017, it's pretty trivial to push out minor changes to
-Leanpub. Kindle is a bit harder.
+As of January 2017, it's trivial to push out minor changes to
+Leanpub. Kindle is harder.
 
-tmux does intermittently receive updates. I've accommodated many of them over
-the past 5 or so years on my personal configurations as well as software
-libraries which are set with [continuous integration tests against multiple tmux
-versions](https://github.com/tony/libtmux/blob/master/.travis.yml). Sometimes
-publishers overplay version numbers to make it seem as if its worth striking a
-new edition of a book over it. It's effective for them, but I'd rather be honest
-to my readership.
+tmux does intermittently receive updates. I've accommodated many over the past 5
+years on my personal configurations and software libraries set with [continuous integration tests against multiple tmux versions](https://github.com/tony/libtmux/blob/master/.travis.yml).
+Sometimes, publishers overplay version numbers to make it seem as if it's worth
+striking a new edition of a book over it. It's effective for them, but I'd
+rather be honest to my readership.
 
-If you're looking into keeping up to date with new features and adjustments to tmux,
+If you're considering keeping up to date with new features and adjustments to tmux,
 the [`CHANGES`](https://github.com/tmux/tmux/blob/master/CHANGES) file in the
-project source serves as way to see for what's updated between official releases.
+project source serves as a way to see what's updated between official releases.
