@@ -13,22 +13,22 @@ on a black background. We ssh'd with ConnectBot into our cloud servers and
 reattached by running [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
 hit 2AM, our Turkish coffee arrived, the `|away` status indicator trailing our online nicknames disappeared.
 
-It was funny that even though we knew each other by our real names, we sometimes opted to
-call each other by our nicks. It's something about how personal
-relationships, formed completely online, persist in real life.
+It was funny that, even though we knew each other by our real names, we
+sometimes opted to call each other by our nicks. It's something about how
+personal relationships, formed online, persist in real life.
 
 It seemed as if it were orchestrated, but each of us fell into the same ebb and
-flow of living our lives. No one told us to do it, but bit by bit we
-incrementally optimized our lifestyles personally and professionally to arrive
-at destinations that felt eerily alike.
+flow of living our lives. No one told us to do it, but bit by bit, we
+incrementally optimized our lifestyles, personally and professionally,
+to arrive at destinations that felt eerily alike.
 
 Like many things in life, when we act on autopilot, we sometimes arrive at
-similar destinations. This is often completely unplanned.
+similar destinations. This is often unplanned.
 
-So when I go off and write an educational book about a computer application, I
+So, when I write an educational book about a computer application, I
 hope to write it for human beings. Not to sell you on tmux, convince you to like
 it or hate it, but to tell you what it is and how some people use it. I'll leave
-the rest up to you.
+the rest to you.
 
 ## About this book
 
