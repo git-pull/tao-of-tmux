@@ -35,37 +35,37 @@ the rest to you.
 I've helped thousands learn tmux through my free resource under the name
 [The Tao of tmux](https://tmuxp.git-pull.com/en/latest/about_tmux.html), which I
 kept as part of the documentation for the [tmuxp session manager](https://github.com/tony/tmuxp).
-And now, it's been expanded into a full blown book with refined graphics,
-examples and much more.
+And now, it's been expanded into a full-blown book with refined graphics,
+examples, and much more.
 
 You do not need a book to use or understand tmux. If you want a technical
 manual, look at the [manpage for tmux](http://man.openbsd.org/OpenBSD-current/man1/tmux.1).
-Manpages, however, are almost never sufficient to wrap your brain around
-abstract concepts, they're there for reference. This learning book is the
+Manpages, however, are rarely sufficient to wrap your brain around
+abstract concepts; they're there for reference. This learning book is the
 culmination of years of explaining tmux to others online and in person.
 
-In this book we will break down tmux by the way of its objects, from servers
+In this book, we will break down tmux by the way of its objects, from servers
 down to panes. It also includes a rehash of terminal facilities we use every day
-to keep us autodidacts up to speed with what is what. On top of that, I've
-included numerous examples of projects, permissively licensed source code and
-workflows designed for efficiency in the world of the terminal.
+to keep us autodidacts up to speed with what is what. I've included numerous
+examples of projects, permissively licensed source code, and workflows designed
+for efficiency in the world of the terminal.
 
-tmux is a tool I find incredibly useful. While I don't attach it to my personal
-identity, it's been part of my daily life for years. In addition to the original
-resource, I've written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
+tmux is a tool I find useful. While I don't attach it to my personal identity,
+it's been part of my daily life for years. Besides the original resource,
+I've written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
 a [pythonic tmux library](https://github.com/tony/libtmux), and a
 [tmux session manager](https://github.com/tony/tmuxp).
 
 I am writing this from vim running in a tmux pane, inside a window, in a session, on
 the server, through a client.
 
-A word to absolute beginners: don't feel you need to grasp the concepts
+A word to absolute beginners: Don't feel you need to grasp the concepts
 of the command line and terminal multiplexing in a single sitting. You have the
-choice of picking out concepts of tmux that you like according to your
+choice of picking out concepts of tmux you like, according to your
 needs or interests. If you haven't installed tmux yet, please view the
 [Installation section](#appendix-installation) in the Appendix of the book.
 
-Feel free to follow [@TheTaoOfTmux](https://twitter.com/TheTaoOfTmux) for
+Follow [@TheTaoOfTmux](https://twitter.com/TheTaoOfTmux) for
 updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20reading%20The%20Tao%20of%20tmux%20online%20at&url=https://leanpub.com/the-tao-of-tmux/read&hashtags=tmux&via=TheTaoOfTmux)!
 
 ## Styles
@@ -79,7 +79,7 @@ dollar character. For more information on the meaning of the "dollar prompt", ch
 prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
-Shortcuts require a [prefix key](#prefix-key) to be sent before hand. Sections
+Shortcuts require a [prefix key](#prefix-key) to be sent beforehand. Sections
 describing similar keyboard commands typically will appear in a table. For
 example:
 
