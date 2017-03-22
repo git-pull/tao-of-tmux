@@ -15,7 +15,7 @@ a rectangular grid in a window, like in a terminal from the 1980s.
 
 ## Window manager for the terminal
 
-tmux is to the console what a desktop is to gui apps. It's a world inside the
+tmux is to the console what a desktop is to GUI apps. It's a world inside the
 text dimension. Inside tmux, you can:
 
 - multitask inside the terminal, run multiple applications
