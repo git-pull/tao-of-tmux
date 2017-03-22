@@ -2,7 +2,9 @@
 
 ## Read the tmux manual in style
 
-`$ man tmux` is the command to load up the "[man page](https://en.wikipedia.org/wiki/Man_page)" for tmux. You can do the same to find instructions for just about any comment, here's a couple of fun ones:
+`$ man tmux` is the command to load up the "[man page](https://en.wikipedia.org/wiki/Man_page)"
+for tmux. You can do the same to find instructions for just about any comment;
+here's two fun ones:
 
 {language=shell, line-numbers=off}
     $ man less
@@ -11,17 +13,17 @@
 [most(1)](http://www.jedsoft.org/most/) is a solid
 [`PAGER`](http://pubs.opengroup.org/onlinepubs/9699919799//utilities/man.html)
 that drastically improves readability of manual pages by acting as a syntax
-highlighter for them.
+highlighter.
 
 ![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/12-tips-and-tricks/most.png)
 
 To get this working, you need to set your `PAGER` [environmental variable](https://en.wikipedia.org/wiki/Environment_variable)
-to point to the MOST binary. You can test is like this:
+to point to the MOST binary. You can test it like this:
 
 {language=shell, line-numbers=off}
     $ PAGER=most man ls
 
-If you found that you like `most`, you'll probably want to make it your default
+If you found you like `most`, you'll probably want to make it your default
 manpage reader. You can do this by setting an environmental variable in your
 "rc" ([Run Commands](https://en.wikipedia.org/wiki/Run_commands)) for your
 shell. The location of the file depends on your shell. You can use `$ echo
@@ -31,7 +33,7 @@ $SHELL` to find it on most shells). In Bash and zsh, these are kept in
 {language=shell, line-numbers=off}
     export PAGER="most"
 
-In my configurations, I often reuse configs and some machines may not have
+I often reuse my configurations across machines, and some of them may not have
 `most` installed, so I will have my scripting only set `PAGER` if `most` is
 found:
 
@@ -44,22 +46,22 @@ found:
 
 Save that to a file, let's say `~/.dot-config/most.sh`.
 
-Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) is in via
+Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) it in via
 your main rc file.
 
 {language=shell, line-numbers=off}
     source $HOME/.dot-config/most.sh
 
-If you keep that pattern (or something close to it), you're on your way to have
-a cross-platform, modular dot config. If you need some inspiration you can check
+If you keep that pattern (or something close to it), you're on your way to
+a cross-platform, modular dot config. If you need inspiration, you can check
 my public permissively licensed config at <https://github.com/tony/.dot-config>.
-I document it pretty well and welcome you to copy/paste from it too.
+I document it well and welcome you to copy/paste from it, too.
 
 ## Log tailing
 
-Not tmux specific, but powerful when used in tandem with it. You can run a
+Not tmux specific, but powerful when used in tandem with it, you can run a
 follow (`-f`) using [`tail(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html).
-More modern versions of tail have the `-F` (capitalized) which checks for file
+More modern versions of tail have the `-F` (capitalized), which checks for file
 renames and rotation. 
 
 On OS X, you can do:
@@ -70,25 +72,25 @@ On OS X, you can do:
 and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
 programmers and system administrators.
 
-For monitoring logs [multitail](https://vanheusden.com/multitail/) is a
+For monitoring logs, [multitail](https://vanheusden.com/multitail/) is a
 terminal friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
 moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
-In my never ending conquest to get software projects working in symphony with
+In my never-ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
-patterns. In an effort to get that perfect feedback look upon files changing,
+patterns. To get that perfect feedback look upon files changing,
 I've gradually become the internet's unofficial connoisseur on them.
 
-What this kind of application does is wait for a file to be updated, then
+What this application does is wait for a file to be updated, then
 executes a custom command, like restarting a server, rebuilding an application,
-running tests, linters and so on. It gives you as a developer instant feedback
-in the terminal and is one of those things that can trick out a tmux workspace
-into an IDE-like environment.
+running tests, linters, and so on. It gives you, as a developer instant feedback
+in the terminal and is one thing that can trick out a tmux workspace into an
+IDE-like environment.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
-superbly across Linux distros, BSD's and OS X / macOS.
+superbly across Linux distros, BSDs and OS X / macOS.
 
 The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
 a list of files into it to watch.
@@ -100,14 +102,14 @@ on file change:
 {language=shell, line-numbers=off}
     $ ls -d *.go | entr -c go test ./...
 
-Sometimes we may want to watch files recursively, and we need to do that in a
+Sometimes, we may want to watch files recursively, and we need to do that in a
 cross-platform way. We can't depend on `**` existing to grab files recursively.
 Something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
 
 {language=shell, line-numbers=off}
     $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
 
-Only run file watcher if entr is installed, let's wrap in a conditional
+Only run file watcher if entr is installed; let's wrap in a conditional
 [`command -v`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/command.html)
 test:
 
@@ -115,8 +117,8 @@ test:
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; fi
 
-And have it fallback to `go test` in the event `entr` isn't installed (you'll
-thank me when you end up scripting this command in a [session manager](#session-manager):
+And have it fallback to `go test` in the event `entr` isn't installed. You'll
+thank me when use this command in conjunction with a [session manager](#session-manager):
 
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
@@ -129,14 +131,14 @@ Show a notice message to user to install entr if not installed on the system:
       entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
       echo "run tasks when files change. \nSee http://entrproject.org/"; fi
 
-Here's why you want patterns like that: you can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
-and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control)
+Here's why you want patterns like that: You can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
+and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control),
 so you and other developers can have access to this reusable command across
 different UNIX-like systems, with and without that certain program installed.
 
 Note: You may have to convert the indentation within the `Makefile`s from spaces to tabs.
 
-Let's go ahead see what a `Makefile` with this looks like:
+Let's see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
     watch_test:
@@ -156,8 +158,8 @@ backslash (`\`):
         echo "\nInstall entr(1) to run tasks on file change. \n"; \
         echo "See http://entrproject.org/"; fi
 
-Another would be to break the command up into variables and `make` subcommands.
-So let's try that:
+Another would be to break the command into variables and `make` subcommands. So,
+let's try that:
 
 {language=makefile, line-numbers=off}
     WATCH_FILES= find . -type f -not -path '*/\.*' | \
@@ -178,26 +180,25 @@ So let's try that:
             if command -v entr > /dev/null; then ${WATCH_FILES} | \
             entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
 
-`$(MAKE)` is used for portability purposes. One reason is recursive calls, such
+`$(MAKE)` is used for portability. One reason is recursive calls, such
 as here. On BSD systems, you may try invoking `make` via `gmake`
 (to call [GNU Make](https://www.gnu.org/software/make/) specifically). This
-ended up happening to me personally while building PDF's for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
+happened to me, while building PDFs for the book [AlgoXY](https://github.com/liuxinyu95/AlgoXY/).
 I had to [write a patch](https://github.com/liuxinyu95/AlgoXY/pull/16) to
 make it properly use `$(MAKE)` for recursive calls.
 
 The `$(test)` after `go test` allows passing a shell variable with arguments
-in it. So you could do `make watch_test test='-i'`. For examples of a similar
-`Makefile` in action see [the one in my tmuxp project](https://github.com/tony/tmuxp/blob/master/Makefile).
+in it. So, you could do `make watch_test test='-i'`. For examples of a similar
+`Makefile` in action, see [the one in my tmuxp project](https://github.com/tony/tmuxp/blob/master/Makefile).
 The project is licensed BSD (permissive), so you can grab code and use it
-in compliant with the [LICENSE](https://github.com/tony/tmuxp/blob/master/LICENSE).
+in compliance with the [LICENSE](https://github.com/tony/tmuxp/blob/master/LICENSE).
 
-One more thing, let's say you're running a server like
-[Gin](https://github.com/gin-gonic/gin), [Iris](https://github.com/kataras/iris)
-or [Echo](https://github.com/labstack/echo). `entr -c` likely won't be
-restarting the server for you. Try entering the `-r` flag to send a
-[`SIGTERM`](https://en.wikipedia.org/wiki/Unix_signal) to the process before
-restarting it. Combining the current `-c` flag with the new `-r` will give you
-`entr -rc`:
+One more thing, let's say you're running a server, like [Gin](https://github.com/gin-gonic/gin),
+[Iris](https://github.com/kataras/iris), or [Echo](https://github.com/labstack/echo).
+`entr -c` likely won't be restarting the server for you. Try entering the `-r`
+flag to send a [`SIGTERM`](https://en.wikipedia.org/wiki/Unix_signal) to the
+process before restarting it. Combining the current `-c` flag with the new `-r`
+will give you `entr -rc`:
 
 {language=makefile, line-numbers=off}
     run:
@@ -210,27 +211,27 @@ restarting it. Combining the current `-c` flag with the new `-r` will give you
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as opening
-the same software project, view the same logs, etc. Applications that
-store your layouts declaratively in a YAML or JSON file and help you boot up
+the same software project, view the same logs, etc., applications that
+store your layouts declaratively in a YAML or JSON file help you boot up
 your session fast.
 
 [Teamocil](https://github.com/remiprev/teamocil) and
 [Tmuxinator](https://github.com/tmuxinator/tmuxinator) are the first ones I
-tried. By far the most popular one is tmuxinator. They are both programmed in
+tried. By far, the most popular one is tmuxinator. They are both programmed in
 Ruby. There's also [tmuxomatic](https://github.com/oxidane/tmuxomatic), where
 you can "draw" your tmux sessions in text and have tmuxomatic build the layout.
 
 I sort of have a home team advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp).
-I wrote it already having used teamocil and tmuxinator but with many more
+I wrote it, already having used teamocil and tmuxinator, but with many more
 features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
 a library which abstracts tmux [server](#server), [sessions](#sessions),
-[windows](#windows) and [panes](#panes) to actively build the state of tmux
-sessions. In addition it has a naive form of session freezing, support for JSON,
-more flexible configuration options, and it will even offer to attach sessions
-that already exist instead of redundantly running script commands against the
-session if it already is running.
+[windows](#windows) and [panes](#panes) to build the state of tmux sessions. In
+addition, it has a naive form of session freezing, support for JSON, more
+flexible configuration options, and it will even offer to attach sessions
+that exist, instead of redundantly running script commands against the
+session if it is already running.
 
-So in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
+So, in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
 then create a YAML file at `~/.tmuxp/test.yaml`:
 
 {language=yaml, line-numbers=off}
@@ -248,8 +249,8 @@ then create a YAML file at `~/.tmuxp/test.yaml`:
         - echo third pane          # pane no. 3
         - echo forth pane          # pane no. 4
 
-gives a session titled *4-pane-split*, with one window titled *dev window* that
-has 4 panes in it. 3 of them are in the home directory, the other is in
+gives a session titled *4-pane-split*, with one window titled *dev window* with
+4 panes in it. 3 in the home directory; the other is in
 `/var/log` and is printing a list of all files ending with `.log`.
 
 To launch it, install tmuxp and load the configuration:
@@ -265,9 +266,8 @@ paths](#troubleshoot-site-paths) in the appendix.
 
 ## More code and examples
 
-I've decided to dust off a C++ space shooter and a new go webapp I've been
-playing with. They're licensed under MIT so you can use them, copy and paste
-from them, etc:
+I've dusted off a C++ space shooter and a new go webapp I've been playing with.
+They're licensed under MIT so, you can use them, copy and paste from them, etc:
 
 - c++14 [space shooter minigame](https://github.com/tony/tot-cpp-shmup) - side
   scrolling [shmup](https://en.wikipedia.org/wiki/Shoot_'em_up) demo (sdl2,
@@ -276,8 +276,7 @@ from them, etc:
   current tmux session and window information via browser ([gin](https://github.com/gin-gonic/gin),
   [bower](https://bower.io/))
 
-Both of the above support `tmuxp load .` within the project directory to load up
-the project.
+Both support `tmuxp load .` within the project directory to load up the project.
 
 Make sure to install [`entr(1)`](http://entrproject.org/) beforehand!
 
@@ -285,7 +284,7 @@ Make sure to install [`entr(1)`](http://entrproject.org/) beforehand!
 
 [tmux-plugins](https://github.com/tmux-plugins) and [tmux package
 manager](https://github.com/tmux-plugins/tpm) are a suite of tools dedicated
-toward enhancing the experience of tmux users.
+to enhancing the experience of tmux users.
 
 - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): Persists
   tmux environment across system restarts.

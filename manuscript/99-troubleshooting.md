@@ -14,7 +14,7 @@ via [brew](http://brew.sh).
 ## `tmuxp: command not found` and `powerline: command not found` {#troubleshoot-site-paths}
 
 This is due to your site package bin path (where application entry points are
-installed to) not being in your paths. To find your user site packages base directory:
+installed) not being in your paths. To find your user site packages base directory:
 
 {language=shell, line-numbers=off}
     $ python -m site --user-base
@@ -22,7 +22,7 @@ installed to) not being in your paths. To find your user site packages base dire
 This will get you something like `/Users/me/Library/Python/2.7` on macOS with
 Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
 
-The applications are in the `bin/` folder inside that. So you need to
+The applications are in the `bin/` folder inside that. So, you need to
 concatenate the two and add them to your [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)).
 Try adding one of these in your `~/.bashrc` or `~/.zshrc`:
 

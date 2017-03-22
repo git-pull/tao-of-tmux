@@ -1,21 +1,20 @@
 # Scripting tmux {#scripting-tmux}
 
-The command line in tmux is one of those areas often uncharted.
+The command line shortcuts and options in tmux is an area often uncharted.
 
-I will use some tables in this chapter. Never get a feeling that you have to
-commit a table to memory immediately. Not my intention, but every person's way
-of using tmux is slightly different, I want to be able to cover points most
-likely to benefit people's flows. Full tables are in the
-[cheatsheets](#appendix-cheatsheets).
+I will use tables in this chapter. Never get a feeling you have to commit a
+table to memory immediately. Not my intention, but every person's way of using
+tmux is slightly different. I want to cover points most likely to benefit
+people's flows. Full tables are in the [cheatsheets](#appendix-cheatsheets).
 
 ## Aliases {#aliases}
 
-tmux supports a variety of alias commands. So don't feel you always have to type
-`tmux attach`. *Aliases*, alongside [fnmatch-style pattern commands](#fnmatch)
-make it very intuitive to type those commands in a pinch.
+tmux supports a variety of alias commands. So, don't feel you always have to
+type `tmux attach`. *Aliases*, alongside [fnmatch-style pattern commands](#fnmatch),
+make it intuitive to type those commands in a pinch.
 
-Most of these aliases come to mind via intuition and are a lot friendlier than
-typing the full hyphenated commands.
+Most aliases come to mind via intuition and are a lot friendlier than typing the
+full hyphenated commands.
 
 {width="narrow"}
 | Command             | Alias     |
@@ -58,21 +57,21 @@ typing the full hyphenated commands.
 | swap-window         | swapw     |
 | unlink-window       | unlinkw   |
 
-If you already know the full name of the command, if you were to chop the hyphen
+If you know the full name of the command, if you were to chopped the hyphen
 (-) from the command and add the first letter of the last word, you'd get the
-shortcut. e.g. **swap**-**w**indow is swapw, **split**-**w**indow is splitw.
+shortcut, e.g., **swap**-**w**indow is swapw, **split**-**w**indow is splitw.
 
 ## Pattern matching {#fnmatch}
 
 tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
 
-For instance, you don't need to type `$ tmux attach-session` every time. First
-there's the [alias](#aliases) of `$ tmux attach`, but *in addition* to that, you
-can pattern match `$ tmux attac`, `$ tmux att`, `$ tmux at` and `$ tmux a` work
-as well.
+For instance, you need not type `$ tmux attach-session` every time. First,
+there's the [alias](#aliases) of `$ tmux attach`, but besides that, you
+can pattern match `$ tmux attac`, `$ tmux att`, `$ tmux at` and `$ tmux a`
+work.
 
-Every tmux command has shorthands, let's try this for `$ tmux new-session`:
+Every tmux command has shorthands; let's try this for `$ tmux new-session`:
 
 {language=shell, line-numbers=off}
     $ tmux new-session
@@ -89,9 +88,9 @@ and so on, until:
     $ tmux new-
     ambiguous command: new-, could be: new-session, new-window
 
-The limitation, as seen above, is that command matches can collide. There are
-multiple commands which begin with `new-`. So, if you wanted to use matches,
-`$ tmux new-s` for a new session, or `$ tmux new-w` for a new window would be
+The limitation, as seen above, is that command matches can collide. Multiple
+commands begin with `new-`. So, if you wanted to use matches,
+`$ tmux new-s` for a new session or `$ tmux new-w` for a new window would be
 the most efficient way. But the alias of `$ tmux new` for new session and
 `$ tmux neww` for new windows is even better than the matching in that case.
 
@@ -112,11 +111,11 @@ in a relational database.
 
 What I use to help me remember:
 
-So sessions are represented by dollar signs ($) because they hold your projects
-(*ostensibly* where you make money, or help someone else do it).
+So, sessions are represented by dollar signs ($) because they hold your projects
+(*ostensibly* where you make money or help someone else do it).
 
 Windows are represented by the [at sign](https://en.wikipedia.org/wiki/At_sign)
-(@). So windows are kind of like referencing / messaging a user on a social
+(@). So, windows are like referencing / messaging a user on a social
 networking website.
 
 Panes are the fun one, represented by the percent sign (%), like the
@@ -124,8 +123,8 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 [tcsh](https://en.wikipedia.org/wiki/Tcsh). Hey, makes sense, since panes are
 pseudoterminals!
 
-To give you an idea of the possibilities of where you can use targets, here are
-the commands with you can use targets:
+To show you the possibilities of where you can use targets, here are
+some examples:
 
 `$ tmux attach-session [-t target-session]`
 
@@ -155,20 +154,20 @@ the commands with you can use targets:
 
 ## Formats {#formats}
 
-tmux provides a minimal template language and set of variables you can use to
-access information about your tmux environment.
+tmux provides a minimal template language and set of variables to access
+information about your tmux environment.
 
 Formats are specified via the `-F` flag.
 
-You know how template engines such as
+You know how template engines, such as
 [mustache](https://mustache.github.io/), [handlebars](http://handlebarsjs.com/)
 [ERB](http://ruby-doc.org/stdlib-2.3.3/libdoc/erb/rdoc/ERB.html) in ruby,
 [jinja2](http://jinja.pocoo.org/docs/dev/) in python,
-[twig](http://twig.sensiolabs.org/) in PHP and
-[JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) in Java allow template
+[twig](http://twig.sensiolabs.org/) in PHP, and
+[JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) in Java, allow template
 variables? Formats are a similar concept.
 
-The amount of `FORMATS` (variables) made available by tmux has expanded greatly
+The `FORMATS` (variables) provided by tmux have expanded greatly
 since version 1.8. Some of the most commonly used formats as of tmux 2.3 are
 listed below. See the [appendix section on formats](#appendix-formats) for a
 complete list.
@@ -179,7 +178,7 @@ Let's try to output it:
     $ tmux list-windows -F "#{window_id} #{window_name}"
     > @0 zsh
 
-Here's a cool trick, list all panes with the x and y coordinates of the cursor
+Here's a cool trick; list all panes with the x and y coordinates of the cursor
 position:
 
 {language=shell, line-numbers=off}

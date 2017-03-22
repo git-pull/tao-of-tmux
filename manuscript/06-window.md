@@ -17,7 +17,7 @@ of what you're doing inside them.
 ![Renaming](images/06-window/rename.png)
 
 When inside tmux, the most common way of doing that is `Prefix` + `,`. This will
-open a prompt in the tmux status line where you can alter the name of the
+open a prompt in the tmux status line, where you can alter the name of the
 current window.
 
 ## Traversing Windows
@@ -64,7 +64,7 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 ## Layouts {#window-layouts}
 
 `Prefix` + `space` switches window *layouts*. These are preset configurations
-which handle proportions of [panes](#panes).
+that handle proportions of [panes](#panes).
 
 As of tmux 2.3, the supported layouts are:
 
@@ -93,17 +93,17 @@ This is different behavior than some [tiling window managers](https://en.wikiped
 instance, automatically handle proportions upon new items being added to their
 layouts.
 
-To allow easily resetting to a sensible layout across machines and terminal
+To allow easy resetting to a sensible layout across machines and terminal
 dimensions, you can try this in your [config](#config):
 
 {language=shell, line-numbers=off}
     bind m set-window-option main-pane-height 60\; select-layout main-horizontal
 
 This allows you to set a `main-horizontal` layout and automatically set the
-bottom panes proportionally on the bottom everytime you do `Prefix` + `m`.
+bottom panes proportionally on the bottom every time you do `Prefix` + `m`.
 
-Layouts can also be totally custom. To get the custom layout snippet for your
-current window, try this:
+Layouts can also be custom. To get the custom layout snippet for your current
+window, try this:
 
 {language=shell, line-numbers=off}
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
@@ -135,7 +135,7 @@ line](#status-line).
 
 ## Summary
 
-In this chapter you learned how to manipulate windows via renaming and changing
-their layouts. To top it off, some advanced functionality you can use to to kill
+In this chapter, you learned how to manipulate windows via renaming and changing
+their layouts. To top it off, some advanced functionality you can use to kill
 windows in a pinch or in shell scripting tmux. In addition, how to save any tmux
 layouts via outputting the `window_layout` template variable.
