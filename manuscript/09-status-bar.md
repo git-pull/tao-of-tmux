@@ -1,6 +1,6 @@
 # Status bar {#status-bar}
 
-The status bar, or *status line* lies in the bottom of the screen. It is
+The status bar, or *status line*, lies in the bottom of the screen. It is
 customizable through the [.tmux.conf config](#config) and live through
 `set-option`.
 
@@ -9,11 +9,11 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux show-options -g | grep status
 
-The status line is compromised of 3 sections. The status fields on either side
+The status line comprises 3 sections. The status fields on either side
 of the status line are customizable. The center field is a window list.
 
-The `status-left` and `status-right` option can be configured to accept a
-variety of variables.
+The `status-left` and `status-right` option can be configured to accept 
+many variables.
 
 ## The symbology behind windows
 
@@ -32,21 +32,20 @@ be followed by a symbol:
 
 ## Date and time
 
-`status-left` and `status-right` accepts variables for the date. 
+`status-left` and `status-right` accept variables for the date. 
 
 This happens via piping the status templates through [`format_expand_time`](https://github.com/tmux/tmux/blob/2.3/format.c#L868)
 in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
 from `time.h`.
 
 For a full list of the variables you can use, view the documentation for
-`strftime(3)`. You find that in the link above, or through your manpages by
+`strftime(3)`. You find that in the link above or through your manpages by
 typing `$ man strftime`.
 
 ## Shell command output
 
-You can also call applications such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load)
-and [conky](https://github.com/brndnmtthws/conky), as well as
-[powerline](#powerline).
+You can also call applications, such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load)
+and [conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
 
 ## Styling
 
@@ -55,7 +54,7 @@ background within for status line text.
 
 ### Prompt colors
 
-The benefit of wrapping your brain around this type of styling is you will see
+The benefit of wrapping your brain around this styling is you will see
 it `message-command-style`, `message style` and so on.
 
 Let's try this:
@@ -67,10 +66,10 @@ Let's try this:
 
 ## Tweaking your status bar, live!
 
-So you want to customize your tmux status line before you write the changes to
+So, you want to customize your tmux status line before you write the changes to
 your [config](#config) file.
 
-First start by grabbing your current status line section you want to edit, for
+Start by grabbing your current status line section you want to edit, for
 instance:
 
 {lang="text", line-numbers=off}
@@ -79,7 +78,7 @@ instance:
     $ tmux show-options -g status-right
     > status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
 
-Also, you can try to snip the variable off with `| cut -d' ' -f2-`:
+Also, you can try to snip off the variable with `| cut -d' ' -f2-`:
 
 {lang="text", line-numbers=off}
     $ tmux show-options -g status-left | cut -d' ' -f2-
@@ -147,29 +146,27 @@ Bind toggling status line to `Prefix` + `q`:
 
 Configs can print the output of an application. In this example,
 [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load) is providing
-system statistics in the right side section of the status line.
+system statistics in the right-side section of the status line.
 
-In order to get tmux-mem-cpu-load built you have to install
-[CMake](https://cmake.org/) and have a C++ compiler like
-[clang](http://clang.llvm.org/) or [GCC](https://gcc.gnu.org/).
+To build tmux-mem-cpu-load, you have to install [CMake](https://cmake.org/)
+and have a C++ compiler, like [clang](http://clang.llvm.org/) or [GCC](https://gcc.gnu.org/).
 
-On Ubuntu, Debian and Mint machines you can do this via `$ sudo apt-get install
-cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew install
-cmake`.
+On Ubuntu, Debian, and Mint machines, you can do this via `$ sudo apt-get
+install cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew
+install cmake`.
 
 Source: <https://github.com/tony/tmux-config>
 
 ## Example: Powerline
 
-By far the most full-featured solution available for tmux status lines is
+By far, the most full-featured solution available for tmux status lines is
 [powerline](https://github.com/powerline/powerline/), which heavily utilizes the
-shell command outputs to not only give direct system statistics, but to also
+shell command outputs, not only to give direct system statistics, but also to
 generate tmux-friendly styling alongside emoji-like glyphs.
 
-To get these to work correctly, you have to set your fonts up to handle the
-powerline symbols. The easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
-which are a great collection of fixed width coder fonts which look great in
-terminal.
+To get these to work correctly, set up your fonts up to handle the powerline
+symbols. The easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
+which are a great collection of fixed width coder fonts that look great in terminal.
 
 [Installation instructions](https://powerline.readthedocs.io/en/latest/installation.html)
 are on Read the Docs. For a better idea:
@@ -181,9 +178,9 @@ are on Read the Docs. For a better idea:
 uses to help gather system information.
 
 The first option to get powerline working with tmux is sourcing `powerline.conf`
-from your config, the only difficulty is nailing down the location across
-systems and python versions. As a way to try getting powerline found across
-varying installations, I use `if-shell`:
+from your config. The only difficulty is nailing down the location across
+systems and python versions. To try getting powerline found across varying
+installations, I use `if-shell`:
 
 {line-numbers=off}
     # pip install --user git+git://github.com/powerline/powerline
