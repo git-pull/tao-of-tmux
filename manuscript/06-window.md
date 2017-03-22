@@ -7,7 +7,23 @@ dimensions or a custom one done through [pane resizing](#pane-resizing).
 
 ![](images/info/window.png)
 
-You can see the current open windows through the [status bar](#status-bar).
+You can see the current windows through the [status bar](#status-bar)
+located at the bottom of tmux.
+
+## Creating and killing windows
+
+All sessions start with at least 1 window (and therefore one pane inside that)
+open. From there, you can create and delete windows as you see fit.
+
+`Prefix` + `c` will create a new at the first open index after your current
+window. So if you're in the first window, it will create a new window in the
+second.
+
+You can delete a window in two ways. First, you can exit or kill every pane in
+that window.  Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
+the pane's shell. The second way is `Prefix` + `&`, which will prompt you if you
+really want to delete the window. Warning: this will destroy all panes inside,
+as well as any processes.
 
 ## Naming windows
 
@@ -20,7 +36,11 @@ When inside tmux, the most common way of doing that is `Prefix` + `,`. This will
 open a prompt in the tmux status line, where you can alter the name of the
 current window.
 
-## Traversing Windows
+## Traversing windows
+
+Moving around windows is often done in two ways. First, by iterating through via
+`Prefix` + `p` and `Prefix` + `n`, and via the window index, which takes you
+directly to a specific window.
 
 `Prefix` + `1`, `Prefix` + `2`, and so on... will get you to navigate to windows
 by their index.
@@ -39,7 +59,7 @@ You can bring up a list of current windows with `Prefix` + `w`. The benefit of
 this is it also gives you some info on what's inside the window. Helpful if
 you're juggling around a lot of things!
 
-## Moving Windows
+## Moving windows
 
 `$ tmux move-window` can be used to move windows.
 
