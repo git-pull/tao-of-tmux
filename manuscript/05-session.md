@@ -1,6 +1,6 @@
 # Sessions {#sessions}
 
-Welcome to the session, the highest level entity residing in the [server](#server)
+Welcome to the session, the highest-level entity residing in the [server](#server)
 instance. Server instances are forked to the background upon starting a fresh
 instance and reconnected to when reattaching sessions. Your interaction with
 tmux will have *at least* one session running.
@@ -15,15 +15,15 @@ The active window will have a `*` symbol next to it.
 
 ## Creating a session
 
-The simplest command to create a new session is just typing `tmux`:
+The simplest command to create a new session is typing `tmux`:
 
 {language=shell, line-numbers=off}
     $ tmux
 
-The `$ tmux` application without any commands is equivalent to
+The `$ tmux` application, with no commands is equivalent to
 `$ tmux new-session`. Nifty!
 
-By default, your session name will be given a number. Which isn't too
+By default, your session name will be given a number, which isn't too
 descriptive. What would be better is:
 
 {language=shell, line-numbers=off}
@@ -32,8 +32,8 @@ descriptive. What would be better is:
 ## Switching sessions within tmux
 
 Some acquire the habit of detaching their tmux client and reattaching via
-`tmux att -t session_name`. Thankfully, you have the ability to switch to
-session from within tmux!
+`tmux att -t session_name`. Thankfully, you can switch to session from within
+tmux!
 
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
@@ -47,33 +47,33 @@ session from within tmux!
 `Prefix` + `s` will allow you to switch between sessions within the same tmux
 client.
 
-This command name can be a bit confusing. `switch-client` will allow you to
-traverse between sessions in the [server](#server).
+This command name can be confusing. `switch-client` will allow you to traverse
+between sessions in the [server](#server).
 
 Example usage:
 
 {language=shell, line-numbers=off}
     $ tmux switch-client -t dev
 
-This will switch to a session named "dev", if it exists.  No need to enter the
-`target-client` if you're in a client already.
+This will switch to a session, named "dev", if it exists.  No need to enter the
+`target-client` if you're already in a client.
 
 ## Naming sessions
 
-Sometimes the default session name given by tmux isn't descriptive enough. It
+Sometimes, the default session name given by tmux isn't descriptive enough. It
 only takes a few seconds to update it.
 
-You can name it whatever you want. Typically if I'm working on multiple web
-projects in one session I'll name it "web". If I'm assigning one software
+You can name it whatever you want. Typically, if I'm working on multiple web
+projects in one session, I'll name it "web". If I'm assigning one software
 project to a single session, I'll name it after the software project. You'll
-likely develop your own naming conventions, but pretty much anything is more
-descriptive than the default. 
+likely develop your own naming conventions, but anything is more descriptive
+than the default. 
 
 ![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
 
 If you don't name your sessions, it'll be difficult to keep track of what is
-inside that session from the outside. Sometimes you may forget you already have
-a project opened that is a few days old and you can just re-attach or switch to
+inside that session from the outside. Sometimes, you may forget you already have
+a project opened that is a few days old, and you can just re-attach or switch to
 that.
 
 You can rename sessions from within tmux with `Prefix` + `$`.  The status bar
@@ -87,15 +87,15 @@ Through command line, you can try:
 
 ## Does my session exist?
 
-If you're scripting tmux, you will want to be able to see if a session already
-exists. `has-session` will return a 0 [exit code](https://en.wikipedia.org/wiki/Exit_status)
+If you're scripting tmux, you will want to see if a session exists.
+`has-session` will return a 0 [exit code](https://en.wikipedia.org/wiki/Exit_status)
 if the session exists, but will report a 1 exit code *and* print an error if a
 session does not exist.
 
 {language=shell, line-numbers=off}
     $ tmux has-session -t1
 
-It's assume the session "1" exists, it'll just return 0 with no output.
+It assumes the session "1" exists; it'll just return 0 with no output.
 
 But if it doesn't, you'll get something like this in a response:
 
@@ -113,13 +113,13 @@ To try it in a shell script:
 ## Summary
 
 In this chapter, you learned how to rename sessions for organizational purposes
-as well as how to switch between them quickly.
+and how to switch between them quickly.
 
 You'll always be attached to a session when you're using a client in tmux.
 
 One way that may help is to think of sessions as workspaces designed to help
-organize a set of windows. Its analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
+organize a set of windows. It's analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
 spaces in GUI computing.
 
-In the next chapter we will go into *windows*, which like sessions, are also
+In the next chapter, we will go into *windows*, which, like sessions, are also
 nameable and let you switch between them.
