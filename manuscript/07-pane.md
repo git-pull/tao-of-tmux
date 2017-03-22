@@ -7,7 +7,7 @@ contain your shell (e.g. Bash, Zsh). They reside within a [window](#windows).
 
 ## Creating new panes
 
-To create a new panes, you can `split-window` from within the current
+To create a new pane, you can `split-window` from within the current
 [window](#windows) and pane you are in.
 
 | Shortcut         | Action                                             |
@@ -58,7 +58,7 @@ I>     bind l select-pane -R
 
 ## Zoom in
 
-To zoom in on a pane, navigate it and do `Prefix` + `z`.
+To zoom in on a pane, navigate to it and do `Prefix` + `z`.
 
 You can use any [pane traversal](#pane-traversal) to unzoom and move a pane at
 the same time.
@@ -68,8 +68,8 @@ the same time.
 Panes can be resized within [windows](#windows).
 
 Another technique that resizes panes is [window layouts](#window-layouts). The
-difference is a window layout switch the proportions and order of the panes.
-Resizing the panes target a specific pane inside that window.
+difference is a window layout switches the proportions and order of the panes.
+Resizing the panes targets a specific pane inside that window.
 
 Resizing a pane in a specific layout may subsequently resize that whole row.
 
