@@ -154,7 +154,7 @@ hand into sections for convenience.
 {width="wide"}
 | Shortcut         | Action                                             |
 |------------------|----------------------------------------------------|
-|`.`               | Prompt for an index to move the current window.    |
+|`.`               | Prompt for an index to move the current window     |
 
 {pagebreak}
 
