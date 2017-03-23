@@ -188,67 +188,16 @@ position:
       %1 tmux /Users/me/work/tao-of-tmux/manuscript 0,17
       %2 man /Users/me/work/tao-of-tmux/manuscript 0,0
 
-### Panes
+Variables are specific to the objects being listed. For instance:
 
-{width="wide"}
-| Variable name         | Description                              |
-|-----------------------|------------------------------------------|
-| cursor_x              |Cursor X position in pane                 |
-| cursor_y              |Cursor Y position in pane                 |
-| pane_active           |1 if active pane                          |
-| pane_current_command  |Current command if available              |
-| pane_current_path     |Current path if available                 |
-| pane_height           |Height of pane                            |
-| pane_id               |Unique pane ID (Alias: #D)                |
-| pane_in_mode          |If pane is in a mode                      |
-| pane_index            |Index of pane (Alias: #P)                 |
-| pane_pid              |PID of first process in pane              |
-| pane_start_command    |Command pane started with                 |
-| pane_title            |Title of pane (Alias: #T)                 |
-| pane_tty              |Pseudo terminal of pane                   |
-| pane_width            |Width of pane                             |
+Server-wide variables: host, host_short (no domain name), socket_path,
+start_time and pid.
 
-### Sessions
+Session-wide variables: session_attached, session_activity, session_created,
+session_height, session_id, session_name, session_width and session_windows.
 
-{width="wide"}
-| Variable name         | Description                              |
-|-----------------------|------------------------------------------|
-| session_attached      |Number of clients session is attached to  |
-| session_activity      |Integer time of session last activity     |
-| session_created       |Integer time session created              |
-| session_last_attached |Integer time session last attached        |
-| session_height        |Height of session                         |
-| session_id            |Unique session ID                         |
-| session_name          |Name of session (Alias: #S)               |
-| session_width         |Width of session                          |
-| session_windows       |Number of windows in session              |
+Window variables: window_activity, window_active, window_height, window_id,
+window_index, window_layout, window_name, window_panes and window_width.
 
-### Windows
-
-{width="wide"}
-| Variable name         | Description                              |
-|-----------------------|------------------------------------------|
-| window_activity       |Integer time of window last activity      |
-| window_activity_flag  |1 if window has activity                  |
-| window_active         |1 if window active                        |
-| window_height         |Height of window                          |
-| window_id             |Unique window ID                          |
-| window_index          |Index of window (Alias: #I)               |
-| window_layout         |Window layout description, ignoring zoomed|
-|                       |window panes                              |
-| window_name           |Name of window (Alias: #W)                |
-| window_panes          |Number of panes in window                 |
-|                       |zoomed window panes                       |
-| window_width          |Width of window                           |
-
-### Servers
-
-{width="wide"}
-| Variable name         | Description                              |
-|-----------------------|------------------------------------------|
-| host                  |Hostname of local host (alias: #H)        |
-| host_short            |Hostname of local host (no domain name)   |
-|                       |(alias: #h)                               |
-| socket_path           |Server socket path                        |
-| start_time            |Server start time                         |
-| pid                   |Server PID                                |
+Pane variables: cursor_x, cursor_y, pane_active, pane_current_command,
+pane_current_path, pane_height, pane_id, pane_index, pane_width, pane_pid.
