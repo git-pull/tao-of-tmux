@@ -32,7 +32,7 @@ descriptive. What would be better is:
 ## Switching sessions within tmux
 
 Some acquire the habit of detaching their tmux client and reattaching via
-`tmux att -t session_name`. Thankfully, you can switch to session from within
+`tmux att -t session_name`. Thankfully, you can switch sessions from within
 tmux!
 
 | Shortcut         | Action                                             |
