@@ -10,7 +10,7 @@ dimensions or a custom one done through [pane resizing](#pane-resizing).
 You can see the current windows through the [status bar](#status-bar)
 located at the bottom of tmux.
 
-## Creating and killing windows
+## Creating windows
 
 All sessions start with at least 1 window (and therefore one pane inside that)
 open. From there, you can create and delete windows as you see fit.
@@ -18,12 +18,6 @@ open. From there, you can create and delete windows as you see fit.
 `Prefix` + `c` will create a new at the first open index after your current
 window. So if you're in the first window, it will create a new window in the
 second.
-
-You can delete a window in two ways. First, you can exit or kill every pane in
-that window.  Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
-the pane's shell. The second way is `Prefix` + `&`, which will prompt you if you
-really want to delete the window. Warning: this will destroy all panes inside,
-as well as any processes.
 
 ## Naming windows
 
@@ -61,7 +55,12 @@ you're juggling around a lot of things!
 
 ## Moving windows
 
-`$ tmux move-window` can be used to move windows.
+Windows themselves can also be reordered one by one via `move-window` and its
+associated shortcut. This is helpful if a window is worth keeping open but not
+important or rarely looked at. After you move a window, you can continue to
+reorder them at any point in time after.
+
+The command `$ tmux move-window` can be used to move windows.
 
 The accepted arguments are `-s` (the window you are moving) and `-t`, where you
 are moving the window to.
@@ -139,6 +138,12 @@ To apply that layout, do this:
 
 ## Closing windows
 
+You can delete a window in two ways. First, you can exit or kill every pane in
+that window.  Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
+the pane's shell. The second way is `Prefix` + `&`, which will prompt you if you
+really want to delete the window. Warning: this will destroy all panes inside,
+as well as any processes.
+
 From inside the current window, try this:
 
 {language=shell, line-numbers=off}
@@ -150,8 +155,10 @@ from outside, use a [target](#targets) of the window index:
 {language=shell, line-numbers=off}
     $ tmux kill-window -t2
 
-You can easily find the window index through the middle section of the [status
-line](#status-line).
+If you're trying to find the target of the window to kill, they reside in the number
+in the middle section of the [status line](#status-line), as well as via `$ tmux
+choose-window`. You can hit "return" after you're in choose-window to go back to
+where you were previously.
 
 ## Summary
 
