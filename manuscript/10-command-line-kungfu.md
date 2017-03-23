@@ -194,10 +194,26 @@ Server-wide variables: host, host_short (no domain name), socket_path,
 start_time and pid.
 
 Session-wide variables: session_attached, session_activity, session_created,
-session_height, session_id, session_name, session_width and session_windows.
+session_height, session_id, session_name, session_width, session_windows
+and all server-wide variables.
 
 Window variables: window_activity, window_active, window_height, window_id,
-window_index, window_layout, window_name, window_panes and window_width.
+window_index, window_layout, window_name, window_panes, window_width and
+all session and server variables.
 
 Pane variables: cursor_x, cursor_y, pane_active, pane_current_command,
-pane_current_path, pane_height, pane_id, pane_index, pane_width, pane_pid.
+pane_current_path, pane_height, pane_id, pane_index, pane_width, pane_pid
+and all window, session and server variables.
+
+Remember the graphic that showed how servers encapsulated sessions, sessions
+held windows, windows held panes? That concept plays a role here. If you
+`list-panes`, all variables up the ladder, including window, session and server
+variables are available for the panes being listed. Example:
+
+{language=shell, line-numbers=off}
+    $ tmux list-panes -F "pane: #{pane_id}, window: #{window_id}, \
+      session: #{session_id}, server: #{socket_path}"
+    > pane: %35, window: @13, session: $6, server: /private/tmp/tmux-501/default
+      pane: %38, window: @13, session: $6, server: /private/tmp/tmux-501/default
+      pane: %36, window: @13, session: $6, server: /private/tmp/tmux-501/default
+
