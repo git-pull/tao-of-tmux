@@ -15,9 +15,20 @@ located at the bottom of tmux.
 All sessions start with at least 1 window (and therefore one pane inside that)
 open. From there, you can create and delete windows as you see fit.
 
-`Prefix` + `c` will create a new at the first open index after your current
-window. So if you're in the first window, it will create a new window in the
-second.
+Window indexes are a number tmux uses to determine ordering. The first window's
+index is 0, unless you set it via `base-index` in your [configuration](#config).
+I usually `set -g base-index 1` in my tmux configuration since 0 is after 9 on
+the keyboard.
+
+`Prefix` + `c` will create a new at the first open index. So if you're in the
+first window, and there is no second window created yet, it will create the
+second window. If the second window is already taken, and the third hasn't
+been created yet, it will create the third window.
+
+If the `base_index` is 1, and there are 7 windows created, with the 5th window
+missing, creating a new window will fill the empty 5th index, since it's the
+next one in order and nothing is filling it. After that, a new window would be
+the eighth.
 
 ## Naming windows
 
@@ -166,3 +177,8 @@ In this chapter, you learned how to manipulate windows via renaming and changing
 their layouts. To top it off, some advanced functionality you can use to kill
 windows in a pinch or in shell scripting tmux. In addition, how to save any tmux
 layouts via outputting the `window_layout` template variable.
+
+If you are in a tmux session, you'll always have at least one window open, and
+you'll be in it. And within that window will be a shell, or "pane". When all the
+panes close, the window closes too!  In the next chapter, we'll go deeper into
+panes.
