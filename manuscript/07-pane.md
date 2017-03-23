@@ -15,7 +15,9 @@ To create a new pane, you can `split-window` from within the current
 |`Prefix` + `%`    | `split-window -h` (split horizontally)             |
 |`Prefix` + `"`    | `split-window -v` (split vertically)               |
 
-{pagebreak}
+You can continue to create panes until you've reached the limit of what the
+terminal can fit. This depends on the dimensions of your terminal. A normal
+window will usually have 1 to 5 panes open.
 
 Example usage:
 
