@@ -198,8 +198,6 @@ position:
 | pane_active           |1 if active pane                          |
 | pane_current_command  |Current command if available              |
 | pane_current_path     |Current path if available                 |
-| pane_dead             |1 if pane is dead                         |
-| pane_dead_status      |Exit status of process in dead pane       |
 | pane_height           |Height of pane                            |
 | pane_id               |Unique pane ID (Alias: #D)                |
 | pane_in_mode          |If pane is in a mode                      |
@@ -219,11 +217,8 @@ position:
 | session_activity      |Integer time of session last activity     |
 | session_created       |Integer time session created              |
 | session_last_attached |Integer time session last attached        |
-| session_group         |Number of session group                   |
-| session_grouped       |1 if session in a group                   |
 | session_height        |Height of session                         |
 | session_id            |Unique session ID                         |
-| session_many_attached |1 if multiple clients attached            |
 | session_name          |Name of session (Alias: #S)               |
 | session_width         |Width of session                          |
 | session_windows       |Number of windows in session              |
@@ -236,19 +231,15 @@ position:
 | window_activity       |Integer time of window last activity      |
 | window_activity_flag  |1 if window has activity                  |
 | window_active         |1 if window active                        |
-| window_bell_flag      |1 if window has bell                      |
-| window_flags          |Window flags (Alias: #F)                  |
 | window_height         |Height of window                          |
 | window_id             |Unique window ID                          |
 | window_index          |Index of window (Alias: #I)               |
 | window_layout         |Window layout description, ignoring zoomed|
 |                       |window panes                              |
-| window_linked         |1 if window is linked across sessions     |
 | window_name           |Name of window (Alias: #W)                |
 | window_panes          |Number of panes in window                 |
 |                       |zoomed window panes                       |
 | window_width          |Width of window                           |
-| window_zoomed_flag    |1 if window is zoomed                     |
 
 ### Servers
 
