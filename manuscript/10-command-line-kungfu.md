@@ -274,7 +274,7 @@ pane-specific information aside from the count of panes inside it.
       window: @13, panes: 3 pane_id: %36
       window: @25, panes: 1 pane_id: %50
 
-So, `pane_id` shows up via `list-windows`, as of tmux 2.3. But which `pane_id`
-isn't defined. It's advised to keep use of `-F` scoped to the objects you
-are a listing, when scripting, to avoid breakage. If you want the active pane,
-get the `#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
+Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. Despite
+that, it's advised to keep use of `-F` scoped to the objects you are a listing,
+when scripting, to avoid breakage. If you want the active pane, get the
+`#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
