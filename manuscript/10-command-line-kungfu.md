@@ -139,25 +139,65 @@ client at `/dev/ttys004`:
 
 `$ tmux has-session [-t target-session]`
 
+{language=shell, line-numbers=off}
+    $ tmux has-session -t mysession
+
 `$ tmux kill-session [-t target-session]`
+
+{language=shell, line-numbers=off}
+    $ tmux kill-session -t mysession
 
 `$ tmux list-clients [-t target-session]`
 
+{language=shell, line-numbers=off}
+    $ tmux list-clients -t mysession
+
 `$ tmux lock-client [-t target-client]`
+
+{language=shell, line-numbers=off}
+    $ tmux lock-clients -t /dev/ttys004
 
 `$ tmux lock-session [-t target-session]`
 
+{language=shell, line-numbers=off}
+    $ tmux lock-session -t mysession
+
 `$ tmux new-session [-t target-session]`
+
+{language=shell, line-numbers=off}
+    $ tmux new-session -t newsession
+    $ tmux new-session -t newsession -d  # create new-session in the background
 
 `$ tmux refresh-client [-t target-client]`
 
-`$ tmux rename-session [-t target-session]`
+{language=shell, line-numbers=off}
+    $ tmux refresh-client -t /dev/ttys004
+
+`$ tmux rename-session [-t target-session]` session-name
+
+{language=shell, line-numbers=off}
+    $ tmux rename-session -t mysession renamedsession
+    $ tmux rename-session renamedsession  # if already inside attached session
 
 `$ tmux show-messages [-t target-client]`
 
+{language=shell, line-numbers=off}
+    $ tmux show-messages -t /dev/ttys004
+
 `$ tmux suspend-client [-t target-client]`
 
+{language=shell, line-numbers=off}
+    $ tmux suspend-client -t /dev/ttys004
+    $ tmux suspend-client  # if already in client
+
+    # bring client back to the foreground
+    $ fg
+
 `$ tmux switch-client [-c target-client] [-t target-session]`
+
+{language=shell, line-numbers=off}
+    $ tmux suspend-client -c /dev/ttys004 -t othersession
+    $ tmux suspend-client -t othersession  # within current client
 
 ## Formats {#formats}
 
