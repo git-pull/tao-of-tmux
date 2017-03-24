@@ -123,9 +123,8 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 [tcsh](https://en.wikipedia.org/wiki/Tcsh). Hey, makes sense, since panes are
 pseudoterminals!
 
-To show you the possibilities of where you can use targets, here are
-some examples, assuming one session named `mysession` and a client at
-`/dev/ttys0004`:
+Here are some examples of targets, assuming one session named `mysession` and a
+client at `/dev/ttys004`:
 
 `$ tmux attach-session [-t target-session]`
 
