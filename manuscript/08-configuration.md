@@ -4,8 +4,17 @@ Configuration of tmux is managed through `.tmux.conf` in your `$HOME` directory.
 The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux, and
 BSD.
 
+tmux configuration is the same as passing commands to tmux via shell. For
+instance, `$ tmux set-window-option -g automatic-rename` in a shell is the
+same as `set-window-option -g automatic-rename` in your config.
+
+The commands in the configuration file are ran when the server is first started.
+The configuration can be updated later via `source-file`, which is discussed in
+this chapter.
+
 For a sample config, I maintain a pretty decked out one at
-<https://github.com/tony/tmux-config>.
+<https://github.com/tony/tmux-config>. It's permissively licensed and you're
+free to copy and paste from it as you wish.
 
 I> **Custom Configs**
 I>
@@ -76,6 +85,8 @@ Is the same as having no `.tmux.conf` (or `$ tmux -f/dev/null`) and typing:
 
 {language=shell, line-numbers=off}
     $ tmux bind-key a send-prefix
+
+in a newly started tmux server.
 
 ## Common options
 
