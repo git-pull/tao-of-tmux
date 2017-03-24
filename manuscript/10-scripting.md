@@ -134,7 +134,7 @@ client at `/dev/ttys004`:
 `$ tmux detach-client [-s target-session] [-t target-client]`
 
 {language=shell, line-numbers=off}
-    $ tmux attach -s mysession
+    $ tmux detach-client -s mysession
     $ tmux detach-client -s mysession -t /dev/ttys004
 
 `$ tmux has-session [-t target-session]`
