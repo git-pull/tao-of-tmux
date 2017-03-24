@@ -124,11 +124,19 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 pseudoterminals!
 
 To show you the possibilities of where you can use targets, here are
-some examples:
+some examples, assuming one session named `mysession` and a client at
+`/dev/ttys0004`:
 
 `$ tmux attach-session [-t target-session]`
 
+{language=shell, line-numbers=off}
+    $ tmux attach-session -t mysession
+
 `$ tmux detach-client [-s target-session] [-t target-client]`
+
+{language=shell, line-numbers=off}
+    $ tmux attach -s mysession
+    $ tmux detach-client -s mysession -t /dev/ttys004
 
 `$ tmux has-session [-t target-session]`
 
