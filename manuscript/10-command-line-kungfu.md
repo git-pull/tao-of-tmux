@@ -190,20 +190,20 @@ position:
 
 Variables are specific to the objects being listed. For instance:
 
-Server-wide variables: host, host_short (no domain name), socket_path,
-start_time and pid.
+Server-wide variables: `host`, `host_short` (no domain name), `socket_path`,
+`start_time` and `pid`.
 
-Session-wide variables: session_attached, session_activity, session_created,
-session_height, session_id, session_name, session_width, session_windows
-and all server-wide variables.
+Session-wide variables: `session_attached`, `session_activity`,
+`session_created`, `session_height`, `session_id`, `session_name`,
+`session_width`, `session_windows` and all server-wide variables.
 
-Window variables: window_activity, window_active, window_height, window_id,
-window_index, window_layout, window_name, window_panes, window_width and
-all session and server variables.
+Window variables: `window_activity`, `window_active`, `window_height`,
+`window_id`, `window_index`, `window_layout`, `window_name`, `window_panes`,
+`window_width` and all session and server variables.
 
-Pane variables: cursor_x, cursor_y, pane_active, pane_current_command,
-pane_current_path, pane_height, pane_id, pane_index, pane_width, pane_pid
-and all window, session and server variables.
+Pane variables: `cursor_x`, `cursor_y`, `pane_active`, `pane_current_command`,
+`pane_current_path`, `pane_height`, `pane_id`, `pane_index`, `pane_width`,
+`pane_pid` and all window, session and server variables.
 
 Remember the graphic that showed how servers encapsulated sessions, sessions
 held windows, windows held panes? That concept plays a role here. If you
@@ -217,3 +217,17 @@ variables are available for the panes being listed. Example:
       pane: %38, window: @13, session: $6, server: /private/tmp/tmux-501/default
       pane: %36, window: @13, session: $6, server: /private/tmp/tmux-501/default
 
+But, on the other hand, listing windows isn't going to, reliably, turn up
+pane-specific information aside from the count of panes inside it.
+
+{language=shell, line-numbers=off}
+    $ tmux list-windows -F "window: #{window_id}, panes: #{window_panes} \
+      pane_id: #{pane_id}"
+    > window: @15, panes: 1 pane_id: %40
+      window: @13, panes: 3 pane_id: %36
+      window: @25, panes: 1 pane_id: %50
+
+So, `pane_id` shows up in list-windows, as of tmux 2.3. But which `pane_id`
+isn't defined. It'd be advised to keep your formatting in scope in your
+scripting to avoid breakage. If you want the active pane, get the
+`#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
