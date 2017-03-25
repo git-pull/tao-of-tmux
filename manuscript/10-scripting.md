@@ -438,10 +438,12 @@ powerful way of retrieving information on its objects between `list-panes`,
 accessible, configurable, but also scriptable.
 
 The ability to explicitly and reliably target information down to the point of
-tracking a pane by its ID and collecting its pane contents, even sending in keys
-open up the possiblity of anything from niche shell scripts to monitor and react
-to behavior on your system to intelligent and structured control via object
-oriented libraries, like [libtmux](https://github.com/tony/libtmux).
+tracking a pane by its ID and collecting its pane contents, even sending in
+keys. Used by the skilled programmer, opening up the possiblity of orchestrating
+the terminals in ways that were previously unrealistic; anything from niche
+shell scripts to monitor and react to behavior on systems to high-level,
+intelligent and structured control via object oriented libraries, like
+[libtmux](https://libtmux.git-pull.com).
 
 In the next chapter, we go delve into optimizations that showcase the latest
 generation of unix tools that build upon old, time-tested concepts like [man pages](https://en.wikipedia.org/wiki/Man_page)
