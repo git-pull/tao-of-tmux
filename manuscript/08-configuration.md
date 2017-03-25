@@ -42,7 +42,7 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -Ltesting_tmux attach
 
-## Reloading configuration
+## Reloading configuration {#reload-config}
 
 You can apply config files in live tmux sessions. Compare this to `source` or
 ["dot"](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
@@ -96,9 +96,10 @@ in a newly started tmux server.
 
 The important thing to internalize is that a tmux configuration consists of
 setting server options (`set-option -s`), global session (`set-option -g`), and
-window options (`set-window-option -g`) 
+window options (`set-window-option -g`).
 
-The rest of this chapter is going to be cookbook-style.
+The rest of this chapter is going to proceed cookbook-style. You can pick out
+these tweaks as and add them to your `.tmux.conf` and [reload](#reload-config).
 
 ## Server options
 
