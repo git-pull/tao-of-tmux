@@ -142,8 +142,10 @@ content into your paste buffer or files with `$ tmux save-buffer`.
 
 ## Summary
 
-The server is one of the fundamental underpinnings of tmux. Mostly, it is
-invisible to the user. 
+The server is one of the fundamental underpinnings of tmux. Implemented
+seemlessly to the user by forking into the background. Running behind the
+scenes, it ensures sessions, windows, panes, buffers are operating even when
+the client is detached.
 
 The server can hold one or more *sessions*. You can copy and paste between
 sessions via the clipboard. In the next chapter we will go deeper into the role
