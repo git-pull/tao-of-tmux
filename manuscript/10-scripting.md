@@ -308,9 +308,10 @@ This will show the window ID, which is prefixed by an `@` symbol, as well as the
 number of panes inside the window.
 
 Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. While this
-behavior happens now, it's advised to keep use of `-F` scoped to the objects
-being listing, when scripting, to avoid breakage. For instance, if you want the
-active pane, use `#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
+output occurs in this version of tmux, it's undefined behavior, it's advised to
+keep use of `-F` scoped to the objects being listing, when scripting, to avoid
+breakage. For instance, if you want the active pane, use `#{pane_active}` via
+`$ tmux list-panes -F "#{pane_active}"`.
 
 ## Controlling tmux via remotely
 
