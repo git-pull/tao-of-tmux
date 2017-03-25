@@ -134,6 +134,12 @@ I>     set-window-option -g mode-keys vi
 I>     bind-key -t vi-copy 'v' begin-selection
 I>     bind-key -t vi-copy 'y' copy-selection
 
+In addition to the "copy mode", tmux has advanced functionality to
+programatically copy and paste. Later in the book, the [Capturing pane content](#capture-pane)
+section in the [Scripting tmux](#scripting-tmux) chapter goes into
+`$ tmux capture-pane` and how you can use [targets](#targets) to copy pane
+content into your paste buffer or files with `$ tmux save-buffer`.
+
 ## Summary
 
 The server is one of the fundamental underpinnings of tmux. Mostly, it is
