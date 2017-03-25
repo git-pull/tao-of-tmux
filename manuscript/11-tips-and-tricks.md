@@ -3,12 +3,13 @@
 ## Read the tmux manual in style
 
 `$ man tmux` is the command to load up the "[man page](https://en.wikipedia.org/wiki/Man_page)"
-for tmux. You can do the same to find instructions for just about any comment;
-here's two fun ones:
+for tmux. You can do the same to find instructions for any command or entity
+with a manpage entry; here's two fun ones:
 
 {language=shell, line-numbers=off}
     $ man less
     $ man man
+    $ man strftime
 
 [most(1)](http://www.jedsoft.org/most/), a solid [`PAGER`](http://pubs.opengroup.org/onlinepubs/9699919799//utilities/man.html),
 drastically improves readability of manual pages by acting as a syntax
