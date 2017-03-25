@@ -7,11 +7,12 @@ Nearly all my friends use tmux. I remember going out at night for drinks and the
 3 of us would take a seat at a round table and take out our smart phones. This
 was back when phones still had physical "QWERTY" keyboards.
 
-Despite our home computers being asleep or turned off, our usernames in the IRC channel we frequently visited
-persisted in the chatroom list. Our screens were lit by a kaleidoscope of colors
-on a black background. We ssh'd with ConnectBot into our cloud servers and
-reattached by running [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
-hit 2AM, our Turkish coffee arrived, the `|away` status indicator trailing our online nicknames disappeared.
+Despite our home computers being asleep or turned off, our usernames in the IRC
+channel we frequently visited persisted in the chatroom list. Our screens were
+lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot
+into our cloud servers and reattached by running [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen).
+As it hit 2AM, our Turkish coffee arrived, the `|away` status indicator trailing
+our online nicknames disappeared.
 
 It was funny noticing, even though we knew each other by our real names, we
 sometimes opted to call each other by our nicks. It's something about how
@@ -19,16 +20,16 @@ personal relationships, formed online, persist in real life.
 
 It seemed as if it were orchestrated, but each of us fell into the same ebb and
 flow of living our lives. No one told us to do it, but bit by bit, we
-incrementally optimized our lifestyles, personally and professionally,
-to arrive at destinations seeming eerily alike.
+incrementally optimized our lifestyles, personally and professionally, to arrive
+at destinations seeming eerily alike.
 
 Like many things in life, when we act on autopilot, we sometimes arrive at
 similar destinations. This is often unplanned.
 
-So, when I write an educational book about a computer application, I
-hope to write it for human beings. Not to sell you on tmux, convince you to like
-it or hate it, but to tell you what it is and how some people use it. I'll leave
-the rest to you.
+So, when I write an educational book about a computer application, I hope to
+write it for human beings. Not to sell you on tmux, convince you to like it or
+hate it, but to tell you what it is and how some people use it. I'll leave the
+rest to you.
 
 ## About this book
 
