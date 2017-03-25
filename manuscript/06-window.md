@@ -12,8 +12,8 @@ located at the bottom of tmux.
 
 ## Creating windows
 
-All sessions start with at least 1 window (and therefore one pane inside that)
-open. From there, you can create and delete windows as you see fit.
+All sessions start with at least 1 window open. From there, you can create and
+kill windows as you see fit.
 
 Window indexes are a number tmux uses to determine ordering. The first window's
 index is 0, unless you set it via `base-index` in your [configuration](#config).
@@ -27,7 +27,7 @@ been created yet, it will create the third window.
 
 If the `base_index` is 1, and there are 7 windows created, with the 5th window
 missing, creating a new window will fill the empty 5th index, since it's the
-next one in order and nothing is filling it. After that, a new window would be
+next one in order and nothing is filling it. The next created window would be
 the eighth.
 
 ## Naming windows
@@ -37,32 +37,38 @@ of what you're doing inside them.
 
 ![Renaming](images/06-window/rename.png)
 
-When inside tmux, the most common way of doing that is `Prefix` + `,`. This will
-open a prompt in the tmux status line, where you can alter the name of the
+When inside tmux, the shortcut of `Prefix` + `,` is most commonly used. It
+opens a prompt in the tmux status line, where you can alter the name of the
 current window.
+
+The default numbers given to windows also become muscle memory after a while.
+But naming helps you when you're in a new tmux flow and want to organize
+yourself. Also, if you're sharing tmux with another user it's good practice to
+give a hint what's inside the windows.
 
 ## Traversing windows
 
-Moving around windows is often done in two ways. First, by iterating through via
+Moving around windows is done in two ways. First, by iterating through via
 `Prefix` + `p` and `Prefix` + `n`, and via the window index, which takes you
 directly to a specific window.
 
-`Prefix` + `1`, `Prefix` + `2`, and so on... will get you to navigate to windows
-by their index.
+`Prefix` + `1`, `Prefix` + `2`, and so on... allows quickly navigating to
+windows via their index. Unlike window names, which change, indexes are
+consistent and only require a quick key combo for you to invoke.
 
 Prompt for a window index (useful for indexes greater than 9) with `Prefix` +
-`'`.
+`'`. If the window index is 10 or above, this will help you a lot.
 
 I> ### POWER MOVE: Search + Traverse Windows for Text
 I> 
 I> You can forward to a window with a match of a text string by doing `Prefix` +
 I> `f`.
 
-You can move to the last selected window with `Prefix` + `l`.
+Bring up the last selected window with `Prefix` + `l`.
 
-You can bring up a list of current windows with `Prefix` + `w`. The benefit of
-this is it also gives you some info on what's inside the window. Helpful if
-you're juggling around a lot of things!
+A list of current windows can be displayed with `Prefix` + `w`. This also gives
+some info on what's inside the window. Helpful when juggling around a lot of
+things!
 
 ## Moving windows
 
@@ -94,7 +100,7 @@ The shortcut to prompt for an index to move the current window to is `Prefix` +
 ## Layouts {#window-layouts}
 
 `Prefix` + `space` switches window *layouts*. These are preset configurations
-that handle proportions of [panes](#panes).
+automatically adjusting proportions of [panes](#panes).
 
 As of tmux 2.3, the supported layouts are:
 
@@ -138,7 +144,7 @@ window, try this:
 {language=shell, line-numbers=off}
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
 
-To apply that layout, do this:
+To apply this layout:
 
 {language=shell, line-numbers=off}
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
@@ -149,11 +155,11 @@ To apply that layout, do this:
 
 ## Closing windows
 
-You can delete a window in two ways. First, you can exit or kill every pane in
-that window.  Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
-the pane's shell. The second way is `Prefix` + `&`, which will prompt you if you
-really want to delete the window. Warning: this will destroy all panes inside,
-and any processes.
+There are two ways to kill a window. First, exit or kill every pane in the
+window. Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
+the pane's shell. The second way, `Prefix` + `&`, which prompts if you really
+want to delete the window. Warning: this will destroy all panes inside, and any
+processes.
 
 From inside the current window, try this:
 
@@ -179,6 +185,6 @@ windows in a pinch or in shell scripting tmux. In addition, how to save any tmux
 layouts via outputting the `window_layout` template variable.
 
 If you are in a tmux session, you'll always have at least one window open, and
-you'll be in it. And within that window will be a shell, or "pane". When all the
-panes close, the window closes too!  In the next chapter, we'll go deeper into
+you'll be in it. And within the window will be 1 shell, or "pane". When all the
+panes close, the window closes too. In the next chapter, we'll go deeper into
 panes.
