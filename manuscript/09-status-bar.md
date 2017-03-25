@@ -38,9 +38,8 @@ This happens via piping the status templates through [`format_expand_time`](http
 in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
 from `time.h`.
 
-For a full list of the variables you can use, view the documentation for
-`strftime(3)`. You find that in the link above or through your manpages by
-typing `$ man strftime`.
+A full list of variables can be found in the documentation for `strftime(3)`.
+This can viewed through `$ man strftime` on Unix-like systems.
 
 ## Shell command output
 
@@ -166,7 +165,8 @@ generate tmux-friendly styling alongside emoji-like glyphs.
 
 To get these to work correctly, set up your fonts up to handle the powerline
 symbols. The easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
-which are a great collection of fixed width coder fonts that look great in terminal.
+a collection of fixed width coder fonts patched to support [Wingdings](https://en.wikipedia.org/wiki/Wingdings)-like
+symbols.
 
 [Installation instructions](https://powerline.readthedocs.io/en/latest/installation.html)
 are on Read the Docs. For a better idea:
