@@ -23,7 +23,7 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -f path/to/config.conf
 I>
-I> Note that, if a tmux server is running in the background and you want 
+I> Note: if a tmux server is running in the background and you want 
 I> to test a fresh config, you must either shut down the rest of the
 I> tmux sessions or use a different socket name. Like this:
 I> 
@@ -71,10 +71,10 @@ The tmux configuration is processed just like [run commands](https://en.wikipedi
 in a `~/.zshrc` or `~/.bashrc` file. `bind r source ~/.tmux.conf` in the tmux
 configuration is the same as `$ tmux bind r source ~/.tmux.conf`.
 
-You could always create a shell script that prefixes `tmux ` in front of every
-entry and run that file on fresh servers. The result is the same. Same goes if
-you manually type in `$ tmux set-option` and `$ tmux bind-key` commands into any
-terminal (in or outside tmux).
+You could always create a shell script prefixing `tmux ` in front of commands
+and run it on fresh servers. The result is the same. Same goes if you manually
+type in `$ tmux set-option` and `$ tmux bind-key` commands into any terminal (in
+or outside tmux).
 
 This in .tmux.conf:
 
