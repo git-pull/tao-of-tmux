@@ -96,12 +96,16 @@ in a newly started tmux server.
 
 ## Common options
 
+Aside from the [status bar](#status-bar), which is covered next chapter, most
+user configuration will be custom keybindings. This section covers the few
+generic options, the next section will go into snippets involving keybindings.
+
 Tweak wait-time between key sequences:
 
 {line-numbers=off}
     set -s escape-time 0
 
-`-s` sets the option server wide.
+(`-s` sets the option server wide.)
 
 Set the starting number (base index) for windows:
 
@@ -109,6 +113,8 @@ Set the starting number (base index) for windows:
     set -g base-index 1
 
 Will make newly created windows start at 1 and count upwards.
+
+## Keybindings
 
 Customize your [prefix key](#prefix-key):
 
