@@ -313,6 +313,35 @@ keep use of `-F` scoped to the objects being listing, when scripting, to avoid
 breakage. For instance, if you want the active pane, use `#{pane_active}` via
 `$ tmux list-panes -F "#{pane_active}"`.
 
+By default, `list-panes` will only show panes in a window. Unless you specificy
+`-a` to output all on a server, or `-s [-t session-name]` for all panes in a
+session:
+
+{language=shell, line-numbers=off}
+    $ tmux list-panes -s -t mysession
+    > 1.0: [176x29] [history 87/2000, 21033 bytes] %0
+      1.1: [87x6] [history 1814/2000, 408479 bytes] %1 (active)
+      1.2: [88x6] [history 1916/2000, 464932 bytes] %2
+      2.0: [176x24] [history 9/2000, 2262 bytes] %13
+      2.1: [55x11] [history 55/2000, 7395 bytes] %14
+
+And the `-t` flag lists all panes in a window:
+
+{language=shell, line-numbers=off}
+    $ tmux list-panes -t @0
+    > 0: [176x29] [history 87/2000, 21033 bytes] %0
+      1: [176x36] [history 1790/2000, 407807 bytes] %1 (active)
+      2: [88x6] [history 1916/2000, 464932 bytes] %2
+
+Same concept applies to `list-windows`. By default, The `-a` flag will list all
+windows on a server, `-t` lists windows within a session, omitting `-t` will
+only list windows within the current session inside tmux.
+
+{language=shell, line-numbers=off}
+    $ tmux list-windows
+    > 1: zsh* (3 panes) [176x36] [layout f9a4,176x36,0,0[176x29,0,0,0,176x6,0,30{87x6,0,30,1,88x6,88,30,2}]] @0 (active)
+      2: zsh- (5 panes) [176x36] [layout 55ef,176x36,0,0[176x24,0,0,13,176x11,0,25{55x11,0,25,14,58x11,56,25[58x7,56,25,16,58x3,56,33,17],61x11,115,25,15}]] @6
+
 ## Controlling tmux via remotely
 
 I recommend doing `send-keys`
@@ -362,6 +391,42 @@ This outputs in the adjacent pane.
 Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
 ## Reading and monitoring tmux panes
+
+`$ tmux capture-pane` will copy a panes' contents.
+
+By default, the contents will be saved to tmux' internal clipboard; *the
+paste *buffer*. You can run `capture-pane` within any pane, then navigate to an
+editor, paste the contents (don't forget to `:set paste` and go into insert mode
+with `i` on vim) and save it to a file. To [paste](#clipbpard), use `Prefix` +
+`]` inside the pane you're pasting into.
+
+You can also add the `-p` flag to print it to [stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29).
+From there you could use [redirection](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)
+to place the output into a file. Let's do `>>` so we don't accidentically
+truncate a file:
+
+{language=shell, line-numbers=off}
+    $ tmux capture-pane -p >> ./test
+
+As an alternative to redirection, you can also use `save-buffer`. The `-a` flag
+will get you the same behavior as appended output direction.
+
+{language=shell, line-numbers=off}
+    $ tmux save-buffer -a ./test
+
+To check what's inside:
+
+{language=shell, line-numbers=off}
+    $ cat ./test
+
+Like with `send-keys`, [targets](#targets) can be specified with `-t`. Let's
+grab a pane:
+
+![Top-left: Listing panes, Bottom-left: Capturing pane output of top-left pane,
+Right: Pasting buffer into vim.](images/10-scripting/capture-pane-vim.png)
+
+Remember, you can also copy, paste and send-keys to other windows and sessions
+also. Targets are server-wide.
 
 ## Summary
 
