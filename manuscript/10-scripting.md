@@ -342,12 +342,21 @@ only list windows within the current session inside tmux.
     > 1: zsh* (3 panes) [176x36] [layout f9a4,176x36,0,0[176x29,0,0,0,176x6,0,30{87x6,0,30,1,88x6,88,30,2}]] @0 (active)
       2: zsh- (5 panes) [176x36] [layout 55ef,176x36,0,0[176x24,0,0,13,176x11,0,25{55x11,0,25,14,58x11,56,25[58x7,56,25,16,58x3,56,33,17],61x11,115,25,15}]] @6
 
-## Controlling tmux via remotely
+## Controlling tmux
 
-I recommend doing `send-keys`
-through prompt the first time, because ommitting the target (`-t`) will direct
-the command to the current pane, but the text will sometimes be print before the
-prompt is printed.
+tmux allows sending keys, including Ctrl via `C-`, `^` and alt (meta) via `M-`,
+as well as special key names, from the tmux manual:
+
+> Up, Down, Left, Right, BSpace, BTab, DC (Delete), End, Enter, Escape, F1 to
+> F12, Home, IC (Insert), NPage/PageDown/PgDn, PPage/PageUp/PgUp, Space,
+> and Tab.
+
+If special keys are not matched, the defined behavior is to send it as a string
+to the pane, character by character.
+
+For this example, we will use `send-keys` through tmux prompt, because omitting
+target (`-t`) will direct the command to the current pane, but the keys sent will 
+sometimes print before the prompt.
 
 Open tmux command prompt via `Prefix` + `:` and type this after the `:`:
 
