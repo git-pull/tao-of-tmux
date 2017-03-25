@@ -100,12 +100,14 @@ Aside from the [status bar](#status-bar), which is covered next chapter, most
 user configuration will be custom keybindings. This section covers the few
 generic options, the next section goes into snippets involving keybindings.
 
-Tweak wait-time between key sequences:
+### Tweak timing between key sequences
 
 {line-numbers=off}
     set -s escape-time 0
 
 (`-s` sets the option server wide.)
+
+### Base index
 
 Set the starting number (base index) for windows:
 
@@ -114,13 +116,17 @@ Set the starting number (base index) for windows:
 
 Setting `base-index` assures newly created windows start at 1 and count upwards.
 
+### Terminal coloring
+
 If you're having issue with color detail in tmux, it may help to set
 `default-terminal` to `screen-256color`.
 
 {line-numbers=off}
     set -g default-terminal "screen-256color"
 
-This sets the TERM variable in new panes.
+This sets the `TERM` variable in new panes.
+
+### Automatic window naming
 
 Windows can be automatically renamed via setting `automatic-rename`:
 
@@ -129,15 +135,21 @@ Windows can be automatically renamed via setting `automatic-rename`:
 
 ## Keybindings
 
+### Prefix key
+
 Customize your [prefix key](#prefix-key):
 
 {line-numbers=off}
     bind-key a send-prefix
 
+### New window w/ prompt
+
 Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 
 {line-numbers=off}
     bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
+
+### Further inspiration
 
 For more ideas, I have a `.tmux.conf` you can copy-paste from on the internet at
 <https://github.com/tony/tmux-config/blob/master/.tmux.conf>.
