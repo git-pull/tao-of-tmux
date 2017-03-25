@@ -1,6 +1,12 @@
 # Configuration {#config}
 
-Configuration of tmux is managed through `.tmux.conf` in your `$HOME` directory. 
+Most tmux users break away from the defaults by creating their own customized
+configurations. These configurations vary from the trivial, such as adding
+keybindings, and adjusting the prefix key, to complex things, such as decking
+out the [status bar](#status-bar) with system stats and fancy glyphs via
+powerlines.
+
+Configuration of tmux is done through `.tmux.conf` in your `$HOME` directory. 
 The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux, and
 BSD.
 
