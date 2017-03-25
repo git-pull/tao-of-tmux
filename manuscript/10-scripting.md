@@ -383,7 +383,7 @@ to the input:
 {language=shell, line-numbers=off}
     $ tmux send-keys -t %2 'cal'
 
-Nice, let's cancel that out by sending a [SIGINT](https://en.wikipedia.org/wiki/Unix_signal#SIGINT):
+Nice, let's cancel that out by sending a [`SIGINT`](https://en.wikipedia.org/wiki/Unix_signal#SIGINT):
 
 {language=shell, line-numbers=off}
     $ tmux send-keys -t %2 'C-c'
