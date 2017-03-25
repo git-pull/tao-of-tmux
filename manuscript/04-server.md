@@ -5,7 +5,7 @@ The server holds [sessions](#sessions) and the [windows](#windows) and
 
 When tmux starts, you are connected to a server via a socket connection.
 What you see presented in your shell is merely a client connection. In
-this chapter, we go into one of the secret sauces that allow your terminal
+this chapter, we go into the secret power plant allowing your terminal
 applications to persist for months or even years if you want to.
 
 {width=90%}
@@ -30,9 +30,10 @@ You don't notice it, but when you use tmux normally, a server is launched and
 being connected via a client.
 
 tmux is so streamlined, the book could continue to explain usage and not even
-mention servers. But, I'd rather you have a solid understanding that while, tmux
-feels like magic, it's utilitarian. One cannot deny it's
-exquisitely executed from a user experience standpoint.
+mention servers. But, I'd rather you have a true understanding of how it works
+on systems. The implementation feels like magic, while still fulfilling the
+unix expectations of utilitarianism. One cannot deny it's exquisitely executed
+from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters, where we dive
 into [Formats](#formats), [Targets](#targets), and tools such as [libtmux](https://github.com/tony/libtmux)
@@ -104,8 +105,8 @@ You can retrieve a list of active client connections via:
     $ tmux list-clients
 
 These commands, and the other `list-` commands, in practice, are rare. But, they
-are part of the functionality that make tmux highly scriptable should you want
-to get creative. You can learn more about that in [formats](#formats).
+are part of tmux scriptability should you want to get creative. The [scripting tmux](#scripting-tmux)
+chapter will cover this in greater detail.
 
 ## Clipboard
 
