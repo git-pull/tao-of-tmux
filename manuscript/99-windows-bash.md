@@ -5,9 +5,8 @@ As of Windows 10 build 14361, [you can run tmux](https://blogs.msdn.microsoft.co
 Usage requires enabling **Developer mode** via the "For Developers" tab in the
 "Update & security" settings.
 
-After you enable that, open "Windows Features". You can find it by
-searching for "Turn Windows features on or off".  Then check "Windows Subsystem
-for Linux (Beta)".
+After enabling, open "Windows Features". You can find it by searching for "Turn
+Windows features on or off".  Then check "Windows Subsystem for Linux (Beta)".
 
 You may be asked to restart.
 
