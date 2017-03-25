@@ -72,6 +72,20 @@ X> You've sent tmux your first command, and you're now outside of tmux!
 You've detached the tmux session you were in. You can reattach via `$ tmux
 attach`.
 
+### Nested tmux sessions
+
+You can also send the prefix key to *nested* tmux sessions. For instance, if
+you're inside a tmux client on a *local* machine and you SSH into a *remote* machine
+in one of your panes. On the remote machine, you can attach the client via `tmux
+attach` as you normally would. To send the prefix key to the machines' tmux
+client, and not your local one, hit the prefix key again.
+
+So, if you prefix key is the default, `Ctrl-b`, do `Ctrl+b` + `b` again,
+*then* hit the shortcut for what you want to do.
+
+Example: If you wanted to create a window on the remote machine, which would normally
+be `Ctrl-b` + `c` locally, it'd be `Ctrl-b` + `b` + `c`.
+
 ## Session persistence and the server model
 
 If you use Linux or a similar system, you've likely brushed through [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
