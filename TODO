@@ -16,4 +16,4 @@ Tables
 
 Tweaking status bar live needs `set-option`
 
-How to output pane contents via capture-pane
+How to output pane contents via capture-pane, send-keys
