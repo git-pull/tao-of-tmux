@@ -173,7 +173,7 @@ from outside, use a [target](#targets) of the window index:
     $ tmux kill-window -t2
 
 If you're trying to find the target of the window to kill, they reside in the number
-in the middle section of the [status line](#status-line), as well as via `$ tmux
+in the middle section of the [status line](#status-line), and via `$ tmux
 choose-window`. You can hit "return" after you're in choose-window to go back to
 where you were previously.
 
