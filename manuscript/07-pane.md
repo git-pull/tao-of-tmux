@@ -95,3 +95,17 @@ You can output the display of a pane to a file.
 
 The `#I` and `#P` are [formats](#formats) for window index and pane index, so
 the file created is unique. Clever!
+
+## Summary
+
+Panes are shells within a shell. You can keep adding panes to a tmux window
+until you run out of room on your screen. Within your shell, you can `tail -F`
+log files, write and run scripts, an run [curses](https://en.wikipedia.org/wiki/Curses_(programming_library))-powered
+applications like vim, top, htop, ncmpcpp, irssi, weechat, mutt and so on.
+
+You will always have at least one pane open. Once you kill the last pane in
+the window, the window will close. Panes are also resizable; you can resize
+panes via targetting them specifically and changing the window layout.
+
+In the next chapter, we will go into the ways you can customize your tmux
+shortcuts, status line and behavior.
