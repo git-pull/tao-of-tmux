@@ -390,7 +390,7 @@ This outputs in the adjacent pane.
 ![Top-left: Listing panes, Bottom-left: Sending keys to right pane, Right:
 Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
-## Reading and monitoring tmux panes
+## Capturing pane content
 
 `$ tmux capture-pane` will copy a panes' contents.
 
