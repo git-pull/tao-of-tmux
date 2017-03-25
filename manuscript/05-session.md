@@ -71,10 +71,10 @@ than the default.
 
 ![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
 
-If you don't name your sessions, it'll be difficult to keep track of what is
-inside that session from the outside. Sometimes, you may forget you already have
-a project opened that is a few days old, and you can just re-attach or switch to
-that.
+If you don't name your sessions, it'll be difficult to keep track of what the
+session contains. Sometimes, you may forget you already have a project opened, 
+especially if your machine has been running for a few days, weeks or months. You
+can save time by reattaching your session and avoid creating a duplicate.
 
 You can rename sessions from within tmux with `Prefix` + `$`.  The status bar
 will be temporarily altered into a text field to allow altering the session
@@ -115,10 +115,11 @@ To try it in a shell script:
 In this chapter, you learned how to rename sessions for organizational purposes
 and how to switch between them quickly.
 
-You'll always be attached to a session when you're using a client in tmux.
+You'll always be attached to a session when you're using a client in tmux. When
+the last remaining session is closed, the server will close also.
 
-One way that may help is to think of sessions as workspaces designed to help
-organize a set of windows. It's analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
+Think of sessions as workspaces designed to help organize a set of windows,
+analogous to [virtual desktop](https://en.wikipedia.org/wiki/Virtual_desktop)
 spaces in GUI computing.
 
 In the next chapter, we will go into *windows*, which, like sessions, are also
