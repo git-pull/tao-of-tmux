@@ -42,7 +42,7 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -Ltesting_tmux attach
 
-## Updating configs in current sessions
+## Reloading configuration
 
 You can apply config files in live tmux sessions. Compare this to `source` or
 ["dot"](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
