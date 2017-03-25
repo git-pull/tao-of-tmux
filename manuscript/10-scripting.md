@@ -134,6 +134,10 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 [tcsh](https://en.wikipedia.org/wiki/Tcsh). Hey, makes sense, since panes are
 pseudoterminals!
 
+When scripting tmux, the symbols help denote the type of object, but also serve
+as a way to target something deeply, like the pane, *directly*, without needing
+to know or specify the window or its session.
+
 Here are some examples of targets, assuming one session named `mysession` and a
 client at `/dev/ttys004`:
 
@@ -308,6 +312,52 @@ behavior happens now, it's advised to keep use of `-F` scoped to the objects
 being listing, when scripting, to avoid breakage. For instance, if you want the
 active pane, use `#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
 
+## Controlling tmux via remotely
+
+I recommend doing `send-keys`
+through prompt the first time, because ommitting the target (`-t`) will direct
+the command to the current pane, but the text will sometimes be print before the
+prompt is printed.
+
+Open tmux command prompt via `Prefix` + `:` and type this after the `:`:
+
+`send-keys echo 'hi'`
+
+Hit enter. This just inserted *hi* into the current active pane. You can also
+use targets to specific which pane to send it to. 
+
+Let's now try to send keys to a another pane in our current window. Create a
+second pane via splitting the window if one doesn't exist. You can also do this
+exercise outside of tmux or inside a scripting file and running it.
+
+Grab a pane ID from the output of `list-panes`:
+
+{language=shell, line-numbers=off}
+    $ tmux list-panes
+      0: [180x57] [history 87/2000, 21033 bytes] %0
+      1: [89x14] [history 1884/2000, 509864 bytes] %1 (active)
+      2: [90x14] [history 1853/2000, 465297 bytes] %2
+
+`%2` looks good. Replace `%2` with the pane you want to target. This sends `cal`
+to the input:
+
+{language=shell, line-numbers=off}
+    $ tmux send-keys -t %2 'cal'
+
+Nice, let's cancel that out by sending a [SIGINT](https://en.wikipedia.org/wiki/Unix_signal#SIGINT):
+
+{language=shell, line-numbers=off}
+    $ tmux send-keys -t %2 'C-c'
+
+This cancelled the command and brought up a fresh input. This time let's send
+an Enter keypress to run `cal(1)`.
+
+{language=shell, line-numbers=off}
+    $ tmux send-keys -t %2 'cal' 'Enter'
+
+This outputs in the adjacent pane.
+
+## Reading and monitoring tmux panes
 
 ## Summary
 
