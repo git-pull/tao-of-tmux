@@ -79,14 +79,14 @@ moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 In my never-ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
-patterns. To get that perfect feedback loop upon file changes, I've gradually
+patterns. Pursing the holy grail feedback loop upon file changes, I've gradually
 become the internet's unofficial connoisseur on them.
 
 File watcher applications wait for a file to be updated, then execute a custom
 command, such as restarting a server, rebuilding an application, running tests,
-linters, and so on. It gives you, as a developer instant feedback in the
-terminal and is one thing that can trick out a tmux workspace into an IDE-like
-environment.
+linters, and so on. It gives you, as a developer, instant feedback in the
+terminal, empowering a tmux workspace to have IDE-like features, without the
+bloat, memory and CPU fans roaring.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
 superbly across Linux distros, BSDs and OS X / macOS.
@@ -103,7 +103,7 @@ on file change:
 
 Sometimes, we may want to watch files recursively, but we need it to run
 reliably across systems. We can't depend on `**` existing to grab files
-recursively, since that's not portable. Something more POSIX-friendly would be
+recursively, since it's not portable. Something more POSIX-friendly would be
 `find . -print | grep -i '.*[.]go'`:
 
 {language=shell, line-numbers=off}
@@ -125,8 +125,8 @@ snippet in conjunction with a [session manager](#session-manager):
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; else go test ./...; fi
 
-If the project is a team or open source project where a user may be trying that
-command for the first time, but missing a require software package, we can give
+If the project is a team or open source project where a user never used the
+command before, and could missing a required software package, we can give
 a helpful message. This shows a notice to the user to install entr if not
 installed on the system:
 
