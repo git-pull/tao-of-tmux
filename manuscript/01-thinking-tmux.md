@@ -30,8 +30,8 @@ text dimension. Inside tmux, you can:
 |-------------------|----------------------|-----------------------------------|
 |Session            |Desktop               |Applications are visible here      |
 |-------------------|----------------------|-----------------------------------|
-|Window             |Virtual Desktop or    |A desktop that stores it own screen|
-|                   |applications          |screen			       |
+|Window             |Virtual Desktop or    |Desktop containing its own screen  |
+|                   |applications          |     			       |
 |-------------------|----------------------|-----------------------------------|
 |Pane               |Application           |Performs operations                |
 
