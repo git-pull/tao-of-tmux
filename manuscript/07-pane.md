@@ -1,9 +1,9 @@
 # Panes {#panes}
 
-Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal) that
-contain your shell (e.g. Bash, Zsh). They reside within a [window](#windows).
-A terminal within a terminal, you can run shell commands, scripts, programs like
-vim, emacs, top, htop, irssi, weechat and so on from within them.
+Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal)
+encapsulating shells (e.g. Bash, Zsh). They reside within a [window](#windows).
+A terminal within a terminal, which can run shell commands, scripts, programs
+like vim, emacs, top, htop, irssi, weechat and so on from within them.
 
 ![](images/info/pane.png)
 
@@ -71,9 +71,10 @@ the same time.
 
 Pane size can be adjusted within [windows](#windows) via [window layouts](#window-layouts)
 and `resize-pane`. Adjusting window layout switches the proportions and order of
-the panes. Resizing the panes targets a specific pane inside that window.
-
-Resizing a pane in a specific layout may subsequently resize that whole row.
+the panes. Resizing the panes targets a specific pane inside the window
+containing it, also shrink or growing the size of the other columns or rows. It's like
+adjusting your car seat or reclining on a flight, if you take up more space,
+something else will also have less space.
 
 | Shortcut         | Action              |
 |------------------|---------------------|
