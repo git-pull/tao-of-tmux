@@ -20,6 +20,12 @@ How to output pane contents via capture-pane, send-keys
 
 New sections:
 
-Send keys, Copying panes
+- Send keys
+- Copying panes
+- Overhaul of configuration, branching into Server options, Session options and window options.
+- Examples for use of commands with -t, targets
+- Examples added to formats section, as well as removing table of formats in favor of cheatsheet in the back
+- Chapter summaries
+- Ran through a professional editor
 
 Detailed examples for formats and targets
