@@ -13,14 +13,14 @@ on a black background. We ssh'd with ConnectBot into our cloud servers and
 reattached by running [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen). Just as it
 hit 2AM, our Turkish coffee arrived, the `|away` status indicator trailing our online nicknames disappeared.
 
-It was funny that, even though we knew each other by our real names, we
+It was funny noticing, even though we knew each other by our real names, we
 sometimes opted to call each other by our nicks. It's something about how
 personal relationships, formed online, persist in real life.
 
 It seemed as if it were orchestrated, but each of us fell into the same ebb and
 flow of living our lives. No one told us to do it, but bit by bit, we
 incrementally optimized our lifestyles, personally and professionally,
-to arrive at destinations that felt eerily alike.
+to arrive at destinations seeming eerily alike.
 
 Like many things in life, when we act on autopilot, we sometimes arrive at
 similar destinations. This is often unplanned.
@@ -73,9 +73,8 @@ updates or [share on Twitter](https://twitter.com/intent/tweet?text=I%27m%20read
 Formatted text `like this` is source code.
 
 Formatted text with a $ in front is a terminal command. `$ echo 'like this'`.
-This means you type that text right into the console, without the
-dollar character. For more information on the meaning of the "dollar prompt", check out
-[*What is the origin of the UNIX $ (dollar)
+The text can be typed into the console, without the dollar character. For more
+information on the meaning of the "dollar prompt", check out [*What is the origin of the UNIX $ (dollar)
 prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
@@ -112,9 +111,9 @@ environment.
 [*Practical Usage*](#practical-usage) covers common bread and
 butter uses for you to use tmux immediately.
 
-[*Server*](#server) gives life to the unseen workhorse behind the scenes that
-powers tmux. You'll think of tmux differently and may be impressed that
-a client-server architecture could be presented to end users so seamlessly.
+[*Server*](#server) gives life to the unseen workhorse behind the scenes
+powering tmux. You'll think of tmux differently and may be impressed a
+client-server architecture could be presented to end users so seamlessly.
 
 [*Sessions*](#sessions) are the containers holding windows. You'll learn what
 sessions are and how they help organize your workspace in the terminal. You'll
