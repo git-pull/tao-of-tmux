@@ -288,8 +288,9 @@ available for the panes being listed. Example:
       pane: %38, window: @13, session: $6, server: /private/tmp/tmux-501/default
       pane: %36, window: @13, session: $6, server: /private/tmp/tmux-501/default
 
-On the other hand, listing windows isn't going to, reliably, turn up pane-
-specific information aside from the count of panes inside it.
+Listing windows isn't designed to display variables for pane-specific propreties.
+Since a window is a collection of panes, it can have 1 or more panes open at any
+time.
 
 {language=shell, line-numbers=off}
     $ tmux list-windows -F "window: #{window_id}, panes: #{window_panes} \
@@ -297,6 +298,9 @@ specific information aside from the count of panes inside it.
     > window: @15, panes: 1 pane_id: %40
       window: @13, panes: 3 pane_id: %36
       window: @25, panes: 1 pane_id: %50
+
+This will show the window ID, which is prefixed by an `@` symbol, as well as the
+number of panes inside the window.
 
 Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. While this
 behavior happens now, it's advised to keep use of `-F` scoped to the objects
