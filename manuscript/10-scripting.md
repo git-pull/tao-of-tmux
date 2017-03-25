@@ -362,7 +362,7 @@ Open tmux command prompt via `Prefix` + `:` and type this after the `:`:
 
 `send-keys echo 'hi'`
 
-Hit enter. This just inserted *hi* into the current active pane. You can also
+Hit enter. This inserted *hi* into the current active pane. You can also
 use targets to specific which pane to send it to. 
 
 Let's now try to send keys to a another pane in our current window. Create a
