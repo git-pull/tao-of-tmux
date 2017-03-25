@@ -26,12 +26,12 @@ key, you'll be dead in the water.
 
 Key sequences will come up later if you use Vim, Emacs, or other TUI (Terminal
 User Interface) applications. If you haven't internalized the concept, let's do
-it now. If you have done similar command sequences in TUI/GUI applications,
-that'll come in handy.
+it now. Prior experience command sequences in TUI/GUI applications will come in
+handy.
 
 When you memorize a key combo, it's one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short-term memory
-on getting stuff done; that means fewer mistakes.
+on getting stuff done; resulting in fewer mistakes.
 
 Q> ### Coming from ``GNU Screen``?
 Q>
@@ -44,8 +44,8 @@ Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
 
-The default leader prefix is `<Ctrl-b>`. That's holding down the
-`control` key, then `b`.
+The default leader prefix is `<Ctrl-b>`. Holding down the `control` key, then
+`b`.
 
 X> ### Sending tmux commands
 X>
@@ -55,7 +55,10 @@ X> 1. Press `control` key down and *hold it*.
 X> 2. Press `b` and hold it.
 X> 3. Release both keys at the same time.
 X>
-X> That's all it takes. Now, let's try something:
+X> Try it a few times. It may feel unnatural until you've done it a couple
+X> times, which is normal when memorizing shortcuts.
+X>
+X> Now, let's try something:
 X>
 X> `<Ctrl-b> d`. So,
 X>
