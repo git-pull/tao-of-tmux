@@ -38,8 +38,7 @@ In daily life, we often break compatibility with POSIX standards for reasons of
 sheer practicality. Operating systems, like macOS, will drop you right into Bash.
 [`make(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html),
 a POSIX standard, is [GNU Make](https://www.gnu.org/software/make/) on macOS by
-default.  Did you know that, as of September 2016, POSIX Make has no
-conditionals?
+default. Did you know, as of September 2016, POSIX Make has no conditionals?
 
 I'm not saying this to take a run at purists. As someone who tries to remain
 compatible in my scripting, it gets hard to do simple things after a while. On
@@ -58,8 +57,8 @@ But on most Linux systems and macOS, GNU Make is the default, so they get to do:
 
     ENDIF
 
-This is one of the many tiny inconsistencies that span across operating systems,
-their userlands, their binary / library /  include paths, and adherence /
+This is one of the many tiny inconsistencies across operating systems, their
+userlands, their binary / library /  include paths, and adherence /
 interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 or whether they follow their own.
 
@@ -89,9 +88,9 @@ The terminal interface can be best introduced by citing official specification,
 laying out its technical properties, interfaces, and responsibilities. This can
 be viewed in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html).
 
-That's your TTY's, including text terminals and X sessions that live within
-them. On Linux / BSD systems, you can switch between sessions via
-`<ctrl-alt-F1>` through `<ctrl-alt-F12>`.
+This includes TTY's, including text terminals and X sessions within them. On
+Linux / BSD systems, you can switch between sessions via `<ctrl-alt-F1>`
+through `<ctrl-alt-F12>`.
 
 ## Terminal emulators
 
@@ -108,9 +107,8 @@ language is a language.
 Each shell interpreter has its own language features. Like with shells, many
 will resemble the [POSIX shell language](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_01)
 and strive to be compatible with it. Zsh and Bash should be able to understand
-POSIX shell scripts you write, but not the other way around (we will cover that
+POSIX shell scripts you write, but not the other way around (we will cover this
 in [shell interpreters](#shells)).
-
 
 The top of `.sh` files [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
 statement, which can invoke shellscripts in different dialects.
@@ -120,7 +118,7 @@ But the languages are not as closely regulated and standardized as, say, [C++'s
 standards committee](http://www.open-std.org/jtc1/sc22/wg21/) workgroups or
 [python's PEPs](https://www.python.org/dev/peps/). Bash and Zsh take features
 from Korn and C Shell's languages, but without all the ceremony and bureaucracy
-that other languages entail.
+other languages espouse.
 
 ## Shell interpreters (Shells) {#shells}
 
@@ -135,7 +133,7 @@ covers in technical detail the responsibilities of the shell.
 
 For shells and operating systems: each distro or group does their own darn
 thing. On most Linux distributions and macOS, you'll typically be dropped into
-Bash. That's because Apple decided to use it as a *default shell* for users.
+Bash.
 
 On FreeBSD, you may default to a plain vanilla `sh` unless you specify
 otherwise during the installation process. In Ubuntu, `/bin/sh` used to be
@@ -145,9 +143,9 @@ was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 here, you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell";
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
 via Bash. This is because specialty [shell languages](#shell-languages), such as
-Bash and Zsh, add a lot of helpful and practical features that may work on
-one interpreter, but not another. For instance, you would need to install the
-Zah interpreter across all your systems if you rely on Zsh-specialized
+Bash and Zsh, add a lot of helpful and practical features may work on one
+interpreter, but not another. For instance, you would need to install the Zsh
+interpreter across all your systems if you rely on Zsh-specialized
 scripting. If you conformed with POSIX shell scripting, your scripting would
 have the highest level of compatibility at the cost of being more verbose.
 
