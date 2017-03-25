@@ -122,6 +122,11 @@ If you're having issue with color detail in tmux, it may help to set
 
 This sets the TERM variable in new panes.
 
+Windows can be automatically renamed via setting `automatic-rename`:
+
+{line-numbers=off}
+    set-window-option -g automatic-rename
+
 ## Keybindings
 
 Customize your [prefix key](#prefix-key):
