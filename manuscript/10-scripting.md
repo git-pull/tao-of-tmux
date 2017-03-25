@@ -101,7 +101,7 @@ instance, a session named `mysession` can be matched via `mys`:
 {language=shell, line-numbers=off}
     $ tmux attach -t mys
 
-Matching of targets can fail if a pattern matches more than one target. If 2
+Matching targets will fail if a pattern matches more than one item. If 2
 sessions existed, named `mysession` and `mysession2`, the above command would
 fail. To target either session, the complete target name must be specified.
 
@@ -307,3 +307,25 @@ Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. While this
 behavior happens now, it's advised to keep use of `-F` scoped to the objects
 being listing, when scripting, to avoid breakage. For instance, if you want the
 active pane, use `#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
+
+
+## Summary
+
+tmux has a well-devised and intuitive front-end available for command line
+use. The user can get access to bread and butter functionality, quickly. At the
+same time, tmux provides a powerful way of retrieving information on its objects
+between `list-panes`, `list-windows` and `list-sessions` and formats. This makes
+tmux not only accessible, configurable, but also scriptable.
+
+The ability to explicitly and reliably target information down to the point of
+tracking a pane by its ID and collecting its pane contents, even sending in keys
+open up the possiblity of anything from niche shell scripts to monitor and react
+to behavior on your system to intelligent and structured control via object
+oriented libraries, like [libtmux](https://github.com/tony/libtmux).
+
+In the next chapter, we go delve into optimizations that showcase the latest
+generation of unix tools that build upon old, time-tested concepts like manual
+pages and [piping](https://en.wikipedia.org/wiki/Pipeline_(Unix)) while
+maintaining all important portability and degrading gracefully. In addition,
+a class of powerful, high-level applications that leverage tmux' scripting
+capabilities to consistenly build tmux workspace via declarative configurations.
