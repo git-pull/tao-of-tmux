@@ -67,9 +67,10 @@ tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.o
 patterns.
 
 For instance, you need not type `$ tmux attach-session` every time. First,
-there's the [alias](#aliases) of `$ tmux attach`, but besides that, you
-can pattern match `$ tmux attac`, `$ tmux att`, `$ tmux at` and `$ tmux a`
-work.
+there's the [alias](#aliases) of `$ tmux attach`, but additionally, more
+concise commands can be used if they partially match the name of the command or
+the target. tmux' pattern matching allows `$ tmux attac`, `$ tmux att`, `$ tmux at`
+and `$ tmux a` to reach `$ tmux attach`.
 
 Every tmux command has shorthands; let's try this for `$ tmux new-session`:
 
@@ -88,11 +89,21 @@ and so on, until:
     $ tmux new-
     ambiguous command: new-, could be: new-session, new-window
 
-The limitation, as seen above, is that command matches can collide. Multiple
-commands begin with `new-`. So, if you wanted to use matches,
-`$ tmux new-s` for a new session or `$ tmux new-w` for a new window would be
-the most efficient way. But the alias of `$ tmux new` for new session and
-`$ tmux neww` for new windows is even better than the matching in that case.
+The limitation, as seen above, is command matches can collide. Multiple commands
+begin with `new-`. So, if you wanted to use matches, `$ tmux new-s` for a new
+session or `$ tmux new-w` for a new window would be the most efficient way. But,
+the alias of `$ tmux new` for new session and `$ tmux neww` for new windows is
+even more concise than matching, since the special alias exists.
+
+Patterns can also match [targets](#targets) with window and session names. For
+instance, a session named `mysession` can be matched via `mys`:
+
+{language=shell, line-numbers=off}
+    $ tmux attach -t mys
+
+Collisions to patterns also have a limitation, if there is a `mysession` and
+`mysession2` session, means `mys` would match both. To target either session,
+the full target name must be specific.
 
 ## Targets {#targets}
 
@@ -134,13 +145,18 @@ client at `/dev/ttys004`:
 `$ tmux detach-client [-s target-session] [-t target-client]`
 
 {language=shell, line-numbers=off}
-    $ tmux detach-client -s mysession
     $ tmux detach-client -s mysession -t /dev/ttys004
+
+    # If within client, -t is assumed to be current client
+    $ tmux detach-client -s mysession
 
 `$ tmux has-session [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux has-session -t mysession
+
+    # Pattern matching session name
+    $ tmux has-session -t mys
 
 `$ tmux kill-session [-t target-session]`
 
@@ -166,7 +182,9 @@ client at `/dev/ttys004`:
 
 {language=shell, line-numbers=off}
     $ tmux new-session -t newsession
-    $ tmux new-session -t newsession -d  # create new-session in the background
+
+    # Create new-session in the background
+    $ tmux new-session -t newsession -d
 
 `$ tmux refresh-client [-t target-client]`
 
@@ -177,7 +195,9 @@ client at `/dev/ttys004`:
 
 {language=shell, line-numbers=off}
     $ tmux rename-session -t mysession renamedsession
-    $ tmux rename-session renamedsession  # if already inside attached session
+
+    # If within attached session, -t is assumed
+    $ tmux rename-session renamedsession
 
 `$ tmux show-messages [-t target-client]`
 
@@ -188,7 +208,9 @@ client at `/dev/ttys004`:
 
 {language=shell, line-numbers=off}
     $ tmux suspend-client -t /dev/ttys004
-    $ tmux suspend-client  # if already in client
+
+    # If already in client
+    $ tmux suspend-client
 
     # bring client back to the foreground
     $ fg
@@ -197,7 +219,9 @@ client at `/dev/ttys004`:
 
 {language=shell, line-numbers=off}
     $ tmux suspend-client -c /dev/ttys004 -t othersession
-    $ tmux suspend-client -t othersession  # within current client
+
+    # Within current client, -c is assumed
+    $ tmux suspend-client -t othersession 
 
 ## Formats {#formats}
 
@@ -252,10 +276,10 @@ Pane variables: `cursor_x`, `cursor_y`, `pane_active`, `pane_current_command`,
 `pane_current_path`, `pane_height`, `pane_id`, `pane_index`, `pane_width`,
 `pane_pid` and all window, session and server variables.
 
-Remember the graphic that showed how servers encapsulated sessions, sessions
-held windows, windows held panes? That concept plays a role here. If you
-`list-panes`, all variables up the ladder, including window, session and server
-variables are available for the panes being listed. Example:
+This book gives a great focus to seperating the concept of server, session,
+window and panes. That concept plays a role here. If you `list-panes`, all
+variables up the ladder, including window, session and server variables are
+available for the panes being listed. Example:
 
 {language=shell, line-numbers=off}
     $ tmux list-panes -F "pane: #{pane_id}, window: #{window_id}, \
@@ -264,8 +288,8 @@ variables are available for the panes being listed. Example:
       pane: %38, window: @13, session: $6, server: /private/tmp/tmux-501/default
       pane: %36, window: @13, session: $6, server: /private/tmp/tmux-501/default
 
-But, on the other hand, listing windows isn't going to, reliably, turn up
-pane-specific information aside from the count of panes inside it.
+On the other hand, listing windows isn't going to, reliably, turn up pane-
+specific information aside from the count of panes inside it.
 
 {language=shell, line-numbers=off}
     $ tmux list-windows -F "window: #{window_id}, panes: #{window_panes} \
@@ -274,7 +298,7 @@ pane-specific information aside from the count of panes inside it.
       window: @13, panes: 3 pane_id: %36
       window: @25, panes: 1 pane_id: %50
 
-Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. Despite
-that, it's advised to keep use of `-F` scoped to the objects you are a listing,
-when scripting, to avoid breakage. If you want the active pane, get the
-`#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
+Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. While this
+behavior happens now, it's advised to keep use of `-F` scoped to the objects
+being listing, when scripting, to avoid breakage. For instance, if you want the
+active pane, use `#{pane_active}` via `$ tmux list-panes -F "#{pane_active}"`.
