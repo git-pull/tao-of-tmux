@@ -94,27 +94,20 @@ Is the same as having no `.tmux.conf` (or `$ tmux -f/dev/null`) and typing:
 
 in a newly started tmux server.
 
-## Common options
+The important thing to internalize is that a tmux configuration consists of
+setting server options (`set-option -s`), global session (`set-option -g`), and
+window options (`set-window-option -g`) 
 
-Aside from the [status bar](#status-bar), which is covered next chapter, most
-user configuration will be custom keybindings. This section covers the few
-generic options, the next section goes into snippets involving keybindings.
+The rest of this chapter is going to be cookbook-style.
+
+## Server options
+
+Server options are set with `set-option -s option value`.
 
 ### Tweak timing between key sequences
 
 {line-numbers=off}
     set -s escape-time 0
-
-(`-s` sets the option server wide.)
-
-### Base index
-
-Set the starting number (base index) for windows:
-
-{line-numbers=off}
-    set -g base-index 1
-
-Setting `base-index` assures newly created windows start at 1 and count upwards.
 
 ### Terminal coloring
 
@@ -125,6 +118,26 @@ If you're having issue with color detail in tmux, it may help to set
     set -g default-terminal "screen-256color"
 
 This sets the `TERM` variable in new panes.
+
+## Session options
+
+Aside from the [status bar](#status-bar), which is covered next chapter, most
+user configuration will be custom keybindings. This section covers the few
+generic options, the next section goes into snippets involving keybindings.
+
+### Base index
+
+Set the starting number (base index) for windows:
+
+{line-numbers=off}
+    set -g base-index 1
+
+Setting `base-index` assures newly created windows start at 1 and count upwards.
+
+## Window options
+
+Window options are set via `set-option -w` or `set-window-option`. They are the
+same thing.
 
 ### Automatic window naming
 
