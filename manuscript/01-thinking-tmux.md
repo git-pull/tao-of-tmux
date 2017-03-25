@@ -43,11 +43,8 @@ Just like in a graphical desktop environment, they throw in a clock, too.
 
 ## Multitasking
 
-tmux allows you to 
-keep multiple terminals running on the same screen.
-
-(After all, that's where the abbreviation "tmux" comes from - **T**erminal
-**Mu**ltiple**x**er.)
+tmux allows you to keep multiple terminals running on the same screen. After
+all, the abbreviation "tmux" comes from - **T**erminal **Mu**ltiple**x**er.
 
 In addition to multiple terminals on one screen, tmux allows you to create and link
 multiple "windows" within the confines of the tmux session you attached.
@@ -92,15 +89,16 @@ Detaching can be especially useful on:
 - Local machines. You start all your normal terminal applications within
   a tmux session, you restart X. Instead of losing your processes as your
   normally would if you were using an X terminal, like xterm or konsole, you'd
-  be able to `tmux attach` after and find all processes that were alive and
+  be able to `tmux attach` after and find all processes were alive and
   kicking all along.
 - Remote SSH applications and workspaces you run in tmux. You
   can detach your tmux workspace at work before you clock out, then the next
   morning, reattach your session. Ahhh. Refreshing. :)
-- Those servers you rarely log into. It could be that cloud instance you have
-  that you log into 9 months later, and as a reflex, `tmux attach` to see if
-  there is anything on there. And boom, you're back in a session that's 9 months
-  old. It's like a hack to restore your short-term memory.
+- Those servers you rarely log into. Perhaps a cloud instance you log into 9
+  months later, and as a reflex, `tmux attach` to see if there is anything on
+  there. And boom, you're back in a session you've forgotten about, but still
+  jogs your memory to what you were tweaking or fixing. It's like a hack to
+  restore your memory.
 
 ## Powerful combos
 
@@ -122,9 +120,9 @@ which is great for pair programming.  If you were in the same session, you
 and the other person would see the same thing, share the same input, and the
 same active window and pane.
 
-The above are just examples, but any general workspace you'd normally use in a
+The above are just examples, any general workspace you'd normally use in a
 terminal for any task can gain the benefit of you being able to persist it! 
-That includes projects or repetitive efforts you'd multitask on. The
+Including projects or repetitive efforts you'd multitask on. The
 *[tips and tricks](#tips-and-tricks)* section will dive into specific flows
 you can use today.
 
@@ -138,7 +136,7 @@ Q> consumer laptops and PC's with a day or two uptime, having tmux persist
 Q> tasks for organizational purposes is satisfactory to run it.
 Q>
 Q> It comes as a disappointment, because some are interested in being able to
-Q> persist a tree of processes after restart. That goes out of scope of what
+Q> persist a tree of processes after restart. It goes out of scope of what
 Q> tmux is meant to do.
 Q>
 Q> For tasks you repeat often, you can always use a tool, like
