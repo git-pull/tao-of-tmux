@@ -108,7 +108,7 @@ These commands, and the other `list-` commands, in practice, are rare. But, they
 are part of tmux scriptability should you want to get creative. The [scripting tmux](#scripting-tmux)
 chapter will cover this in greater detail.
 
-## Clipboard
+## Clipboard {#clipboard}
 
 tmux clients wield a powerful clipboard feature to copy and paste across
 sessions, windows and panes.
