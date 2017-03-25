@@ -357,6 +357,9 @@ an Enter keypress to run `cal(1)`.
 
 This outputs in the adjacent pane.
 
+![Top-left: listing panes, Bottom-left: Sending keys to right pane, Right:
+output of cal.](images/10-scripting/send-keys-cal.png)
+
 ## Reading and monitoring tmux panes
 
 ## Summary
