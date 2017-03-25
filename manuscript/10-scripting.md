@@ -394,8 +394,8 @@ Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
 `$ tmux capture-pane` will copy a panes' contents.
 
-By default, the contents will be saved to tmux' internal clipboard; *the
-paste *buffer*. You can run `capture-pane` within any pane, then navigate to an
+By default, the contents will be saved to tmux' internal clipboard; the *paste
+buffer*. You can run `capture-pane` within any pane, then navigate to an
 editor, paste the contents (don't forget to `:set paste` and go into insert mode
 with `i` on vim) and save it to a file. To [paste](#clipbpard), use `Prefix` +
 `]` inside the pane you're pasting into.
