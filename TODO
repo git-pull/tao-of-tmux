@@ -17,3 +17,9 @@ Tables
 Tweaking status bar live needs `set-option`
 
 How to output pane contents via capture-pane, send-keys
+
+New sections:
+
+Send keys, Copying panes
+
+Detailed examples for formats and targets
