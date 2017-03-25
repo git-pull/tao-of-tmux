@@ -109,7 +109,7 @@ Bind toggling status line to `Prefix` + `q`:
 
 ## Example: default config
 
-![](images/status-line/default.png)
+![](images/09-status-bar/default.png)
 
 {line-numbers=off}
     status on
@@ -127,7 +127,7 @@ Bind toggling status line to `Prefix` + `q`:
 
 ## Example: Dressed up
 
-![](images/status-line/dressed up.png)
+![](images/09-status-bar/dressed up.png)
 
 {line-numbers=off}
     status on
