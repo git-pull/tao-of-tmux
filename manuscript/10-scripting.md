@@ -431,11 +431,11 @@ also. Targets are server-wide.
 
 ## Summary
 
-tmux has a well-devised and intuitive front-end available for command line
-use. The user can get access to bread and butter functionality, quickly. At the
-same time, tmux provides a powerful way of retrieving information on its objects
-between `list-panes`, `list-windows` and `list-sessions` and formats. This makes
-tmux not only accessible, configurable, but also scriptable.
+tmux has a well-devised and intuitive command system enabling the user to access 
+bread and butter functionality, quickly. At the same time, tmux provides a
+powerful way of retrieving information on its objects between `list-panes`,
+`list-windows` and `list-sessions` and formats. This makes tmux not only
+accessible, configurable, but also scriptable.
 
 The ability to explicitly and reliably target information down to the point of
 tracking a pane by its ID and collecting its pane contents, even sending in keys
