@@ -158,7 +158,9 @@ Source: <https://github.com/tony/tmux-config>
 
 ## Example: Powerline
 
-By far, the most full-featured solution available for tmux status lines is
+![](images/09-status-bar/powerline.png)
+
+The most full-featured solution available for tmux status lines is
 [powerline](https://github.com/powerline/powerline/), which heavily utilizes the
 shell command outputs, not only to give direct system statistics, but also to
 generate tmux-friendly styling alongside emoji-like glyphs.
@@ -206,5 +208,3 @@ For a simpler approach, assure you [properly configured python with your PATHs](
 {line-numbers=off}
     set -g status-interval 2
     set -g status-right '#(powerline tmux right)'
-
-![Powerline requires a specialized font](images/09-status-bar/powerline.png)
