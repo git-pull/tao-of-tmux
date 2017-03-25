@@ -420,7 +420,8 @@ To check what's inside:
     $ cat ./test
 
 Like with `send-keys`, [targets](#targets) can be specified with `-t`. Let's
-grab a pane:
+copy a pane into tmux' clipboard ("paste buffer") and paste it into a text
+editor in a third pane:
 
 ![Top-left: Listing panes, Bottom-left: Capturing pane output of top-left pane,
 Right: Pasting buffer into vim.](images/10-scripting/capture-pane-vim.png)
