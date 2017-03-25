@@ -163,6 +163,28 @@ Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 {line-numbers=off}
     bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
 
+### Vi copy-paste keys
+
+This is comprised of two-parts: Setting the `mode-keys` window option to vi, and
+setting the `vi-copy` bindings to use `v` to begin selection and `y` to yank.
+
+{line-numbers=off}
+    # Vi copypaste mode
+    set-window-option -g mode-keys vi
+    bind-key -t vi-copy 'v' begin-selection
+    bind-key -t vi-copy 'y' copy-selection
+
+#### hjkl / vi-like pane traversal
+
+Another one for vi fans, this keeps your right hand on the home row when moving
+directionally across panes in a window.
+
+{line-numbers=off}
+    bind h select-pane -L
+    bind j select-pane -D
+    bind k select-pane -U
+    bind l select-pane -R
+
 ### Further inspiration
 
 For more ideas, I have a `.tmux.conf` you can copy-paste from on the internet at
