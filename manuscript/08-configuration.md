@@ -151,9 +151,13 @@ Windows can be automatically renamed via setting `automatic-rename`:
 
 ### Prefix key
 
-Customize your [prefix key](#prefix-key):
+The default [prefix key](#prefix-key) in tmux is `C-b`, you can customize it by
+setting a new prefix and unsetting the default. To set the prefix to `C-a`,
+holding the `Ctrl` key and pressing `a`, try this:
 
 {line-numbers=off}
+    set-option -g prefix C-a
+    unbind-key C-b
     bind-key a send-prefix
 
 ### New window w/ prompt
