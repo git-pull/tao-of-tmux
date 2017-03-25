@@ -103,9 +103,9 @@ You can retrieve a list of active client connections via:
 {language=shell, line-numbers=off}
     $ tmux list-clients
 
-These commands, as well as the other `list-` commands, in practice, are rather
-rare. But they are part of the tools that make tmux highly scriptable should
-you want to get creative. You can learn more about that in [formats](#formats).
+These commands, and the other `list-` commands, in practice, are rare. But, they
+are part of the functionality that make tmux highly scriptable should you want
+to get creative. You can learn more about that in [formats](#formats).
 
 ## Clipboard
 
