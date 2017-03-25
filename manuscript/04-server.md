@@ -37,7 +37,7 @@ from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters, where we dive
 into [Formats](#formats), [Targets](#targets), and tools such as [libtmux](https://github.com/tony/libtmux)
-that I made, which utilize these features.
+I made, which utilize these features.
 
 It surprises some, because servers often beget a setup process. But servers
 being involved doesn't entail hours of configuration on each machine you run on.
@@ -62,8 +62,8 @@ The tmux server won't go away until all sessions are closed.
 
 One server can contain one or multiple [sessions](#sessions).
 
-Recurring usage of tmux, after a server already exists, will create a new
-session inside that server. 
+Starting tmux after a server already running will create a new session inside
+the existing server. 
 
 W> ### Advanced: Multiple servers
 W>
