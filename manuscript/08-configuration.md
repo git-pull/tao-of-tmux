@@ -98,7 +98,7 @@ in a newly started tmux server.
 
 Aside from the [status bar](#status-bar), which is covered next chapter, most
 user configuration will be custom keybindings. This section covers the few
-generic options, the next section will go into snippets involving keybindings.
+generic options, the next section goes into snippets involving keybindings.
 
 Tweak wait-time between key sequences:
 
@@ -112,7 +112,15 @@ Set the starting number (base index) for windows:
 {line-numbers=off}
     set -g base-index 1
 
-Will make newly created windows start at 1 and count upwards.
+Setting `base-index` assures newly created windows start at 1 and count upwards.
+
+If you're having issue with color detail in tmux, it may help to set
+`default-terminal` to `screen-256color`.
+
+{line-numbers=off}
+    set -g default-terminal "screen-256color"
+
+This sets the TERM variable in new panes.
 
 ## Keybindings
 
