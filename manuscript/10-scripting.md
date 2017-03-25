@@ -364,7 +364,7 @@ Grab a pane ID from the output of `list-panes`:
 
 {language=shell, line-numbers=off}
     $ tmux list-panes
-      0: [180x57] [history 87/2000, 21033 bytes] %0
+    > 0: [180x57] [history 87/2000, 21033 bytes] %0
       1: [89x14] [history 1884/2000, 509864 bytes] %1 (active)
       2: [90x14] [history 1853/2000, 465297 bytes] %2
 
@@ -390,7 +390,7 @@ This outputs in the adjacent pane.
 ![Top-left: Listing panes, Bottom-left: Sending keys to right pane, Right:
 Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
-## Capturing pane content
+## Capturing pane content {#capture-pane}
 
 `$ tmux capture-pane` will copy a panes' contents.
 
