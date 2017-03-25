@@ -101,9 +101,9 @@ instance, a session named `mysession` can be matched via `mys`:
 {language=shell, line-numbers=off}
     $ tmux attach -t mys
 
-Collisions to patterns also have a limitation, if there is a `mysession` and
-`mysession2` session, means `mys` would match both. To target either session,
-the full target name must be specific.
+Matching of targets can fail if a pattern matches more than one target. If 2
+sessions existed, named `mysession` and `mysession2`, the above command would
+fail. To target either session, the complete target name must be specified.
 
 ## Targets {#targets}
 
