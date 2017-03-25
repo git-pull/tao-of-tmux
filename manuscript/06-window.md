@@ -153,7 +153,7 @@ You can delete a window in two ways. First, you can exit or kill every pane in
 that window.  Panes can be killed via `Prefix` + `x` or by `Ctrl` + `d` within
 the pane's shell. The second way is `Prefix` + `&`, which will prompt you if you
 really want to delete the window. Warning: this will destroy all panes inside,
-as well as any processes.
+and any processes.
 
 From inside the current window, try this:
 
