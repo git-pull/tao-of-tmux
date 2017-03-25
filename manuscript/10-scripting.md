@@ -277,9 +277,10 @@ Pane variables: `cursor_x`, `cursor_y`, `pane_active`, `pane_current_command`,
 `pane_pid` and all window, session and server variables.
 
 This book gives a great focus to seperating the concept of server, session,
-window and panes. That concept plays a role here. If you `list-panes`, all
-variables up the ladder, including window, session and server variables are
-available for the panes being listed. Example:
+window and panes, a separation existing in user experience, and now also in
+tmux' printing attributes. If you `list-panes`, all variables up the ladder,
+including window, session and server variables are available for the panes being
+listed. Try this:
 
 {language=shell, line-numbers=off}
     $ tmux list-panes -F "pane: #{pane_id}, window: #{window_id}, \
