@@ -10,9 +10,8 @@ here's two fun ones:
     $ man less
     $ man man
 
-[most(1)](http://www.jedsoft.org/most/) is a solid
-[`PAGER`](http://pubs.opengroup.org/onlinepubs/9699919799//utilities/man.html)
-that drastically improves readability of manual pages by acting as a syntax
+[most(1)](http://www.jedsoft.org/most/), a solid [`PAGER`](http://pubs.opengroup.org/onlinepubs/9699919799//utilities/man.html),
+drastically improves readability of manual pages by acting as a syntax
 highlighter.
 
 ![left: man, version 1.6c on macOS Sierra. right: MOST v5.0.0](images/12-tips-and-tricks/most.png)
@@ -44,7 +43,7 @@ found:
         export PAGER="most"
     fi
 
-Save that to a file, let's say `~/.dot-config/most.sh`.
+Save this in a file, for example, to `~/.dot-config/most.sh`.
 
 Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) it in via
 your main rc file.
@@ -52,10 +51,9 @@ your main rc file.
 {language=shell, line-numbers=off}
     source $HOME/.dot-config/most.sh
 
-If you keep that pattern (or something close to it), you're on your way to
-a cross-platform, modular dot config. If you need inspiration, you can check
-my public permissively licensed config at <https://github.com/tony/.dot-config>.
-I document it well and welcome you to copy/paste from it, too.
+Patterns like these help make your dot-configs portable, cross-platform, and
+modular. For inspiration, you can fork, copy and paste from my permissively-
+licensed config at <https://github.com/tony/.dot-config>.
 
 ## Log tailing
 
@@ -69,25 +67,26 @@ On OS X, you can do:
 {language=shell, line-numbers=off}
     $ tail -F /var/log/system.log
 
-and keep that open in a pane. It's kind of like a Facebook newsfeed, except for
-programmers and system administrators.
+and keep it running in a pane while log messages come in. It's like
+Facebook newsfeed for your system, except for programmers and system
+administrators.
 
-For monitoring logs, [multitail](https://vanheusden.com/multitail/) is a
-terminal friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
+For monitoring logs, [multitail](https://vanheusden.com/multitail/) provides a
+terminal-friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
 moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching
 
 In my never-ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
-patterns. To get that perfect feedback look upon files changing,
-I've gradually become the internet's unofficial connoisseur on them.
+patterns. To get that perfect feedback loop upon file changes, I've gradually
+become the internet's unofficial connoisseur on them.
 
-What this application does is wait for a file to be updated, then
-executes a custom command, like restarting a server, rebuilding an application,
-running tests, linters, and so on. It gives you, as a developer instant feedback
-in the terminal and is one thing that can trick out a tmux workspace into an
-IDE-like environment.
+File watcher applications wait for a file to be updated, then execute a custom
+command, such as restarting a server, rebuilding an application, running tests,
+linters, and so on. It gives you, as a developer instant feedback in the
+terminal and is one thing that can trick out a tmux workspace into an IDE-like
+environment.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
 superbly across Linux distros, BSDs and OS X / macOS.
@@ -102,14 +101,15 @@ on file change:
 {language=shell, line-numbers=off}
     $ ls -d *.go | entr -c go test ./...
 
-Sometimes, we may want to watch files recursively, and we need to do that in a
-cross-platform way. We can't depend on `**` existing to grab files recursively.
-Something more POSIX friendly would be `find . -print | grep -i '.*[.]go'`:
+Sometimes, we may want to watch files recursively, but we need it to run
+reliably across systems. We can't depend on `**` existing to grab files
+recursively, since that's not portable. Something more POSIX-friendly would be
+`find . -print | grep -i '.*[.]go'`:
 
 {language=shell, line-numbers=off}
     $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
 
-Only run file watcher if entr is installed; let's wrap in a conditional
+To only run file watcher if entr is installed; let's wrap in a conditional
 [`command -v`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/command.html)
 test:
 
@@ -117,26 +117,31 @@ test:
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; fi
 
-And have it fallback to `go test` in the event `entr` isn't installed. You'll
-thank me when use this command in conjunction with a [session manager](#session-manager):
+And have it fallback to `go test` in the event `entr` isn't installed. This
+allows your command to degrade gracefully. You'll thank me when use this
+snippet in conjunction with a [session manager](#session-manager):
 
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; else go test ./...; fi
 
-Show a notice message to user to install entr if not installed on the system:
+If the project is a team or open source project where a user may be trying that
+command for the first time, but missing a require software package, we can give
+a helpful message. This shows a notice to the user to install entr if not
+installed on the system:
 
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
       echo "run tasks when files change. \nSee http://entrproject.org/"; fi
 
-Here's why you want patterns like that: You can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
+Here's why you want patterns like above: You can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
 and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control),
 so you and other developers can have access to this reusable command across
-different UNIX-like systems, with and without that certain program installed.
+different UNIX-like systems, with and without certain programs installed.
 
-Note: You may have to convert the indentation within the `Makefile`s from spaces to tabs.
+Note: You may have to convert the indentation within the `Makefile`s from spaces
+to tabs.
 
 Let's see what a `Makefile` with this looks like:
 
@@ -146,7 +151,7 @@ Let's see what a `Makefile` with this looks like:
 
 To run this, do `$ make watch_test` in the same directory as the `Makefile`.
 
-But that was a tad bloated and hard to read. We have a couple tricks at our
+But it's still a tad bloated and hard to read. We have a couple tricks at our
 disposal. One would be to add continuation to the next line with a trailing
 backslash (`\`):
 
@@ -158,8 +163,7 @@ backslash (`\`):
         echo "\nInstall entr(1) to run tasks on file change. \n"; \
         echo "See http://entrproject.org/"; fi
 
-Another would be to break the command into variables and `make` subcommands. So,
-let's try that:
+Another would be to break the command into variables and `make` subcommands. So:
 
 {language=makefile, line-numbers=off}
     WATCH_FILES= find . -type f -not -path '*/\.*' | \
@@ -211,9 +215,19 @@ will give you `entr -rc`:
 ## Session Managers {#session-manager}
 
 For those who use tmux regularly to perform repetitive tasks, such as opening
-the same software project, view the same logs, etc., applications that
-store your layouts declaratively in a YAML or JSON file help you boot up
-your session fast.
+the same software project, viewing the same logs, etc., frequent tasks will
+often end up leading to the creation of tmux scripts.
+
+A user can use plain shell scripting to build their tmux sessions. However,
+scripting is error prone, hard to debug, and requires tmux split windows into
+panes in a certain order. In addition, there's the burden of assuring the shell
+scripts are portable.
+
+A declarative configuration in YAML or JSON configuration abstracts out the
+commands, layout and options tmux has. It'd prevent the mistakes and repetition
+scripting entails. These applications are called tmux *session managers*, and, in
+differently ways, they programatically create tmux workspaces by runnings a
+series of commands based off a config.
 
 [Teamocil](https://github.com/remiprev/teamocil) and
 [Tmuxinator](https://github.com/tmuxinator/tmuxinator) are the first ones I
@@ -227,9 +241,9 @@ features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux
 a library which abstracts tmux [server](#server), [sessions](#sessions),
 [windows](#windows) and [panes](#panes) to build the state of tmux sessions. In
 addition, it has a naive form of session freezing, support for JSON, more
-flexible configuration options, and it will even offer to attach sessions
-that exist, instead of redundantly running script commands against the
-session if it is already running.
+flexible configuration options, and it will even offer to attach exiting
+sessions, instead of redundantly running script commands against the
+session if it's already running.
 
 So, in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
 then create a YAML file at `~/.tmuxp/test.yaml`:
