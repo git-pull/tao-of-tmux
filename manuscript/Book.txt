@@ -10,7 +10,7 @@
 09-status-bar.md
 10-scripting.md
 11-tips-and-tricks.md
-11-takeaway.md
+12-takeaway.md
 99-cheatsheets.md
 99-installation.md
 99-windows-bash.md
