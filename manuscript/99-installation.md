@@ -1,5 +1,3 @@
-{backmatter}
-
 # Appendix: Installing tmux {#appendix-installation}
 
 ## macOS / OS X

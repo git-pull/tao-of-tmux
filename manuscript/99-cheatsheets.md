@@ -1,4 +1,6 @@
-# Cheatsheets {#appendix-cheatsheets}
+{backmatter}
+
+# Appendix: Cheatsheets {#appendix-cheatsheets}
 
 These are taken directly from tmux's manual pages, tabled and organized by
 hand into sections for convenience.
