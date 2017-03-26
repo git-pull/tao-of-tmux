@@ -179,31 +179,7 @@ are on Read the Docs. For a better idea:
 [psutil](https://github.com/giampaolo/psutil) is a cross-platform tool powerline
 uses to help gather system information.
 
-The first option to get powerline working with tmux is sourcing `powerline.conf`
-from your config. The only difficulty is nailing down the location across
-systems and python versions. To try getting powerline found across varying
-installations, I use `if-shell`:
-
-{line-numbers=off}
-    # pip install --user git+git://github.com/powerline/powerline
-    if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
-
-    # [sudo] pip install git+git://github.com/powerline/powerline
-    if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
-
-    # [sudo] pip install git+git://github.com/powerline/powerline
-    if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
-
-    # python 3.4
-    # if-shell 'test -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf'
-
-    # python 3.5
-    # if-shell 'test -f /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf'
-
-    # python 3.6
-    # if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
-
-For a simpler approach, assure you [properly configured python with your PATHs](#troubleshoot-site-paths) and try this:
+Assure you [properly configured python with your PATHs](#troubleshoot-site-paths) and try this:
 
 {line-numbers=off}
     set -g status-interval 2
