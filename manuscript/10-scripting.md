@@ -216,7 +216,7 @@ client at `/dev/ttys004`:
     # If already in client
     $ tmux suspend-client
 
-    # bring client back to the foreground
+    # Bring client back to the foreground
     $ fg
 
 ### `$ tmux switch-client [-c target-client] [-t target-session]`
