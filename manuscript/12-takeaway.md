@@ -13,11 +13,11 @@ very clever hacker that utilizes the advanced scripting capabilities tmux
 offers to pilot the terminal in ways previously thought impossible.
 
 We've covered the [server](#server), [session](#sessions), [window](#windows),
-and [pane](#panes) container concept. Panes are shells, aka pseudoterminals, aka
-PTYs. The command system and how configurations are basically a file filled with
-commands. An overview of the [target](#targets) system, which lets you specify
-objects to interact with tmux commands. A breeze through [formats](#formats), a
-template system with variables toretrieve information on tmux' current state.
+and [pane](#panes) concepts. Panes are shells, aka pseudoterminals, aka
+PTYs. The command system and how [configurations](#config) are basically a file
+filled with commands. An overview of the [target](#targets) system, which lets
+you specify objects to interact with tmux commands. A breeze through [formats](#formats),
+a template system with variables toretrieve information on tmux' current state.
 How to [send keystrokes](#send-keys) and [copy from tmux panes](#capture-pane)
 programmatically. A lot of [terminal tricks](#tips-and-tricks) that work across
 platforms and well with tmux, including a [file watching workflow](#file-watching)
