@@ -347,9 +347,9 @@ only list windows within the current session inside tmux.
 tmux allows sending keys, including Ctrl via `C-`, `^` and alt (meta) via `M-`,
 as well as special key names, from the tmux manual:
 
-> Up, Down, Left, Right, BSpace, BTab, DC (Delete), End, Enter, Escape, F1 to
-> F12, Home, IC (Insert), NPage/PageDown/PgDn, PPage/PageUp/PgUp, Space,
-> and Tab.
+`Up`, `Down`, `Left`, `Right`, `BSpace`, `BTab`, `DC` (Delete), `End`, `Enter`,
+`Escape`, `F1` to `F12`, `Home`, `IC` (Insert), `NPage`/`PageDown`/`PgDn`,
+`PPage`/`PageUp`/`PgUp`, `Space`, and `Tab`.
 
 If special keys are not matched, the defined behavior is to send it as a string
 to the pane, character by character.
