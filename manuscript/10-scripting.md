@@ -344,8 +344,8 @@ only list windows within the current session inside tmux.
 
 ## Controlling tmux
 
-tmux allows sending keys, including Ctrl via `C-`, `^` and alt (meta) via `M-`,
-as well as special key names, from the tmux manual:
+tmux allows sending keys, including Ctrl via `C-` or `^`, alt (Meta) via `M-`,
+and special key names. Here's a list of special keys straight from the manual:
 
 `Up`, `Down`, `Left`, `Right`, `BSpace`, `BTab`, `DC` (Delete), `End`, `Enter`,
 `Escape`, `F1` to `F12`, `Home`, `IC` (Insert), `NPage`/`PageDown`/`PgDn`,
