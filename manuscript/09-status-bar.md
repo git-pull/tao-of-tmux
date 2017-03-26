@@ -107,9 +107,12 @@ Bind toggling status line to `Prefix` + `q`:
 {language=shell, line-numbers=off}
     $ tmux bind-key q set-option status
 
-## Example: default config
+## Example: Default config
 
 ![](images/09-status-bar/default.png)
+
+This is an example of the default config, you see if your tmux
+configuration has no status styling.
 
 {line-numbers=off}
     status on
