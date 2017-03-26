@@ -21,7 +21,7 @@ template system with variables toretrieve information on tmux' current state.
 How to [send keystrokes](#send-keys) and [copy from tmux panes](#capture-pane)
 programmatically. A lot of [terminal tricks](#tips-and-tricks) that work across
 platforms and well with tmux, including a [file watching workflow](#file-watching)
-to run linting, testing and build commands on file changes. [2 permissively licensed open source projects](#example-projects) for demonstration. A [tmux configuration](https://www.github.com/tony/.tmux-config)
+to run linting, testing and build commands on file changes. [2 permissively licensed open source projects](#example-projects) for demonstration. A [tmux configuration](https://www.github.com/tony/tmux-config)
 you can copy and paste from. An object oriented [tmux API wrapper](https://libtmux.git-pull.com)
 and a [tmux session manager](https://tmuxp.git-pull.com).
 
