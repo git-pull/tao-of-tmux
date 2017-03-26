@@ -162,27 +162,27 @@ client at `/dev/ttys004`:
     # Pattern matching session name
     $ tmux has-session -t mys
 
-`$ tmux kill-session [-t target-session]`
+### `$ tmux kill-session [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux kill-session -t mysession
 
-`$ tmux list-clients [-t target-session]`
+### `$ tmux list-clients [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux list-clients -t mysession
 
-`$ tmux lock-client [-t target-client]`
+### `$ tmux lock-client [-t target-client]`
 
 {language=shell, line-numbers=off}
     $ tmux lock-clients -t /dev/ttys004
 
-`$ tmux lock-session [-t target-session]`
+### `$ tmux lock-session [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux lock-session -t mysession
 
-`$ tmux new-session [-t target-session]`
+### `$ tmux new-session [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux new-session -t newsession
@@ -190,12 +190,12 @@ client at `/dev/ttys004`:
     # Create new-session in the background
     $ tmux new-session -t newsession -d
 
-`$ tmux refresh-client [-t target-client]`
+### `$ tmux refresh-client [-t target-client]`
 
 {language=shell, line-numbers=off}
     $ tmux refresh-client -t /dev/ttys004
 
-`$ tmux rename-session [-t target-session]` session-name
+### `$ tmux rename-session [-t target-session]` session-name
 
 {language=shell, line-numbers=off}
     $ tmux rename-session -t mysession renamedsession
@@ -203,12 +203,12 @@ client at `/dev/ttys004`:
     # If within attached session, -t is assumed
     $ tmux rename-session renamedsession
 
-`$ tmux show-messages [-t target-client]`
+### `$ tmux show-messages [-t target-client]`
 
 {language=shell, line-numbers=off}
     $ tmux show-messages -t /dev/ttys004
 
-`$ tmux suspend-client [-t target-client]`
+### `$ tmux suspend-client [-t target-client]`
 
 {language=shell, line-numbers=off}
     $ tmux suspend-client -t /dev/ttys004
@@ -219,7 +219,7 @@ client at `/dev/ttys004`:
     # bring client back to the foreground
     $ fg
 
-`$ tmux switch-client [-c target-client] [-t target-session]`
+### `$ tmux switch-client [-c target-client] [-t target-session]`
 
 {language=shell, line-numbers=off}
     $ tmux suspend-client -c /dev/ttys004 -t othersession
