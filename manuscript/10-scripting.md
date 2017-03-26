@@ -141,12 +141,12 @@ to know or specify the window or its session.
 Here are some examples of targets, assuming one session named `mysession` and a
 client at `/dev/ttys004`:
 
-#### attach-session [-t target-session]
+### attach-session [-t target-session]
 
 {language=shell, line-numbers=off}
     $ tmux attach-session -t mysession
 
-#### detach-client [-s target-session] [-t target-client]
+### detach-client [-s target-session] [-t target-client]
 
 {language=shell, line-numbers=off}
     $ tmux detach-client -s mysession -t /dev/ttys004
@@ -154,7 +154,7 @@ client at `/dev/ttys004`:
     # If within client, -t is assumed to be current client
     $ tmux detach-client -s mysession
 
-#### has-session [-t target-session]
+### has-session [-t target-session]
 
 {language=shell, line-numbers=off}
     $ tmux has-session -t mysession
