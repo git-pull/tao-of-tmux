@@ -26,8 +26,8 @@ you can copy and paste from. An object oriented [tmux API wrapper](https://libtm
 and a [tmux session manager](https://tmuxp.git-pull.com).
 
 If you liked this book, please leave a review on [Amazon](http://amzn.to/2gPfRhC) and
-[Goodreads](https://www.goodreads.com/book/show/33246223-the-tao-of-tmux). Also,
-consider leaving something in my [tip jar](https://www.git-pull.com/support.html).
+[Goodreads](https://www.goodreads.com/book/show/33246223-the-tao-of-tmux). I
+would also appreciate you considering leaving something in my [tip jar](https://www.git-pull.com/support.html).
 I am independent software developer and could use all the help I can get.
 
 If you found an error or have a suggestion, please contact me at
