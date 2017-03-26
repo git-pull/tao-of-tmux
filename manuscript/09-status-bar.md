@@ -163,10 +163,10 @@ Source: <https://github.com/tony/tmux-config>
 The most full-featured solution available for tmux status lines is
 [powerline](https://github.com/powerline/powerline/), which heavily utilizes the
 shell command outputs, not only to give direct system statistics, but also to
-generate tmux-friendly styling alongside emoji-like glyphs.
+generate graphical-like styling.
 
-To get these to work correctly, set up your fonts up to handle the powerline
-symbols. The easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
+To get the styling to work correctly, special fonts must be installed. The
+easiest way to use this is to install [powerline fonts](https://github.com/powerline/fonts),
 a collection of fixed width coder fonts patched to support [Wingdings](https://en.wikipedia.org/wiki/Wingdings)-like
 symbols.
 
@@ -176,8 +176,8 @@ are on Read the Docs. For a better idea:
 {language=shell, line-numbers=off}
     $ pip install --user powerline-status psutil
 
-[psutil](https://github.com/giampaolo/psutil) is a cross-platform tool powerline
-uses to help gather system information.
+[psutil](https://github.com/giampaolo/psutil), a required dependency of
+powerline, is a cross-platform tool to gather system information.
 
 Assure you [properly configured python with your PATHs](#troubleshoot-site-paths) and try this:
 
