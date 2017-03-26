@@ -1,4 +1,4 @@
-# Troubleshooting {#appendix-troubleshooting}
+# Appendix: Troubleshooting {#appendix-troubleshooting}
 
 ## `E353: Nothing in register *` when pasting on vim
 
