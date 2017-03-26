@@ -76,7 +76,7 @@ For monitoring logs, [multitail](https://vanheusden.com/multitail/) provides a
 terminal-friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
 moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
-## File watching
+## File watching {#file-watching}
 
 In my never-ending conquest to get software projects working in symphony with
 code changes, I've come to taste test many file watching applications and
@@ -279,7 +279,7 @@ To launch it, install tmuxp and load the configuration:
 If tmuxp isn't found, there is a [troubleshooting entry on fixing your
 paths](#troubleshoot-site-paths) in the appendix.
 
-## More code and examples
+## More code and examples {#example-projects}
 
 I've dusted off a C++ space shooter and a new go webapp I've been playing with.
 They're licensed under MIT so, you can use them, copy and paste from them, etc:

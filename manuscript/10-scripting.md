@@ -342,7 +342,7 @@ only list windows within the current session inside tmux.
     > 1: zsh* (3 panes) [176x36] [layout f9a4,176x36,0,0[176x29,0,0,0,176x6,0,30{87x6,0,30,1,88x6,88,30,2}]] @0 (active)
       2: zsh- (5 panes) [176x36] [layout 55ef,176x36,0,0[176x24,0,0,13,176x11,0,25{55x11,0,25,14,58x11,56,25[58x7,56,25,16,58x3,56,33,17],61x11,115,25,15}]] @6
 
-## Controlling tmux
+## Controlling tmux {#send-keys}
 
 tmux allows sending keys, including Ctrl via `C-` or `^`, alt (Meta) via `M-`,
 and special key names. Here's a list of special keys straight from the manual:

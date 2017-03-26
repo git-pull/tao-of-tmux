@@ -54,8 +54,8 @@ for efficiency in the world of the terminal.
 tmux is a tool I find useful. While I don't attach it to my personal identity,
 it's been part of my daily life for years. Besides the original resource,
 I've written a [popular tmux starter configuration](https://github.com/tony/tmux-config),
-a [pythonic tmux library](https://github.com/tony/libtmux), and a
-[tmux session manager](https://github.com/tony/tmuxp).
+a [pythonic tmux library](https://libtmux.git-pull.com), and a
+[tmux session manager](https://tmuxp.git-pull.com).
 
 I am writing this from vim running in a tmux pane, inside a window, in a session, on
 the server, through a client.

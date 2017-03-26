@@ -12,16 +12,18 @@ configurations and host it in their dot-config on github. There also exists a
 very clever hacker that utilizes the advanced scripting capabilities tmux
 offers to pilot the terminal in ways previously thought impossible.
 
-We've covered the server, session, window and pane container concept. Panes are
-shells, aka pseudoterminals, aka PTYs. The command system and how configurations
-are basically a file filled with commands. An overview of the target system,
-which lets you specify objects to interact with tmux commands. An overview of
-tmux formats, which allow you to get information on tmux' current state. How to
-send keystrokes and copy from tmux panes programmatically. A lot of terminal
-tricks that work across platforms and well with tmux, including a file watching
-workflow to run linting, testing and build commands on file changes. 2
-permissively licensed open source projects demonstration. A tmux configuration
-you can copy and paste from. A tmux API wrapper and a tmux session manager.
+We've covered the [server](#server), [session](#sessions), [window](#windows),
+and [pane](#panes) container concept. Panes are shells, aka pseudoterminals, aka
+PTYs. The command system and how configurations are basically a file filled with
+commands. An overview of the [target](#targets) system, which lets you specify
+objects to interact with tmux commands. A breeze through [formats](#formats), a
+template system with variables toretrieve information on tmux' current state.
+How to [send keystrokes](#send-keys) and [copy from tmux panes](#capture-pane)
+programmatically. A lot of [terminal tricks](#tips-and-tricks) that work across
+platforms and well with tmux, including a [file watching workflow](#file-watching)
+to run linting, testing and build commands on file changes. [2 permissively licensed open source projects](#example-projects) for demonstration. A [tmux configuration](https://www.github.com/tony/.tmux-config)
+you can copy and paste from. An object oriented [tmux API wrapper](https://libtmux.git-pull.com)
+and a [tmux session manager](https://tmuxp.git-pull.com).
 
 If you liked this book, please leave a review on [Amazon](http://amzn.to/2gPfRhC) and
 [Goodreads](https://www.goodreads.com/book/show/33246223-the-tao-of-tmux). Also,
