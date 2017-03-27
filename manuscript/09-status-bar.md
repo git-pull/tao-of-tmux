@@ -1,4 +1,4 @@
-# Status bar {#status-bar}
+# Status bar and styling {#status-bar}
 
 The status bar, or *status line*, serves as customizable taskbar in the bottom
 of tmux. It is comprised of 3 sections. The status fields on either side
