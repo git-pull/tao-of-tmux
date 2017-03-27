@@ -59,15 +59,24 @@ The *colors* available to tmux are:
 - `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
 - bright colors such as `brightred`, `brightgreen`, `brightyellow`,
   `brightblue`, `brightmagenta`, `brightcyan`.
-- `colour0` through `colour255` from the 256-color set
+- `colour0` through `colour255` from the 256-color set.
 - `default`
 - hexadecimal RGB code like `#000000`, `#FFFFFF`, similar to HTML colors.
 
-### Status line text
+### Status line
 
 You can use `[bg=color]` and `[fg=color]` to adjust the text color and
 background within for status line text. This works on `status-left` and
 `status-right`.
+
+Let's say you want to style the background:
+
+Command: `$ tmux set-option status-style fg=white,bg=black`
+
+In config: `status-style fg=white,bg=black`
+
+In the examples at the end of the chapter, you will see complete examples of how
+colors can be used, also.
 
 ### Clock styling
 
