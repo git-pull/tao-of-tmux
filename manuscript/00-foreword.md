@@ -109,7 +109,7 @@ examples and osmosis. At the end of this section, you'll be more confident and
 secure using the essential components underpinning a modern terminal
 environment.
 
-[*Practical Usage*](#practical-usage) covers common bread and
+[*Practical usage*](#practical-usage) covers common bread and
 butter uses for you to use tmux immediately.
 
 [*Server*](#server) gives life to the unseen workhorse behind the scenes
@@ -138,11 +138,11 @@ display system information like CPU and memory usage via the status line.
 and the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
-[*Technical Stuff*](#technical-stuff) is a glimpse at tmux source code and how it
+[*Technical stuff*](#technical-stuff) is a glimpse at tmux source code and how it
 works under the hood. You may learn enough to impress colleagues who already use
 tmux. If you like programming on Unix-like systems, this one is for you.
 
-[*Tips and Tricks*](#tips-and-tricks) wraps up with a whirlwind of useful
+[*Tips and tricks*](#tips-and-tricks) wraps up with a whirlwind of useful
 terminal tutorials you can use with tmux to improve day to day development and
 administration experience.
 
