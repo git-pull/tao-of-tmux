@@ -100,7 +100,7 @@ Let's try this:
 
 ![Top: default scheme for prompt. Bottom: newly-styled.](images/09-status-bar/prompt.png)
 
-## Tweaking your status bar, live!
+## Styling while using tmux
 
 So, you want to customize your tmux status line before you write the changes to
 your [config](#config) file.
@@ -121,6 +121,12 @@ Also, you can try to snip off the variable with `| cut -d' ' -f2-`:
     > "[#S] "
     $ tmux show-options -g status-right | cut -d' ' -f2-
     > " "#{=21:pane_title}" %H:%M %d-%b-%y"
+
+Then, add the options to your [configuration](#config).
+
+To be sure your configuration fully works, you can start it in a different
+server via `tmux -Lrandom`, verify the settings, and close it. This is helpful
+to make sure your config file isn't missing any styling info.
 
 ## Toggling status line 
 
