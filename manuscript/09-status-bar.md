@@ -12,6 +12,8 @@ I>     $ tmux show-options -g | grep status
 The status line comprises 3 sections. The status fields on either side
 of the status line are customizable. The center field is a window list.
 
+![](images/09-status-bar/overview.png)
+
 The `status-left` and `status-right` option can be configured to accept 
 many variables.
 
