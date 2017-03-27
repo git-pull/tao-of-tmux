@@ -98,7 +98,7 @@ For special circumstances, like [tmux on Windows 10](#appendix-windows-bash), I
 decided adding screenshots is best, since many readers may be more comfortable
 with a visual approach.
 
-[*Thinking Tmux*](#thinking-tmux) goes over what tmux does and how it relates to
+[*Thinking in tmux*](#thinking-tmux) goes over what tmux does and how it relates to
 the GUI desktops on our computers.  You'll understand the big picture of
 what tmux is and how it can make your life easier.
 
