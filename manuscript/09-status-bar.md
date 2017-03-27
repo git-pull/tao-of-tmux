@@ -152,6 +152,14 @@ configuration has no status styling.
     status-right-style default
     status-style fg=colour136,bg=colour235
 
+    # default window title colors
+    set-window-option -g window-status-fg colour244  # base0
+    set-window-option -g window-status-bg default
+
+    # active window title colors
+    set-window-option -g window-status-current-fg colour166  # orange
+    set-window-option -g window-status-current-bg default
+
 Configs can print the output of an application. In this example,
 [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load) is providing
 system statistics in the right-side section of the status line.
@@ -193,3 +201,16 @@ Assure you [properly configured python with your PATHs](#troubleshoot-site-paths
 {line-numbers=off}
     set -g status-interval 2
     set -g status-right '#(powerline tmux right)'
+
+## Summary
+
+Configuring the status line is optional. It can use the the output of programs
+installed on your system to give you specialized information such as CPU, ram
+and I/O usage. By default, you'll at least have a window list and a clock.
+
+In addition, you can customize the colors. By default, it's only a green bar
+with dark text, so take some time to customize yours if you want and save it to
+your [configuration](#config).
+
+In the next chapter, we will go into the command line and scripting features of
+tmux.
