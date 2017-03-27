@@ -1,21 +1,21 @@
 # Status bar {#status-bar}
 
-The status bar, or *status line*, lies in the bottom of the screen. It is
-[configurable](#config) via the `.tmux.conf` file and modifiable live through
-using `$ tmux set-option`.
-
-I> *Finding your current status line settings* 
-I>
-I> {language=shell, line-numbers=off}
-I>     $ tmux show-options -g | grep status
-
-The status line comprises 3 sections. The status fields on either side
-of the status line are customizable. The center field is a window list.
+The status bar, or *status line*, serves as customizable taskbar in the bottom
+of tmux. It is comprised of 3 sections. The status fields on either side
+of the status line are customizable. The center field is a list of windows.
 
 ![](images/09-status-bar/overview.png)
 
 The `status-left` and `status-right` option can be configured to accept 
 many variables.
+
+It is [configurable](#config) via the `.tmux.conf` file and modifiable live
+through using `$ tmux set-option`.
+
+I> *Finding your current status line settings* 
+I>
+I> {language=shell, line-numbers=off}
+I>     $ tmux show-options -g | grep status
 
 ## The symbology behind windows
 
