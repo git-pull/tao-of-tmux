@@ -19,8 +19,9 @@ I>     $ tmux show-options -g | grep status
 
 ## The symbology behind windows
 
-The center part of the status line contains a list of windows, each of which can
-be followed by a symbol:
+This window list is between the left and right status bar regions.
+
+tmux helps indicate the the status of a window through symbols.
 
 | Symbol | Meaning                                                      |
 |--------|--------------------------------------------------------------|
@@ -31,6 +32,9 @@ be followed by a symbol:
 | ~      | The window has been silent for the monitor-silence interval. |
 | M      | The window contains the marked pane.                         |
 | Z      | The window's active pane is zoomed.                          |
+
+Reminder: A pane can be zoomed via `Prefix` + `z`. To unzoom, press `Prefix`
++ `z` or move left / right / up / down panes.
 
 ## Date and time
 
