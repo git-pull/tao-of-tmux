@@ -1,8 +1,8 @@
 # Status bar {#status-bar}
 
 The status bar, or *status line*, lies in the bottom of the screen. It is
-customizable through the [.tmux.conf config](#config) and live through
-`set-option`.
+[configurable](#config) via the `.tmux.conf` file and modifiable live through
+using `$ tmux set-option`.
 
 I> *Finding your current status line settings* 
 I>
