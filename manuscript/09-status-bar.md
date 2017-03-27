@@ -122,19 +122,21 @@ Also, you can try to snip off the variable with `| cut -d' ' -f2-`:
     $ tmux show-options -g status-right | cut -d' ' -f2-
     > " "#{=21:pane_title}" %H:%M %d-%b-%y"
 
-## Turn your status line off
+## Toggling status line 
 
-Turn it off:
+The tmux status line can be hidden, as well. Turn it off:
 
 {language=shell, line-numbers=off}
     $ tmux set-option status off
 
-Turn it on:
+And, turn it on:
 
 {language=shell, line-numbers=off}
     $ tmux set-option status on
 
-Toggle it (regardless or current state):
+The above is best for scripting, but if you're binding it to a keyboard
+shortcut, *toggling*, or reversing the current option, can be done via omitting
+the on/off value:
 
 {language=shell, line-numbers=off}
     $ tmux set-option status
