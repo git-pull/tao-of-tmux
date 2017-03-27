@@ -247,9 +247,9 @@ Configuring the status line is optional. It can use the the output of programs
 installed on your system to give you specialized information such as CPU, ram
 and I/O usage. By default, you'll at least have a window list and a clock.
 
-In addition, you can customize the colors. By default, it's only a green bar
-with dark text, so take some time to customize yours if you want and save it to
-your [configuration](#config).
+In addition, you can customize the colors of the status line, clock and prompt.
+By default, it's only a green bar with dark text, so take some time to customize
+yours if you want and save it to your [configuration](#config).
 
 In the next chapter, we will go into the command line and scripting features of
 tmux.
