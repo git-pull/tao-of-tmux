@@ -17,11 +17,11 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux show-options -g | grep status
 
-## The symbology behind windows
+## Window status symbols
 
 This window list is between the left and right status bar regions.
 
-tmux helps indicate the the status of a window through symbols.
+tmux indicates status of a window through symbols. Seen below:
 
 | Symbol | Meaning                                                      |
 |--------|--------------------------------------------------------------|
