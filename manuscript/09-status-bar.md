@@ -9,7 +9,7 @@ of the status line are customizable. The center field is a list of windows.
 The `status-left` and `status-right` option can be configured to accept 
 many variables.
 
-It is [configurable](#config) via the `.tmux.conf` file and modifiable live
+It's [configurable](#config) through the `.tmux.conf` file and modifiable live
 through using `$ tmux set-option`.
 
 I> *Finding your current status line settings* 
