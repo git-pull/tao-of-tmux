@@ -60,12 +60,23 @@ I>     bind j select-pane -D
 I>     bind k select-pane -U
 I>     bind l select-pane -R
 
-## Zoom in
+## Zoom in {#zoom-pane}
 
 To zoom in on a pane, navigate to it and do `Prefix` + `z`.
 
-You can use any [pane traversal](#pane-traversal) to unzoom and move a pane at
-the same time.
+You can unzoom via pressing `Prefix` + `z` again.
+
+In addition, you can unzoom and move at the same time by using a [pane traversal](#pane-traversal)
+key.
+
+Behind the scenes, the keybinding is a shortcut for `$ tmux resize-pane -Z`. So
+if you ever wanted to script tmux to zoom/unzoom a pane, or apply this
+functionality to a custom key binding, you can do that too, for instance:
+
+{line-numbers=off}
+    bind-key -T prefix Z resize-pane -Z
+
+This would have `Prefix` + `Z`, note the *capital* Z, zoom and unzoom panes.
 
 ## Resizing panes {#resizing-panes}
 
