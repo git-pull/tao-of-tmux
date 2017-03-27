@@ -33,8 +33,8 @@ tmux helps indicate the the status of a window through symbols.
 | M      | The window contains the marked pane.                         |
 | Z      | The window's active pane is zoomed.                          |
 
-Reminder: A pane can be zoomed via `Prefix` + `z`. To unzoom, press `Prefix`
-+ `z` or move left / right / up / down panes.
+Reminder: A pane can be [zoomed](#zoom-pane) via `Prefix` + `z`. To unzoom,
+press `Prefix` + `z` or move left / right / up / down panes.
 
 ## Date and time
 
