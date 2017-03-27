@@ -1,4 +1,4 @@
-# Practical Usage {#practical-usage}
+# Practical usage {#practical-usage}
 
 This is the easiest part; open your terminal and type `tmux`, hit enter.
 
