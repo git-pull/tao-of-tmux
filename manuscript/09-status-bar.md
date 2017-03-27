@@ -54,8 +54,30 @@ and [conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
 
 ## Styling
 
+The *colors* available to tmux are:
+
+- `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
+- bright colors such as `brightred`, `brightgreen`, `brightyellow`,
+  `brightblue`, `brightmagenta`, `brightcyan`.
+- `colour0` through `colour255` from the 256-color set
+- `default`
+- hexadecimal RGB code like `#000000`, `#FFFFFF`, similar to HTML colors.
+
+### Status line text
+
 You can use `[bg=color]` and `[fg=color]` to adjust the text color and
-background within for status line text. 
+background within for status line text. This works on `status-left` and
+`status-right`.
+
+### Clock styling
+
+You can style the color of the tmux clock via:
+
+{lang="text", line-numbers=off}
+    set-option -g clock-mode-colour white
+
+Reminder: Clock mode can be opened with `$ tmux clock-mode` or `Prefix` + `t`.
+Pressing any key will exit clock mode.
 
 ### Prompt colors
 
