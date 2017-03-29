@@ -6,8 +6,7 @@ of the status line are customizable. The center field is a list of windows.
 
 ![](images/09-status-bar/overview.png)
 
-The `status-left` and `status-right` option can be configured to accept 
-many variables.
+The `status-left` and `status-right` option can be configured with  variables.
 
 It's [configurable](#config) through the `.tmux.conf` file and modifiable live
 through using `$ tmux set-option`.
