@@ -52,6 +52,71 @@ This can viewed through `$ man strftime` on Unix-like systems.
 You can also call applications, such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load)
 and [conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
 
+For this example, we'll use `tmux-mem-cpu-load`. This works on Unix-like systems
+like FreeBSD, Linux distributions as well as macOS.
+
+It requires installing [CMake](https://cmake.org) and `git` through your package
+managers. As well, you must have a C++ compiler. On macOS, this is done through
+installing Xcode CLI Utilities. You can do this by going to Applications ->
+Utilities, launching Terminal.app and typing `$ xcode-select --install`. macOS
+can use [Homebrew](https://brew.sh/) to install the CMake package. Linux 
+distributions allow you to install cmake and clang via package manager.
+
+Also, install `git` via your package manager before this step.
+
+{language=shell, line-numbers=off}
+    $ git clone https://github.com/thewtex/tmux-mem-cpu-load.git
+    $ cd tmux-mem-cpu-load
+    $ mkdir ./build
+    $ cd ./build
+    $ cmake ..
+    $ make
+    
+    # macOS, no sudo required
+    $ make install
+
+    # Linux, BSD will require sudo / root to install
+    $ sudo make install
+
+If successful, you should see the output below:
+
+{language=shell, line-numbers=off}
+    [100%] Built target tmux-mem-cpu-load
+    Install the project...
+    -- Install configuration: "MinSizeRel"
+    -- Installing: /usr/local/bin/tmux-mem-cpu-load
+
+You can now add `#(tmux-mem-cpu-load)` to your `status-left` or `status-right`
+option. In the "[Dressed up](#status-bar-example-dressed-up)" example below, I
+use `status-left` and also theme it to be green:
+
+`#[fg=green,bg=default,bright]#(tmux-mem-cpu-load)`
+
+So to apply it to your theme, you need to double check what you already have.
+You may have information on there you want to keep.
+
+{language=shell, line-numbers=off}
+    $ tmux show-option -g status-right
+    status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+
+Copy what you had in response (or change, rearrange as you see fit) then add the
+`#(tmux-mem-cpu-load)` to it. You can apply the new status line in your current
+tmux session via `$ tmux set-option -g status-right`:
+
+{language=shell, line-numbers=off}
+    $ tmux set-option -g status-right '"#{=21:pane_title}" #(tmux-mem-cpu-load) %H:%M %d-%b-%y'
+
+Also, note how I switched out the double quotes on either side of the option
+with single quotes. This is recommended, since there are double quotes inside.
+
+You can do this with anything, for instance, try adding [`uptime`](https://linux.die.net/man/1/uptime).
+This could be done by adding `#(uptime)` to your status line. Typically the
+output is pretty long, so trim it down by doing something like this:
+
+`#(uptime | cut -f 4-5 -d " " | cut -f 1 -d ",")``
+
+In the next section, we go into how you can style (color) tmux.
+
 ## Styling
 
 The *colors* available to tmux are:
@@ -173,7 +238,7 @@ configuration has no status styling.
     status-right-style default
     status-style fg=black,bg=green
 
-## Example: Dressed up
+## Example: Dressed up {#status-bar-example-dressed-up}
 
 ![](images/09-status-bar/dressed up.png)
 
