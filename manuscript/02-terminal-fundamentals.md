@@ -27,7 +27,7 @@ by Marshall Kirk McKusick, [*The UNIX Operating System*](https://www.youtube.com
 by AT&T, [*Early days of Unix and design of sh*](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 by Stephen R. Bourne.
 
-## POSIX stuff
+## POSIX standards
 
 Operating systems like macOS (formerly OS X), Linux, and the BSDs, follow
 something similar to the POSIX specification in terms of how they square away
