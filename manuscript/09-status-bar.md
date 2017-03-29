@@ -55,13 +55,13 @@ For this example, we'll use `tmux-mem-cpu-load`. This works on Unix-like systems
 like FreeBSD, Linux distributions as well as macOS.
 
 It requires installing [CMake](https://cmake.org) and `git` through your package
-managers. As well, you must have a C++ compiler. On macOS, this is done through
-installing Xcode CLI Utilities. You can do this by going to Applications ->
-Utilities, launching Terminal.app and typing `$ xcode-select --install`. macOS
-can use [Homebrew](https://brew.sh/) to install the CMake package. Linux 
-distributions allow you to install cmake and clang via package manager.
+manager. You must have a C++ compiler. On macOS, install Xcode CLI Utilities.
+You can do this by going to Applications -> Utilities, launching Terminal.app
+and typing `$ xcode-select --install`. macOS can use [Homebrew](https://brew.sh/)
+to install the CMake and git package. Linux distributions allow installing
+CMake, clang and git via package manager.
 
-Also, install `git` via your package manager before this step.
+Before this step,  you can `cd` into any directory you're ok keep code in.
 
 {language=shell, line-numbers=off}
     $ git clone https://github.com/thewtex/tmux-mem-cpu-load.git
@@ -84,6 +84,9 @@ If successful, you should see the output below:
     Install the project...
     -- Install configuration: "MinSizeRel"
     -- Installing: /usr/local/bin/tmux-mem-cpu-load
+
+You can remove the source code you cloned from the computer. The compiled
+application is installed.
 
 You can now add `#(tmux-mem-cpu-load)` to your `status-left` or `status-right`
 option. In the "[Dressed up](#status-bar-example-dressed-up)" example below, I
