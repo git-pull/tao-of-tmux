@@ -59,7 +59,7 @@ consistent and only require a quick key combo for you to invoke.
 Prompt for a window index (useful for indexes greater than 9) with `Prefix` +
 `'`. If the window index is 10 or above, this will help you a lot.
 
-I> ### POWER MOVE: Search + Traverse Windows for Text
+I> ### Tip: Search + Traverse Windows for Text
 I> 
 I> You can forward to a window with a match of a text string by doing `Prefix` +
 I> `f`.
