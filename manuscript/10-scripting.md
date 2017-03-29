@@ -135,8 +135,8 @@ default prompt for [csh](https://en.wikipedia.org/wiki/C_shell) and
 pseudoterminals!
 
 When scripting tmux, the symbols help denote the type of object, but also serve
-as a way to target something deeply, like the pane, *directly*, without needing
-to know or specify the window or its session.
+as a way to target something deeply, such as the pane, *directly*, without
+needing to know or specify its window or session.
 
 Here are some examples of targets, assuming one session named `mysession` and a
 client at `/dev/ttys004`:
