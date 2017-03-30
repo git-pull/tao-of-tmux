@@ -11,7 +11,7 @@ The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux, and
 BSD.
 
 Configuration is done via the file being ran on initially starting tmux, when
-the server is started. tmux is configured using the samecommands as tmux does via
+the server is started. tmux is configured using the same commands as tmux does via
 shell. For instance, `$ tmux set-window-option -g automatic-rename`, in a shell
 is the same as `set-window-option -g automatic-rename` in your config.
 
