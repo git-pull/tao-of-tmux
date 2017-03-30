@@ -9,9 +9,8 @@ people's flows. Full tables are in the [cheatsheets](#appendix-cheatsheets).
 
 ## Aliases {#aliases}
 
-tmux supports a variety of alias commands. So, don't feel you always have to
-type `tmux attach`. *Aliases*, alongside [fnmatch-style pattern commands](#fnmatch),
-make it intuitive to type those commands in a pinch.
+tmux supports a variety of alias commands. With aliases, instead of typing
+`tmux attach-session` to attach a session, `$ tmux attach` could do the trick.
 
 Most aliases come to mind via intuition and are a lot friendlier than typing the
 full hyphenated commands.
@@ -63,7 +62,8 @@ shortcut, e.g., **swap**-**w**indow is swapw, **split**-**w**indow is splitw.
 
 ## Pattern matching {#fnmatch}
 
-tmux commands and arguments may all be accessed via [`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
+In addition to aliases, tmux commands and arguments may all be accessed via
+[`fnmatch(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/fnmatch.html)
 patterns.
 
 For instance, you need not type `$ tmux attach-session` every time. First,
