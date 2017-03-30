@@ -143,7 +143,7 @@ content into your paste buffer or files with `$ tmux save-buffer`.
 ## Summary
 
 The server is one of the fundamental underpinnings of tmux. Implemented
-seemlessly to the user by forking into the background. Running behind the
+seamlessly to the user by forking into the background. Running behind the
 scenes, it ensures sessions, windows, panes, buffers are operating even when
 the client is detached.
 
