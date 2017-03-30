@@ -313,7 +313,7 @@ keep use of `-F` scoped to the objects being listing, when scripting, to avoid
 breakage. For instance, if you want the active pane, use `#{pane_active}` via
 `$ tmux list-panes -F "#{pane_active}"`.
 
-By default, `list-panes` will only show panes in a window. Unless you specificy
+By default, `list-panes` will only show panes in a window. Unless you specify
 `-a` to output all on a server, or `-s [-t session-name]` for all panes in a
 session:
 
