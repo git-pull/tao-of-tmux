@@ -75,17 +75,14 @@ Formatted text `like this` is source code.
 
 Formatted text with a $ in front is a terminal command. `$ echo 'like this'`.
 The text can be typed into the console, without the dollar character. For more
-information on the meaning of the "dollar prompt", check out [*What is the origin of the UNIX $ (dollar)
-prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
+information on the meaning of the "dollar prompt", check out [*What is the
+origin of the UNIX $ (dollar) prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
-Shortcuts require a [prefix key](#prefix-key) to be sent beforehand. Sections
-describing similar keyboard commands typically will appear in a table. For
-example:
-
-| Shortcut         | Action                                             |
-|------------------|----------------------------------------------------|
-|`Prefix` + `d`    | Detach client from session.                        |
+In tmux, shortcuts require a [prefix key](#prefix-key) to be sent beforehand.
+For instance, `Prefix` + `d` will detach a tmux client from its session. This
+prefix, by default, is `Ctrl-B`, but users can override it. This is discussed in
+greater detail in *the prefix key* section and [*configuration*](#config).
 
 ## How this book is structured
 
