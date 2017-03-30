@@ -302,7 +302,8 @@ are on Read the Docs. For a better idea:
 [psutil](https://github.com/giampaolo/psutil), a required dependency of
 powerline, is a cross-platform tool to gather system information.
 
-Assure you [properly configured python with your PATHs](#troubleshoot-site-paths) and try this:
+Assure you [properly configured python with your PATHs](#troubleshoot-site-paths),
+and try this:
 
 {line-numbers=off}
     set -g status-interval 2
