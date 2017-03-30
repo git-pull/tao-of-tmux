@@ -293,7 +293,7 @@ listed. Try this:
       pane: %38, window: @13, session: $6, server: /private/tmp/tmux-501/default
       pane: %36, window: @13, session: $6, server: /private/tmp/tmux-501/default
 
-Listing windows isn't designed to display variables for pane-specific propreties.
+Listing windows isn't designed to display variables for pane-specific properties.
 Since a window is a collection of panes, it can have 1 or more panes open at any
 time.
 
