@@ -45,7 +45,7 @@ Manpages, however, are rarely sufficient to wrap your brain around
 abstract concepts; they're there for reference. This learning book is the
 culmination of years of explaining tmux to others online and in person.
 
-In this book, we will break down tmux by the way of its objects, from servers
+In this book, we will break down tmux by its objects, from servers
 down to panes. It also includes a rehash of terminal facilities we use every day
 to keep us autodidacts up to speed with what is what. I've included numerous
 examples of projects, permissively licensed source code, and workflows designed
@@ -127,7 +127,7 @@ panes.
 [*Configuration*](#config) discusses customization of tmux and sets the
 foundation for how to think about `.tmux.conf` so you can customize your own.
 
-[Status bar and styling](#status-bar) is devoted singularly to the customization
+[Status bar and styling](#status-bar) is devoted to the customization
 of the status line and colors in tmux. As a bonus, you'll even learn how to
 display system information like CPU and memory usage via the status line.
 
@@ -172,7 +172,7 @@ I will update digital versions of the book with the changes where applicable.
 
 ## Thanks
 
-Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors)
+Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors),
 who helped me spot errors in this book.
 
 Some copy, particularly in [cheatsheets](#appendix-cheatsheets), comes straight out

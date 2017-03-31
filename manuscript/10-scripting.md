@@ -56,7 +56,7 @@ full hyphenated commands.
 | swap-window         | swapw     |
 | unlink-window       | unlinkw   |
 
-If you know the full name of the command, if you were to chopped the hyphen
+If you know the full name of the command, if you were to chop the hyphen
 (-) from the command and add the first letter of the last word, you'd get the
 shortcut, e.g., **swap**-**w**indow is swapw, **split**-**w**indow is splitw.
 
@@ -102,7 +102,7 @@ instance, a session named `mysession` can be matched via `mys`:
     $ tmux attach -t mys
 
 Matching targets will fail if a pattern matches more than one item. If 2
-sessions existed, named `mysession` and `mysession2`, the above command would
+sessions exist, named `mysession` and `mysession2`, the above command would
 fail. To target either session, the complete target name must be specified.
 
 ## Targets {#targets}
@@ -280,11 +280,11 @@ Pane variables: `cursor_x`, `cursor_y`, `pane_active`, `pane_current_command`,
 `pane_current_path`, `pane_height`, `pane_id`, `pane_index`, `pane_width`,
 `pane_pid` and all window, session and server variables.
 
-This book gives a great focus to separating the concept of server, session,
-window and panes, a separation existing in user experience, and now also in
-tmux' printing attributes. If you `list-panes`, all variables up the ladder,
-including window, session and server variables are available for the panes being
-listed. Try this:
+This book focuses on separating the concept of server, sessions,
+windows, and panes. With the knowledge of targets and formats, this
+separation takes shape in tmux' internal attributes. If you `list-panes` all
+variables up the ladder, including window, session and server variables are
+available for the panes being listed. Try this:
 
 {language=shell, line-numbers=off}
     $ tmux list-panes -F "pane: #{pane_id}, window: #{window_id}, \
@@ -304,17 +304,17 @@ time.
       window: @13, panes: 3 pane_id: %36
       window: @25, panes: 1 pane_id: %50
 
-This will show the window ID, which is prefixed by an `@` symbol, as well as the
-number of panes inside the window.
+This will show the window ID, prefixed by an `@` symbol, and the number of panes
+inside the window.
 
 Surprisingly, `pane_id` shows up via `list-windows`, as of tmux 2.3. While this
-output occurs in this version of tmux, it's undefined behavior, it's advised to
-keep use of `-F` scoped to the objects being listing, when scripting, to avoid
+output occurs in this version of tmux, it's undefined behavior. It's advised to
+keep use of `-F` scoped to the objects being listing when scripting to avoid
 breakage. For instance, if you want the active pane, use `#{pane_active}` via
 `$ tmux list-panes -F "#{pane_active}"`.
 
-By default, `list-panes` will only show panes in a window. Unless you specify
-`-a` to output all on a server, or `-s [-t session-name]` for all panes in a
+By default, `list-panes` will only show panes in a window, unless you specify
+`-a` to output all on a server or `-s [-t session-name]` for all panes in a
 session:
 
 {language=shell, line-numbers=off}
@@ -333,9 +333,9 @@ And the `-t` flag lists all panes in a window:
       1: [176x36] [history 1790/2000, 407807 bytes] %1 (active)
       2: [88x6] [history 1916/2000, 464932 bytes] %2
 
-Same concept applies to `list-windows`. By default, The `-a` flag will list all
-windows on a server, `-t` lists windows within a session, omitting `-t` will
-only list windows within the current session inside tmux.
+The same concept applies to `list-windows`. By default, The `-a` flag will list
+all windows on a server, `-t` lists windows within a session, and omitting `-t`
+will only list windows within the current session inside tmux.
 
 {language=shell, line-numbers=off}
     $ tmux list-windows
@@ -363,9 +363,9 @@ Open tmux command prompt via `Prefix` + `:` and type this after the `:`:
 `send-keys echo 'hi'`
 
 Hit enter. This inserted *hi* into the current active pane. You can also
-use targets to specific which pane to send it to. 
+use targets to specify which pane to send it to. 
 
-Let's now try to send keys to a another pane in our current window. Create a
+Let's now try to send keys to another pane in our current window. Create a
 second pane via splitting the window if one doesn't exist. You can also do this
 exercise outside of tmux or inside a scripting file and running it.
 
@@ -388,7 +388,7 @@ Nice, let's cancel that out by sending a [`SIGINT`](https://en.wikipedia.org/wik
 {language=shell, line-numbers=off}
     $ tmux send-keys -t %2 'C-c'
 
-This cancelled the command and brought up a fresh input. This time let's send
+This cancelled the command and brought up a fresh input. This time, let's send
 an Enter keypress to run `cal(1)`.
 
 {language=shell, line-numbers=off}
@@ -403,15 +403,15 @@ Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
 `$ tmux capture-pane` will copy a panes' contents.
 
-By default, the contents will be saved to tmux' internal clipboard; the *paste
+By default, the contents will be saved to tmux' internal clipboard, the *paste
 buffer*. You can run `capture-pane` within any pane, then navigate to an
 editor, paste the contents (don't forget to `:set paste` and go into insert mode
-with `i` on vim) and save it to a file. To [paste](#clipbpard), use `Prefix` +
+with `i` on vim), and save it to a file. To [paste](#clipbpard), use `Prefix` +
 `]` inside the pane you're pasting into.
 
 You can also add the `-p` flag to print it to [stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29).
-From there you could use [redirection](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)
-to place the output into a file. Let's do `>>` so we don't accidentically
+From there, you could use [redirection](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)
+to place the output into a file. Let's do `>>` so we don't accidentally
 truncate a file:
 
 {language=shell, line-numbers=off}
@@ -435,29 +435,29 @@ editor in a third pane:
 ![Top-left: Listing panes, Bottom-left: Capturing pane output of top-left pane,
 Right: Pasting buffer into vim.](images/10-scripting/capture-pane-vim.png)
 
-Remember, you can also copy, paste and send-keys to other windows and sessions
+Remember, you can also copy, paste, and send-keys to other windows and sessions
 also. Targets are server-wide.
 
 ## Summary
 
-tmux has a well-devised and intuitive command system enabling the user to access 
-bread and butter functionality, quickly. At the same time, tmux provides a
-powerful way of retrieving information on its objects between `list-panes`,
+tmux has a well-devised and intuitive command system, enabling the user to
+access  bread and butter functionality quickly. At the same time, tmux provides
+a powerful way of retrieving information on its objects between `list-panes`,
 `list-windows` and `list-sessions` and formats. This makes tmux not only
-accessible, configurable, but also scriptable.
+accessible and configurable, but also scriptable.
 
-The ability to explicitly and reliably target information down to the point of
+The ability to target information explicitly and reliably down to the point of
 tracking a pane by its ID and collecting its pane contents, even sending in
-keys. Used by the skilled programmer, opening up the possiblity of orchestrating
+keys. Used by the skilled programmer, opening the possibility of orchestrating
 the terminals in ways that were previously unrealistic; anything from niche
 shell scripts to monitor and react to behavior on systems to high-level,
 intelligent and structured control via object oriented libraries, like
 [libtmux](https://libtmux.git-pull.com).
 
-In the next chapter, we go delve into optimizations that showcase the latest
-generation of unix tools that build upon old, time-tested concepts like [man pages](https://en.wikipedia.org/wiki/Man_page)
+In the next chapter, we delve into optimizations that showcase the latest
+generation of unix tools that build upon old, time-tested concepts, like [man pages](https://en.wikipedia.org/wiki/Man_page)
 and [piping](https://en.wikipedia.org/wiki/Pipeline_(Unix)), while maintaining
 portability across differences in platforms and graceful degradation to ensure
 development tooling works on machines missing optional tools. In addition, a
 class of powerful, high-level applications that leverage tmux' scripting
-capabilities to consistenly build tmux workspace via declarative configurations.
+capabilities to consistently build tmux workspace via declarative configurations.

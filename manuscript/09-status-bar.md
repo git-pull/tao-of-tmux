@@ -1,6 +1,6 @@
 # Status bar and styling {#status-bar}
 
-The status bar, or *status line*, serves as customizable taskbar in the bottom
+The status bar, or *status line*, serves as a customizable taskbar in the bottom
 of tmux. It is comprised of 3 sections. The status fields on either side
 of the status line are customizable. The center field is a list of windows.
 
@@ -20,7 +20,7 @@ I>     $ tmux show-options -g | grep status
 
 This window list is between the left and right status bar regions.
 
-tmux indicates status of a window through symbols. Seen below:
+tmux indicates status of a window through symbols. See below:
 
 | Symbol | Meaning                                                      |
 |--------|--------------------------------------------------------------|
@@ -44,7 +44,7 @@ in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org
 from `time.h`.
 
 A full list of variables can be found in the documentation for `strftime(3)`.
-This can viewed through `$ man strftime` on Unix-like systems.
+This can be viewed through `$ man strftime` on Unix-like systems.
 
 ## Shell command output
 
@@ -124,7 +124,7 @@ In the next section, we go into how you can style (color) tmux.
 The *colors* available to tmux are:
 
 - `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
-- bright colors such as `brightred`, `brightgreen`, `brightyellow`,
+- bright colors, such as `brightred`, `brightgreen`, `brightyellow`,
   `brightblue`, `brightmagenta`, `brightcyan`.
 - `colour0` through `colour255` from the 256-color set.
 - `default`
@@ -143,7 +143,7 @@ Command: `$ tmux set-option status-style fg=white,bg=black`
 In config: `status-style fg=white,bg=black`
 
 In the examples at the end of the chapter, you will see complete examples of how
-colors can be used, also.
+colors can be used.
 
 ### Clock styling
 
@@ -208,8 +208,8 @@ And, turn it on:
     $ tmux set-option status on
 
 The above is best for scripting, but if you're binding it to a keyboard
-shortcut, *toggling*, or reversing the current option, can be done via omitting
-the on/off value:
+shortcut, *toggling*, or reversing the current option, it can be done via
+omitting the on/off value:
 
 {language=shell, line-numbers=off}
     $ tmux set-option status
@@ -223,7 +223,7 @@ Bind toggling status line to `Prefix` + `q`:
 
 ![](images/09-status-bar/default.png)
 
-This is an example of the default config, you see if your tmux
+This is an example of the default config you see if your tmux
 configuration has no status styling.
 
 {line-numbers=off}
@@ -311,13 +311,13 @@ and try this:
 
 ## Summary
 
-Configuring the status line is optional. It can use the the output of programs
-installed on your system to give you specialized information such as CPU, ram
+Configuring the status line is optional. It can use the output of programs
+installed on your system to give you specialized information, such as CPU, ram,
 and I/O usage. By default, you'll at least have a window list and a clock.
 
-In addition, you can customize the colors of the status line, clock and prompt.
+In addition, you can customize the colors of the status line, clock, and prompt.
 By default, it's only a green bar with dark text, so take some time to customize
-yours if you want and save it to your [configuration](#config).
+yours, if you want, and save it to your [configuration](#config).
 
 In the next chapter, we will go into the command line and scripting features of
 tmux.

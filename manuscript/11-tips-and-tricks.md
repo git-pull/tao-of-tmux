@@ -53,7 +53,7 @@ your main rc file.
     source $HOME/.dot-config/most.sh
 
 Patterns like these help make your dot-configs portable, cross-platform, and
-modular. For inspiration, you can fork, copy and paste from my permissively-
+modular. For inspiration, you can fork, copy, and paste from my permissively-
 licensed config at <https://github.com/tony/.dot-config>.
 
 ## Log tailing
@@ -79,15 +79,15 @@ moment, because you'd be using a log multiplexer in a terminal multiplexer.
 ## File watching {#file-watching}
 
 In my never-ending conquest to get software projects working in symphony with
-code changes, I've come to taste test many file watching applications and
-patterns. Pursing the holy grail feedback loop upon file changes, I've gradually
+code changes, I've come to test many file watching applications and
+patterns. Pursuing the holy grail feedback loop upon file changes, I've gradually
 become the internet's unofficial connoisseur on them.
 
 File watcher applications wait for a file to be updated, then execute a custom
 command, such as restarting a server, rebuilding an application, running tests,
 linters, and so on. It gives you, as a developer, instant feedback in the
 terminal, empowering a tmux workspace to have IDE-like features, without the
-bloat, memory and CPU fans roaring.
+bloat, memory, and CPU fans roaring.
 
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
 superbly across Linux distros, BSDs and OS X / macOS.
@@ -110,7 +110,7 @@ recursively, since it's not portable. Something more POSIX-friendly would be
 {language=shell, line-numbers=off}
     $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
 
-To only run file watcher if entr is installed; let's wrap in a conditional
+To only run file watcher if entr is installed, let's wrap in a conditional
 [`command -v`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/command.html)
 test:
 
@@ -119,15 +119,15 @@ test:
       entr -c go test ./...; fi
 
 And have it fallback to `go test` in the event `entr` isn't installed. This
-allows your command to degrade gracefully. You'll thank me when use this
+allows your command to degrade gracefully. You'll thank me when you use this
 snippet in conjunction with a [session manager](#session-manager):
 
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; else go test ./...; fi
 
-If the project is a team or open source project where a user never used the
-command before, and could missing a required software package, we can give
+If the project is a team or open source project, where a user never used the
+command before and could missing a required software package, we can give
 a helpful message. This shows a notice to the user to install entr if not
 installed on the system:
 
@@ -217,18 +217,18 @@ will give you `entr -rc`:
 
 For those who use tmux regularly to perform repetitive tasks, such as opening
 the same software project, viewing the same logs, etc., frequent tasks will
-often end up leading to the creation of tmux scripts.
+often lead to the creation of tmux scripts.
 
 A user can use plain shell scripting to build their tmux sessions. However,
-scripting is error prone, hard to debug, and requires tmux split windows into
+scripting is error prone, hard to debug, and requires tmux to split windows into
 panes in a certain order. In addition, there's the burden of assuring the shell
 scripts are portable.
 
 A declarative configuration in YAML or JSON configuration abstracts out the
-commands, layout and options tmux has. It'd prevent the mistakes and repetition
-scripting entails. These applications are called tmux *session managers*, and, in
-differently ways, they programatically create tmux workspaces by runnings a
-series of commands based off a config.
+commands, layout, and options of tmux. It'd prevent the mistakes and repetition
+scripting entails. These applications are called tmux *session managers*, and in
+different ways, they programmatically create tmux workspaces by running a
+series of commands based on a config.
 
 [Teamocil](https://github.com/remiprev/teamocil) and
 [Tmuxinator](https://github.com/tmuxinator/tmuxinator) are the first ones I
