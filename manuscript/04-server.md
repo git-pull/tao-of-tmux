@@ -31,12 +31,12 @@ being connected via a client.
 
 tmux is so streamlined, the book could continue to explain usage and not even
 mention servers. But, I'd rather you have a true understanding of how it works
-on systems. The implementation feels like magic, while still fulfilling the
-unix expectations of utilitarianism. One cannot deny it's exquisitely executed
+on systems. The implementation feels like magic, while living up to the unix
+expectations of utilitarianism. One cannot deny it's exquisitely executed
 from a user experience standpoint.
 
 How is it utilitarian? We'll go into it more in future chapters, where we dive
-into [Formats](#formats), [Targets](#targets), and tools such as [libtmux](https://github.com/tony/libtmux)
+into [Formats](#formats), [Targets](#targets), and tools, such as [libtmux](https://github.com/tony/libtmux)
 I made, which utilize these features.
 
 It surprises some, because servers often beget a setup process. But servers
