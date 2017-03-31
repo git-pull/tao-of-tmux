@@ -5,8 +5,8 @@ The server holds [sessions](#sessions) and the [windows](#windows) and
 
 When tmux starts, you are connected to a server via a socket connection.
 What you see presented in your shell is merely a client connection. In
-this chapter, we go into the secret power plant allowing your terminal
-applications to persist for months or even years if you want to.
+this chapter, we uncover the invisible engine enabling your terminal
+applications to persist for months or even years at a time.
 
 {width=90%}
 ![](images/info/server.png)
