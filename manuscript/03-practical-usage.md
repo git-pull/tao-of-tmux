@@ -31,7 +31,7 @@ handy.
 
 When you memorize a key combo, it's one less time you'll be moving your hand
 away from the keyboard to grab your mouse. You can focus your short-term memory
-on getting stuff done; resulting in fewer mistakes.
+on getting stuff done, resulting in fewer mistakes.
 
 Q> ### Coming from ``GNU Screen``?
 Q>
@@ -44,7 +44,7 @@ Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
 
-The default leader prefix is `<Ctrl-b>`. Holding down the `control` key, then
+The default leader prefix is `<Ctrl-b>`. Hold down the `control` key, then
 `b`.
 
 X> ### Sending tmux commands
@@ -76,11 +76,11 @@ attach`.
 
 You can also send the prefix key to *nested* tmux sessions. For instance, if
 you're inside a tmux client on a *local* machine and you SSH into a *remote* machine
-in one of your panes. On the remote machine, you can attach the client via `tmux
-attach` as you normally would. To send the prefix key to the machines' tmux
-client, and not your local one, hit the prefix key again.
+in one of your panes, on the remote machine, you can attach the client via `tmux
+attach` as you normally would. To send the prefix key to the machine's tmux
+client, not your local one, hit the prefix key again.
 
-So, if you prefix key is the default, `Ctrl-b`, do `Ctrl+b` + `b` again,
+So, if your prefix key is the default, `Ctrl-b`, do `Ctrl+b` + `b` again,
 *then* hit the shortcut for what you want to do.
 
 Example: If you wanted to create a window on the remote machine, which would normally
