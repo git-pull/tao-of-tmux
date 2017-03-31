@@ -67,8 +67,8 @@ Here are a few common scenarios:
   - rebuild with `make` or [`ninja`](https://ninja-build.org/)
   - reload your [Express](http://expressjs.com/) server
   - run any other custom command of your liking
-- Keeping a text editor, like vim, emacs, pico, nano, etc. open in a main pane,
-  while leaving two other open for CLI commands and building via `make` or
+- Keeping a text editor, like vim, emacs, pico, nano, etc., open in a main pane,
+  while leaving two others open for CLI commands and building via `make` or
   `ninja`.
 
 ![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, lldb bottom right](images/01-thinking-tmux/dev-watch.png)
@@ -87,14 +87,14 @@ In tmux, a similar concept exists, where we can "detach" a tmux session.
 Detaching can be especially useful on:
 
 - Local machines. You start all your normal terminal applications within
-  a tmux session, you restart X. Instead of losing your processes as your
+  a tmux session, you restart X. Instead of losing your processes as you
   normally would if you were using an X terminal, like xterm or konsole, you'd
-  be able to `tmux attach` after and find all processes were alive and
-  kicking all along.
+  be able to `tmux attach` after and find all the processes inside that were
+  alive and kicking all along.
 - Remote SSH applications and workspaces you run in tmux. You
   can detach your tmux workspace at work before you clock out, then the next
   morning, reattach your session. Ahhh. Refreshing. :)
-- Those servers you rarely log into. Perhaps a cloud instance you log into 9
+- Those servers you rarely log into. Perhaps, a cloud instance you log into 9
   months later, and as a reflex, `tmux attach` to see if there is anything on
   there. And boom, you're back in a session you've forgotten about, but still
   jogs your memory to what you were tweaking or fixing. It's like a hack to
@@ -120,7 +120,7 @@ which is great for pair programming.  If you were in the same session, you
 and the other person would see the same thing, share the same input, and the
 same active window and pane.
 
-The above are just examples, any general workspace you'd normally use in a
+The above are just examples; any general workspace you'd normally use in a
 terminal for any task can gain the benefit of you being able to persist it! 
 Including projects or repetitive efforts you'd multitask on. The
 *[tips and tricks](#tips-and-tricks)* section will dive into specific flows
@@ -136,7 +136,7 @@ Q> consumer laptops and PC's with a day or two uptime, having tmux persist
 Q> tasks for organizational purposes is satisfactory to run it.
 Q>
 Q> It comes as a disappointment, because some are interested in being able to
-Q> persist a tree of processes after restart. It goes out of scope of what
+Q> persist a tree of processes after restart. It goes out of the scope of what
 Q> tmux is meant to do.
 Q>
 Q> For tasks you repeat often, you can always use a tool, like
