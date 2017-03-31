@@ -6,20 +6,20 @@ keybindings, and adjusting the prefix key, to complex things, such as decking
 out the [status bar](#status-bar) with system stats and fancy glyphs via
 powerlines.
 
-Configuration of tmux is done through `.tmux.conf` in your `$HOME` directory. 
+Configuration of tmux is managed through `.tmux.conf` in your `$HOME` directory. 
 The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux, and
 BSD.
 
-Configuration is done via the file being ran on initially starting tmux, when
+Configuration is done via the file being run upon initially starting tmux, when
 the server is started. tmux is configured using the same commands as tmux does via
-shell. For instance, `$ tmux set-window-option -g automatic-rename`, in a shell
+shell. For instance, `$ tmux set-window-option -g automatic-rename` in a shell
 is the same as `set-window-option -g automatic-rename` in your config.
 
 Configuration can be updated later via `source-file`, which is discussed in
 this chapter.
 
 For a sample config, I maintain a pretty decked out one at
-<https://github.com/tony/tmux-config>. It's permissively licensed and you're
+<https://github.com/tony/tmux-config>. It's permissively licensed, and you're
 free to copy and paste from it as you wish.
 
 I> **Custom Configs**
@@ -29,7 +29,7 @@ I>
 I> {language=shell, line-numbers=off}
 I>     $ tmux -f path/to/config.conf
 I>
-I> Note: if a tmux server is running in the background and you want 
+I> Note: If a tmux server is running in the background and you want 
 I> to test a fresh config, you must either shut down the rest of the
 I> tmux sessions or use a different socket name. Like this:
 I> 
@@ -99,7 +99,7 @@ setting server options (`set-option -s`), global session (`set-option -g`), and
 window options (`set-window-option -g`).
 
 The rest of this chapter is going to proceed cookbook-style. You can pick out
-these tweaks as and add them to your `.tmux.conf` and [reload](#reload-config).
+these tweaks and add them to your `.tmux.conf` and [reload](#reload-config).
 
 ## Server options
 
@@ -112,7 +112,7 @@ Server options are set with `set-option -s option value`.
 
 ### Terminal coloring
 
-If you're having issue with color detail in tmux, it may help to set
+If you're having an issue with color detail in tmux, it may help to set
 `default-terminal` to `screen-256color`.
 
 {line-numbers=off}
@@ -122,9 +122,9 @@ This sets the `TERM` variable in new panes.
 
 ## Session options
 
-Aside from the [status bar](#status-bar), which is covered next chapter, most
+Aside from the [status bar](#status-bar), covered in the next chapter, most
 user configuration will be custom keybindings. This section covers the few
-generic options, the next section goes into snippets involving keybindings.
+generic options, and the next section goes into snippets involving keybindings.
 
 ### Base index
 
@@ -151,9 +151,9 @@ Windows can be automatically renamed via setting `automatic-rename`:
 
 ### Prefix key
 
-The default [prefix key](#prefix-key) in tmux is `C-b`, you can customize it by
+The default [prefix key](#prefix-key) in tmux is `C-b`. You can customize it by
 setting a new prefix and unsetting the default. To set the prefix to `C-a`,
-holding the `Ctrl` key and pressing `a`, try this:
+hold the `Ctrl` key and pressing `a`. Try this:
 
 {line-numbers=off}
     set-option -g prefix C-a
@@ -169,7 +169,7 @@ Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 
 ### Vi copy-paste keys
 
-This is comprised of two-parts: Setting the `mode-keys` window option to vi, and
+This is comprised of two-parts: Setting the `mode-keys` window option to vi and
 setting the `vi-copy` bindings to use `v` to begin selection and `y` to yank.
 
 {line-numbers=off}
