@@ -1,9 +1,9 @@
 # Panes {#panes}
 
 Panes are [pseudoterminals](https://en.wikipedia.org/wiki/Pseudoterminal)
-encapsulating shells (e.g. Bash, Zsh). They reside within a [window](#windows).
-A terminal within a terminal, which can run shell commands, scripts, programs
-like vim, emacs, top, htop, irssi, weechat and so on from within them.
+encapsulating shells (e.g., Bash, Zsh). They reside within a [window](#windows).
+A terminal within a terminal, they can run shell commands, scripts, and programs,
+like vim, emacs, top, htop, irssi, weechat, and so on within them.
 
 ![](images/info/pane.png)
 
@@ -49,7 +49,7 @@ Example usage:
 |`Right`           | the right of the current pane.                     |
 |`Prefix` + `o`    | Select the next pane in the current window.        |
 
-I> *Movin around vimtuitively*
+I> *Moving around vimtuitively*
 I>
 I> If you like vim (hjkl) keybindings, add these to your [config](#config):
 I>
@@ -64,28 +64,28 @@ I>     bind l select-pane -R
 
 To zoom in on a pane, navigate to it and do `Prefix` + `z`.
 
-You can unzoom via pressing `Prefix` + `z` again.
+You can unzoom by pressing `Prefix` + `z` again.
 
-In addition, you can unzoom and move at the same time by using a [pane traversal](#pane-traversal)
-key.
+In addition, you can unzoom and move to an adjacent pane at the same time
+using a [pane traversal](#pane-traversal) key.
 
-Behind the scenes, the keybinding is a shortcut for `$ tmux resize-pane -Z`. So
-if you ever wanted to script tmux to zoom/unzoom a pane, or apply this
+Behind the scenes, the keybinding is a shortcut for `$ tmux resize-pane -Z`. So,
+if you ever wanted to script tmux to zoom/unzoom a pane or apply this
 functionality to a custom key binding, you can do that too, for instance:
 
 {line-numbers=off}
     bind-key -T prefix Z resize-pane -Z
 
-This would have `Prefix` + `Z`, note the *capital* Z, zoom and unzoom panes.
+This would have `Prefix` + `Z`; note the *capital* Z, zoom and unzoom panes.
 
 ## Resizing panes {#resizing-panes}
 
 Pane size can be adjusted within [windows](#windows) via [window layouts](#window-layouts)
 and `resize-pane`. Adjusting window layout switches the proportions and order of
 the panes. Resizing the panes targets a specific pane inside the window
-containing it, also shrink or growing the size of the other columns or rows. It's like
-adjusting your car seat or reclining on a flight, if you take up more space,
-something else will also have less space.
+containing it, also shrinking or growing the size of the other columns or rows.
+It's like adjusting your car seat or reclining on a flight; if you take up more
+space, something else will have less space.
 
 | Shortcut         | Action              |
 |------------------|---------------------|
@@ -112,12 +112,12 @@ the file created is unique. Clever!
 
 Panes are shells within a shell. You can keep adding panes to a tmux window
 until you run out of room on your screen. Within your shell, you can `tail -F`
-log files, write and run scripts, an run [curses](https://en.wikipedia.org/wiki/Curses_(programming_library))-powered
-applications like vim, top, htop, ncmpcpp, irssi, weechat, mutt and so on.
+log files, write and run scripts, and run [curses](https://en.wikipedia.org/wiki/Curses_(programming_library))-powered
+applications, like vim, top, htop, ncmpcpp, irssi, weechat, mutt, and so on.
 
 You will always have at least one pane open. Once you kill the last pane in
 the window, the window will close. Panes are also resizable; you can resize
-panes via targetting them specifically and changing the window layout.
+panes by targeting them specifically and changing the window layout.
 
 In the next chapter, we will go into the ways you can customize your tmux
-shortcuts, status line and behavior.
+shortcuts, status line, and behavior.
