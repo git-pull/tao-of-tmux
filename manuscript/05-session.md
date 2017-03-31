@@ -72,9 +72,9 @@ than the default.
 ![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
 
 If you don't name your sessions, it'll be difficult to keep track of what the
-session contains. Sometimes, you may forget you already have a project opened, 
-especially if your machine has been running for a few days, weeks or months. You
-can save time by reattaching your session and avoid creating a duplicate.
+session contains. Sometimes, you may forget you have a project opened, 
+especially if your machine has been running for a few days, weeks, or months.
+You can save time by reattaching your session and avoid creating a duplicate.
 
 You can rename sessions from within tmux with `Prefix` + `$`.  The status bar
 will be temporarily altered into a text field to allow altering the session
