@@ -111,8 +111,7 @@ POSIX shell scripts you write, but not the other way around (we will cover this
 in [shell interpreters](#shells)).
 
 The top of `.sh` files [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
-statement, which points to the interpreter to run the script in. This way, a
-script can be invoked in different dialect.
+statement, which points to the interpreter to run the script in.
 
 Zsh scripts are implemented by the Zsh shell interpreter, Bash scripts by Bash.
 But the languages are not as closely regulated and standardized as, say, [C++'s
