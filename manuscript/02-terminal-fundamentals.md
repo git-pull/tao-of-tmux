@@ -57,7 +57,7 @@ But on most Linux systems and macOS, GNU Make is the default, so they get to do:
 
     ENDIF
 
-This is one of the many tiny inconsistencies across operating systems, their
+This is one of the many tiny inconsistencies that span operating systems, their
 userlands, their binary / library /  include paths, and adherence /
 interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 or whether they follow their own.
@@ -99,7 +99,7 @@ rxvt-unicode, xterm, roxterm, gnome terminal, cmd.exe + bash.exe
 
 ## Shell languages {#shell-languages}
 
-Shell languages *are* programming languages. Sure, you may not compile the code
+Shell languages *are* programming languages. You may not compile the code
 into binaries with [`gcc`](https://gcc.gnu.org/) or [`clang`](http://clang.llvm.org/).
 And there may not be a shiny [npm](https://www.npmjs.com/) for them, but a
 language is a language.
@@ -111,7 +111,8 @@ POSIX shell scripts you write, but not the other way around (we will cover this
 in [shell interpreters](#shells)).
 
 The top of `.sh` files [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
-statement, which can invoke shellscripts in different dialects.
+statement, which points to the interpreter to run the script in. This way, a
+script can be invoked in different dialect.
 
 Zsh scripts are implemented by the Zsh shell interpreter, Bash scripts by Bash.
 But the languages are not as closely regulated and standardized as, say, [C++'s
@@ -143,8 +144,8 @@ was [replaced with `dash`](https://wiki.ubuntu.com/DashAsBinSh)
 here, you are thinking "hmm, `/bin/sh`, probably just a plain old POSIX shell";
 however, system startup scripts on Ubuntu used to allow non-POSIX scripting
 via Bash. This is because specialty [shell languages](#shell-languages), such as
-Bash and Zsh, add a lot of helpful and practical features may work on one
-interpreter, but not another. For instance, you would need to install the Zsh
+Bash and Zsh, add a lot of helpful and practical that features may work on one
+interpreter but not another. For instance, you would need to install the Zsh
 interpreter across all your systems if you rely on Zsh-specialized
 scripting. If you conformed with POSIX shell scripting, your scripting would
 have the highest level of compatibility at the cost of being more verbose.
@@ -155,7 +156,7 @@ typically require you to install it via package manager and install it to
 on FreeBSD, or [`pkg_add(1)`](http://man.openbsd.org/pkg_add.1) on OpenBSD,
 and it will install to `/usr/local/bin/zsh`.
 
-It's fun to experiment with different shells. On many systems you can use
+It's fun to experiment with different shells. On many systems, you can use
 [`chsh -s`](https://en.wikipedia.org/wiki/Chsh) to update the default shell for
 a user.
 
@@ -172,12 +173,12 @@ Context is key. It could be:
 - A server they have to log into. Before the era of the cloud, it would be
   popular for small hosts to sell "C Shells" with root access.
 - A shell within a tmux [pane](#panes).
-- If scripting is mentioned, it is likely either the script itself, the
-  scripting issue at hand, or something about the shell language.
+- If scripting is mentioned, it is likely either the script file, an issue
+  related to the scripts' behavior, or something about the shell language.
 
 But overall, once you get out of this chapter, go back to doing what you're
 doing. If shell is what people say and they understand it, use it. The backing
-you got here should make you more confident in yourself. It's an ongoing
+you have here should make you more confident in yourself. It's an ongoing
 battle, these days, to keep street smarts we pick up with book smarts.
 
 In the next chapter, we will touch some terminal basics before diving
