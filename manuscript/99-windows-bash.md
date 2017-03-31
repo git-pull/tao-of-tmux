@@ -6,7 +6,7 @@ Usage requires enabling **Developer mode** via the "For Developers" tab in the
 "Update & security" settings.
 
 After enabling, open "Windows Features". You can find it by searching for "Turn
-Windows features on or off".  Then check "Windows Subsystem for Linux (Beta)".
+Windows features on or off". Then check "Windows Subsystem for Linux (Beta)".
 
 You may be asked to restart.
 
