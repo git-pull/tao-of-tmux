@@ -13,8 +13,8 @@ very clever hacker, who utilizes the advanced scripting capabilities tmux
 offers to pilot the terminal in ways previously thought impossible.
 
 We've covered the [server](#server), [session](#sessions), [window](#windows),
-and [pane](#panes) concepts. Panes are shells, aka pseudoterminals, aka
-PTYs. The command system and [configurations](#config) are basically a file
+and [pane](#panes) concepts. Panes are shells, aka pseudoterminals or
+PTYs. The command system. That [configurations](#config) are basically a file
 filled with commands. An overview of the [target](#targets) system lets
 you specify objects to interact with tmux commands. A breeze through [formats](#formats),
 a template system with variables to retrieve information on tmux' current state.
