@@ -127,11 +127,11 @@ panes.
 [*Configuration*](#config) discusses customization of tmux and sets the
 foundation for how to think about `.tmux.conf` so you can customize your own.
 
-[Status bar and styling](#status-bar) is devoted to the customization
+[*Status bar and styling*](#status-bar) is devoted to the customization
 of the status line and colors in tmux. As a bonus, you'll even learn how to
 display system information like CPU and memory usage via the status line.
 
-[Scripting tmux](#scripting-tmux) goes into command [aliases](#aliases)
+[*Scripting tmux*](#scripting-tmux) goes into command [aliases](#aliases)
 and the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
@@ -143,7 +143,7 @@ tmux. If you like programming on Unix-like systems, this one is for you.
 terminal tutorials you can use with tmux to improve day to day development and
 administration experience.
 
-[Cheatsheets](#appendix-cheatsheets) are organized tables of commands,
+[*Cheatsheets*](#appendix-cheatsheets) are organized tables of commands,
 shortcuts, and formats grouped by section.
 
 ## Donations
