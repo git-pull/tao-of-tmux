@@ -8,7 +8,7 @@ time.
 
 tmux' userbase varies in skill level. Some readers of this book may have just
 learned how to use the Prefix key yesterday. Others are looking to tweak their
-configurations and host it in their dot-config on github. There also exists a
+configurations and host it in their "dot files" on github. There also exists a
 very clever hacker, who utilizes the advanced scripting capabilities tmux
 offers to pilot the terminal in ways previously thought impossible.
 
