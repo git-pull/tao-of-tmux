@@ -100,7 +100,7 @@ But if it doesn't, you'll get something like this in a response:
 
 {language=shell, line-numbers=off}
     $ tmux has-session -t 1
-    > can't find session 4
+    > can't find session 1
 
 To try it in a shell script:
 
