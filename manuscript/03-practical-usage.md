@@ -18,8 +18,8 @@ And it's a hump we have to get over.
 It's kind of like [*Street Fighter*](https://en.wikipedia.org/wiki/Street_Fighter).
 In this video game, the player inputs a combination of buttons in sequence to
 perform flying spinning kicks and shoot fireballs; sweet. As the player grows
-more accustomed with the combos, they repeat moves by intuition, since they grow
-muscle memory.
+more accustomed with the combos, they repeat moves by intuition, since they
+develop muscle memory.
 
 Without understanding how to send *command sequences* to tmux via the prefix
 key, you'll be dead in the water.
@@ -44,8 +44,8 @@ Q>
 Q> This will set the prefix key to `screen(1)`'s (another terminal
 Q> multiplexer's) prefix key.
 
-The default leader prefix is `<Ctrl-b>`. Hold down the `control` key, then
-`b`.
+The default leader prefix is `<Ctrl-b>`. While holding down the `control` key,
+press `b`.
 
 X> ### Sending tmux commands
 X>
@@ -70,7 +70,7 @@ X>
 X> You've sent tmux your first command, and you're now outside of tmux!
 
 You've detached the tmux session you were in. You can reattach via `$ tmux
-attach`.
+attach`. 
 
 ### Nested tmux sessions
 
@@ -80,20 +80,23 @@ in one of your panes, on the remote machine, you can attach the client via `tmux
 attach` as you normally would. To send the prefix key to the machine's tmux
 client, not your local one, hit the prefix key again.
 
-So, if your prefix key is the default, `Ctrl-b`, do `Ctrl+b` + `b` again,
+So, if your prefix key is the default, `<Ctrl-b>`, do `<Ctrl+b>` + `b` again,
 *then* hit the shortcut for what you want to do.
 
 Example: If you wanted to create a window on the remote machine, which would normally
-be `Ctrl-b` + `c` locally, it'd be `Ctrl-b` + `b` + `c`.
+be `<Ctrl-b>` + `c` locally, it'd be `<Ctrl-b>` + `b` + `c`.
+
+Hereinafter, the book will refer to shortcuts by `Prefix`. Instead
+of `<Ctrl-B> + d`, you will see `Prefix` + `d`.
 
 ## Session persistence and the server model
 
 If you use Linux or a similar system, you've likely brushed through [Job Control](https://en.wikipedia.org/wiki/Job_control_(Unix)),
 such as [`fg(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/fg.html), [`jobs(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html).
-tmux behavior feels similar, like you ran `<ctrl-z>` except, technically, you
+tmux behavior feels similar, like you ran `<Ctrl-z>` except, technically, you
 were in a "job" all along. You were just using a client to view it.
 
-Another way of understanding it: `<Ctrl-b> d` closed the client connection,
+Another way of understanding it: `<Ctrl-b>` + `d` closed the client connection,
 therefore, 'detached' from the session.
 
 Your tmux client disconnected from the server instance. The session, however, is
