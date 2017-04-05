@@ -55,8 +55,7 @@ Example usage:
 {language=shell, line-numbers=off}
     $ tmux switch-client -t dev
 
-This will switch to a session, named "dev", if it exists.  No need to enter the
-`target-client` if you're already in a client.
+If already inside a client, this will switch to a session, named "dev", if it exists.
 
 ## Naming sessions
 
