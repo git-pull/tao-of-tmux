@@ -50,7 +50,8 @@ In addition to multiple terminals on one screen, tmux allows you to create and l
 multiple "windows" within the confines of the tmux session you attached.
 
 Even better, you can copy and paste and scroll. No requirement for graphics
-either, so you have full power, even if you're SSH'ing or on a system without X.
+either, so you have full power, even if you're SSH'ing or on a system without 
+a display server such as [X](https://en.wikipedia.org/wiki/X.Org_Server).
 
 Here are a few common scenarios:
 
@@ -121,10 +122,9 @@ and the other person would see the same thing, share the same input, and the
 same active window and pane.
 
 The above are just examples; any general workspace you'd normally use in a
-terminal for any task can gain the benefit of you being able to persist it! 
-Including projects or repetitive efforts you'd multitask on. The
-*[tips and tricks](#tips-and-tricks)* section will dive into specific flows
-you can use today.
+terminal could work, especially projects or repetitive efforts you multitask
+on. The *[tips and tricks](#tips-and-tricks)* section will dive into specific
+flows you can use today.
 
 Q> ### Do tmux sessions persist after a system restart?
 Q>
