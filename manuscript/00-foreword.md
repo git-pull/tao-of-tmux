@@ -4,8 +4,8 @@
 # Foreword 
 
 Nearly all my friends use tmux. I remember going out at night for drinks and the
-3 of us would take a seat at a round table and take out our smart phones. This
-was back when phones still had physical "QWERTY" keyboards.
+three of us would take a seat at a round table and take out our smart phones.
+This was back when phones still had physical "QWERTY" keyboards.
 
 Despite our home computers being asleep or turned off, our usernames in the IRC
 channel we frequently visited persisted in the chatroom list. Our screens were
@@ -57,8 +57,8 @@ I've written a [popular tmux starter configuration](https://github.com/tony/tmux
 a [pythonic tmux library](https://libtmux.git-pull.com), and a
 [tmux session manager](https://tmuxp.git-pull.com).
 
-I am writing this from vim running in a tmux pane, inside a window, in a session, on
-the server, through a client.
+I am writing this from vim running in a tmux pane, inside a window, in a session
+running on a tmux server, through a client.
 
 A word to absolute beginners: Don't feel you need to grasp the concepts
 of the command line and terminal multiplexing in a single sitting. You have the
@@ -106,8 +106,8 @@ examples and osmosis. At the end of this section, you'll be more confident and
 secure using the essential components underpinning a modern terminal
 environment.
 
-[*Practical usage*](#practical-usage) covers common bread and
-butter uses for you to use tmux immediately.
+[*Practical usage*](#practical-usage) covers common bread-and-butter uses for
+you to use tmux immediately.
 
 [*Server*](#server) gives life to the unseen workhorse behind the scenes
 powering tmux. You'll think of tmux differently and may be impressed a

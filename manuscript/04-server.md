@@ -90,7 +90,7 @@ So, something like:
 Will give you a tmux directory created within your `$HOME` folder. On OS X,
 your home folder will probably be something like `/Users/yourusername`. On
 other systems, it may be `/home/yourusername`. If you want to find out, type
-`echo $HOME`.
+`$ echo $HOME`.
 
 ## Clients
 
