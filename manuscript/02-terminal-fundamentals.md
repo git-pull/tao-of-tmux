@@ -10,7 +10,7 @@ shell scripting, and so on. If you use tmux, you'll be around these all the
 time, regardless whether you're in a GUI on a local machine or SSH'ing
 into a remote server.
 
-If you want to learn more about how processes and TTY's work at the kernel level
+If you want to learn more about how processes and TTYs work at the kernel level
 (data structures and all), the book [*The Design and Implementation of the FreeBSD
 Operating System (2nd Edition)*](http://amzn.to/2iTmVyv) by Marshall Kirk
 McKusick is nice, particularly, Chapter 4, *Process Management* and Section
@@ -88,7 +88,7 @@ The terminal interface can be best introduced by citing official specification,
 laying out its technical properties, interfaces, and responsibilities. This can
 be viewed in its [POSIX specification](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap11.html).
 
-This includes TTY's, including text terminals and X sessions within them. On
+This includes TTYs, including text terminals and X sessions within them. On
 Linux / BSD systems, you can switch between sessions via `<ctrl-alt-F1>`
 through `<ctrl-alt-F12>`.
 
