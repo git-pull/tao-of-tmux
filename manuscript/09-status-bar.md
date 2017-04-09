@@ -48,8 +48,8 @@ This can be viewed through `$ man strftime` on Unix-like systems.
 
 ## Shell command output
 
-You can also call applications, such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load)
-and [conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
+You can also call applications, such as [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load),
+[conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
 
 For this example, we'll use `tmux-mem-cpu-load`. This works on Unix-like systems
 like FreeBSD, Linux distributions as well as macOS.

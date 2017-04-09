@@ -12,7 +12,7 @@ at the bottom of tmux.
 
 ## Creating windows
 
-All sessions start with at least 1 window open. From there, you can create and
+All sessions start with at least one window open. From there, you can create and
 kill windows as you see fit.
 
 Window indexes are numbers tmux uses to determine ordering. The first window's
@@ -179,9 +179,9 @@ where you were previously.
 ## Summary
 
 In this chapter, you learned how to manipulate windows via renaming and changing
-their layouts. To top it off, some advanced functionality you can use to kill
-windows in a pinch or in shell scripting tmux. In addition, how to save any tmux
-layouts via outputting the `window_layout` template variable.
+their layouts, a couple of ways to kill windows in a pinch or in when shell
+scripting tmux. In addition, this chapter demonstrated how to save any tmux
+layout by printing the `window_layout` template variable.
 
 If you are in a tmux session, you'll always have at least one window open, and
 you'll be in it. And within the window will be "pane"; a shell within a shell.
