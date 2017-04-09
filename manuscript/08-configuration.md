@@ -69,7 +69,7 @@ I> You can also have it give you a confirmation afterwards:
 I> 
 I> `bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
 I>
-I> Now, you can type `prefix` + `r` to get the config to reload.
+I> Now, you can type `Prefix` + `r` to get the config to reload.
 
 ## How configs work
 
@@ -77,12 +77,12 @@ The tmux configuration is processed just like [run commands](https://en.wikipedi
 in a `~/.zshrc` or `~/.bashrc` file. `bind r source ~/.tmux.conf` in the tmux
 configuration is the same as `$ tmux bind r source ~/.tmux.conf`.
 
-You could always create a shell script prefixing `tmux ` in front of commands
+You could always create a shell script prefixing `tmux` in front of commands
 and run it on fresh servers. The result is the same. Same goes if you manually
 type in `$ tmux set-option` and `$ tmux bind-key` commands into any terminal (in
 or outside tmux).
 
-This in .tmux.conf:
+This in `.tmux.conf`:
 
 {language=shell, line-numbers=off}
     bind-key a send-prefix
@@ -151,9 +151,9 @@ Windows can be automatically renamed via setting `automatic-rename`:
 
 ### Prefix key
 
-The default [prefix key](#prefix-key) in tmux is `C-b`. You can customize it by
-setting a new prefix and unsetting the default. To set the prefix to `C-a`,
-hold the `Ctrl` key and pressing `a`. Try this:
+The default [prefix key](#prefix-key) in tmux is `<Ctrl-b>`. You can customize
+it by setting a new prefix and unsetting the default. To set the prefix to
+`<Ctrl-a>`, like GNU Screen, try this:
 
 {line-numbers=off}
     set-option -g prefix C-a
@@ -178,7 +178,7 @@ setting the `vi-copy` bindings to use `v` to begin selection and `y` to yank.
     bind-key -t vi-copy 'v' begin-selection
     bind-key -t vi-copy 'y' copy-selection
 
-#### hjkl / vi-like pane traversal
+### hjkl / vi-like pane traversal
 
 Another one for vi fans, this keeps your right hand on the home row when moving
 directionally across panes in a window.
