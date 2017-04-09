@@ -74,9 +74,9 @@ if you ever wanted to script tmux to zoom/unzoom a pane or apply this
 functionality to a custom key binding, you can do that too, for instance:
 
 {line-numbers=off}
-    bind-key -T prefix Z resize-pane -Z
+    bind-key -T prefix y resize-pane -Z
 
-This would have `Prefix` + `Z`; note the *capital* Z, zoom and unzoom panes.
+This would have `Prefix` + `y` zoom and unzoom panes.
 
 ## Resizing panes {#resizing-panes}
 
