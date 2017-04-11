@@ -172,8 +172,10 @@ I will update digital versions of the book with the changes where applicable.
 
 ## Thanks
 
-Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors),
-who helped me spot errors in this book.
+Thanks to the [contributors](https://github.com/git-pull/tao-of-tmux/graphs/contributors)
+for spotting errors in this book and submitting errata through GitHub. In
+addition, readers like Graziano Misuraca, who looked through the book closely,
+providing valuable feedback.
 
 Some copy, particularly in [cheatsheets](#appendix-cheatsheets), comes straight out
 of the manual of tmux, which is [ISC-licensed](https://github.com/tmux/tmux/blob/master/COPYING).
