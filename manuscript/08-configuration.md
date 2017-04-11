@@ -164,7 +164,7 @@ it by setting a new prefix and unsetting the default. To set the prefix to
     unbind-key C-b
     bind-key a send-prefix
 
-### New window w/ prompt
+### New window with prompt
 
 Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 
