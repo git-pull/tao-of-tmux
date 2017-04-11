@@ -109,7 +109,7 @@ tmux session via `$ tmux set-option -g status-right`:
     $ tmux set-option -g status-right '"#{=21:pane_title}" #(tmux-mem-cpu-load) %H:%M %d-%b-%y'
 
 Also, note how I switched out the double quotes on either side of the option
-with single quotes. This is recommended, since there are double quotes inside.
+with single quotes. This is required, since there are double quotes inside.
 
 You can do this with anything, for instance, try adding [`uptime`](https://linux.die.net/man/1/uptime).
 This could be done by adding `#(uptime)` to your status line. Typically the
