@@ -127,7 +127,9 @@ generic options, and the next section goes into snippets involving keybindings.
 
 ### Base index
 
-Set the starting number (base index) for windows:
+This was mentioned earlier in the book, but it's a favorite tweak of many tmux
+users, who find it more intuitive to start their window counting at *1*, rather
+than the default, *0*. To set the starting number (base index) for windows:
 
 {line-numbers=off}
     set -g base-index 1
