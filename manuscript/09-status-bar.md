@@ -52,16 +52,16 @@ You can also call applications, such as [tmux-mem-cpu-load](https://github.com/t
 [conky](https://github.com/brndnmtthws/conky), and [powerline](#powerline).
 
 For this example, we'll use `tmux-mem-cpu-load`. This works on Unix-like systems
-like FreeBSD, Linux distributions as well as macOS.
+like FreeBSD, Linux distributions, and macOS.
 
-It requires installing [CMake](https://cmake.org) and `git` through your package
-manager. You must have a C++ compiler. On macOS, install Xcode CLI Utilities.
-You can do this by going to Applications -> Utilities, launching Terminal.app
-and typing `$ xcode-select --install`. macOS can use [Homebrew](https://brew.sh/)
-to install the CMake and git package. Linux distributions allow installing
-CMake, clang and git via package manager.
+To build from source, you must have [CMake](https://cmake.org) and `git`, which
+are available through your package manager. You must have a C++ compiler. On
+macOS, install Xcode CLI Utilities. You can do this by going to *Applications ->
+Utilities*, launching *Terminal.app* and typing `$ xcode-select --install`.
+macOS can use [Homebrew](https://brew.sh/) to install the CMake and git package.
+Linux distributions allow installing CMake, clang and git via package manager.
 
-Before this step,  you can `cd` into any directory you're ok keep code in.
+Before this step, you can `cd` into any directory you're ok keeping code in.
 
 {language=shell, line-numbers=off}
     $ git clone https://github.com/thewtex/tmux-mem-cpu-load.git
