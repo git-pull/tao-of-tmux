@@ -143,10 +143,13 @@ same thing.
 
 ### Automatic window naming
 
-Windows can be automatically renamed via setting `automatic-rename`:
+Setting `automatic-rename` alters the name of the window based upon its active
+pane:
 
 {line-numbers=off}
     set-window-option -g automatic-rename
+
+Automatic renaming will be disabled for the window if you rename it manually.
 
 ## Keybindings
 
