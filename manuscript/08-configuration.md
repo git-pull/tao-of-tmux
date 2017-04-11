@@ -15,7 +15,7 @@ the server is started. tmux is configured using the same commands as tmux does v
 shell. For instance, `$ tmux set-window-option -g automatic-rename` in a shell
 is the same as `set-window-option -g automatic-rename` in your config.
 
-Configuration can be updated later via `source-file`, which is discussed in
+Configuration can be reloaded later via `source-file`, which is discussed in
 this chapter.
 
 For a sample config, I maintain a pretty decked out one at
@@ -70,6 +70,9 @@ I>
 I> `bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
 I>
 I> Now, you can type `Prefix` + `r` to get the config to reload.
+
+Note that reloading the configuration only *re-runs* the configuration file. It
+will not reset keybindings or styling you apply to tmux.
 
 ## How configs work
 
