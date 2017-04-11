@@ -59,7 +59,7 @@ are available through your package manager. You must have a C++ compiler. On
 macOS, install Xcode CLI Utilities. You can do this by going to *Applications ->
 Utilities*, launching *Terminal.app* and typing `$ xcode-select --install`.
 macOS can use [Homebrew](https://brew.sh/) to install the CMake and git package.
-Linux distributions allow installing CMake, clang and git via package manager.
+Major Linux distributions package CMake, clang, and git.
 
 Before this step, you can `cd` into any directory you're ok keeping code in.
 
