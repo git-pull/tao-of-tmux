@@ -2,9 +2,9 @@
 
 ## Read the tmux manual in style
 
-`$ man tmux` is the command to load up the "[man page](https://en.wikipedia.org/wiki/Man_page)"
-for tmux. You can do the same to find instructions for any command or entity
-with a manpage entry; here's two fun ones:
+`$ man tmux` is the command to load up the man page for tmux. You can do the
+same to find instructions for any command or entity with a manpage entry; here
+are some fun ones:
 
 {language=shell, line-numbers=off}
     $ man less
@@ -127,7 +127,7 @@ snippet in conjunction with a [session manager](#session-manager):
       entr -c go test ./...; else go test ./...; fi
 
 If the project is a team or open source project, where a user never used the
-command before and could missing a required software package, we can give
+command before and could be missing a required software package, we can give
 a helpful message. This shows a notice to the user to install entr if not
 installed on the system:
 
@@ -225,7 +225,7 @@ panes in a certain order. In addition, there's the burden of assuring the shell
 scripts are portable.
 
 A declarative configuration in YAML or JSON configuration abstracts out the
-commands, layout, and options of tmux. It'd prevent the mistakes and repetition
+commands, layout, and options of tmux. It prevents the mistakes and repetition
 scripting entails. These applications are called tmux *session managers*, and in
 different ways, they programmatically create tmux workspaces by running a
 series of commands based on a config.
@@ -237,8 +237,8 @@ Ruby. There's also [tmuxomatic](https://github.com/oxidane/tmuxomatic), where
 you can "draw" your tmux sessions in text and have tmuxomatic build the layout.
 
 I sort of have a home team advantage here, as I'm author of [tmuxp](https://github.com/tony/tmuxp).
-I wrote it, already having used teamocil and tmuxinator, but with many more
-features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
+Already having used teamocil and tmuxinator, I wrote my own in python instead of
+ruby, with many more features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
 a library which abstracts tmux [server](#server), [sessions](#sessions),
 [windows](#windows) and [panes](#panes) to build the state of tmux sessions. In
 addition, it has a naive form of session freezing, support for JSON, more
@@ -284,10 +284,10 @@ paths](#troubleshoot-site-paths) in the appendix.
 I've dusted off a C++ space shooter and a new go webapp I've been playing with.
 They're licensed under MIT so, you can use them, copy and paste from them, etc:
 
-- c++14 [space shooter minigame](https://github.com/tony/tot-cpp-shmup) - side
+- C++14 [space shooter minigame](https://github.com/tony/tot-cpp-shmup) - side
   scrolling [shmup](https://en.wikipedia.org/wiki/Shoot_'em_up) demo (sdl2,
-  cmake, json resource manifests, linux/BSD/OS X compatible)
-- golang [tmux web frontend](https://github.com/tony/tot-go-webapp) - display
+  cmake, json resource manifests, Linux/BSD/OS X compatible)
+- Go [tmux web frontend](https://github.com/tony/tot-go-webapp) - display
   current tmux session and window information via browser ([gin](https://github.com/gin-gonic/gin),
   [bower](https://bower.io/))
 

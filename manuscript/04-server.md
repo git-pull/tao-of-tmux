@@ -115,7 +115,7 @@ sessions, windows, and panes.
 
 Much like vi, tmux handles copying as a mode in which a pane is
 temporarily placed. When inside this mode, text can be selected and copied to
-the *paste buffer*, tmux' clipboard.
+the *paste buffer*, tmux's clipboard.
 
 The default key to enter copy mode is `Prefix` + `[`.
 

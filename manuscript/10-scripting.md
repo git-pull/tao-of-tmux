@@ -10,7 +10,7 @@ people's flows. Full tables are in the [cheatsheets](#appendix-cheatsheets).
 ## Aliases {#aliases}
 
 tmux supports a variety of alias commands. With aliases, instead of typing
-`tmux attach-session` to attach a session, `$ tmux attach` could do the trick.
+`$ tmux attach-session` to attach a session, `$ tmux attach` could do the trick.
 
 Most aliases come to mind via intuition and are a lot friendlier than typing the
 full hyphenated commands.
@@ -69,7 +69,7 @@ patterns.
 For instance, you need not type `$ tmux attach-session` every time. First,
 there's the [alias](#aliases) of `$ tmux attach`, but additionally, more
 concise commands can be used if they partially match the name of the command or
-the target. tmux' pattern matching allows `$ tmux attac`, `$ tmux att`, `$ tmux at`
+the target. tmux's pattern matching allows `$ tmux attac`, `$ tmux att`, `$ tmux at`
 and `$ tmux a` to reach `$ tmux attach`.
 
 Every tmux command has shorthands; let's try this for `$ tmux new-session`:
@@ -253,7 +253,7 @@ Let's try to output it:
     $ tmux list-windows -F "#{window_id} #{window_name}"
     > @0 zsh
 
-Here's a cool trick; list all panes with the x and y coordinates of the cursor
+Here's a cool trick to list all panes with the x and y coordinates of the cursor
 position:
 
 {language=shell, line-numbers=off}
@@ -282,7 +282,7 @@ Pane variables: `cursor_x`, `cursor_y`, `pane_active`, `pane_current_command`,
 
 This book focuses on separating the concept of server, sessions,
 windows, and panes. With the knowledge of targets and formats, this
-separation takes shape in tmux' internal attributes. If you `list-panes` all
+separation takes shape in tmux's internal attributes. If you `list-panes` all
 variables up the ladder, including window, session and server variables are
 available for the panes being listed. Try this:
 
@@ -403,10 +403,10 @@ Output of cal(1).](images/10-scripting/send-keys-cal.png)
 
 `$ tmux capture-pane` will copy a panes' contents.
 
-By default, the contents will be saved to tmux' internal clipboard, the *paste
+By default, the contents will be saved to tmux's internal clipboard, the *paste
 buffer*. You can run `capture-pane` within any pane, then navigate to an
 editor, paste the contents (don't forget to `:set paste` and go into insert mode
-with `i` on vim), and save it to a file. To [paste](#clipbpard), use `Prefix` +
+with `i` in vim), and save it to a file. To [paste](#clipboard), use `Prefix` +
 `]` inside the pane you're pasting into.
 
 You can also add the `-p` flag to print it to [stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29).
@@ -429,7 +429,7 @@ To check what's inside:
     $ cat ./test
 
 Like with `send-keys`, [targets](#targets) can be specified with `-t`. Let's
-copy a pane into tmux' clipboard ("paste buffer") and paste it into a text
+copy a pane into tmux's clipboard ("paste buffer") and paste it into a text
 editor in a third pane:
 
 ![Top-left: Listing panes, Bottom-left: Capturing pane output of top-left pane,
@@ -446,10 +446,10 @@ a powerful way of retrieving information on its objects between `list-panes`,
 `list-windows` and `list-sessions` and formats. This makes tmux not only
 accessible and configurable, but also scriptable.
 
-The ability to target information explicitly and reliably down to the point of
-tracking a pane by its ID and collecting its pane contents, even sending in
-keys. Used by the skilled programmer, opening the possibility of orchestrating
-the terminals in ways that were previously unrealistic; anything from niche
+The ability to retrieve explicitly and reliably, from session the sesson down to
+a pane. All it takes is a pane's ID to capture its contents or even send it
+keys. Used by the skilled programmer, scripting tmux can facilitate orchestrating
+terminals in ways previously deemed unrealistic; anything from niche
 shell scripts to monitor and react to behavior on systems to high-level,
 intelligent and structured control via object oriented libraries, like
 [libtmux](https://libtmux.git-pull.com).
@@ -458,6 +458,7 @@ In the next chapter, we delve into optimizations that showcase the latest
 generation of unix tools that build upon old, time-tested concepts, like [man pages](https://en.wikipedia.org/wiki/Man_page)
 and [piping](https://en.wikipedia.org/wiki/Pipeline_(Unix)), while maintaining
 portability across differences in platforms and graceful degradation to ensure
-development tooling works on machines missing optional tools. In addition, a
-class of powerful, high-level applications that leverage tmux' scripting
-capabilities to consistently build tmux workspace via declarative configurations.
+development tooling works on machines missing optional tools. Also, the chapter
+will introduce *session managers*, a powerful, high-level tool leveraging tmux's
+scripting capabilities to consistently load workspace via a declarative
+configuration.
