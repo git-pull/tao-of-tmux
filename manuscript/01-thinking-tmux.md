@@ -55,7 +55,7 @@ a display server such as [X](https://en.wikipedia.org/wiki/X.Org_Server).
 
 Here are a few common scenarios:
 
-- Running `tail -F /var/log/apache2/error.log` in a
+- Running `$ tail -F /var/log/apache2/error.log` in a
   pane to get a live stream of the latest system events.
 - Running a file watcher, like [watchman](https://github.com/facebook/watchman),
   [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
@@ -72,7 +72,7 @@ Here are a few common scenarios:
   while leaving two others open for CLI commands and building via `make` or
   `ninja`.
 
-![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, lldb bottom right](images/01-thinking-tmux/dev-watch.png)
+![vim + building a C++ project w/ CMake + Ninja using entr to rebuild on file changes, LLDB bottom right](images/01-thinking-tmux/dev-watch.png)
 
 With tmux, you quickly have the makings of an IDE! And on your terms.
 
