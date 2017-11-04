@@ -87,7 +87,7 @@ Example: If you wanted to create a window on the remote machine, which would nor
 be `<Ctrl-b>` + `c` locally, it'd be `<Ctrl-b>` + `b` + `c`.
 
 Hereinafter, the book will refer to shortcuts by `Prefix`. Instead
-of `<Ctrl-B> + d`, you will see `Prefix` + `d`.
+of `<Ctrl-b> + d`, you will see `Prefix` + `d`.
 
 ## Session persistence and the server model
 
