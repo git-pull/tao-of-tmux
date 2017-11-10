@@ -80,7 +80,7 @@ in one of your panes, on the remote machine, you can attach the client via `tmux
 attach` as you normally would. To send the prefix key to the machine's tmux
 client, not your local one, hit the prefix key again.
 
-So, if your prefix key is the default, `<Ctrl-b>`, do `<Ctrl+b>` + `b` again,
+So, if your prefix key is the default, `<Ctrl-b>`, do `<Ctrl-b>` + `b` again,
 *then* hit the shortcut for what you want to do.
 
 Example: If you wanted to create a window on the remote machine, which would normally
