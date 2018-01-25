@@ -81,7 +81,7 @@ on Super User.
 
 In tmux, shortcuts require a [prefix key](#prefix-key) to be sent beforehand.
 For instance, `Prefix` + `d` will detach a tmux client from its session. This
-prefix, by default, is `Ctrl-B`, but users can override it. This is discussed in
+prefix, by default, is `<Ctrl-b>`, but users can override it. This is discussed in
 greater detail in *the prefix key* section and [*configuration*](#config).
 
 ## How this book is structured
