@@ -5,7 +5,7 @@ instance. Server instances are forked to the background upon starting a fresh
 instance and reconnected to when reattaching sessions. Your interaction with
 tmux will have *at least* one session running.
 
-A session holds one or more [windows](#windows). 
+A session holds one or more [windows](#windows).
 
 ![](images/info/session.png)
 
@@ -66,12 +66,12 @@ You can name it whatever you want. Typically, if I'm working on multiple web
 projects in one session, I'll name it "web". If I'm assigning one software
 project to a single session, I'll name it after the software project. You'll
 likely develop your own naming conventions, but anything is more descriptive
-than the default. 
+than the default.
 
-![Renaming a session 'zsh' to 'renamed'](images/05-session/rename.png)
+![Renaming a session '0' to 'react web'](images/05-session/rename.png)
 
 If you don't name your sessions, it'll be difficult to keep track of what the
-session contains. Sometimes, you may forget you have a project opened, 
+session contains. Sometimes, you may forget you have a project opened,
 especially if your machine has been running for a few days, weeks, or months.
 You can save time by reattaching your session and avoid creating a duplicate.
 

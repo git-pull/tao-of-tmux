@@ -35,7 +35,7 @@ the eighth.
 Just like with sessions, windows can have names. Labelling them helps keep track
 of what you're doing inside them.
 
-![Renaming](images/06-window/rename.png)
+![Renaming a window 'zsh' to 'renamed'](images/06-window/rename.png)
 
 When inside tmux, the shortcut `Prefix` + `,` is most commonly used. It
 opens a prompt in the tmux status line, where you can alter the name of the
@@ -60,7 +60,7 @@ Prompt for a window index (useful for indexes greater than 9) with `Prefix` +
 `'`. If the window index is 10 or above, this will help you a lot.
 
 I> ### Tip: Search + Traverse Windows for Text
-I> 
+I>
 I> You can forward to a window with a match of a text string by doing `Prefix` +
 I> `f`.
 
