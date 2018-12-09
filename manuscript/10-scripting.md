@@ -446,7 +446,7 @@ a powerful way of retrieving information on its objects between `list-panes`,
 `list-windows` and `list-sessions` and formats. This makes tmux not only
 accessible and configurable, but also scriptable.
 
-The ability to retrieve explicitly and reliably, from session the sesson down to
+The ability to retrieve explicitly and reliably, from a session down to
 a pane. All it takes is a pane's ID to capture its contents or even send it
 keys. Used by the skilled programmer, scripting tmux can facilitate orchestrating
 terminals in ways previously deemed unrealistic; anything from niche
