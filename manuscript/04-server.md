@@ -134,6 +134,9 @@ I>     # Vi copypaste mode
 I>     set-window-option -g mode-keys vi
 I>     bind-key -t vi-copy 'v' begin-selection
 I>     bind-key -t vi-copy 'y' copy-selection
+I>     # starting with tmux version 2.6 this changes to:
+I>     bind-key -Tcopy-mode-vi 'C-v' send -X begin-selection
+I>     bind-key -Tcopy-mode-vi 'C-y' send -X copy-selection
 
 In addition to the "copy mode", tmux has advanced functionality to
 programmatically copy and paste. Later in the book, the [Capturing pane content](#capture-pane)
