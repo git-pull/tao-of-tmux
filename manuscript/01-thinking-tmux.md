@@ -8,7 +8,7 @@ In the world of modern computing, user interaction has 2 realms:
 1. The text realm
 2. The graphical realm
 
-tmux lives in the graphical realm in which fixed-width fonts appear in
+tmux lives in the text realm in which fixed-width fonts appear in
 a rectangular grid in a window, like in a terminal from the 1980s.
 
 ![](images/info/server-with-laptop.png)
