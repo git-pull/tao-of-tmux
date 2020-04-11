@@ -222,10 +222,10 @@ client at `/dev/ttys004`:
 ### `$ tmux switch-client [-c target-client] [-t target-session]`
 
 {language=shell, line-numbers=off}
-    $ tmux suspend-client -c /dev/ttys004 -t othersession
+    $ tmux switch-client -c /dev/ttys004 -t othersession
 
     # Within current client, -c is assumed
-    $ tmux suspend-client -t othersession 
+    $ tmux switch-client -t othersession 
 
 ## Formats {#formats}
 
