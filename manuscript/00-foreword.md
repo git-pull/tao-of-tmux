@@ -3,33 +3,49 @@
  
 # Foreword 
 
-Nearly all my friends use tmux. I remember going out at night for drinks and the
-three of us would take a seat at a round table and take out our smart phones.
-This was back when phones still had physical "QWERTY" keyboards.
+The terminal is a direct textual pathway to your system. It's characterized by
+fixed width text, high contrast, raw input and output via text, and unforgiving.
+By its very nature, it's precise - it acts upon what you say, not what you mean.
 
-Despite our home computers being asleep or turned off, our usernames in the IRC
-channel we frequently visited persisted in the chatroom list. Our screens were
-lit by a kaleidoscope of colors on a black background. We ssh'd with ConnectBot
-into our cloud servers and reattached by running [`screen(1)`](https://en.wikipedia.org/wiki/GNU_Screen).
-As it hit 2AM, our Turkish coffee arrived, the `|away` status indicator trailing
-our online nicknames disappeared.
+It's ignorant of your intentions. It's developers designed it for utility, and it
+happens in a setting where happiness and convenience is tied legacy implementations
+on terminal displays, the UNIX / DOS legacy, and an every growing set of new
+developers using terminals despite having graphical options.
 
-It was funny noticing, even though we knew each other by our real names, we
-sometimes opted to call each other by our nicks. It's something about how
-personal relationships, formed online, persist in real life.
+Terminals are mainstream. They're not going away.
 
-It seemed as if it were orchestrated, but each of us fell into the same ebb and
-flow of living our lives. No one told us to do it, but bit by bit, we
-incrementally optimized our lifestyles, personally and professionally, to arrive
-at destinations seeming eerily alike.
+Microsoft and Windows Terminal. The Rust community and its writing of shell and
+CLI utilities that are defying expectations. Version managers that handle
+python, node, rust, PHP, and ruby versioning. Continual improvement on systems
+such as ZSH, Bash, Fish, and other systems. There's just too many to mention,
+and if I kept going, it'd be out of date in a month.
 
-Like many things in life, when we act on autopilot, we sometimes arrive at
-similar destinations. This is often unplanned.
+There is still mystery to the terminal for me. When text turns into garbage,
+cells corrupt recall an NES cartridge that decides to corrupt with a life of its
+own. I launch a new terminal or pane, wave it off and keep going. What I mean to
+say is:
 
-So, when I write an educational book about a computer application, I hope to
-write it for human beings. Not to sell you on tmux, convince you to like it or
-hate it, but to tell you what it is and how some people use it. I'll leave the
-rest to you.
+1. We're human.
+
+   We aren't computers, we're thinking, and often have more than just our terminal open.
+
+   We may have handbook or documentation open alongside a window manager.
+   We may be interfacing with other human being outside of the computer.
+   Pair coding. 
+   Watching YouTube or a Podcast.
+2. It's not feasible to know everything.
+
+   Terminals are a way to get from point A to point B. We're using it for value, but
+   we won't upend our work, we'll probably procrastinate, and not understand
+   many of the systems underneath the hood.
+
+   Some of us may eventually.
+
+   Programming and IT rely more and more on a huge dependency tree
+   of software. We're on working with, and on top of, yet so far away from unix
+   parts. In the same way we have hearts and aren't cargiologists, have brains
+   and aren't neurologists, don't take it open yourself to stunt your own
+   learning by feeling you need to learn everything.
 
 ## About this book
 
