@@ -1,6 +1,6 @@
 # Terminal fundamentals {#terminal-fundamentals}
 
-Before getting into tmux, a few fundamentals of the command line should be 
+Before getting into tmux, a few fundamentals of the command line should be
 reviewed. Often, we're so used to using these out of street smarts and muscle
 memory, a great deal of us never see the relation of where these tools stand
 next to each other.
@@ -11,20 +11,20 @@ time, regardless whether you're in a GUI on a local machine or SSH'ing
 into a remote server.
 
 If you want to learn more about how processes and TTYs work at the kernel level
-(data structures and all), the book [*The Design and Implementation of the FreeBSD
-Operating System (2nd Edition)*](http://amzn.to/2iTmVyv) by Marshall Kirk
-McKusick is nice, particularly, Chapter 4, *Process Management* and Section
-8.6, *Terminal Handling*. [*The TTY demystified*](http://www.linusakesson.net/programming/tty/index.php)
+(data structures and all), the book [_The Design and Implementation of the FreeBSD
+Operating System (2nd Edition)_](http://amzn.to/2iTmVyv) by Marshall Kirk
+McKusick is nice, particularly, Chapter 4, _Process Management_ and Section
+8.6, _Terminal Handling_. [_The TTY demystified_](http://www.linusakesson.net/programming/tty/index.php)
 by Linus Åkesson (available online) dives into the TTY and is a good read.
 
 Much more exists to glean off the history of Unix, 4.2 BSD, etc. I probably
 could have a coffee / tea with you discussing it for hours. You could look at it
 from multiple perspectives (The C Language, anything from the Unix/BSD lineage,
 etc.), and some clever fellow would likely chime in, mentioning Linux, GNU, and
-so on. It's like *Game of Thrones*; there's multiple story arcs you can follow,
-some of which intersect. A few good video resources would be [*A Narrative History of BSD*](https://www.youtube.com/watch?v=bVSXXeiFLgk)
-by Marshall Kirk McKusick, [*The UNIX Operating System*](https://www.youtube.com/watch?v=tc4ROCJYbm0)
-by AT&T, [*Early days of Unix and design of sh*](https://www.youtube.com/watch?v=FI_bZhV7wpI)
+so on. It's like _Game of Thrones_; there's multiple story arcs you can follow,
+some of which intersect. A few good video resources would be [_A Narrative History of BSD_](https://www.youtube.com/watch?v=bVSXXeiFLgk)
+by Marshall Kirk McKusick, [_The UNIX Operating System_](https://www.youtube.com/watch?v=tc4ROCJYbm0)
+by AT&T, [_Early days of Unix and design of sh_](https://www.youtube.com/watch?v=FI_bZhV7wpI)
 by Stephen R. Bourne.
 
 ## POSIX standards
@@ -46,29 +46,29 @@ FreeBSD, the default Make [(PMake)](https://www.freebsd.org/doc/en_US.ISO8859-1/
 uses dots between conditionals:
 
 {line-numbers=off}
-    .IF
+.IF
 
     .ENDIF
 
 But on most Linux systems and macOS, GNU Make is the default, so they get to do:
 
 {line-numbers=off}
-    IF
+IF
 
     ENDIF
 
 This is one of the many tiny inconsistencies that span operating systems, their
-userlands, their binary / library /  include paths, and adherence /
+userlands, their binary / library / include paths, and adherence /
 interpretation of the [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 or whether they follow their own.
 
 I> **Find your path**
 I>
 I> Most operating systems inspired by Unix (BSD's, macOS, Linux) will allow you
-I> to get the info of your systems' filesystem hierarchy via [`hier(7)`](https://www.freebsd.org/cgi/man.cgi?hier(7)).
+I> to get the info of your systems' filesystem hierarchy via [`hier(7)`](<https://www.freebsd.org/cgi/man.cgi?hier(7)>).
 I>
 I> {language=shell, line-numbers=off}
-I>     $ man hier
+I> $ man hier
 
 These differences add up. A good deal of software infrastructure out
 there exists solely to abstract the differences across them. For example: CMake,
@@ -110,7 +110,7 @@ and strive to be compatible with it. Zsh and Bash should be able to understand
 POSIX shell scripts you write, but not the other way around (we will cover this
 in [shell interpreters](#shells)).
 
-The first line of shell file is the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
+The first line of shell file is the [shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)
 statement, which points to the interpreter to run the script in. They normally
 use the `.sh` extension, but they can also be `.zsh`, `.csh` and so on if
 they're for a specific interpreter.
@@ -126,7 +126,7 @@ other languages espouse.
 
 Examples: POSIX sh, Bash, Zsh, csh, tcsh, ksh, fish
 
-Shell interpreters *implement* the shell language. They are a layer on top of
+Shell interpreters _implement_ the shell language. They are a layer on top of
 the kernel and are what allow you, interactively, to run commands and
 applications inside them.
 

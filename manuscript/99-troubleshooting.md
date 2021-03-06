@@ -9,7 +9,7 @@ Try installing [`reattach-to-user-namespace`](https://github.com/ChrisJohnsen/tm
 via [brew](http://brew.sh).
 
 {language=shell, line-numbers=off}
-    $ brew install reattach-to-user-namespace
+$ brew install reattach-to-user-namespace
 
 ## `tmuxp: command not found` and `powerline: command not found` {#troubleshoot-site-paths}
 
@@ -17,20 +17,21 @@ This is due to your site package bin path (where application entry points are
 installed) not being in your paths. To find your user site packages base directory:
 
 {language=shell, line-numbers=off}
-    $ python -m site --user-base
+$ python -m site --user-base
 
 This will get you something like `/Users/me/Library/Python/2.7` on macOS with
 Python 2.7 or `/home/me/.local` on Linux/BSD boxes.
 
 The applications are in the `bin/` folder inside. So, concatenate the two and
-apply them to your [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)). This
+apply them to your [`PATH`](<https://en.wikipedia.org/wiki/PATH_(variable)>). This
 can be done automatically on every shell session by using one of these in your
 `~/.bashrc` or `~/.zshrc`:
 
 {language=shell, line-numbers=off}
+
     export PATH=/Users/me/Library/Python/2.7/bin:$PATH     # macOS w/ python 2.7
     export PATH=$HOME/.local/bin:$PATH                     # Linux/BSD
-    export PATH="`python -m site --user-base`/bin":$PATH   # May work all-around
+    export PATH="`python -m site --user-base`/bin":$PATH # May work all-around
 
 Then open a new terminal, or `. ~/.zshrc` / `. ~/.bashrc` in your current one.
 Then you can run `$ tmuxp -V`, `$ tmuxp load` and `$ powerline tmux right`

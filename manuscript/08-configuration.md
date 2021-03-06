@@ -6,7 +6,7 @@ keybindings, and adjusting the prefix key, to complex things, such as decking
 out the [status bar](#status-bar) with system stats and fancy glyphs via
 powerlines.
 
-Configuration of tmux is managed through `.tmux.conf` in your `$HOME` directory. 
+Configuration of tmux is managed through `.tmux.conf` in your `$HOME` directory.
 The paths `~/.tmux.conf` and `$HOME/.tmux.conf` should work on OS X, Linux, and
 BSD.
 
@@ -21,22 +21,22 @@ free to copy and paste from it as you wish.
 I> **Custom Configs**
 I>
 I> You can specify your config via the `-f` command. Like this:
-I> 
-I> {language=shell, line-numbers=off}
-I>     $ tmux -f path/to/config.conf
 I>
-I> Note: If a tmux server is running in the background and you want 
+I> {language=shell, line-numbers=off}
+I> $ tmux -f path/to/config.conf
+I>
+I> Note: If a tmux server is running in the background and you want
 I> to test a fresh config, you must either shut down the rest of the
 I> tmux sessions or use a different socket name. Like this:
-I> 
+I>
 I> {language=shell, line-numbers=off}
-I>     $ tmux -f path/to/config.conf -Ltesting_tmux
+I> $ tmux -f path/to/config.conf -Ltesting_tmux
 I>
 I> And you can treat everything like normal; just keep passing `-Ltesting_tmux`
 I> (or whatever socket name you feel like testing configs with) for reuse.
 I>
 I> {language=shell, line-numbers=off}
-I>     $ tmux -Ltesting_tmux attach
+I> $ tmux -Ltesting_tmux attach
 
 ## Reloading configuration {#reload-config}
 
@@ -60,14 +60,14 @@ I> `$HOME/.tmux.conf`. So, what can you do? You can `bind-key` to
 I> `source-file ~/.tmux.conf`:
 I>
 I> `bind r source ~/.tmux.conf`
-I> 
+I>
 I> You can also have it give you a confirmation afterwards:
-I> 
+I>
 I> `bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"`
 I>
 I> Now, you can type `Prefix` + `r` to get the config to reload.
 
-Note that reloading the configuration only *re-runs* the configuration file. It
+Note that reloading the configuration only _re-runs_ the configuration file. It
 will not reset keybindings or styling you apply to tmux.
 
 ## How configs work
@@ -84,12 +84,12 @@ or outside tmux).
 This in `.tmux.conf`:
 
 {language=shell, line-numbers=off}
-    bind-key a send-prefix
+bind-key a send-prefix
 
 Is the same as having no `.tmux.conf` (or `$ tmux -f/dev/null`) and typing:
 
 {language=shell, line-numbers=off}
-    $ tmux bind-key a send-prefix
+$ tmux bind-key a send-prefix
 
 in a newly started tmux server.
 
@@ -107,7 +107,7 @@ Server options are set with `set-option -s option value`.
 ### Tweak timing between key sequences
 
 {line-numbers=off}
-    set -s escape-time 0
+set -s escape-time 0
 
 ### Terminal coloring
 
@@ -115,7 +115,7 @@ If you're having an issue with color detail in tmux, it may help to set
 `default-terminal` to `screen-256color`.
 
 {line-numbers=off}
-    set -g default-terminal "screen-256color"
+set -g default-terminal "screen-256color"
 
 This sets the `TERM` variable in new panes.
 
@@ -128,11 +128,11 @@ generic options, and the next section goes into snippets involving keybindings.
 ### Base index
 
 This was mentioned earlier in the book, but it's a favorite tweak of many tmux
-users, who find it more intuitive to start their window counting at *1*, rather
-than the default, *0*. To set the starting number (base index) for windows:
+users, who find it more intuitive to start their window counting at _1_, rather
+than the default, _0_. To set the starting number (base index) for windows:
 
 {line-numbers=off}
-    set -g base-index 1
+set -g base-index 1
 
 Setting `base-index` assures newly created windows start at 1 and count upwards.
 
@@ -147,7 +147,7 @@ Setting `automatic-rename` alters the name of the window based upon its active
 pane:
 
 {line-numbers=off}
-    set-window-option -g automatic-rename
+set-window-option -g automatic-rename
 
 Automatic renaming will be disabled for the window if you rename it manually.
 
@@ -160,27 +160,26 @@ it by setting a new prefix and unsetting the default. To set the prefix to
 `<Ctrl-a>`, like GNU Screen, try this:
 
 {line-numbers=off}
-    set-option -g prefix C-a
-    unbind-key C-b
-    bind-key a send-prefix
+set-option -g prefix C-a
+unbind-key C-b
+bind-key a send-prefix
 
 ### New window with prompt
 
 Prompt for window name upon creating a new window, `Prefix` + `C` (capital C):
 
 {line-numbers=off}
-    bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
+bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
 
 ### Vi copy-paste keys
 
 This is comprised of two-parts: Setting the `mode-keys` window option to vi and
 setting the `vi-copy` bindings to use `v` to begin selection and `y` to yank.
 
-{line-numbers=off}
-    # Vi copypaste mode
-    set-window-option -g mode-keys vi
-    bind-key -t vi-copy 'v' begin-selection
-    bind-key -t vi-copy 'y' copy-selection
+{line-numbers=off} # Vi copypaste mode
+set-window-option -g mode-keys vi
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
 
 ### hjkl / vi-like pane traversal
 
@@ -188,10 +187,10 @@ Another one for vi fans, this keeps your right hand on the home row when moving
 directionally across panes in a window.
 
 {line-numbers=off}
-    bind h select-pane -L
-    bind j select-pane -D
-    bind k select-pane -U
-    bind l select-pane -R
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 
 ### Further inspiration
 

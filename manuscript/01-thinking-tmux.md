@@ -1,4 +1,3 @@
-
 {mainmatter}
 
 # Thinking in tmux {#thinking-tmux}
@@ -23,18 +22,17 @@ text dimension. Inside tmux, you can:
 - have multiple windows (window) in the workspace (session)
 - switch between multiple workspaces, like virtual desktops
 
-|**tmux**           |**"Desktop"-Speak**   |**Plain English**                  |
-|-------------------|----------------------|-----------------------------------|
-|Multiplexer        |Multi-tasking         |Multiple applications              |
-|                   |                      |simultaneously.                    |
-|-------------------|----------------------|-----------------------------------|
-|Session            |Desktop               |Applications are visible here      |
-|-------------------|----------------------|-----------------------------------|
-|Window             |Virtual Desktop or    |Desktop containing its own screen  |
-|                   |applications          |     			       |
-|-------------------|----------------------|-----------------------------------|
-|Pane               |Application           |Performs operations                |
-
+| **tmux**            | **"Desktop"-Speak**    | **Plain English**                   |
+| ------------------- | ---------------------- | ----------------------------------- |
+| Multiplexer         | Multi-tasking          | Multiple applications               |
+|                     |                        | simultaneously.                     |
+| ------------------- | ---------------------- | ----------------------------------- |
+| Session             | Desktop                | Applications are visible here       |
+| ------------------- | ---------------------- | ----------------------------------- |
+| Window              | Virtual Desktop or     | Desktop containing its own screen   |
+|                     | applications           |                                     |
+| ------------------- | ---------------------- | ----------------------------------- |
+| Pane                | Application            | Performs operations                 |
 
 Just like in a graphical desktop environment, they throw in a clock, too.
 
@@ -50,7 +48,7 @@ In addition to multiple terminals on one screen, tmux allows you to create and l
 multiple "windows" within the confines of the tmux session you attached.
 
 Even better, you can copy and paste and scroll. No requirement for graphics
-either, so you have full power, even if you're SSH'ing or on a system without 
+either, so you have full power, even if you're SSH'ing or on a system without
 a display server such as [X](https://en.wikipedia.org/wiki/X.Org_Server).
 
 Here are a few common scenarios:
@@ -79,7 +77,7 @@ With tmux, you quickly have the makings of an IDE! And on your terms.
 ## Keep your applications running in the background
 
 Sometimes, GUI applications will have an option to be sidelined to the system
-tray to run in the background.  The application is out of sight, but events and
+tray to run in the background. The application is out of sight, but events and
 notifications can still come in, and the app can be instantly brought to the
 foreground.
 
@@ -112,18 +110,18 @@ messengers, and get back to your messages when you return.
 ![Chatting on weechat w/ tmux](images/01-thinking-tmux/weechat.png)
 
 Some keep development services running in a session. Hearty emphasis on
-*development*, you probably will want to daemonize and wrap your production web
+_development_, you probably will want to daemonize and wrap your production web
 applications, using a tool like [supervisor](http://supervisord.org/), with its
 own safe environmental settings.
 
 You can also have multiple users attach their clients to the same sessions,
-which is great for pair programming.  If you were in the same session, you
+which is great for pair programming. If you were in the same session, you
 and the other person would see the same thing, share the same input, and the
 same active window and pane.
 
 The above are just examples; any general workspace you'd normally use in a
 terminal could work, especially projects or repetitive efforts you multitask
-on. The *[tips and tricks](#tips-and-tricks)* section will dive into specific
+on. The _[tips and tricks](#tips-and-tricks)_ section will dive into specific
 flows you can use today.
 
 Q> ### Do tmux sessions persist after a system restart?

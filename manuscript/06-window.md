@@ -86,19 +86,19 @@ You can also use `$ tmux movew` for short.
 Example: move the current window to number 2:
 
 {language=shell, line-numbers=off}
-    $ tmux movew -t2
+$ tmux movew -t2
 
 Example: move window 2 to window 1:
 
 {language=shell, line-numbers=off}
-    $ tmux movew -s2 -t1
+$ tmux movew -s2 -t1
 
 The shortcut to prompt for an index to move the current window to is `Prefix` +
 `.`.
 
 ## Layouts {#window-layouts}
 
-`Prefix` + `space` switches window *layouts*. These are preset configurations
+`Prefix` + `space` switches window _layouts_. These are preset configurations
 automatically adjusting proportions of [panes](#panes).
 
 As of tmux 2.3, the supported layouts are:
@@ -124,7 +124,7 @@ To reset the proportions of the layout (such as after splitting or resizing
 panes), you have to run `$ tmux select-layout` again for the layout.
 
 This is different behavior than some [tiling window managers](https://en.wikipedia.org/wiki/Tiling_window_manager).
-[*awesome*](https://awesomewm.org/) and [*xmonad*](http://xmonad.org/), for
+[_awesome_](https://awesomewm.org/) and [_xmonad_](http://xmonad.org/), for
 instance, automatically handle proportions upon new items being added to their
 layouts.
 
@@ -132,7 +132,7 @@ To allow easy resetting to a sensible layout across machines and terminal
 dimensions, you can try this in your [config](#config):
 
 {language=shell, line-numbers=off}
-    bind m set-window-option main-pane-height 60\; select-layout main-horizontal
+bind m set-window-option main-pane-height 60\; select-layout main-horizontal
 
 This allows you to set a `main-horizontal` layout and automatically set the
 bottom panes proportionally on the bottom every time you do `Prefix` + `m`.
@@ -140,9 +140,8 @@ bottom panes proportionally on the bottom every time you do `Prefix` + `m`.
 Layouts can also be custom. To get the custom layout snippet for your current
 window, try this:
 
-{language=shell, line-numbers=off}
-    # awk(1)
-    $ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}'
+{language=shell, line-numbers=off} # awk(1)
+$ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}'
 
     # grep(1) + cut(1)
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
@@ -150,8 +149,7 @@ window, try this:
 To apply this layout:
 
 {language=shell, line-numbers=off}
-    $ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}'
-    > 5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]
+$ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}' > 5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]
 
     # Alternant to above:
     $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
@@ -170,17 +168,16 @@ along with the processes within them.
 From inside the current window, try this:
 
 {language=shell, line-numbers=off}
-    $ tmux kill-window
+$ tmux kill-window
 
 Another thing, when [scripting](#scripting-tmux) or trying to kill the window
 from outside, use a [target](#targets) of the window index:
 
 {language=shell, line-numbers=off}
-    $ tmux kill-window -t2
+$ tmux kill-window -t2
 
 If you're trying to find the target of the window to kill, they reside in the number
-in the middle section of the [status line](#status-line) and via `$ tmux
-choose-window`. You can hit "return" after you're in choose-window to go back to
+in the middle section of the [status line](#status-line) and via `$ tmux choose-window`. You can hit "return" after you're in choose-window to go back to
 where you were previously.
 
 ## Summary

@@ -1,7 +1,6 @@
-
 {frontmatter}
- 
-# Foreword 
+
+# Foreword
 
 Nearly all my friends use tmux. I remember going out at night for drinks and the
 three of us would take a seat at a round table and take out our smart phones.
@@ -75,14 +74,14 @@ Formatted text `like this` is source code.
 
 Formatted text with a $ in front is a terminal command. `$ echo 'like this'`.
 The text can be typed into the console, without the dollar character. For more
-information on the meaning of the "dollar prompt", check out [*What is the
-origin of the UNIX $ (dollar) prompt?*](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
+information on the meaning of the "dollar prompt", check out [_What is the
+origin of the UNIX $ (dollar) prompt?_](https://superuser.com/questions/57575/what-is-the-origin-of-the-unix-dollar-prompt)
 on Super User.
 
 In tmux, shortcuts require a [prefix key](#prefix-key) to be sent beforehand.
 For instance, `Prefix` + `d` will detach a tmux client from its session. This
 prefix, by default, is `<Ctrl-b>`, but users can override it. This is discussed in
-greater detail in *the prefix key* section and [*configuration*](#config).
+greater detail in _the prefix key_ section and [_configuration_](#config).
 
 ## How this book is structured
 
@@ -95,55 +94,55 @@ For special circumstances, like [tmux on Windows 10](#appendix-windows-bash), I
 decided adding screenshots is best, since many readers may be more comfortable
 with a visual approach.
 
-[*Thinking in tmux*](#thinking-tmux) goes over what tmux does and how it relates to
-the GUI desktops on our computers.  You'll understand the big picture of
+[_Thinking in tmux_](#thinking-tmux) goes over what tmux does and how it relates to
+the GUI desktops on our computers. You'll understand the big picture of
 what tmux is and how it can make your life easier.
 
-[*Terminal Fundamentals*](#terminal-fundamentals) shows the text-based
+[_Terminal Fundamentals_](#terminal-fundamentals) shows the text-based
 environments you'll be dealing with. It's great for those new to tmux, but also
 presents technical background for developers, who learned the ropes through
 examples and osmosis. At the end of this section, you'll be more confident and
 secure using the essential components underpinning a modern terminal
 environment.
 
-[*Practical usage*](#practical-usage) covers common bread-and-butter uses for
+[_Practical usage_](#practical-usage) covers common bread-and-butter uses for
 you to use tmux immediately.
 
-[*Server*](#server) gives life to the unseen workhorse behind the scenes
+[_Server_](#server) gives life to the unseen workhorse behind the scenes
 powering tmux. You'll think of tmux differently and may be impressed a
 client-server architecture could be presented to end users so seamlessly.
 
-[*Sessions*](#sessions) are the containers holding windows. You'll learn what
+[_Sessions_](#sessions) are the containers holding windows. You'll learn what
 sessions are and how they help organize your workspace in the terminal. You'll
 learn how to manipulate and rename and traverse sessions.
 
-[*Windows*](#windows) are what you see when tmux is open in front of you.
-You'll learn how to rename and move windows. 
+[_Windows_](#windows) are what you see when tmux is open in front of you.
+You'll learn how to rename and move windows.
 
-[*Panes*](#panes) are a terminal in a terminal. This is where you get to work and
+[_Panes_](#panes) are a terminal in a terminal. This is where you get to work and
 do your magic! You'll learn how to create, delete, move between, and resize
 panes.
 
-[*Configuration*](#config) discusses customization of tmux and sets the
+[_Configuration_](#config) discusses customization of tmux and sets the
 foundation for how to think about `.tmux.conf` so you can customize your own.
 
-[*Status bar and styling*](#status-bar) is devoted to the customization
+[_Status bar and styling_](#status-bar) is devoted to the customization
 of the status line and colors in tmux. As a bonus, you'll even learn how to
 display system information like CPU and memory usage via the status line.
 
-[*Scripting tmux*](#scripting-tmux) goes into command [aliases](#aliases)
+[_Scripting tmux_](#scripting-tmux) goes into command [aliases](#aliases)
 and the advanced and powerful [Targets](#targets) and [Formats](#formats)
 concepts.
 
-[*Technical stuff*](#technical-stuff) is a glimpse at tmux source code and how it
+[_Technical stuff_](#technical-stuff) is a glimpse at tmux source code and how it
 works under the hood. You may learn enough to impress colleagues who already use
 tmux. If you like programming on Unix-like systems, this one is for you.
 
-[*Tips and tricks*](#tips-and-tricks) wraps up with a whirlwind of useful
+[_Tips and tricks_](#tips-and-tricks) wraps up with a whirlwind of useful
 terminal tutorials you can use with tmux to improve day to day development and
 administration experience.
 
-[*Cheatsheets*](#appendix-cheatsheets) are organized tables of commands,
+[_Cheatsheets_](#appendix-cheatsheets) are organized tables of commands,
 shortcuts, and formats grouped by section.
 
 ## Donations

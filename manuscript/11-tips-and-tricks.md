@@ -7,9 +7,9 @@ same to find instructions for any command or entity with a manpage entry; here
 are some fun ones:
 
 {language=shell, line-numbers=off}
-    $ man less
-    $ man man
-    $ man strftime
+$ man less
+$ man man
+$ man strftime
 
 [most(1)](http://www.jedsoft.org/most/), a solid [`PAGER`](http://pubs.opengroup.org/onlinepubs/9699919799//utilities/man.html),
 drastically improves readability of manual pages by acting as a syntax
@@ -21,24 +21,23 @@ To get this working, you need to set your `PAGER` [environmental variable](https
 to point to the MOST binary. You can test it like this:
 
 {language=shell, line-numbers=off}
-    $ PAGER=most man ls
+$ PAGER=most man ls
 
 If you found you like `most`, you'll probably want to make it your default
 manpage reader. You can do this by setting an environmental variable in your
 "rc" ([Run Commands](https://en.wikipedia.org/wiki/Run_commands)) for your
-shell. The location of the file depends on your shell. You can use `$ echo
-$SHELL` to find it on most shells). In Bash and zsh, these are kept in
+shell. The location of the file depends on your shell. You can use `$ echo $SHELL` to find it on most shells). In Bash and zsh, these are kept in
 `~/.bashrc` or `~/.zshrc`, respectively:
 
 {language=shell, line-numbers=off}
-    export PAGER="most"
+export PAGER="most"
 
 I often reuse my configurations across machines, and some of them may not have
 `most` installed, so I will have my scripting only set `PAGER` if `most` is
 found:
 
 {language=shell, line-numbers=off}
-    #!/bin/sh
+#!/bin/sh
 
     if command -v most > /dev/null 2>&1; then
         export PAGER="most"
@@ -46,11 +45,11 @@ found:
 
 Save this in a file, for example, to `~/.dot-config/most.sh`.
 
-Then you can [`source`](https://en.wikipedia.org/wiki/Dot_(command)) it in via
+Then you can [`source`](<https://en.wikipedia.org/wiki/Dot_(command)>) it in via
 your main rc file.
 
 {language=shell, line-numbers=off}
-    source $HOME/.dot-config/most.sh
+source $HOME/.dot-config/most.sh
 
 Patterns like these help make your dot-configs portable, cross-platform, and
 modular. For inspiration, you can fork, copy, and paste from my permissively-
@@ -61,19 +60,19 @@ licensed config at <https://github.com/tony/.dot-config>.
 Not tmux specific, but powerful when used in tandem with it, you can run a
 follow (`-f`) using [`tail(1)`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html).
 More modern versions of tail have the `-F` (capitalized), which checks for file
-renames and rotation. 
+renames and rotation.
 
 On OS X, you can do:
 
 {language=shell, line-numbers=off}
-    $ tail -F /var/log/system.log
+$ tail -F /var/log/system.log
 
 and keep it running in a pane while log messages come in. It's like
 Facebook newsfeed for your system, except for programmers and system
 administrators.
 
 For monitoring logs, [multitail](https://vanheusden.com/multitail/) provides a
-terminal-friendly solution. It'd be an [*Inception*](http://www.imdb.com/title/tt1375666/)
+terminal-friendly solution. It'd be an [_Inception_](http://www.imdb.com/title/tt1375666/)
 moment, because you'd be using a log multiplexer in a terminal multiplexer.
 
 ## File watching {#file-watching}
@@ -92,15 +91,15 @@ bloat, memory, and CPU fans roaring.
 I eventually settled on [`entr(1)`](http://entrproject.org/), which works
 superbly across Linux distros, BSDs and OS X / macOS.
 
-The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
+The trick to make entr work is to [pipe](<https://en.wikipedia.org/wiki/Pipeline_(Unix)>)
 a list of files into it to watch.
 
-Let's search for all [`.go`](https://en.wikipedia.org/wiki/Go_(programming_language))
+Let's search for all [`.go`](<https://en.wikipedia.org/wiki/Go_(programming_language)>)
 files in a directory and [run tests](https://golang.org/cmd/go/#hdr-Test_packages)
 on file change:
 
 {language=shell, line-numbers=off}
-    $ ls -d *.go | entr -c go test ./...
+$ ls -d \*.go | entr -c go test ./...
 
 Sometimes, we may want to watch files recursively, but we need it to run
 reliably across systems. We can't depend on `**` existing to grab files
@@ -108,23 +107,23 @@ recursively, since it's not portable. Something more POSIX-friendly would be
 `find . -print | grep -i '.*[.]go'`:
 
 {language=shell, line-numbers=off}
-    $ find . -print | grep -i '.*[.]go' | entr -c go test ./...
+$ find . -print | grep -i '.\*[.]go' | entr -c go test ./...
 
 To only run file watcher if entr is installed, let's wrap in a conditional
 [`command -v`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/command.html)
 test:
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
-      entr -c go test ./...; fi
+$ if command -v entr > /dev/null; then find . -print | grep -i '.\*[.]go' | \
+ entr -c go test ./...; fi
 
 And have it fallback to `go test` in the event `entr` isn't installed. This
 allows your command to degrade gracefully. You'll thank me when you use this
 snippet in conjunction with a [session manager](#session-manager):
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
-      entr -c go test ./...; else go test ./...; fi
+$ if command -v entr > /dev/null; then find . -print | grep -i '.\*[.]go' | \
+ entr -c go test ./...; else go test ./...; fi
 
 If the project is a team or open source project, where a user never used the
 command before and could be missing a required software package, we can give
@@ -132,9 +131,9 @@ a helpful message. This shows a notice to the user to install entr if not
 installed on the system:
 
 {language=shell, line-numbers=off}
-    $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
-      entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
-      echo "run tasks when files change. \nSee http://entrproject.org/"; fi
+$ if command -v entr > /dev/null; then find . -print | grep -i '.\*[.]go' | \
+ entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
+echo "run tasks when files change. \nSee http://entrproject.org/"; fi
 
 Here's why you want patterns like above: You can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
 and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control),
@@ -147,8 +146,8 @@ to tabs.
 Let's see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
-    watch_test:
-        if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to run tasks when files change. \nSee http://entrproject.org/"; fi
+watch_test:
+if command -v entr > /dev/null; then find . -print | grep -i '.\*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to run tasks when files change. \nSee http://entrproject.org/"; fi
 
 To run this, do `$ make watch_test` in the same directory as the `Makefile`.
 
@@ -157,18 +156,18 @@ disposal. One would be to add continuation to the next line with a trailing
 backslash (`\`):
 
 {language=makefile, line-numbers=off}
-    watch_test:
-        if command -v entr > /dev/null; then find . -print | \
-        grep -i '.*[.]go' | entr -c go test ./...; \
-        else go test ./...; \
-        echo "\nInstall entr(1) to run tasks on file change. \n"; \
-        echo "See http://entrproject.org/"; fi
+watch_test:
+if command -v entr > /dev/null; then find . -print | \
+ grep -i '.\*[.]go' | entr -c go test ./...; \
+ else go test ./...; \
+ echo "\nInstall entr(1) to run tasks on file change. \n"; \
+ echo "See http://entrproject.org/"; fi
 
 Another would be to break the command into variables and `make` subcommands. So:
 
 {language=makefile, line-numbers=off}
-    WATCH_FILES= find . -type f -not -path '*/\.*' | \
-    grep -i '.*[.]go$$' 2> /dev/null
+WATCH*FILES= find . -type f -not -path '*/\.\_' | \
+ grep -i '.\*[.]go$$' 2> /dev/null
 
     test:
             go test $(test) ./...
@@ -206,8 +205,8 @@ process before restarting it. Combining the current `-c` flag with the new `-r`
 will give you `entr -rc`:
 
 {language=makefile, line-numbers=off}
-    run:
-            go run main.go
+run:
+go run main.go
 
     watch_run:
             if command -v entr > /dev/null; then ${WATCH_FILES} | \
@@ -226,7 +225,7 @@ scripts are portable.
 
 A declarative configuration in YAML or JSON configuration abstracts out the
 commands, layout, and options of tmux. It prevents the mistakes and repetition
-scripting entails. These applications are called tmux *session managers*, and in
+scripting entails. These applications are called tmux _session managers_, and in
 different ways, they programmatically create tmux workspaces by running a
 series of commands based on a config.
 
@@ -250,31 +249,22 @@ So, in tmuxp, we'll hollow out a tmuxp config directory with `$ mkdir ~/.tmuxp`
 then create a YAML file at `~/.tmuxp/test.yaml`:
 
 {language=yaml, line-numbers=off}
-    session_name: 4-pane-split
-    windows:
-    - window_name: dev window
-      layout: tiled
-      shell_command_before:
-        - cd ~/                    # run as a first command in all panes
-      panes:
-        - shell_command:           # pane no. 1
-            - cd /var/log          # run multiple commands in this pane
-            - ls -al | grep \.log
-        - echo second pane         # pane no. 2
-        - echo third pane          # pane no. 3
-        - echo forth pane          # pane no. 4
+session_name: 4-pane-split
+windows: - window_name: dev window
+layout: tiled
+shell_command_before: - cd ~/ # run as a first command in all panes
+panes: - shell_command: # pane no. 1 - cd /var/log # run multiple commands in this pane - ls -al | grep \.log - echo second pane # pane no. 2 - echo third pane # pane no. 3 - echo forth pane # pane no. 4
 
-gives a session titled *4-pane-split*, with one window titled *dev window* with
+gives a session titled _4-pane-split_, with one window titled _dev window_ with
 4 panes in it. 3 in the home directory; the other is in
 `/var/log` and is printing a list of all files ending with `.log`.
 
 To launch it, install tmuxp and load the configuration:
 
 {language=shell, line-numbers=off}
-    $ pip install --user tmuxp
-    $ tmuxp -V   # verify tmuxp is installed, if not you need to fix your `PATH`
-                 # to point to your python bin folder. More help below.
-    $ tmuxp load ~/.tmuxp/test.yaml
+$ pip install --user tmuxp
+$ tmuxp -V # verify tmuxp is installed, if not you need to fix your `PATH` # to point to your python bin folder. More help below.
+$ tmuxp load ~/.tmuxp/test.yaml
 
 If tmuxp isn't found, there is a [troubleshooting entry on fixing your
 paths](#troubleshoot-site-paths) in the appendix.

@@ -1,4 +1,4 @@
-# Server {#server} 
+# Server {#server}
 
 The server holds [sessions](#sessions) and the [windows](#windows) and
 [panes](#panes) within them.
@@ -21,7 +21,7 @@ supervisor, and so on.
 Unlike web or database software, tmux doesn't require specialized
 configuration settings or creating a service entry to start things.
 
-tmux uses a client-server model, but the server is forked to the 
+tmux uses a client-server model, but the server is forked to the
 background for you.
 
 ## Zero config needed
@@ -63,7 +63,7 @@ The tmux server won't go away until all sessions are closed.
 One server can contain one or multiple [sessions](#sessions).
 
 Starting tmux after a server already is running will create a new session inside
-the existing server. 
+the existing server.
 
 W> ### Advanced: Multiple servers
 W>
@@ -84,8 +84,8 @@ the `TMUX_TMPDIR` environment variable.
 So, something like:
 
 {language=shell, line-numbers=off}
-    $ export TMUX_TMPDIR=$HOME
-    $ tmux
+$ export TMUX_TMPDIR=$HOME
+$ tmux
 
 Will give you a tmux directory created within your `$HOME` folder. On OS X,
 your home folder will probably be something like `/Users/yourusername`. On
@@ -102,7 +102,7 @@ connection into tmux.
 You can retrieve a list of active client connections via:
 
 {language=shell, line-numbers=off}
-    $ tmux list-clients
+$ tmux list-clients
 
 These commands and the other `list-` commands, in practice, are rare. But, they
 are part of tmux scriptability should you want to get creative. The [scripting tmux](#scripting-tmux)
@@ -115,7 +115,7 @@ sessions, windows, and panes.
 
 Much like vi, tmux handles copying as a mode in which a pane is
 temporarily placed. When inside this mode, text can be selected and copied to
-the *paste buffer*, tmux's clipboard.
+the _paste buffer_, tmux's clipboard.
 
 The default key to enter copy mode is `Prefix` + `[`.
 
@@ -125,18 +125,18 @@ The default key to enter copy mode is `Prefix` + `[`.
 
 The default key to paste the text copied is `Prefix` + `]`.
 
-I> *Vi-like copy-paste*
+I> _Vi-like copy-paste_
 I>
 I> In your [config](#config), put this:
 I>
 I> {language=shell, line-numbers=off}
-I>     # Vi copypaste mode
-I>     set-window-option -g mode-keys vi
-I>     bind-key -t vi-copy 'v' begin-selection
-I>     bind-key -t vi-copy 'y' copy-selection
-I>     # starting with tmux version 2.6 this changes to:
-I>     bind-key -Tcopy-mode-vi 'C-v' send -X begin-selection
-I>     bind-key -Tcopy-mode-vi 'C-y' send -X copy-selection
+I> # Vi copypaste mode
+I> set-window-option -g mode-keys vi
+I> bind-key -t vi-copy 'v' begin-selection
+I> bind-key -t vi-copy 'y' copy-selection
+I> # starting with tmux version 2.6 this changes to:
+I> bind-key -Tcopy-mode-vi 'C-v' send -X begin-selection
+I> bind-key -Tcopy-mode-vi 'C-y' send -X copy-selection
 
 In addition to the "copy mode", tmux has advanced functionality to
 programmatically copy and paste. Later in the book, the [Capturing pane content](#capture-pane)
@@ -151,7 +151,7 @@ automatically to the user, it persists by forking into the background. Running
 behind the scenes, it ensures sessions, windows, panes, and buffers are
 operating, even when the client is detached.
 
-The server can hold one or more *sessions*. You can copy and paste between
+The server can hold one or more _sessions_. You can copy and paste between
 sessions via the clipboard. In the next chapter, we will go deeper into the role
 sessions play and how they help you organize and control your terminal
 workspace.

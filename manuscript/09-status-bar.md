@@ -1,20 +1,20 @@
 # Status bar and styling {#status-bar}
 
-The status bar, or *status line*, serves as a customizable taskbar in the bottom
+The status bar, or _status line_, serves as a customizable taskbar in the bottom
 of tmux. It is comprised of 3 sections. The status fields on either side
 of the status line are customizable. The center field is a list of windows.
 
 ![](images/09-status-bar/overview.png)
 
-The `status-left` and `status-right` option can be configured with  variables.
+The `status-left` and `status-right` option can be configured with variables.
 
 It's [configurable](#config) through the `.tmux.conf` file and modifiable live
 through using `$ tmux set-option`.
 
-I> *Finding your current status line settings* 
+I> _Finding your current status line settings_
 I>
 I> {language=shell, line-numbers=off}
-I>     $ tmux show-options -g | grep status
+I> $ tmux show-options -g | grep status
 
 ## Window status symbols
 
@@ -23,8 +23,8 @@ This window list is between the left and right status bar regions.
 tmux indicates status of a window through symbols. See below:
 
 | Symbol | Meaning                                                      |
-|--------|--------------------------------------------------------------|
-| *      | Denotes the current window.                                  |
+| ------ | ------------------------------------------------------------ |
+| \*     | Denotes the current window.                                  |
 | -      | Marks the last window (previously selected).                 |
 | #      | Window is monitored and activity has been detected.          |
 | !      | A bell has occurred in the window.                           |
@@ -37,7 +37,7 @@ press `Prefix` + `z` or move left / right / up / down panes.
 
 ## Date and time
 
-`status-left` and `status-right` accept variables for the date. 
+`status-left` and `status-right` accept variables for the date.
 
 This happens via piping the status templates through [`format_expand_time`](https://github.com/tmux/tmux/blob/2.3/format.c#L868)
 in `format.c`, which routes right into [`strftime(3)`](http://pubs.opengroup.org/onlinepubs/9699919799/functions/strftime.html)
@@ -56,21 +56,21 @@ like FreeBSD, Linux distributions, and macOS.
 
 To build from source, you must have [CMake](https://cmake.org) and `git`, which
 are available through your package manager. You must have a C++ compiler. On
-macOS, install Xcode CLI Utilities. You can do this by going to *Applications ->
-Utilities*, launching *Terminal.app* and typing `$ xcode-select --install`.
+macOS, install Xcode CLI Utilities. You can do this by going to _Applications ->
+Utilities_, launching _Terminal.app_ and typing `$ xcode-select --install`.
 macOS can use [Homebrew](https://brew.sh/) to install the CMake and git package.
 Major Linux distributions package CMake, clang, and git.
 
 Before this step, you can `cd` into any directory you're ok keeping code in.
 
 {language=shell, line-numbers=off}
-    $ git clone https://github.com/thewtex/tmux-mem-cpu-load.git
-    $ cd tmux-mem-cpu-load
-    $ mkdir ./build
-    $ cd ./build
-    $ cmake ..
-    $ make
-    
+$ git clone https://github.com/thewtex/tmux-mem-cpu-load.git
+$ cd tmux-mem-cpu-load
+$ mkdir ./build
+$ cd ./build
+$ cmake ..
+$ make
+
     # macOS, no sudo required
     $ make install
 
@@ -80,10 +80,10 @@ Before this step, you can `cd` into any directory you're ok keeping code in.
 If successful, you should see the output below:
 
 {language=shell, line-numbers=off}
-    [100%] Built target tmux-mem-cpu-load
-    Install the project...
-    -- Install configuration: "MinSizeRel"
-    -- Installing: /usr/local/bin/tmux-mem-cpu-load
+[100%] Built target tmux-mem-cpu-load
+Install the project...
+-- Install configuration: "MinSizeRel"
+-- Installing: /usr/local/bin/tmux-mem-cpu-load
 
 You can remove the source code you cloned from the computer. The compiled
 application is installed.
@@ -98,15 +98,15 @@ So to apply it to your theme, you need to double check what you already have.
 You may have information on there you want to keep.
 
 {language=shell, line-numbers=off}
-    $ tmux show-option -g status-right
-    status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+$ tmux show-option -g status-right
+status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
 
 Copy what you had in response (or change, rearrange as you see fit) then add the
 `#(tmux-mem-cpu-load)` to it. You can apply the new status line in your current
 tmux session via `$ tmux set-option -g status-right`:
 
 {language=shell, line-numbers=off}
-    $ tmux set-option -g status-right '"#{=21:pane_title}" #(tmux-mem-cpu-load) %H:%M %d-%b-%y'
+$ tmux set-option -g status-right '"#{=21:pane_title}" #(tmux-mem-cpu-load) %H:%M %d-%b-%y'
 
 Also, note how I switched out the double quotes on either side of the option
 with single quotes. This is required, since there are double quotes inside.
@@ -121,7 +121,7 @@ In the next section, we go into how you can style (color) tmux.
 
 ## Styling
 
-The *colors* available to tmux are:
+The _colors_ available to tmux are:
 
 - `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
 - bright colors, such as `brightred`, `brightgreen`, `brightyellow`,
@@ -150,7 +150,7 @@ colors can be used.
 You can style the color of the tmux clock via:
 
 {lang="text", line-numbers=off}
-    set-option -g clock-mode-colour white
+set-option -g clock-mode-colour white
 
 Reminder: Clock mode can be opened with `$ tmux clock-mode` or `Prefix` + `t`.
 Pressing any key will exit clock mode.
@@ -163,7 +163,7 @@ it `message-command-style`, `message style` and so on.
 Let's try this:
 
 {lang="shell", line-numbers=off}
-    $ tmux set-option -ag message-style fg=yellow,blink\; set-option -ag message-style bg=black
+$ tmux set-option -ag message-style fg=yellow,blink\; set-option -ag message-style bg=black
 
 ![Top: default scheme for prompt. Bottom: newly-styled.](images/09-status-bar/prompt.png)
 
@@ -176,18 +176,14 @@ Start by grabbing your current status line section you want to edit, for
 instance:
 
 {lang="text", line-numbers=off}
-    $ tmux show-options -g status-left
-    > status-left "[#S] "
-    $ tmux show-options -g status-right
-    > status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+$ tmux show-options -g status-left > status-left "[#S] "
+$ tmux show-options -g status-right > status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
 
 Also, you can try to snip off the variable with `| cut -d' ' -f2-`:
 
 {lang="text", line-numbers=off}
-    $ tmux show-options -g status-left | cut -d' ' -f2-
-    > "[#S] "
-    $ tmux show-options -g status-right | cut -d' ' -f2-
-    > " "#{=21:pane_title}" %H:%M %d-%b-%y"
+$ tmux show-options -g status-left | cut -d' ' -f2- > "[#S] "
+$ tmux show-options -g status-right | cut -d' ' -f2- > " "#{=21:pane_title}" %H:%M %d-%b-%y"
 
 Then, add the options to your [configuration](#config).
 
@@ -195,29 +191,29 @@ To be sure your configuration fully works, you can start it in a different
 server via `tmux -Lrandom`, verify the settings, and close it. This is helpful
 to make sure your config file isn't missing any styling info.
 
-## Toggling status line 
+## Toggling status line
 
 The tmux status line can be hidden, as well. Turn it off:
 
 {language=shell, line-numbers=off}
-    $ tmux set-option status off
+$ tmux set-option status off
 
 And, turn it on:
 
 {language=shell, line-numbers=off}
-    $ tmux set-option status on
+$ tmux set-option status on
 
 The above is best for scripting, but if you're binding it to a keyboard
-shortcut, *toggling*, or reversing the current option, it can be done via
+shortcut, _toggling_, or reversing the current option, it can be done via
 omitting the on/off value:
 
 {language=shell, line-numbers=off}
-    $ tmux set-option status
+$ tmux set-option status
 
 Bind toggling status line to `Prefix` + `q`:
 
 {language=shell, line-numbers=off}
-    $ tmux bind-key q set-option status
+$ tmux bind-key q set-option status
 
 ## Example: Default config
 
@@ -227,36 +223,36 @@ This is an example of the default config you see if your tmux
 configuration has no status styling.
 
 {line-numbers=off}
-    status on
-    status-interval 15
-    status-justify left
-    status-keys vi
-    status-left "[#S] "
-    status-left-length 10
-    status-left-style default
-    status-position bottom
-    status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
-    status-right-length 40
-    status-right-style default
-    status-style fg=black,bg=green
+status on
+status-interval 15
+status-justify left
+status-keys vi
+status-left "[#S] "
+status-left-length 10
+status-left-style default
+status-position bottom
+status-right " "#{=21:pane_title}" %H:%M %d-%b-%y"
+status-right-length 40
+status-right-style default
+status-style fg=black,bg=green
 
 ## Example: Dressed up {#status-bar-example-dressed-up}
 
 ![](images/09-status-bar/dressed up.png)
 
 {line-numbers=off}
-    status on
-    status-interval 1
-    status-justify centre
-    status-keys vi
-    status-left "#[fg=green]#H #[fg=black]• #[fg=green,bright]#(uname -r | cut -c 1-6)#[default]"
-    status-left-length 20
-    status-left-style default
-    status-position bottom
-    status-right "#[fg=green,bg=default,bright]#(tmux-mem-cpu-load) #[fg=red,dim,bg=default]#(uptime | cut -f 4-5 -d " " | cut -f 1 -d ",") #[fg=white,bg=default]%a%l:%M:%S %p#[default] #[fg=blue]%Y-%m-%d"
-    status-right-length 140
-    status-right-style default
-    status-style fg=colour136,bg=colour235
+status on
+status-interval 1
+status-justify centre
+status-keys vi
+status-left "#[fg=green]#H #[fg=black]• #[fg=green,bright]#(uname -r | cut -c 1-6)#[default]"
+status-left-length 20
+status-left-style default
+status-position bottom
+status-right "#[fg=green,bg=default,bright]#(tmux-mem-cpu-load) #[fg=red,dim,bg=default]#(uptime | cut -f 4-5 -d " " | cut -f 1 -d ",") #[fg=white,bg=default]%a%l:%M:%S %p#[default] #[fg=blue]%Y-%m-%d"
+status-right-length 140
+status-right-style default
+status-style fg=colour136,bg=colour235
 
     # default window title colors
     set-window-option -g window-status-fg colour244  # base0
@@ -273,9 +269,7 @@ system statistics in the right-side section of the status line.
 To build tmux-mem-cpu-load, you have to install [CMake](https://cmake.org/)
 and have a C++ compiler, like [clang](http://clang.llvm.org/) or [GCC](https://gcc.gnu.org/).
 
-On Ubuntu, Debian, and Mint machines, you can do this via `$ sudo apt-get
-install cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew
-install cmake`.
+On Ubuntu, Debian, and Mint machines, you can do this via `$ sudo apt-get install cmake build-essential`. On macOS w/ [brew](http://brew.sh/) via `$ brew install cmake`.
 
 Source: <https://github.com/tony/tmux-config>
 
@@ -297,7 +291,7 @@ symbols.
 are on Read the Docs. For a better idea:
 
 {language=shell, line-numbers=off}
-    $ pip install --user powerline-status psutil
+$ pip install --user powerline-status psutil
 
 [psutil](https://github.com/giampaolo/psutil), a required dependency of
 powerline, is a cross-platform tool to gather system information.
@@ -306,8 +300,8 @@ Assure you [properly configured python with your PATHs](#troubleshoot-site-paths
 and try this:
 
 {line-numbers=off}
-    set -g status-interval 2
-    set -g status-right '#(powerline tmux right)'
+set -g status-interval 2
+set -g status-right '#(powerline tmux right)'
 
 ## Summary
 
