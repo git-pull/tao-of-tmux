@@ -141,13 +141,20 @@ Layouts can also be custom. To get the custom layout snippet for your current
 window, try this:
 
 {language=shell, line-numbers=off}
+    # awk(1)
     $ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}'
+
+    # grep(1) + cut(1)
+    $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
 
 To apply this layout:
 
 {language=shell, line-numbers=off}
     $ tmux lsw -F "#{window_active} #{window_layout}" | awk '$1{print $2}'
     > 5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]
+
+    # Alternant to above:
+    $ tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2
 
     # resize your panes or try doing this in another window to see the outcome
     $ tmux select-layout "5aed,176x79,0,0[176x59,0,0,0,176x19,0,60{87x19,0,60,1,88x19,88,60,2}]"
