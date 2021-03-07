@@ -3,13 +3,13 @@
  
 # Foreword 
 
-The terminal is a direct textual pathway to your system. It's characterized by
-fixed width text, high contrast, raw input and output via text, and unforgiving.
-By its very nature, it's precise - it acts upon what you say, not what you mean.
+The terminal is a direct link to your system. It's characterized by high
+contrast, fixed width text, raw input and output, flexibility, yet stringent.
+Precise by nature - it acts upon what we say, not what we mean.
 
 It's ignorant of your intentions. It's developers designed it for utility, and it
 happens in a setting where happiness and convenience is tied legacy implementations
-on terminal displays, the UNIX / DOS legacy, and an every growing set of new
+on terminal displays, the UNIX / DOS legacy, and an ever growing set of new
 developers using terminals despite having graphical options.
 
 Terminals are mainstream. They're not going away.
