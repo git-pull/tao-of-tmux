@@ -188,7 +188,7 @@ As of January 2017, it's trivial to push out minor changes to
 Leanpub. Kindle is harder.
 
 tmux does intermittently receive updates. I've accommodated many over the past 5
-years on my personal configurations and software libraries set with [continuous integration tests against multiple tmux versions](https://github.com/tony/libtmux/blob/master/.travis.yml).
+years on my personal configurations and software libraries set with [continuous integration tests against multiple tmux versions](https://github.com/tmux-python/libtmux/blob/master/.github/workflows/tests.yml).
 Sometimes, publishers overplay version numbers to make it seem as if it's worth
 striking a new edition of a book over it. It's effective for them, but I'd
 rather be honest to my readership.
