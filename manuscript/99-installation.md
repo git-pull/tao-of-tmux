@@ -26,6 +26,13 @@
 
 ### CentOS / Fedora / Redhat, etc.
 
+dnf:
+
+{language=shell, line-numbers=off}
+    $ sudo dnf install tmux
+
+yum:
+
 {language=shell, line-numbers=off}
     $ sudo yum install tmux
 
