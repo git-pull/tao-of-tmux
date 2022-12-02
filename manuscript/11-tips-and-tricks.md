@@ -241,7 +241,7 @@ Already having used teamocil and tmuxinator, I wrote my own in python instead of
 ruby, with many more features. For one, it builds on top of [libtmux](https://github.com/tony/libtmux),
 a library which abstracts tmux [server](#server), [sessions](#sessions),
 [windows](#windows) and [panes](#panes) to build the state of tmux sessions. In
-addition, it has a naive form of session freezing, support for JSON, more
+addition, it can save active tmux sessions fo a layout file (JSON or yaml), more
 flexible configuration options, and it will even offer to attach exiting
 sessions, instead of redundantly running script commands against the
 session if it's already running.
