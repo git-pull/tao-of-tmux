@@ -60,7 +60,7 @@ Here are a few common scenarios:
 - Running a file watcher, like [watchman](https://github.com/facebook/watchman),
   [gulp-watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob-opts-tasks),
   [grunt-watch](https://github.com/gruntjs/grunt-contrib-watch), [guard](https://github.com/guard/guard),
-  or [entr](http://entrproject.org/). On file change, you could do stuff like:
+  or [entr](https://eradman.com/entrproject/). On file change, you could do stuff like:
   - rebuild LESS or SASS files, minimize CSS and/or assets and static files
   - lint with linters, like [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint),
     [Cppcheck](http://cppcheck.sourceforge.net/), [rubocop](https://github.com/bbatsov/rubocop),

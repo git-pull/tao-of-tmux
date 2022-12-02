@@ -89,7 +89,7 @@ linters, and so on. It gives you, as a developer, instant feedback in the
 terminal, empowering a tmux workspace to have IDE-like features, without the
 bloat, memory, and CPU fans roaring.
 
-I eventually settled on [`entr(1)`](http://entrproject.org/), which works
+I eventually settled on [`entr(1)`](https://eradman.com/entrproject/), which works
 superbly across Linux distros, BSDs and OS X / macOS.
 
 The trick to make entr work is to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix))
@@ -134,7 +134,7 @@ installed on the system:
 {language=shell, line-numbers=off}
     $ if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | \
       entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to \"
-      echo "run tasks when files change. \nSee http://entrproject.org/"; fi
+      echo "run tasks when files change. \nSee https://eradman.com/entrproject/"; fi
 
 Here's why you want patterns like above: You can put it into a [`Makefile`](https://en.wikipedia.org/wiki/Makefile)
 and commit it to your project's [VCS](https://en.wikipedia.org/wiki/Version_control),
@@ -148,7 +148,7 @@ Let's see what a `Makefile` with this looks like:
 
 {language=makefile, line-numbers=off}
     watch_test:
-        if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to run tasks when files change. \nSee http://entrproject.org/"; fi
+        if command -v entr > /dev/null; then find . -print | grep -i '.*[.]go' | entr -c go test ./...; else go test ./...; echo "\nInstall entr(1) to run tasks when files change. \nSee https://eradman.com/entrproject/"; fi
 
 To run this, do `$ make watch_test` in the same directory as the `Makefile`.
 
@@ -162,7 +162,7 @@ backslash (`\`):
         grep -i '.*[.]go' | entr -c go test ./...; \
         else go test ./...; \
         echo "\nInstall entr(1) to run tasks on file change. \n"; \
-        echo "See http://entrproject.org/"; fi
+        echo "See https://eradman.com/entrproject/"; fi
 
 Another would be to break the command into variables and `make` subcommands. So:
 
@@ -178,7 +178,7 @@ Another would be to break the command into variables and `make` subcommands. So:
             @echo " ! File watching functionality non-operational ! "
             @echo "                                                 "
             @echo " Install entr(1) to run tasks on file change.    "
-            @echo " See http://entrproject.org/                     "
+            @echo " See https://eradman.com/entrproject/                     "
             @echo "-------------------------------------------------"
 
     watch_test:
@@ -293,7 +293,7 @@ They're licensed under MIT so, you can use them, copy and paste from them, etc:
 
 Both support `tmuxp load .` within the project directory to load up the project.
 
-Make sure to install [`entr(1)`](http://entrproject.org/) beforehand!
+Make sure to install [`entr(1)`](https://eradman.com/entrproject/) beforehand!
 
 ## tmux-plugins and tpm
 
