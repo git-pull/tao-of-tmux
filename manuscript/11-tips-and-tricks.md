@@ -178,7 +178,7 @@ Another would be to break the command into variables and `make` subcommands. So:
             @echo " ! File watching functionality non-operational ! "
             @echo "                                                 "
             @echo " Install entr(1) to run tasks on file change.    "
-            @echo " See https://eradman.com/entrproject/                     "
+            @echo " See https://eradman.com/entrproject/            "
             @echo "-------------------------------------------------"
 
     watch_test:
